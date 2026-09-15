@@ -1,0 +1,26 @@
+{
+  "status": "PASS",
+  "video": {
+    "resolution": "1920x1080",
+    "fps": "24/1",
+    "duration": 47.042,
+    "size_bytes": 2299319
+  },
+  "full_decode": "PASS",
+  "black_intervals": 0,
+  "original_voice_sha256_unchanged": true,
+  "source_to_encoded_audio_correlation": 0.999961,
+  "sentence_cues": 12,
+  "sentence_timestamps_source": "MiniMax",
+  "audio_speed_changed": false,
+  "added_tail_hold_seconds": 1.43,
+  "scope": "Local 47-second mechanism demonstration, not an upstream full-episode certification.",
+  "limitations": [
+    "Within-sentence actions use authored subdivisions; no word-level alignment claim.",
+    "Summary is authored example content, not a live summarization model.",
+    "Visual QA is manual review of actual rendered frames; no independent steward certification."
+  ],
+  "browser_playback": "Verified in Codex in-app browser",
+  "browser_chapter_seek": "Verified chapter 3 jumps to encoded summary sequence",
+  "http_range_requests": "206 response with correct byte count"
+}

@@ -1,0 +1,21 @@
+{
+  "model": "speech-2.8-hd",
+  "text": "今天来上一节英语微课，学会用三个词，描述物体的位置。<#0.4#>Look at the ball.<#0.4#>我们用这颗小球，学习 in, on, and under.<#0.4#>In means inside.<#0.4#>The ball is in the box.<#0.4#>看，小球在盒子里面。跟我读。<#0.4#>The ball is in the box.<#2.5#>On means on the surface.<#0.4#>The ball is on the table.<#0.4#>小球接触桌子的表面。现在跟读。<#0.4#>The ball is on the table.<#2.5#>Under means below.<#0.4#>The ball is under the table.<#0.4#>小球在桌子下面。轮到你读。<#0.4#>The ball is under the table.<#2.5#>把句子分成三块，物体，位置，参照物。<#0.4#>The ball is, under, the table.<#0.4#>现在看图回答。Where is the ball?<#3.0#>The ball is on the table.<#0.4#>再试一次。小球在盒子里，空格应该填哪个词？<#3.0#>The ball is in the box.<#0.4#>最后比较一下，inside 用 in，接触表面用 on，在下面用 under。<#0.4#>学会以后，试着描述你身边的物体。",
+  "stream": false,
+  "voice_setting": {
+    "voice_id": "male-qn-jingying",
+    "speed": 0.9,
+    "vol": 1,
+    "pitch": 0
+  },
+  "audio_setting": {
+    "sample_rate": 32000,
+    "bitrate": 128000,
+    "format": "mp3",
+    "channel": 1
+  },
+  "language_boost": "auto",
+  "subtitle_enable": true,
+  "subtitle_type": "sentence",
+  "output_format": "hex"
+}

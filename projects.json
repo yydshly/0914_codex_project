@@ -1,6 +1,25 @@
 {
   "projects": [
     {
+      "id": "001",
+      "order": 10,
+      "slug": "audio-locked-paper-theatre",
+      "name": "语音驱动纸艺剧场",
+      "repo": "https://github.com/jay-yangPY/audio-locked-paper-theatre",
+      "summary": "画板是舞台，物品是演员，代码是动作脚本，音频时间轴是演出节拍。用于培训视频制作、教学微课、科普与产品说明，附四个有声演示和场景指南。",
+      "status": "已完成",
+      "tags": [
+        "培训视频",
+        "教学微课",
+        "MiniMax",
+        "音频时间轴",
+        "纸艺动画"
+      ],
+      "cover": "projects/001-audio-locked-paper-theatre/assets/cover.jpg",
+      "cover_alt": "三条会议记录经纸艺机器整理为行动摘要",
+      "demo": "https://yydshly.github.io/0914_codex_project/001-audio-locked-paper-theatre/"
+    },
+    {
       "id": "002",
       "order": 20,
       "slug": "agent-skills-eval",

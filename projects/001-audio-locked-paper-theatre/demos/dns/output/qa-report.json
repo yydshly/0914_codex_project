@@ -1,0 +1,24 @@
+{
+  "status": "PASS",
+  "video": {
+    "resolution": "1920x1080",
+    "fps": "24/1",
+    "duration": 60.667,
+    "size_bytes": 2633756
+  },
+  "full_decode": "PASS",
+  "black_intervals": 0,
+  "original_voice_sha256_unchanged": true,
+  "source_to_encoded_audio_correlation": 0.999954,
+  "sentence_cues": 13,
+  "sentence_timestamps_source": "MiniMax",
+  "audio_speed_changed": false,
+  "added_tail_hold_seconds": 1.519,
+  "scope": "Local audio-locked demonstration, not an upstream full-episode certification.",
+  "limitations": [
+    "Within-sentence actions use authored subdivisions; no word-level alignment claim.",
+    "Content and animation are authored; this is not a live DNS query or task-execution service.",
+    "Visual QA is manual review of actual rendered frames; no independent steward certification."
+  ],
+  "browser_verification": "Verified chapter seeking and video playback in Codex browser"
+}

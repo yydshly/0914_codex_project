@@ -1,0 +1,132 @@
+[
+  {
+    "text": "你输入网址，电脑怎么知道网站在哪里？",
+    "pronounce_text": "你输入网址，电脑怎么知道网站在哪里？",
+    "time_begin": 0,
+    "time_end": 3475.873015873016,
+    "text_begin": 0,
+    "text_end": 18,
+    "pronounce_text_begin": 0,
+    "pronounce_text_end": 18
+  },
+  {
+    "text": "网址是好记的名字，连接网站还需要网络地址。",
+    "pronounce_text": "网址是好记的名字，连接网站还需要网络地址。",
+    "time_begin": 4104,
+    "time_end": 7904.952380952381,
+    "text_begin": 18,
+    "text_end": 39,
+    "pronounce_text_begin": 18,
+    "pronounce_text_end": 39
+  },
+  {
+    "text": "DNS就像查号服务，帮助设备找到这个地址。",
+    "pronounce_text": "DNS就像查号服务，帮助设备找到这个地址。",
+    "time_begin": 8532,
+    "time_end": 12785.741496598639,
+    "text_begin": 39,
+    "text_end": 60,
+    "pronounce_text_begin": 39,
+    "pronounce_text_end": 60
+  },
+  {
+    "text": "首先，设备和DNS服务会检查是否有可用缓存。",
+    "pronounce_text": "首先，设备和DNS服务会检查是否有可用缓存。",
+    "time_begin": 13392,
+    "time_end": 17785.061224489797,
+    "text_begin": 60,
+    "text_end": 82,
+    "pronounce_text_begin": 60,
+    "pronounce_text_end": 82
+  },
+  {
+    "text": "如果没有，就由递归解析器帮你继续查找。",
+    "pronounce_text": "如果没有，就由递归解析器帮你继续查找。",
+    "time_begin": 18396,
+    "time_end": 22096,
+    "text_begin": 82,
+    "text_end": 101,
+    "pronounce_text_begin": 82,
+    "pronounce_text_end": 101
+  },
+  {
+    "text": "它先问根服务器，得到顶级域服务器的指引。",
+    "pronounce_text": "它先问根服务器，得到顶级域服务器的指引。",
+    "time_begin": 22716,
+    "time_end": 26064.163265306124,
+    "text_begin": 101,
+    "text_end": 121,
+    "pronounce_text_begin": 101,
+    "pronounce_text_end": 121
+  },
+  {
+    "text": "以点com结尾的网站，会继续询问点com服务器。",
+    "pronounce_text": "以点com结尾的网站，会继续询问点com服务器。",
+    "time_begin": 26676,
+    "time_end": 30291.19274376417,
+    "text_begin": 121,
+    "text_end": 145,
+    "pronounce_text_begin": 121,
+    "pronounce_text_end": 145
+  },
+  {
+    "text": "接着找到管理这个域名记录的权威服务器。",
+    "pronounce_text": "接着找到管理这个域名记录的权威服务器。",
+    "time_begin": 30924,
+    "time_end": 33772.93424036281,
+    "text_begin": 145,
+    "text_end": 164,
+    "pronounce_text_begin": 145,
+    "pronounce_text_end": 164
+  },
+  {
+    "text": "权威服务器返回地址记录，解析器再把结果交给你的设备。",
+    "pronounce_text": "权威服务器返回地址记录，解析器再把结果交给你的设备。",
+    "time_begin": 34380,
+    "time_end": 39040.09070294785,
+    "text_begin": 164,
+    "text_end": 190,
+    "pronounce_text_begin": 164,
+    "pronounce_text_end": 190
+  },
+  {
+    "text": "设备拿到地址，才能继续连接网站服务器。",
+    "pronounce_text": "设备拿到地址，才能继续连接网站服务器。",
+    "time_begin": 39672,
+    "time_end": 43101.43310657596,
+    "text_begin": 190,
+    "text_end": 209,
+    "pronounce_text_begin": 190,
+    "pronounce_text_end": 209
+  },
+  {
+    "text": "查到的记录会按有效时间缓存，后续查询可能更快。",
+    "pronounce_text": "查到的记录会按有效时间缓存，后续查询可能更快。",
+    "time_begin": 43740,
+    "time_end": 48260.77097505669,
+    "text_begin": 209,
+    "text_end": 232,
+    "pronounce_text_begin": 209,
+    "pronounce_text_end": 232
+  },
+  {
+    "text": "所以，DNS负责找地址，网页内容由网站服务器提供。",
+    "pronounce_text": "所以，DNS负责找地址，网页内容由网站服务器提供。",
+    "time_begin": 48888,
+    "time_end": 54140.19954648526,
+    "text_begin": 232,
+    "text_end": 257,
+    "pronounce_text_begin": 232,
+    "pronounce_text_end": 257
+  },
+  {
+    "text": "记住这条路线，名字变地址，浏览器再去取网页。",
+    "pronounce_text": "记住这条路线，名字变地址，浏览器再去取网页。",
+    "time_begin": 54756,
+    "time_end": 59009.74149659864,
+    "text_begin": 257,
+    "text_end": 279,
+    "pronounce_text_begin": 257,
+    "pronounce_text_end": 279
+  }
+]

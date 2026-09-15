@@ -1,0 +1,36 @@
+{
+  "provider": "MiniMax",
+  "model": "speech-2.8-hd",
+  "voice_id": "male-qn-jingying",
+  "speed": 0.94,
+  "duration": 59.148,
+  "sha256": "063be23d4f97a17208d5882e792d7522c831eec34f75e5a7106965cd3eb965cf",
+  "extra_info": {
+    "audio_length": 59148,
+    "audio_sample_rate": 32000,
+    "audio_size": 948084,
+    "bitrate": 128000,
+    "word_count": 363,
+    "invisible_character_ratio": 0,
+    "usage_characters": 600,
+    "audio_format": "mp3",
+    "audio_channel": 1
+  },
+  "transcript": [
+    "你输入网址，电脑怎么知道网站在哪里？",
+    "网址是好记的名字，连接网站还需要网络地址。",
+    "DNS就像查号服务，帮助设备找到这个地址。",
+    "首先，设备和DNS服务会检查是否有可用缓存。",
+    "如果没有，就由递归解析器帮你继续查找。",
+    "它先问根服务器，得到顶级域服务器的指引。",
+    "以点com结尾的网站，会继续询问点com服务器。",
+    "接着找到管理这个域名记录的权威服务器。",
+    "权威服务器返回地址记录，解析器再把结果交给你的设备。",
+    "设备拿到地址，才能继续连接网站服务器。",
+    "查到的记录会按有效时间缓存，后续查询可能更快。",
+    "所以，DNS负责找地址，网页内容由网站服务器提供。",
+    "记住这条路线，名字变地址，浏览器再去取网页。"
+  ],
+  "alignment_source": "MiniMax generated-audio sentence timestamps",
+  "audio_retimed": false
+}

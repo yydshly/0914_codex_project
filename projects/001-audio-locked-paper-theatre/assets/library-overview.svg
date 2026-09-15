@@ -1,0 +1,152 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="2100" viewBox="0 0 1600 2100" role="img" aria-labelledby="title desc"><title id="title">Audio-Locked Paper Theatre：意义、场景与实现原理</title><desc id="desc">以音频为主时间轴，将知识编排为独立对象的可控动画；八类用途、六步制作流程，以及英语位置词实例。PPT和智能辅导需外部工具。</desc>
+<rect x="0" y="0" width="1600" height="2100" rx="0" fill="#f5f1e6"/>
+<text x="72" y="75.6" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="24" font-weight="700" fill="#287c69">AUDIO-LOCKED PAPER THEATRE  /  一图读懂</text>
+<text x="72" y="158.0" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="60" font-weight="700" fill="#213f39">用声音定节奏，把知识演出来</text>
+<text x="72" y="212.2" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="28" font-weight="400" fill="#576b62">定位：一套有声解释视频的制作流程、结构化模板与验证工具。</text>
+<path d="M72 245 L1528 245" stroke="#d5dacc" stroke-width="2" fill="none"/>
+<rect x="72" y="279" width="51" height="43" rx="8" fill="#287c69"/>
+<text x="81" y="309.3" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="27" font-weight="700" fill="#ffffff">01</text>
+<text x="141" y="311.6" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="34" font-weight="700" fill="#213f39">它的意义</text>
+<text x="1242.0" y="308.7" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="23" font-weight="400" fill="#576b62">让值得解释的关系变得可见</text>
+<rect x="72" y="348" width="468" height="145" rx="14" fill="#e5ecdf"/>
+<text x="96" y="396.0" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="30" font-weight="700" fill="#287c69">看懂抽象关系</text>
+<text x="96" y="440.5" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="25" font-weight="400" fill="#213f39">把位置、因果、结构、流程</text>
+<text x="96" y="474.5" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="25" font-weight="400" fill="#213f39">变成对象的移动与状态变化。</text>
+<rect x="566" y="348" width="468" height="145" rx="14" fill="#e5ecdf"/>
+<text x="590" y="396.0" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="30" font-weight="700" fill="#287c69">控制讲解节奏</text>
+<text x="590" y="440.5" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="25" font-weight="400" fill="#213f39">说到哪里，画面演到哪里；</text>
+<text x="590" y="474.5" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="25" font-weight="400" fill="#213f39">让声音与关键动作相互配合。</text>
+<rect x="1060" y="348" width="468" height="145" rx="14" fill="#e5ecdf"/>
+<text x="1084" y="396.0" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="30" font-weight="700" fill="#287c69">复用与修改内容</text>
+<text x="1084" y="440.5" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="25" font-weight="400" fill="#213f39">保留脚本、素材和动作规则；</text>
+<text x="1084" y="474.5" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="25" font-weight="400" fill="#213f39">便于重渲染与系列内容制作。</text>
+<rect x="72" y="532" width="51" height="43" rx="8" fill="#287c69"/>
+<text x="81" y="562.3" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="27" font-weight="700" fill="#ffffff">02</text>
+<text x="141" y="564.6" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="34" font-weight="700" fill="#213f39">它可以用在哪里？</text>
+<text x="1133.546875" y="561.7" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="23" font-weight="400" fill="#576b62">8 类代表用途 · 可延展到更多知识领域</text>
+<rect x="72" y="600" width="344" height="143" rx="12" fill="#fffdf7" stroke="#d5dacc" stroke-width="2"/>
+<text x="91" y="644.2" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="28" font-weight="700" fill="#213f39">学习与复习</text>
+<text x="91" y="686.6" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="24" font-weight="400" fill="#576b62">概念辨析 · 错题讲解</text>
+<text x="91" y="720.6" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="24" font-weight="400" fill="#576b62">知识回顾 · 学习方法</text>
+<rect x="442" y="600" width="344" height="143" rx="12" fill="#fffdf7" stroke="#d5dacc" stroke-width="2"/>
+<text x="461" y="644.2" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="28" font-weight="700" fill="#213f39">英语与语言</text>
+<text x="461" y="686.6" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="24" font-weight="400" fill="#576b62">位置词 · 语序与句型</text>
+<text x="461" y="720.6" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="24" font-weight="400" fill="#576b62">构词分析 · 情景对话</text>
+<rect x="812" y="600" width="344" height="143" rx="12" fill="#fffdf7" stroke="#d5dacc" stroke-width="2"/>
+<text x="831" y="644.2" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="28" font-weight="700" fill="#213f39">课堂与课程</text>
+<text x="831" y="686.6" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="24" font-weight="400" fill="#576b62">课前导入 · 难点微课</text>
+<text x="831" y="720.6" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="24" font-weight="400" fill="#576b62">实验预讲 · 暂停提问</text>
+<rect x="1182" y="600" width="344" height="143" rx="12" fill="#fffdf7" stroke="#d5dacc" stroke-width="2"/>
+<text x="1201" y="644.2" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="28" font-weight="700" fill="#213f39">科普与技术</text>
+<text x="1201" y="686.6" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="24" font-weight="400" fill="#576b62">DNS · 程序执行</text>
+<text x="1201" y="720.6" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="24" font-weight="400" fill="#576b62">科学原理 · 系统架构</text>
+<rect x="72" y="762" width="344" height="143" rx="12" fill="#fffdf7" stroke="#d5dacc" stroke-width="2"/>
+<text x="91" y="806.2" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="28" font-weight="700" fill="#213f39">企业与岗位培训</text>
+<text x="91" y="848.6" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="24" font-weight="400" fill="#576b62">入职流程 · 任务交接</text>
+<text x="91" y="882.6" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="24" font-weight="400" fill="#576b62">业务步骤 · 错误纠正</text>
+<rect x="442" y="762" width="344" height="143" rx="12" fill="#fffdf7" stroke="#d5dacc" stroke-width="2"/>
+<text x="461" y="806.2" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="28" font-weight="700" fill="#213f39">产品与客户教育</text>
+<text x="461" y="848.6" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="24" font-weight="400" fill="#576b62">功能原理 · 使用流程</text>
+<text x="461" y="882.6" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="24" font-weight="400" fill="#576b62">新手上手 · 常见问题</text>
+<rect x="812" y="762" width="344" height="143" rx="12" fill="#fffdf7" stroke="#d5dacc" stroke-width="2"/>
+<text x="831" y="806.2" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="28" font-weight="700" fill="#213f39">研究与知识传播</text>
+<text x="831" y="848.6" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="24" font-weight="400" fill="#576b62">论文方法 · 数据故事</text>
+<text x="831" y="882.6" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="24" font-weight="400" fill="#576b62">报告说明 · 文化讲解</text>
+<rect x="1182" y="762" width="344" height="143" rx="12" fill="#fffdf7" stroke="#d5dacc" stroke-width="2"/>
+<text x="1201" y="806.2" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="28" font-weight="700" fill="#213f39">课件与材料扩展</text>
+<text x="1201" y="848.6" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="24" font-weight="400" fill="#576b62">视频嵌入 PPT · 讲义</text>
+<text x="1201" y="882.6" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="24" font-weight="400" fill="#576b62">可编辑课件需额外工具</text>
+<text x="72" y="954.2" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="28" font-weight="700" fill="#287c69">选题判断：有没有一个“演出来，比只说出来更容易懂”的过程？</text>
+<rect x="72" y="996" width="51" height="43" rx="8" fill="#287c69"/>
+<text x="81" y="1026.3" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="27" font-weight="700" fill="#ffffff">03</text>
+<text x="141" y="1028.6" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="34" font-weight="700" fill="#213f39">实现原理：音频是主时间轴</text>
+<text x="1157.625" y="1025.7" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="23" font-weight="400" fill="#576b62">工作流编排 + 外部工具 + 可控渲染</text>
+<rect x="72" y="1075" width="222" height="162" rx="12" fill="#fffdf7" stroke="#d5dacc" stroke-width="2"/>
+<text x="90" y="1110.8" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="22" font-weight="700" fill="#287c69">01</text>
+<text x="90" y="1151.0" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="30" font-weight="700" fill="#213f39">讲解设计</text>
+<text x="90" y="1190.7" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="23" font-weight="400" fill="#576b62">确定知识目标</text>
+<text x="90" y="1224.7" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="23" font-weight="400" fill="#576b62">编写口播与分镜</text>
+<path d="M298 1153 L311 1153" stroke="#287c69" stroke-width="3" fill="none"/>
+<path d="M303 1146 L311 1153" stroke="#287c69" stroke-width="3" fill="none"/>
+<path d="M303 1160 L311 1153" stroke="#287c69" stroke-width="3" fill="none"/>
+<rect x="319" y="1075" width="222" height="162" rx="12" fill="#fffdf7" stroke="#d5dacc" stroke-width="2"/>
+<text x="337" y="1110.8" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="22" font-weight="700" fill="#287c69">02</text>
+<text x="337" y="1151.0" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="30" font-weight="700" fill="#213f39">锁定声音</text>
+<text x="337" y="1190.7" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="23" font-weight="400" fill="#576b62">生成最终配音</text>
+<text x="337" y="1224.7" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="23" font-weight="400" fill="#576b62">取得真实时间戳</text>
+<path d="M545 1153 L558 1153" stroke="#287c69" stroke-width="3" fill="none"/>
+<path d="M550 1146 L558 1153" stroke="#287c69" stroke-width="3" fill="none"/>
+<path d="M550 1160 L558 1153" stroke="#287c69" stroke-width="3" fill="none"/>
+<rect x="566" y="1075" width="222" height="162" rx="12" fill="#fffdf7" stroke="#d5dacc" stroke-width="2"/>
+<text x="584" y="1110.8" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="22" font-weight="700" fill="#287c69">03</text>
+<text x="584" y="1151.0" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="30" font-weight="700" fill="#213f39">拆成对象</text>
+<text x="584" y="1190.7" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="23" font-weight="400" fill="#576b62">准备独立图层</text>
+<text x="584" y="1224.7" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="23" font-weight="400" fill="#576b62">登记位置与关系</text>
+<path d="M792 1153 L805 1153" stroke="#287c69" stroke-width="3" fill="none"/>
+<path d="M797 1146 L805 1153" stroke="#287c69" stroke-width="3" fill="none"/>
+<path d="M797 1160 L805 1153" stroke="#287c69" stroke-width="3" fill="none"/>
+<rect x="813" y="1075" width="222" height="162" rx="12" fill="#fffdf7" stroke="#d5dacc" stroke-width="2"/>
+<text x="831" y="1110.8" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="22" font-weight="700" fill="#287c69">04</text>
+<text x="831" y="1151.0" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="30" font-weight="700" fill="#213f39">编排动作</text>
+<text x="831" y="1190.7" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="23" font-weight="400" fill="#576b62">以音频时间为准</text>
+<text x="831" y="1224.7" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="23" font-weight="400" fill="#576b62">控制移动与遮挡</text>
+<path d="M1039 1153 L1052 1153" stroke="#287c69" stroke-width="3" fill="none"/>
+<path d="M1044 1146 L1052 1153" stroke="#287c69" stroke-width="3" fill="none"/>
+<path d="M1044 1160 L1052 1153" stroke="#287c69" stroke-width="3" fill="none"/>
+<rect x="1060" y="1075" width="222" height="162" rx="12" fill="#fffdf7" stroke="#d5dacc" stroke-width="2"/>
+<text x="1078" y="1110.8" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="22" font-weight="700" fill="#287c69">05</text>
+<text x="1078" y="1151.0" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="30" font-weight="700" fill="#213f39">逐帧合成</text>
+<text x="1078" y="1190.7" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="23" font-weight="400" fill="#576b62">计算每一帧画面</text>
+<text x="1078" y="1224.7" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="23" font-weight="400" fill="#576b62">合入音频与字幕</text>
+<path d="M1286 1153 L1299 1153" stroke="#287c69" stroke-width="3" fill="none"/>
+<path d="M1291 1146 L1299 1153" stroke="#287c69" stroke-width="3" fill="none"/>
+<path d="M1291 1160 L1299 1153" stroke="#287c69" stroke-width="3" fill="none"/>
+<rect x="1307" y="1075" width="222" height="162" rx="12" fill="#fffdf7" stroke="#d5dacc" stroke-width="2"/>
+<text x="1325" y="1110.8" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="22" font-weight="700" fill="#287c69">06</text>
+<text x="1325" y="1151.0" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="30" font-weight="700" fill="#213f39">验证交付</text>
+<text x="1325" y="1190.7" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="23" font-weight="400" fill="#576b62">检查同步与关系</text>
+<text x="1325" y="1224.7" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="23" font-weight="400" fill="#576b62">解码、导出视频</text>
+<text x="72" y="1290.2" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="28" font-weight="700" fill="#287c69">每一帧 = 在音频时间 t，按既定规则绘制所有对象的当前状态。</text>
+<rect x="72" y="1321" width="1456" height="350" rx="16" fill="#e9eee3"/>
+<text x="99" y="1371.1" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="29" font-weight="700" fill="#213f39">以英语课为例：同一颗球，三个位置；对象独立移动，配合讲解。</text>
+<text x="101" y="1427.3" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="27" font-weight="700" fill="#287c69">14.4 秒 · in</text>
+<path d="M206 1589 L397 1589" stroke="#bfcbbb" stroke-width="3" fill="none"/>
+<rect x="220" y="1488" width="164" height="99" rx="3" fill="#abcddd"/>
+<circle cx="301" cy="1507" r="32" fill="#d57c54"/>
+<rect x="220" y="1520" width="164" height="68" rx="3" fill="#73aac4"/>
+<text x="101" y="1635.5" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="25" font-weight="400" fill="#213f39">The ball is in the box.</text>
+<path d="M486 1480 L542 1480" stroke="#287c69" stroke-width="3" fill="none"/>
+<path d="M534 1473 L542 1480" stroke="#287c69" stroke-width="3" fill="none"/>
+<path d="M534 1487 L542 1480" stroke="#287c69" stroke-width="3" fill="none"/>
+<text x="586" y="1427.3" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="27" font-weight="700" fill="#287c69">28.5 秒 · on</text>
+<path d="M691 1589 L882 1589" stroke="#bfcbbb" stroke-width="3" fill="none"/>
+<rect x="686" y="1507" width="200" height="15" rx="3" fill="#bf9657"/>
+<rect x="700" y="1522" width="12" height="66" rx="1" fill="#a67b41"/>
+<rect x="860" y="1522" width="12" height="66" rx="1" fill="#a67b41"/>
+<circle cx="786" cy="1479" r="28" fill="#d57c54"/>
+<text x="586" y="1635.5" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="25" font-weight="400" fill="#213f39">The ball is on the table.</text>
+<path d="M971 1480 L1027 1480" stroke="#287c69" stroke-width="3" fill="none"/>
+<path d="M1019 1473 L1027 1480" stroke="#287c69" stroke-width="3" fill="none"/>
+<path d="M1019 1487 L1027 1480" stroke="#287c69" stroke-width="3" fill="none"/>
+<text x="1071" y="1427.3" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="27" font-weight="700" fill="#287c69">40.7 秒 · under</text>
+<path d="M1176 1589 L1367 1589" stroke="#bfcbbb" stroke-width="3" fill="none"/>
+<rect x="1171" y="1507" width="200" height="15" rx="3" fill="#bf9657"/>
+<rect x="1185" y="1522" width="12" height="66" rx="1" fill="#a67b41"/>
+<rect x="1345" y="1522" width="12" height="66" rx="1" fill="#a67b41"/>
+<circle cx="1271" cy="1560" r="28" fill="#d57c54"/>
+<text x="1071" y="1635.5" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="25" font-weight="400" fill="#213f39">The ball is under the table.</text>
+<rect x="72" y="1714" width="51" height="43" rx="8" fill="#287c69"/>
+<text x="81" y="1744.3" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="27" font-weight="700" fill="#ffffff">04</text>
+<text x="141" y="1746.6" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="34" font-weight="700" fill="#213f39">看清边界，再组合扩展</text>
+<text x="1196.0" y="1743.7" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="23" font-weight="400" fill="#576b62">方法可复用，应用功能按需接入</text>
+<text x="72" y="1808.3" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="27" font-weight="700" fill="#287c69">仓库核心</text>
+<text x="247" y="1808.3" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="27" font-weight="400" fill="#213f39">制作规范、生产模板与验证器；音频、图像、渲染依赖配套工具。</text>
+<text x="72" y="1856.3" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="27" font-weight="700" fill="#287c69">本地复现</text>
+<text x="247" y="1856.3" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="27" font-weight="400" fill="#213f39">MiniMax 配音与句级时间戳 → Pillow 图层动画 → FFmpeg 成片。</text>
+<text x="72" y="1904.3" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="27" font-weight="700" fill="#287c69">另加功能</text>
+<text x="247" y="1904.3" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="27" font-weight="400" fill="#213f39">网页答题是额外交互；可编辑 PPT、发音评分、个性辅导需其他模块。</text>
+<rect x="72" y="1941" width="1456" height="69" rx="10" fill="#e5ecdf"/>
+<text x="96" y="1985.3" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="27" font-weight="700" fill="#213f39">能把内容演清楚，是表达能力；是否真正学会，还要通过复述、练习与应用检验。</text>
+<text x="72" y="2061.9" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="21" font-weight="400" fill="#576b62">来源：github.com/jay-yangPY/audio-locked-paper-theatre · 上游文档与本地四个样例</text>
+<text x="72" y="2090.2" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="18" font-weight="400" fill="#576b62">场景为适用性归纳；本地动画按句级时间编排，不声称逐词对齐。  /  2026-09-15</text>
+</svg>

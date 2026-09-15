@@ -10,6 +10,7 @@ on:
       - 'scripts/build_pages.py'
       - 'scripts/catalog.py'
       - 'projects/**/web/dist/**'
+      - 'projects/001-audio-locked-paper-theatre/**'
   workflow_dispatch:
 
 permissions:
@@ -30,6 +31,8 @@ jobs:
       - name: Validate research catalog
         run: python scripts/catalog.py check
       - name: Package selected static demos
+        run: python projects/001-audio-locked-paper-theatre/src/package_site.py
+      - name: Build combined project site
         run: python scripts/build_pages.py
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v4

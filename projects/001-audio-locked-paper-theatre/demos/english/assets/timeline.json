@@ -1,0 +1,170 @@
+{
+  "duration": 89.0,
+  "audio_duration": 87.48,
+  "fps": 24,
+  "cues": [
+    {
+      "id": 0,
+      "start": 0.0,
+      "end": 4.543990929705215,
+      "text": "今天来上一节英语微课，学会用三个词，描述物体的位置。",
+      "caption": "今天来上一节英语微课，学会用三个词，描述物体的位置"
+    },
+    {
+      "id": 1,
+      "start": 5.148,
+      "end": 6.23221768707483,
+      "text": "Look at the ball.",
+      "caption": "Look at the ball."
+    },
+    {
+      "id": 2,
+      "start": 6.84,
+      "end": 11.523310657596372,
+      "text": "我们用这颗小球，学习 in, on, and under.",
+      "caption": "我们用这颗小球，学习 in, on, and under."
+    },
+    {
+      "id": 3,
+      "start": 12.132,
+      "end": 13.831546485260771,
+      "text": "In means inside.",
+      "caption": "In means inside."
+    },
+    {
+      "id": 4,
+      "start": 14.436,
+      "end": 16.181986394557825,
+      "text": "The ball is in the box.",
+      "caption": "The ball is in the box."
+    },
+    {
+      "id": 5,
+      "start": 16.812,
+      "end": 21.019301587301587,
+      "text": "看，小球在盒子里面。跟我读。",
+      "caption": "看，小球在盒子里面。跟我读"
+    },
+    {
+      "id": 6,
+      "start": 21.636,
+      "end": 23.184616780045353,
+      "text": "The ball is in the box.",
+      "caption": "The ball is in the box."
+    },
+    {
+      "id": 7,
+      "start": 25.884,
+      "end": 27.908625850340137,
+      "text": "On means on the surface.",
+      "caption": "On means on the surface."
+    },
+    {
+      "id": 8,
+      "start": 28.548,
+      "end": 30.20110657596372,
+      "text": "The ball is on the table.",
+      "caption": "The ball is on the table."
+    },
+    {
+      "id": 9,
+      "start": 30.816,
+      "end": 33.746204081632655,
+      "text": "小球接触桌子的表面。现在跟读。",
+      "caption": "小球接触桌子的表面。现在跟读"
+    },
+    {
+      "id": 10,
+      "start": 34.38,
+      "end": 35.986666666666665,
+      "text": "The ball is on the table.",
+      "caption": "The ball is on the table."
+    },
+    {
+      "id": 11,
+      "start": 38.7,
+      "end": 40.06285714285715,
+      "text": "Under means below.",
+      "caption": "Under means below."
+    },
+    {
+      "id": 12,
+      "start": 40.68,
+      "end": 42.22861678004536,
+      "text": "The ball is under the table.",
+      "caption": "The ball is under the table."
+    },
+    {
+      "id": 13,
+      "start": 42.84,
+      "end": 46.95442176870748,
+      "text": "小球在桌子下面。轮到你读。",
+      "caption": "小球在桌子下面。轮到你读"
+    },
+    {
+      "id": 14,
+      "start": 47.592,
+      "end": 49.38442630385487,
+      "text": "The ball is under the table.",
+      "caption": "The ball is under the table."
+    },
+    {
+      "id": 15,
+      "start": 52.092,
+      "end": 56.29930158730159,
+      "text": "把句子分成三块，物体，位置，参照物。",
+      "caption": "把句子分成三块，物体，位置，参照物"
+    },
+    {
+      "id": 16,
+      "start": 56.916,
+      "end": 59.75332426303855,
+      "text": "The ball is, under, the table.",
+      "caption": "The ball is, under, the table."
+    },
+    {
+      "id": 17,
+      "start": 60.372,
+      "end": 63.48796371882086,
+      "text": "现在看图回答。Where is the ball?",
+      "caption": "现在看图回答。Where is the ball?"
+    },
+    {
+      "id": 18,
+      "start": 66.708,
+      "end": 68.2101768707483,
+      "text": "The ball is on the table.",
+      "caption": "The ball is on the table."
+    },
+    {
+      "id": 19,
+      "start": 68.832,
+      "end": 73.03930158730158,
+      "text": "再试一次。小球在盒子里，空格应该填哪个词？",
+      "caption": "再试一次。小球在盒子里，空格应该填哪个词？"
+    },
+    {
+      "id": 20,
+      "start": 76.248,
+      "end": 77.61085714285714,
+      "text": "The ball is in the box.",
+      "caption": "The ball is in the box."
+    },
+    {
+      "id": 21,
+      "start": 78.228,
+      "end": 83.86332879818595,
+      "text": "最后比较一下，inside 用 in，接触表面用 on，在下面用 under。",
+      "caption": "最后比较一下，inside 用 in，接触表面用 on，在下面用 under"
+    },
+    {
+      "id": 22,
+      "start": 84.492,
+      "end": 87.32932426303854,
+      "text": "学会以后，试着描述你身边的物体。",
+      "caption": "学会以后，试着描述你身边的物体"
+    }
+  ],
+  "timing_precision": "MiniMax sentence boundaries. Actions within a sentence use authored timing.",
+  "title": "Where is the ball?"
+}

@@ -11,12 +11,23 @@
 <!-- PROJECT_INDEX:START -->
 | 顺序 | 编号 | 项目 | 源库 | 能力摘要 | 状态 | 演示 |
 | --- | --- | --- | --- | --- | --- | --- |
-| 1 | 002 | [Agent Skills Eval：Skill 能力校验引擎](projects/002-agent-skills-eval/README.md) | [agent\-skills\-eval](https://github.com/darkrishabh/agent-skills-eval) | 读取已编写的 Skill 与测试标准，自动调用模型、评分并对比有无 Skill 的效果，为校验能力 Skill 提供底层评测引擎。 | 已完成 | [在线演示](https://yydshly.github.io/0914_codex_project/002-agent-skills-eval/) |
+| 1 | 001 | [语音驱动纸艺剧场](projects/001-audio-locked-paper-theatre/README.md) | [audio\-locked\-paper\-theatre](https://github.com/jay-yangPY/audio-locked-paper-theatre) | 画板是舞台，物品是演员，代码是动作脚本，音频时间轴是演出节拍。用于培训视频制作、教学微课、科普与产品说明，附四个有声演示和场景指南。 | 已完成 | [在线演示](https://yydshly.github.io/0914_codex_project/001-audio-locked-paper-theatre/) |
+| 2 | 002 | [Agent Skills Eval：Skill 能力校验引擎](projects/002-agent-skills-eval/README.md) | [agent\-skills\-eval](https://github.com/darkrishabh/agent-skills-eval) | 读取已编写的 Skill 与测试标准，自动调用模型、评分并对比有无 Skill 的效果，为校验能力 Skill 提供底层评测引擎。 | 已完成 | [在线演示](https://yydshly.github.io/0914_codex_project/002-agent-skills-eval/) |
 <!-- PROJECT_INDEX:END -->
 
 ## 项目预览
 
 <!-- PROJECT_PREVIEWS:START -->
+### 001 · 语音驱动纸艺剧场
+
+画板是舞台，物品是演员，代码是动作脚本，音频时间轴是演出节拍。用于培训视频制作、教学微课、科普与产品说明，附四个有声演示和场景指南。
+
+![三条会议记录经纸艺机器整理为行动摘要](projects/001-audio-locked-paper-theatre/assets/cover.jpg)
+
+[研究记录](projects/001-audio-locked-paper-theatre/README.md) · [上游仓库](https://github.com/jay-yangPY/audio-locked-paper-theatre) · [在线演示](https://yydshly.github.io/0914_codex_project/001-audio-locked-paper-theatre/)
+
+标签：培训视频 / 教学微课 / MiniMax / 音频时间轴 / 纸艺动画
+
 ### 002 · Agent Skills Eval：Skill 能力校验引擎
 
 读取已编写的 Skill 与测试标准，自动调用模型、评分并对比有无 Skill 的效果，为校验能力 Skill 提供底层评测引擎。
