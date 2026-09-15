@@ -16,7 +16,7 @@
       ],
       "cover": "projects/002-agent-skills-eval/assets/skill-validation-workflow.png",
       "cover_alt": "Skill 能力校验闭环：用户与 AI 准备、评测引擎自动验证、人工复核后修改再测",
-      "demo": ""
+      "demo": "https://yydshly.github.io/0914_codex_project/002-agent-skills-eval/"
     }
   ]
 }

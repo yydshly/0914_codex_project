@@ -6,6 +6,8 @@
 
 发布状态以 GitHub Actions 部署成功且网页实际可访问为准。只有经过访问验证的演示地址才写入 `projects.json`，并同步到仓库索引。
 
+已验证的在线入口：[演示导航页](https://yydshly.github.io/0914_codex_project/) · [002：Skill 能力校验](https://yydshly.github.io/0914_codex_project/002-agent-skills-eval/)。
+
 ## GitHub Pages 地址规划
 
 GitHub Pages 每个仓库最多有一个站点，可把多个静态演示放在同一站点的不同子目录：

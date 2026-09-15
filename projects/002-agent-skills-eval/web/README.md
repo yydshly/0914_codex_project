@@ -2,6 +2,8 @@
 
 中文交互式研究页，提供三个场景、工作原理和实验结论。纯静态 HTML/CSS/JavaScript，无依赖，不调用模型或业务接口。
 
+**[在线访问：Skill 评测实验室](https://yydshly.github.io/0914_codex_project/002-agent-skills-eval/)** · [所有已发布演示](https://yydshly.github.io/0914_codex_project/)
+
 ## 本地打开
 
 在本目录运行：
@@ -38,6 +40,8 @@ check.mjs 校验退款边界、六个示例、数据对照和工具规则，以�
 
 ## 托管状态
 
-当前通过本地服务访问。已按 Sites 静态目录要求准备 .openai/hosting.json；当前会话没有可调用的 Sites 注册与发布工具，尚未生成托管地址。也可以将 dist/ 作为整个静态目录接入总仓库的统一发布流程。所有资源使用相对地址、导航使用页面锚点，兼容子目录部署。
+已通过 GitHub Pages 发布。总仓库 `.github/workflows/pages.yml` 统一打包 `pages.json` 中选择的项目，把本目录 dist/ 放到站点的 002-agent-skills-eval/ 子目录。推送网页修改到 main 后会自动重新部署。所有资源使用相对地址、导航使用页面锚点，兼容子目录部署。
+
+部署成功后，已验证线上入口、脚本、样式、引导图与实验数据内容和本地提交文件一致。GitHub 仓库保存源码；GitHub Pages 地址提供可实际打开的网页。`.openai/hosting.json` 保留静态目录说明，本项目当前使用 GitHub Pages 托管。
 
 源码与证据基于研究版本 b60eebe；原库报告及源代码的许可见 [上游 MIT 许可证](../upstream/LICENSE)。

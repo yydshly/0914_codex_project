@@ -6,6 +6,8 @@
 
 [源库：darkrishabh/agent-skills-eval](https://github.com/darkrishabh/agent-skills-eval) · [固定研究版本](https://github.com/darkrishabh/agent-skills-eval/tree/b60eebe3c6edaa917a284e13b9b0e9fa00f1c957)
 
+**[打开在线交互演示](https://yydshly.github.io/0914_codex_project/002-agent-skills-eval/)**：能力与流程、完整引导图，以及退款客服、数据分析、工具调用三个场景。无需在本机启动服务。
+
 ## 一张图理解完整流程
 
 ![Skill 能力校验完整流程：用户与 AI 准备范围、场景、测试和 Skill，agent-skills-eval 自动执行与评分，人工复核后修改并再次验证](assets/skill-validation-workflow.png)
@@ -58,7 +60,7 @@
 | 完成范围 | 源码分析、上游测试、离线机制验证、试验用例与真实模型运行入口 |
 | 实测环境 | Windows / Node.js 22.15.0 / npm 10.9.2 |
 | 真实模型效果数据 | **未测量：本次没有调用付费或外部模型接口** |
-| 网页演示 | 已完成三个交互场景；通过本地服务访问，参见 [网页说明](web/README.md) |
+| 网页演示 | [GitHub Pages 在线演示](https://yydshly.github.io/0914_codex_project/002-agent-skills-eval/)；本地运行见 [网页说明](web/README.md) |
 
 ## 它解决什么问题？
 
