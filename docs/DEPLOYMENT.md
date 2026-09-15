@@ -2,7 +2,9 @@
 
 ## 当前状态
 
-初始化阶段只建立研究目录与部署约定，尚未发布网站。实际有可运行的 Web 项目后，再配置构建和发布流程。
+已配置统一的 GitHub Actions 发布流程 `.github/workflows/pages.yml`。`pages.json` 显式选择要发布的项目编号，目前为 `002`；`scripts/build_pages.py` 将各项目的 `web/dist/` 打包到 `_site/<编号-slug>/`，并生成站点导航页。
+
+发布状态以 GitHub Actions 部署成功且网页实际可访问为准。只有经过访问验证的演示地址才写入 `projects.json`，并同步到仓库索引。
 
 ## GitHub Pages 地址规划
 
@@ -16,14 +18,16 @@ https://yydshly.github.io/0914_codex_project/
 
 以上子项目路径是规划示例，并非已上线地址。每个演示沿用稳定的项目目录名；调整首页顺序不改变链接。
 
-## 后续接入步骤
+## 添加后续演示
 
-1. 各项目在自己的 `web/` 中维护源码、依赖和构建说明。
-2. 设置应用资源基础路径为 `/0914_codex_project/001-example-repo/`，替换为实际编号和名称；同时检查路由前缀。
-3. 用统一 GitHub Actions 流程分别构建需要发布的项目，将每个静态产物放到 `_site/<编号-slug>/`，根目录准备一个导航页。
-4. 一次性上传完整 `_site/` 并部署到 GitHub Pages；每次部署都包含所有已上线项目的产物。
-5. 在仓库 Settings → Pages 中选择 GitHub Actions 作为发布来源。
-6. 确认页面、资源和刷新路径可访问后，将真实地址写入 `projects.json` 的 `demo` 并运行 `sync`。
+1. 在子项目 `web/` 中维护网页，准备可直接托管的 `web/dist/index.html` 及其静态资源；需要构建的项目在工作流打包前增加相应构建步骤。
+2. 使用相对资源路径或正确的子目录前缀，单页导航优先使用 hash。
+3. 将该项目编号加入 `pages.json`，提交并推送到 main。只发布清单明确选择的项目，不自动公开所有本地演示。
+4. 工作流一次性上传完整 `_site/`，确保每次部署保留所有已选择的演示。
+5. 仓库 Settings → Pages 的发布来源应为 GitHub Actions。
+6. 等部署成功并确认网页和资源可访问，再写入 `projects.json` 的 `demo`，运行 `python scripts/catalog.py sync` 并提交。
+
+本地可运行 `python scripts/build_pages.py --output <新的输出目录>` 检查打包。脚本拒绝覆盖已有目录，避免陈旧文件混入发布包。
 
 不要让多个流程分别部署局部产物到同一个 Pages 站点：后一次部署会替换站点内容。单页应用需要考虑静态托管下的深层路由刷新，可采用 hash 路由或生成实际静态页面。
 
