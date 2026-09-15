@@ -23,6 +23,20 @@
 
 画板是舞台，物品是演员，代码是动作脚本，音频时间轴是演出节拍。用于培训视频制作、教学微课、科普与产品说明，附四个有声演示和场景指南。
 
+#### 理解图一：音频驱动动画的实现架构
+
+画板是舞台，物品是演员，代码是动作脚本，音频时间轴是演出节拍。看清时间戳、动作规则、图层与视频合成之间的关系。
+
+![讲稿、音频时间轴、动作脚本与独立图层共同驱动逐帧渲染的架构图](projects/001-audio-locked-paper-theatre/assets/audio-animation-architecture.png)
+
+#### 理解图二：意义与使用场景
+
+从培训视频制作、英语教学、学科微课到技术科普与产品说明，直观了解适用场景、制作流程及扩展边界。
+
+![纸艺剧场的意义、八类代表用途、制作流程与能力边界](projects/001-audio-locked-paper-theatre/assets/library-overview.png)
+
+#### 演示效果
+
 ![三条会议记录经纸艺机器整理为行动摘要](projects/001-audio-locked-paper-theatre/assets/cover.jpg)
 
 [研究记录](projects/001-audio-locked-paper-theatre/README.md) · [上游仓库](https://github.com/jay-yangPY/audio-locked-paper-theatre) · [在线演示](https://yydshly.github.io/0914_codex_project/001-audio-locked-paper-theatre/)

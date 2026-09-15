@@ -85,6 +85,21 @@ def load_projects():
             require(image.suffix.lower() in {".png", ".jpg", ".jpeg", ".webp", ".gif", ".svg"},
                     f"不支持的封面格式：{cover}")
             require(project["cover_alt"].strip(), f"请填写封面说明：{pid}")
+        preview_images = project.get("preview_images", [])
+        require(isinstance(preview_images, list), f"preview_images 必须是数组：{pid}")
+        for preview in preview_images:
+            require(isinstance(preview, dict), f"预览图必须是对象：{pid}")
+            for key in ("title", "path", "alt", "caption"):
+                value = preview.get(key)
+                require(isinstance(value, str) and value.strip()
+                        and not any(c in value for c in "\r\n"), f"预览图 {key} 必须是单行非空字符串：{pid}")
+            image = (ROOT / preview["path"]).resolve()
+            require(preview["path"].startswith(folder(project) + "/assets/")
+                    and "\\" not in preview["path"] and ".." not in Path(preview["path"]).parts
+                    and image.is_relative_to((directory / "assets").resolve())
+                    and image.is_file(), f"预览图必须存在于本项目 assets 目录：{pid}")
+            require(image.suffix.lower() in {".png", ".jpg", ".jpeg", ".webp", ".gif", ".svg"},
+                    f"不支持的预览图格式：{pid}")
         ids.add(pid)
         slugs.add(project["slug"])
         registered.add(directory.name)
@@ -109,7 +124,12 @@ def render(projects):
                     f"{link(source_name, project['repo'])} | "
                     f"{md(project['summary'])} | {project['status']} | {demo} |")
         block = [f"### {project['id']} · {md(project['name'])}", "", md(project["summary"]), ""]
+        for preview in project.get("preview_images", []):
+            block += [f"#### {md(preview['title'])}", "", md(preview["caption"]), "",
+                      "!" + link(preview["alt"], preview["path"]), ""]
         if project["cover"]:
+            if project.get("preview_images"):
+                block += ["#### 演示效果", ""]
             block += ["!" + link(project["cover_alt"], project["cover"]), ""]
         entries = [link("研究记录", detail), link("上游仓库", project["repo"])]
         if project["demo"]:
