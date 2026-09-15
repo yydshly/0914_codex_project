@@ -1,0 +1,95 @@
+{
+  "commit": "cb3c905e4bc362e02e040035b5c88b13fdd54cf4",
+  "files": [
+    {
+      "path": "light-spotlight-render/assets/light_spotlight_template.html",
+      "local": "upstream/skills/light-spotlight-render/assets/light_spotlight_template.html",
+      "sha256": "47729dea5b6d20077e963d3aa97d6a36847d88645dab99091dc337fb00cff6d3",
+      "url": "https://github.com/vibe-motion/skills/blob/cb3c905e4bc362e02e040035b5c88b13fdd54cf4/light-spotlight-render/assets/light_spotlight_template.html"
+    },
+    {
+      "path": "light-spotlight-render/scripts/render_light_spotlight.py",
+      "local": "upstream/skills/light-spotlight-render/scripts/render_light_spotlight.py",
+      "sha256": "98e74b9e20e8001a551f11c0cbabf276d67bcbaefb11908c95cbe68782edc536",
+      "url": "https://github.com/vibe-motion/skills/blob/cb3c905e4bc362e02e040035b5c88b13fdd54cf4/light-spotlight-render/scripts/render_light_spotlight.py"
+    },
+    {
+      "path": "printed-curtain-render/assets/printed-curtain-template/NOTICE.txt",
+      "local": "upstream/skills/printed-curtain-render/assets/printed-curtain-template/NOTICE.txt",
+      "sha256": "2e3954b0ae0276edc1a2f0e6e0a25f7f4533769e17808d4b8de397e02abaf25b",
+      "url": "https://github.com/vibe-motion/skills/blob/cb3c905e4bc362e02e040035b5c88b13fdd54cf4/printed-curtain-render/assets/printed-curtain-template/NOTICE.txt"
+    },
+    {
+      "path": "printed-curtain-render/assets/printed-curtain-template/controls.js",
+      "local": "upstream/skills/printed-curtain-render/assets/printed-curtain-template/controls.js",
+      "sha256": "74f16ef301553d5aadfd1ec2884737b1a5c56695d827089215a8d8195a62df20",
+      "url": "https://github.com/vibe-motion/skills/blob/cb3c905e4bc362e02e040035b5c88b13fdd54cf4/printed-curtain-render/assets/printed-curtain-template/controls.js"
+    },
+    {
+      "path": "printed-curtain-render/assets/printed-curtain-template/curtain.js",
+      "local": "upstream/skills/printed-curtain-render/assets/printed-curtain-template/curtain.js",
+      "sha256": "6c2da7cda096a9e066ff6645cedafd12085d0e017d8ced1c8aa7b3c171997c95",
+      "url": "https://github.com/vibe-motion/skills/blob/cb3c905e4bc362e02e040035b5c88b13fdd54cf4/printed-curtain-render/assets/printed-curtain-template/curtain.js"
+    },
+    {
+      "path": "printed-curtain-render/assets/printed-curtain-template/index.html",
+      "local": "upstream/skills/printed-curtain-render/assets/printed-curtain-template/index.html",
+      "sha256": "c90f288cd76738c2dfeceec7cead80f614ac29354decebf354d2615325cfaa01",
+      "url": "https://github.com/vibe-motion/skills/blob/cb3c905e4bc362e02e040035b5c88b13fdd54cf4/printed-curtain-render/assets/printed-curtain-template/index.html"
+    },
+    {
+      "path": "printed-curtain-render/assets/printed-curtain-template/p5.min.js",
+      "local": "upstream/skills/printed-curtain-render/assets/printed-curtain-template/p5.min.js",
+      "sha256": "00a532c56e785c68d7c7bb6f9a084e2c856b71527f22c3260aff4a2f582d80c9",
+      "url": "https://github.com/vibe-motion/skills/blob/cb3c905e4bc362e02e040035b5c88b13fdd54cf4/printed-curtain-render/assets/printed-curtain-template/p5.min.js"
+    },
+    {
+      "path": "printed-curtain-render/assets/printed-curtain-template/point.js",
+      "local": "upstream/skills/printed-curtain-render/assets/printed-curtain-template/point.js",
+      "sha256": "413c7cbbf122d6568958944826ee7d4518fcf81b97344ed1a34bc2d18bfb697f",
+      "url": "https://github.com/vibe-motion/skills/blob/cb3c905e4bc362e02e040035b5c88b13fdd54cf4/printed-curtain-render/assets/printed-curtain-template/point.js"
+    },
+    {
+      "path": "printed-curtain-render/assets/printed-curtain-template/print.js",
+      "local": "upstream/skills/printed-curtain-render/assets/printed-curtain-template/print.js",
+      "sha256": "202c381f2e60b6d5495dc720a8ae28cd7f5b53f0433e2b5c4b06a4e8d68ca90d",
+      "url": "https://github.com/vibe-motion/skills/blob/cb3c905e4bc362e02e040035b5c88b13fdd54cf4/printed-curtain-render/assets/printed-curtain-template/print.js"
+    },
+    {
+      "path": "printed-curtain-render/assets/printed-curtain-template/rigidBody.js",
+      "local": "upstream/skills/printed-curtain-render/assets/printed-curtain-template/rigidBody.js",
+      "sha256": "0b176d18fa32f21e53b1cee47f432ca9c6c8a23cd66b047ba91c23018e12d903",
+      "url": "https://github.com/vibe-motion/skills/blob/cb3c905e4bc362e02e040035b5c88b13fdd54cf4/printed-curtain-render/assets/printed-curtain-template/rigidBody.js"
+    },
+    {
+      "path": "printed-curtain-render/assets/printed-curtain-template/segment.js",
+      "local": "upstream/skills/printed-curtain-render/assets/printed-curtain-template/segment.js",
+      "sha256": "a89497bca5a3df3e1495f3a69bc93ea70b142f79eb6bf5cb46cfcd49d8b1c0b7",
+      "url": "https://github.com/vibe-motion/skills/blob/cb3c905e4bc362e02e040035b5c88b13fdd54cf4/printed-curtain-render/assets/printed-curtain-template/segment.js"
+    },
+    {
+      "path": "printed-curtain-render/assets/printed-curtain-template/sketch.js",
+      "local": "upstream/skills/printed-curtain-render/assets/printed-curtain-template/sketch.js",
+      "sha256": "3aed75b1f669c6901b60aa061045eee2564b10369b9ba4f3bb883efeef7ffc98",
+      "url": "https://github.com/vibe-motion/skills/blob/cb3c905e4bc362e02e040035b5c88b13fdd54cf4/printed-curtain-render/assets/printed-curtain-template/sketch.js"
+    },
+    {
+      "path": "printed-curtain-render/assets/printed-curtain-template/style.css",
+      "local": "upstream/skills/printed-curtain-render/assets/printed-curtain-template/style.css",
+      "sha256": "665cf784c46c38e5aa1b8242e3f6fb756e907c54e7685313c8bfc38a7ed653d8",
+      "url": "https://github.com/vibe-motion/skills/blob/cb3c905e4bc362e02e040035b5c88b13fdd54cf4/printed-curtain-render/assets/printed-curtain-template/style.css"
+    },
+    {
+      "path": "printed-curtain-render/scripts/create_printed_curtain.py",
+      "local": "upstream/skills/printed-curtain-render/scripts/create_printed_curtain.py",
+      "sha256": "eae0ca43d142f0e0940f1a603848559c17e8cba8d148f13aed0caef42a35886e",
+      "url": "https://github.com/vibe-motion/skills/blob/cb3c905e4bc362e02e040035b5c88b13fdd54cf4/printed-curtain-render/scripts/create_printed_curtain.py"
+    },
+    {
+      "path": "remotion-3d-ticker/assets/VerticalTicker.tsx",
+      "local": "upstream/skills/remotion-3d-ticker/assets/VerticalTicker.tsx",
+      "sha256": "d8a4b51cd61c4bfc13bf96d2e0e0ae4e09a0ca971c2f67728571d3826a25219b",
+      "url": "https://github.com/vibe-motion/skills/blob/cb3c905e4bc362e02e040035b5c88b13fdd54cf4/remotion-3d-ticker/assets/VerticalTicker.tsx"
+    }
+  ]
+}

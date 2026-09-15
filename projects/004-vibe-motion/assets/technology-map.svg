@@ -1,0 +1,145 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2400" height="2520" viewBox="0 0 2400 2520" role="img"><title>Vibe Motion 技术能力、效果与实现原理</title><desc>二维React与Remotion；三维Three.js和WebGL；动效技能调用Remotion、GSAP、p5.js等；SRT经过模型分镜、代码生成、HyperFrames渲染与FFmpeg拼接。</desc><rect width="2400" height="2520" fill="#f4f7fb"/>
+<text x="75" y="42" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="26" font-weight="700" dominant-baseline="text-before-edge" fill="#275ed6">VIBE MOTION  /  PROJECT 004 · 技术总览</text>
+<text x="75" y="99" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="68" font-weight="700" dominant-baseline="text-before-edge" fill="#142238">代码如何变成动画与视频</text>
+<text x="75" y="197" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="32" font-weight="400" dominant-baseline="text-before-edge" fill="#52647b">二维 / 三维是画面维度；动效 Skills 是复用方式；SRT 是内容与时间输入。它们可以组合。</text>
+<rect x="75" y="268" width="690" height="157" rx="16" fill="#ffffff" stroke="#d5dfec" stroke-width="2"/>
+<text x="100" y="286" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="24" font-weight="700" dominant-baseline="text-before-edge" fill="#275ed6">输入</text>
+<text x="100" y="323" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="35" font-weight="700" dominant-baseline="text-before-edge" fill="#142238">需求与素材</text>
+<text x="100" y="377" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="27" font-weight="400" dominant-baseline="text-before-edge" fill="#52647b">文字、图片、数据、风格、时长</text>
+<rect x="855" y="268" width="690" height="157" rx="16" fill="#ffffff" stroke="#d5dfec" stroke-width="2"/>
+<text x="880" y="286" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="24" font-weight="700" dominant-baseline="text-before-edge" fill="#275ed6">创作</text>
+<text x="880" y="323" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="35" font-weight="700" dominant-baseline="text-before-edge" fill="#142238">AI 或开发者编写代码</text>
+<text x="880" y="377" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="27" font-weight="400" dominant-baseline="text-before-edge" fill="#52647b">定义对象、构图、运动和时间轴</text>
+<rect x="1635" y="268" width="690" height="157" rx="16" fill="#ffffff" stroke="#d5dfec" stroke-width="2"/>
+<text x="1660" y="286" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="24" font-weight="700" dominant-baseline="text-before-edge" fill="#275ed6">交付</text>
+<text x="1660" y="323" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="35" font-weight="700" dominant-baseline="text-before-edge" fill="#142238">运行、渲染与编码</text>
+<text x="1660" y="377" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="27" font-weight="400" dominant-baseline="text-before-edge" fill="#52647b">得到交互网页、帧序列或视频</text>
+<line x1="781" y1="345" x2="835" y2="345" stroke="#275ed6" stroke-width="4"/>
+<polygon points="835,345 822.7138441335347,351.71195754045885 822.7138441335347,338.28804245954115" fill="#275ed6"/>
+<line x1="1561" y1="345" x2="1615" y2="345" stroke="#275ed6" stroke-width="4"/>
+<polygon points="1615,345 1602.7138441335348,351.71195754045885 1602.7138441335348,338.28804245954115" fill="#275ed6"/>
+<text x="95" y="479" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="27" font-weight="700" dominant-baseline="text-before-edge" fill="#52647b">能力入口</text>
+<text x="470" y="479" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="27" font-weight="700" dominant-baseline="text-before-edge" fill="#52647b">技术与实现原理</text>
+<text x="1350" y="479" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="27" font-weight="700" dominant-baseline="text-before-edge" fill="#52647b">能做出什么效果</text>
+<text x="1850" y="479" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="27" font-weight="700" dominant-baseline="text-before-edge" fill="#52647b">输出与本次验证</text>
+<rect x="75" y="531" width="2250" height="330" rx="16" fill="white" stroke="#d5dfec" stroke-width="2"/>
+<rect x="75" y="531" width="337" height="330" rx="16" fill="#edf3ff" stroke="#d5dfec" stroke-width="2"/>
+<text x="101" y="559" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="29" font-weight="700" dominant-baseline="text-before-edge" fill="#275ed6">01</text>
+<text x="101" y="608" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="43" font-weight="700" dominant-baseline="text-before-edge" fill="#142238">二维动画</text>
+<text x="101" y="673" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="28" font-weight="400" dominant-baseline="text-before-edge" fill="#275ed6">平面元素 + 时间轴</text>
+<text x="101" y="773" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="23" font-weight="400" dominant-baseline="text-before-edge" fill="#52647b">create-vibe-motion</text>
+<line x1="1305" y1="559" x2="1305" y2="833" stroke="#d5dfec" stroke-width="2"/>
+<line x1="1808" y1="559" x2="1808" y2="833" stroke="#d5dfec" stroke-width="2"/>
+<text x="450" y="563" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="36" font-weight="700" dominant-baseline="text-before-edge" fill="#275ed6">React + Remotion</text>
+<text x="450" y="629" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="30" font-weight="400" dominant-baseline="text-before-edge" fill="#52647b">React / HTML / CSS / SVG 描述画面。</text>
+<text x="450" y="676" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="30" font-weight="400" dominant-baseline="text-before-edge" fill="#52647b">Remotion 提供帧号、时间轴和视频制作能力。</text>
+<text x="450" y="723" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="30" font-weight="400" dominant-baseline="text-before-edge" fill="#52647b">代码按帧计算位置、角度、缩放和透明度。</text>
+<text x="450" y="770" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="30" font-weight="400" dominant-baseline="text-before-edge" fill="#52647b">浏览器绘制每帧，再编码为视频。</text>
+<text x="1345" y="566" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="31" font-weight="400" dominant-baseline="text-before-edge" fill="#142238">文字与卡片运动</text>
+<text x="1345" y="616" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="31" font-weight="400" dominant-baseline="text-before-edge" fill="#142238">图表、进度条、字幕</text>
+<text x="1345" y="666" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="31" font-weight="400" dominant-baseline="text-before-edge" fill="#142238">二维转场与讲解画面</text>
+<text x="1345" y="796" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="24" font-weight="400" dominant-baseline="text-before-edge" fill="#52647b">效果由场景代码与素材决定</text>
+<text x="1848" y="567" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="31" font-weight="400" dominant-baseline="text-before-edge" fill="#142238">可编辑工程</text>
+<text x="1848" y="615" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="31" font-weight="400" dominant-baseline="text-before-edge" fill="#142238">MP4 / 按配置导出</text>
+<text x="1848" y="663" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="31" font-weight="400" dominant-baseline="text-before-edge" fill="#142238">可管理成品音频</text>
+<rect x="1843" y="745" width="447" height="87" rx="9" fill="#f3f6fa" stroke="#d5dfec" stroke-width="2"/>
+<text x="1860" y="760" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="24" font-weight="400" dominant-baseline="text-before-edge" fill="#52647b">已实测：5 秒卡片视频</text>
+<text x="1860" y="794" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="24" font-weight="400" dominant-baseline="text-before-edge" fill="#52647b">150 帧，30fps，无音轨</text>
+<rect x="75" y="884" width="2250" height="330" rx="16" fill="white" stroke="#d5dfec" stroke-width="2"/>
+<rect x="75" y="884" width="337" height="330" rx="16" fill="#eaf8f7" stroke="#d5dfec" stroke-width="2"/>
+<text x="101" y="912" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="29" font-weight="700" dominant-baseline="text-before-edge" fill="#087e88">02</text>
+<text x="101" y="961" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="43" font-weight="700" dominant-baseline="text-before-edge" fill="#142238">三维动画</text>
+<text x="101" y="1026" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="28" font-weight="400" dominant-baseline="text-before-edge" fill="#087e88">空间物体 + 灯光相机</text>
+<text x="101" y="1126" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="23" font-weight="400" dominant-baseline="text-before-edge" fill="#52647b">create-vibe-motion-3d</text>
+<line x1="1305" y1="912" x2="1305" y2="1186" stroke="#d5dfec" stroke-width="2"/>
+<line x1="1808" y1="912" x2="1808" y2="1186" stroke="#d5dfec" stroke-width="2"/>
+<text x="450" y="916" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="36" font-weight="700" dominant-baseline="text-before-edge" fill="#087e88">Three.js → WebGL</text>
+<text x="450" y="982" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="30" font-weight="400" dominant-baseline="text-before-edge" fill="#52647b">Three.js 描述几何、材质、灯光和相机。</text>
+<text x="450" y="1029" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="30" font-weight="400" dominant-baseline="text-before-edge" fill="#52647b">WebGL 是此场景使用的底层图形接口。</text>
+<text x="450" y="1076" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="30" font-weight="400" dominant-baseline="text-before-edge" fill="#52647b">按帧计算物体与相机状态，浏览器绘制。</text>
+<text x="450" y="1123" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="30" font-weight="400" dominant-baseline="text-before-edge" fill="#52647b">Puppeteer 抓帧；FFmpeg 可再编码为视频。</text>
+<text x="1345" y="919" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="31" font-weight="400" dominant-baseline="text-before-edge" fill="#142238">旋转物体与镜头移动</text>
+<text x="1345" y="969" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="31" font-weight="400" dominant-baseline="text-before-edge" fill="#142238">地球航线、三维粒子</text>
+<text x="1345" y="1019" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="31" font-weight="400" dominant-baseline="text-before-edge" fill="#142238">空间层次与光影</text>
+<text x="1345" y="1149" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="24" font-weight="400" dominant-baseline="text-before-edge" fill="#52647b">效果由场景代码与素材决定</text>
+<text x="1848" y="920" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="31" font-weight="400" dominant-baseline="text-before-edge" fill="#142238">交互三维场景</text>
+<text x="1848" y="968" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="31" font-weight="400" dominant-baseline="text-before-edge" fill="#142238">原生 PNG / ZIP 帧序列</text>
+<text x="1848" y="1016" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="31" font-weight="400" dominant-baseline="text-before-edge" fill="#142238">额外编码 → MP4</text>
+<rect x="1843" y="1098" width="447" height="87" rx="9" fill="#f3f6fa" stroke="#d5dfec" stroke-width="2"/>
+<text x="1860" y="1113" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="24" font-weight="400" dominant-baseline="text-before-edge" fill="#52647b">已实测：3 秒三维样片</text>
+<text x="1860" y="1147" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="24" font-weight="400" dominant-baseline="text-before-edge" fill="#52647b">90 帧，同帧重复导出一致</text>
+<rect x="75" y="1237" width="2250" height="330" rx="16" fill="white" stroke="#d5dfec" stroke-width="2"/>
+<rect x="75" y="1237" width="337" height="330" rx="16" fill="#f4effb" stroke="#d5dfec" stroke-width="2"/>
+<text x="101" y="1265" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="29" font-weight="700" dominant-baseline="text-before-edge" fill="#7749bd">03</text>
+<text x="101" y="1314" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="43" font-weight="700" dominant-baseline="text-before-edge" fill="#142238">动效技能</text>
+<text x="101" y="1379" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="28" font-weight="400" dominant-baseline="text-before-edge" fill="#7749bd">制作方法 + 模板脚本</text>
+<text x="101" y="1479" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="23" font-weight="400" dominant-baseline="text-before-edge" fill="#52647b">vibe-motion/skills</text>
+<line x1="1305" y1="1265" x2="1305" y2="1539" stroke="#d5dfec" stroke-width="2"/>
+<line x1="1808" y1="1265" x2="1808" y2="1539" stroke="#d5dfec" stroke-width="2"/>
+<text x="450" y="1269" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="36" font-weight="700" dominant-baseline="text-before-edge" fill="#7749bd">按效果选择技术，可跨二维与三维</text>
+<text x="450" y="1335" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="30" font-weight="400" dominant-baseline="text-before-edge" fill="#52647b">Remotion：按视频帧组织组件与动效。</text>
+<text x="450" y="1382" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="30" font-weight="400" dominant-baseline="text-before-edge" fill="#52647b">GSAP：控制属性随时间变化，本身不负责绘图。</text>
+<text x="450" y="1429" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="30" font-weight="400" dominant-baseline="text-before-edge" fill="#52647b">SVG / DOM / Canvas / WebGL：呈现画面。</text>
+<text x="450" y="1476" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="30" font-weight="400" dominant-baseline="text-before-edge" fill="#52647b">p5.js：封装绘图，可配合物理模拟。</text>
+<text x="1345" y="1272" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="31" font-weight="400" dominant-baseline="text-before-edge" fill="#142238">聚光灯：SVG + GSAP</text>
+<text x="1345" y="1322" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="31" font-weight="400" dominant-baseline="text-before-edge" fill="#142238">线帘：p5.js + 物理模拟</text>
+<text x="1345" y="1372" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="31" font-weight="400" dominant-baseline="text-before-edge" fill="#142238">也有照片墙、Logo、K线</text>
+<text x="1345" y="1502" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="24" font-weight="400" dominant-baseline="text-before-edge" fill="#52647b">效果由场景代码与素材决定</text>
+<text x="1848" y="1273" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="31" font-weight="400" dominant-baseline="text-before-edge" fill="#142238">按技能分别交付</text>
+<text x="1848" y="1321" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="31" font-weight="400" dominant-baseline="text-before-edge" fill="#142238">HTML / SVG / 视频等</text>
+<text x="1848" y="1369" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="31" font-weight="400" dominant-baseline="text-before-edge" fill="#142238">不是统一的视频引擎</text>
+<rect x="1843" y="1451" width="447" height="87" rx="9" fill="#f3f6fa" stroke="#d5dfec" stroke-width="2"/>
+<text x="1860" y="1466" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="24" font-weight="400" dominant-baseline="text-before-edge" fill="#52647b">已运行：聚光灯、线帘</text>
+<text x="1860" y="1500" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="24" font-weight="400" dominant-baseline="text-before-edge" fill="#52647b">共 15 项技能，非全部实测</text>
+<text x="75" y="1625" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="34" font-weight="700" dominant-baseline="text-before-edge" fill="#a46a0b">04</text>
+<text x="152" y="1623" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="40" font-weight="700" dominant-baseline="text-before-edge" fill="#142238">SRT 自动成片：让模型决定“这句话怎样演”</text>
+<text x="75" y="1687" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="30" font-weight="400" dominant-baseline="text-before-edge" fill="#52647b">SRT 提供文案与时间戳；语义分镜、视觉方案和代码实现依赖模型判断。</text>
+<rect x="75" y="1752" width="414" height="228" rx="16" fill="#fff9ed" stroke="#e8d6b5" stroke-width="2"/>
+<text x="97" y="1775" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="34" font-weight="700" dominant-baseline="text-before-edge" fill="#a46a0b">SRT 字幕</text>
+<text x="97" y="1827" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="28" font-weight="700" dominant-baseline="text-before-edge" fill="#142238">说什么 / 何时说</text>
+<text x="97" y="1877" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="27" font-weight="400" dominant-baseline="text-before-edge" fill="#52647b">已有时间轴的文案</text>
+<text x="97" y="1917" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="27" font-weight="400" dominant-baseline="text-before-edge" fill="#52647b">字幕空白也要保留</text>
+<line x1="496" y1="1863" x2="527" y2="1863" stroke="#a46a0b" stroke-width="4"/>
+<polygon points="527,1863 514.7138441335347,1869.7119575404588 514.7138441335347,1856.2880424595412" fill="#a46a0b"/>
+<rect x="534" y="1752" width="414" height="228" rx="16" fill="#fff9ed" stroke="#e8d6b5" stroke-width="2"/>
+<text x="556" y="1775" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="34" font-weight="700" dominant-baseline="text-before-edge" fill="#a46a0b">调度模型</text>
+<text x="556" y="1827" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="28" font-weight="700" dominant-baseline="text-before-edge" fill="#142238">理解语义、拆镜头</text>
+<text x="556" y="1877" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="27" font-weight="400" dominant-baseline="text-before-edge" fill="#52647b">Codex 依据任务说明</text>
+<text x="556" y="1917" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="27" font-weight="400" dominant-baseline="text-before-edge" fill="#52647b">分配镜头文案与时长</text>
+<line x1="955" y1="1863" x2="986" y2="1863" stroke="#a46a0b" stroke-width="4"/>
+<polygon points="986,1863 973.7138441335347,1869.7119575404588 973.7138441335347,1856.2880424595412" fill="#a46a0b"/>
+<rect x="993" y="1752" width="414" height="228" rx="16" fill="#fff9ed" stroke="#e8d6b5" stroke-width="2"/>
+<text x="1015" y="1775" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="34" font-weight="700" dominant-baseline="text-before-edge" fill="#a46a0b">Claude Code</text>
+<text x="1015" y="1827" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="28" font-weight="700" dominant-baseline="text-before-edge" fill="#142238">设计效果、编写代码</text>
+<text x="1015" y="1877" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="27" font-weight="400" dominant-baseline="text-before-edge" fill="#52647b">按镜头逐个执行</text>
+<text x="1015" y="1917" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="27" font-weight="400" dominant-baseline="text-before-edge" fill="#52647b">生成 HTML 动画工程</text>
+<line x1="1414" y1="1863" x2="1445" y2="1863" stroke="#a46a0b" stroke-width="4"/>
+<polygon points="1445,1863 1432.7138441335348,1869.7119575404588 1432.7138441335348,1856.2880424595412" fill="#a46a0b"/>
+<rect x="1452" y="1752" width="414" height="228" rx="16" fill="#fff9ed" stroke="#e8d6b5" stroke-width="2"/>
+<text x="1474" y="1775" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="34" font-weight="700" dominant-baseline="text-before-edge" fill="#a46a0b">HyperFrames</text>
+<text x="1474" y="1827" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="28" font-weight="700" dominant-baseline="text-before-edge" fill="#142238">渲染每个镜头</text>
+<text x="1474" y="1877" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="27" font-weight="400" dominant-baseline="text-before-edge" fill="#52647b">执行动画代码</text>
+<text x="1474" y="1917" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="27" font-weight="400" dominant-baseline="text-before-edge" fill="#52647b">输出单镜头 MP4</text>
+<line x1="1873" y1="1863" x2="1904" y2="1863" stroke="#a46a0b" stroke-width="4"/>
+<polygon points="1904,1863 1891.7138441335348,1869.7119575404588 1891.7138441335348,1856.2880424595412" fill="#a46a0b"/>
+<rect x="1911" y="1752" width="414" height="228" rx="16" fill="#fff9ed" stroke="#e8d6b5" stroke-width="2"/>
+<text x="1933" y="1775" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="34" font-weight="700" dominant-baseline="text-before-edge" fill="#a46a0b">FFmpeg</text>
+<text x="1933" y="1827" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="28" font-weight="700" dominant-baseline="text-before-edge" fill="#142238">按顺序拼接</text>
+<text x="1933" y="1877" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="27" font-weight="400" dominant-baseline="text-before-edge" fill="#52647b">镜头视频 → final.mp4</text>
+<text x="1933" y="1917" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="27" font-weight="400" dominant-baseline="text-before-edge" fill="#52647b">当前默认静音画面</text>
+<rect x="75" y="2007" width="2250" height="102" rx="12" fill="#eaf0f8" stroke="#d5dfec" stroke-width="2"/>
+<text x="103" y="2027" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="26" font-weight="700" dominant-baseline="text-before-edge" fill="#275ed6">语义例子</text>
+<text x="288" y="2025" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="30" font-weight="700" dominant-baseline="text-before-edge" fill="#142238">“把信息汇总起来” → 设计散卡片归位 → 编写位置变化代码 → 渲染成镜头</text>
+<text x="288" y="2070" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="26" font-weight="400" dominant-baseline="text-before-edge" fill="#52647b">这是表达方式的示意；同一句话可有不同视觉方案，不是固定关键词套模板。</text>
+<rect x="75" y="2144" width="2250" height="197" rx="16" fill="#13253c" stroke="#13253c" stroke-width="2"/>
+<text x="104" y="2170" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="26" font-weight="700" dominant-baseline="text-before-edge" fill="#b9d582">代码视频的关键原则</text>
+<text x="104" y="2214" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="41" font-weight="700" dominant-baseline="text-before-edge" fill="#ffffff">画面状态 = f（帧号，参数，素材）</text>
+<text x="104" y="2281" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="28" font-weight="400" dominant-baseline="text-before-edge" fill="#becbdc">同一帧应可独立计算，方便拖动、乱序渲染和局部重渲。实时物理动效未必自动满足这一约定。</text>
+<line x1="1185" y1="2174" x2="1185" y2="2254" stroke="#425267" stroke-width="2"/>
+<text x="1230" y="2177" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="30" font-weight="700" dominant-baseline="text-before-edge" fill="#ffffff">AI：理解、设计、写代码</text>
+<text x="1230" y="2223" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="30" font-weight="700" dominant-baseline="text-before-edge" fill="#ffffff">引擎：执行、绘制、输出</text>
+<text x="75" y="2375" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="25" font-weight="700" dominant-baseline="text-before-edge" fill="#a46a0b">验证边界</text>
+<text x="245" y="2375" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="25" font-weight="400" dominant-baseline="text-before-edge" fill="#52647b">完整 auto-motion 尚未实跑；网页 SRT 部分为预先编写的流程示意。配音、音乐和逐字字幕需另行处理。</text>
+<text x="75" y="2426" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="24" font-weight="400" dominant-baseline="text-before-edge" fill="#52647b">来源：github.com/vibe-motion · 四个核心仓库固定版本源码 / 本地实验记录</text>
+<text x="75" y="2465" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="24" font-weight="400" dominant-baseline="text-before-edge" fill="#52647b">研究日期：2026-09-16     /     实现路线按所研究版本整理，并非所有模块必须同时使用。</text>
+</svg>

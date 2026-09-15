@@ -1,0 +1,114 @@
+# create-vibe-motion
+
+Scaffold a production-ready Remotion starter for procedural animation and programmatic video creation.
+
+`create-vibe-motion` helps you bootstrap a ready-to-run Remotion project in seconds, so you can focus on building scenes instead of wiring tooling.
+
+It is designed for creators and developers who want **procedural animation** workflows and want to **make video or motion graphics or animation programmatically**.
+
+Use it when you need a practical starter for code-driven video production, animation templates, and iterative content generation.
+
+## Usage
+
+```bash
+npm create vibe-motion@latest my-app
+cd my-app
+pnpm dev
+```
+
+To make the initial scaffold package download also use a mirror:
+
+```bash
+npm_config_registry=https://registry.npmmirror.com npx create-vibe-motion@latest my-app
+```
+
+Dependencies are installed automatically after scaffolding with pnpm only.
+
+If pnpm is missing, the scaffold first tries to install pnpm via npm, then continues with pnpm.
+
+By default, dependency installation uses `https://registry.npmmirror.com`.
+You can override it with `--registry=<url>` or `npm_config_registry`.
+
+If no directory is provided, it creates `./vibe-motion-app` by default.
+
+On macOS, install triggers a cached Chrome Headless Shell check/install for Remotion and stores it under:
+
+`~/Library/Caches/com.zjucat.create-vive-motion/remotion`
+
+### Options
+
+- `--force`: overwrite files when the target directory is not empty.
+- `--skip-install`: skip automatic dependency installation.
+- `--registry`: specify the package registry used for pnpm/npm bootstrap install.
+
+## Repository Structure
+
+This is a pnpm monorepo with two packages:
+
+```
+packages/
+  create-vibe-motion/   # CLI package (published to npm, zero dependencies)
+  template/             # Template files + dev environment (private, not published)
+scripts/
+  sync-template-to-cli.mjs   # copies template into CLI package before publish
+```
+
+### Where Template Content Comes From
+
+- Files copied by the CLI are controlled by `packages/template/scaffold-manifest.json`.
+- Generated `package.json`: `packages/template/scaffold-template-package.json`.
+- Generated `.gitignore`: `packages/template/scaffold-template-gitignore`.
+
+When adding or removing scaffold files, update `scaffold-manifest.json` first.
+
+Template code is split into `motion/` for user animation code and `remotion/`
+for the Remotion Studio/rendering support layer.
+
+## Development
+
+```bash
+pnpm install              # install all dependencies
+pnpm dev                  # run Remotion Studio
+pnpm lint                 # lint template code
+pnpm run sync-template    # sync template files into CLI package
+pnpm run create:local     # test scaffold generation locally
+```
+
+### Validate a Generated App
+
+```bash
+pnpm run create:local -- /tmp/vibe-motion-test-app
+cd /tmp/vibe-motion-test-app
+pnpm dev
+```
+
+### Common Commands
+
+```bash
+# package dry-run (from CLI package)
+cd packages/create-vibe-motion && pnpm pack --dry-run
+
+# check published version
+npm view create-vibe-motion version
+
+# run scaffold CLI directly
+node packages/create-vibe-motion/bin/create-vibe-motion.mjs my-app
+```
+
+## Release
+
+```bash
+pnpm release patch   # or minor / major
+```
+
+This script: bumps `packages/create-vibe-motion/package.json`, syncs the template, commits, tags, and pushes (`git push --follow-tags`). GitHub Actions then publishes to npm automatically.
+
+## Security / Dependency Policy
+
+- Avoid `pnpm audit fix` in template without manual verification.
+- Prefer pinning known-good versions when upstream has temporary advisories.
+- After dependency updates, always validate by generating a fresh app and running `pnpm install && pnpm audit`.
+
+## Remotion Note
+
+Remotion may render frames out of order and in parallel. Scene animation logic should be frame-deterministic and independently computable per frame.

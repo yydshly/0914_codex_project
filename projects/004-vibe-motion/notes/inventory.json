@@ -1,0 +1,550 @@
+{
+  "date": "2026-09-16",
+  "repositories": [
+    {
+      "name": "create-vibe-motion",
+      "url": "https://github.com/vibe-motion/create-vibe-motion",
+      "commit": "2657ae9abadb89714bdabf0d3aef210e60ce1223",
+      "license_files": [],
+      "skill_entries": [],
+      "selected_file_count": 32
+    },
+    {
+      "name": "create-vibe-motion-3d",
+      "url": "https://github.com/vibe-motion/create-vibe-motion-3d",
+      "commit": "b88aa9999ab37b6202b5d7370a91e85ded0e1919",
+      "license_files": [],
+      "skill_entries": [],
+      "selected_file_count": 13
+    },
+    {
+      "name": "auto-motion",
+      "url": "https://github.com/vibe-motion/auto-motion",
+      "commit": "17ead629d010f7e5495f645d46fafd6876482c32",
+      "license_files": [],
+      "skill_entries": [
+        "exampleFolder/.claude/skills/general-video/SKILL.md",
+        "exampleFolder/.claude/skills/hyperframes-design/SKILL.md",
+        "exampleFolder/.claude/skills/hyperframes-motion/SKILL.md",
+        "exampleFolder/.claude/skills/hyperframes/SKILL.md",
+        "exampleFolder/.claude/skills/hyperframes/cli/SKILL.md",
+        "exampleFolder/.claude/skills/hyperframes/core/SKILL.md",
+        "exampleFolder/.claude/skills/hyperframes/registry/SKILL.md",
+        "exampleFolder/.claude/skills/image-gen/SKILL.md",
+        "exampleFolder/.claude/skills/motion-graphics/SKILL.md"
+      ],
+      "selected_file_count": 7
+    },
+    {
+      "name": "skills",
+      "url": "https://github.com/vibe-motion/skills",
+      "commit": "cb3c905e4bc362e02e040035b5c88b13fdd54cf4",
+      "license_files": [
+        "printed-curtain-render/assets/printed-curtain-template/NOTICE.txt"
+      ],
+      "skill_entries": [
+        "3d-chladni-render/SKILL.md",
+        "brand-launch-video-star/SKILL.md",
+        "claude-typer/SKILL.md",
+        "disney-animation-rule-skill/SKILL.md",
+        "fisheye-motion/SKILL.md",
+        "light-spotlight-render/SKILL.md",
+        "pixel2motion/SKILL.md",
+        "printed-curtain-render/SKILL.md",
+        "procedural-fish-render/SKILL.md",
+        "remotion-3d-ticker/SKILL.md",
+        "remotion-candlestick/SKILL.md",
+        "remotion-vinyl-player/SKILL.md",
+        "ruler-progress-render/SKILL.md",
+        "threejs-earth-render/SKILL.md",
+        "wechat-2d-render/SKILL.md"
+      ],
+      "selected_file_count": 17
+    }
+  ],
+  "files": [
+    {
+      "repo": "create-vibe-motion",
+      "path": "README.md",
+      "local": "upstream/create-vibe-motion/README.md",
+      "sha256": "0b4202c6164d47e64a40f1e799763d5ea41211e07d2b0c1e94a9b6013bbdc823",
+      "url": "https://github.com/vibe-motion/create-vibe-motion/blob/2657ae9abadb89714bdabf0d3aef210e60ce1223/README.md"
+    },
+    {
+      "repo": "create-vibe-motion",
+      "path": "package.json",
+      "local": "upstream/create-vibe-motion/package.json",
+      "sha256": "8753090b5fba40205bfd8f694b712831d8f8eea7028befc1d5b2a7c193c526ab",
+      "url": "https://github.com/vibe-motion/create-vibe-motion/blob/2657ae9abadb89714bdabf0d3aef210e60ce1223/package.json"
+    },
+    {
+      "repo": "create-vibe-motion",
+      "path": "packages/template/AGENTS.md",
+      "local": "upstream/create-vibe-motion/packages/template/AGENTS.md",
+      "sha256": "d7b2ac59259db5aed3d3d127eafc0102d9dbcabf1c801ee1709cde800fc7307c",
+      "url": "https://github.com/vibe-motion/create-vibe-motion/blob/2657ae9abadb89714bdabf0d3aef210e60ce1223/packages/template/AGENTS.md"
+    },
+    {
+      "repo": "create-vibe-motion",
+      "path": "packages/template/eslint.config.js",
+      "local": "upstream/create-vibe-motion/packages/template/eslint.config.js",
+      "sha256": "75d9f48bdc5214d73f5fd5862272d0767948ce2ced55a507fe5c5a9496723ec9",
+      "url": "https://github.com/vibe-motion/create-vibe-motion/blob/2657ae9abadb89714bdabf0d3aef210e60ce1223/packages/template/eslint.config.js"
+    },
+    {
+      "repo": "create-vibe-motion",
+      "path": "packages/template/motion/Scene.jsx",
+      "local": "upstream/create-vibe-motion/packages/template/motion/Scene.jsx",
+      "sha256": "253f0f7e4fd8f6165701a1e8f90d2417a34d4f292d5a5cf804486a83679dd33f",
+      "url": "https://github.com/vibe-motion/create-vibe-motion/blob/2657ae9abadb89714bdabf0d3aef210e60ce1223/packages/template/motion/Scene.jsx"
+    },
+    {
+      "repo": "create-vibe-motion",
+      "path": "packages/template/motion/composition-id.js",
+      "local": "upstream/create-vibe-motion/packages/template/motion/composition-id.js",
+      "sha256": "f55f7e3dded2925f27faef0c2534d6a4e2dae54d35a621fb7935144ba92f380f",
+      "url": "https://github.com/vibe-motion/create-vibe-motion/blob/2657ae9abadb89714bdabf0d3aef210e60ce1223/packages/template/motion/composition-id.js"
+    },
+    {
+      "repo": "create-vibe-motion",
+      "path": "packages/template/motion/config.js",
+      "local": "upstream/create-vibe-motion/packages/template/motion/config.js",
+      "sha256": "ceb2c5cd4a02ed2b5ec4f595f246110517dd7789592c8137579bce429294f721",
+      "url": "https://github.com/vibe-motion/create-vibe-motion/blob/2657ae9abadb89714bdabf0d3aef210e60ce1223/packages/template/motion/config.js"
+    },
+    {
+      "repo": "create-vibe-motion",
+      "path": "packages/template/motion/plugin.js",
+      "local": "upstream/create-vibe-motion/packages/template/motion/plugin.js",
+      "sha256": "6d3df599d05e8bced9469dedbd0565653a4489e7330179281c0ec47c1de27993",
+      "url": "https://github.com/vibe-motion/create-vibe-motion/blob/2657ae9abadb89714bdabf0d3aef210e60ce1223/packages/template/motion/plugin.js"
+    },
+    {
+      "repo": "create-vibe-motion",
+      "path": "packages/template/motion/project.js",
+      "local": "upstream/create-vibe-motion/packages/template/motion/project.js",
+      "sha256": "062f6890c63a46f974b4784efe295e17676391fb10c05628b425949105951a6e",
+      "url": "https://github.com/vibe-motion/create-vibe-motion/blob/2657ae9abadb89714bdabf0d3aef210e60ce1223/packages/template/motion/project.js"
+    },
+    {
+      "repo": "create-vibe-motion",
+      "path": "packages/template/motion/render-presets/default.json",
+      "local": "upstream/create-vibe-motion/packages/template/motion/render-presets/default.json",
+      "sha256": "734a060972b4484297af2afbb4b19be989c9882f8d2322d384473b21659c4f71",
+      "url": "https://github.com/vibe-motion/create-vibe-motion/blob/2657ae9abadb89714bdabf0d3aef210e60ce1223/packages/template/motion/render-presets/default.json"
+    },
+    {
+      "repo": "create-vibe-motion",
+      "path": "packages/template/motion/timeline.js",
+      "local": "upstream/create-vibe-motion/packages/template/motion/timeline.js",
+      "sha256": "c36fe3115e4487f1dba003d8bc89dad3564bec17ced7483242037518c7019326",
+      "url": "https://github.com/vibe-motion/create-vibe-motion/blob/2657ae9abadb89714bdabf0d3aef210e60ce1223/packages/template/motion/timeline.js"
+    },
+    {
+      "repo": "create-vibe-motion",
+      "path": "packages/template/package.json",
+      "local": "upstream/create-vibe-motion/packages/template/package.json",
+      "sha256": "b228aca79e2831d7a8dd792efe75402b4d3bd2a1acd3e4dbf09439c8bd5bdee2",
+      "url": "https://github.com/vibe-motion/create-vibe-motion/blob/2657ae9abadb89714bdabf0d3aef210e60ce1223/packages/template/package.json"
+    },
+    {
+      "repo": "create-vibe-motion",
+      "path": "packages/template/public/.vibe-motion/audio-tracks.json",
+      "local": "upstream/create-vibe-motion/packages/template/public/.vibe-motion/audio-tracks.json",
+      "sha256": "a79c8b91890f8594da31bc8a02fc5a78caab393cc68bcb27551c86290b24b19f",
+      "url": "https://github.com/vibe-motion/create-vibe-motion/blob/2657ae9abadb89714bdabf0d3aef210e60ce1223/packages/template/public/.vibe-motion/audio-tracks.json"
+    },
+    {
+      "repo": "create-vibe-motion",
+      "path": "packages/template/remotion.config.js",
+      "local": "upstream/create-vibe-motion/packages/template/remotion.config.js",
+      "sha256": "36afeb4d367459fad7a9826265cad1b10ebe051b1647d50963a4bc05fd1edce5",
+      "url": "https://github.com/vibe-motion/create-vibe-motion/blob/2657ae9abadb89714bdabf0d3aef210e60ce1223/packages/template/remotion.config.js"
+    },
+    {
+      "repo": "create-vibe-motion",
+      "path": "packages/template/remotion/AudioTracks.jsx",
+      "local": "upstream/create-vibe-motion/packages/template/remotion/AudioTracks.jsx",
+      "sha256": "79c7b9856ae3ae700cbae8eef42eb6a8dfeba2d38bedb3a70980e0d5b473f8cb",
+      "url": "https://github.com/vibe-motion/create-vibe-motion/blob/2657ae9abadb89714bdabf0d3aef210e60ce1223/packages/template/remotion/AudioTracks.jsx"
+    },
+    {
+      "repo": "create-vibe-motion",
+      "path": "packages/template/remotion/CompositionRoot.jsx",
+      "local": "upstream/create-vibe-motion/packages/template/remotion/CompositionRoot.jsx",
+      "sha256": "e2920971f9636dbe026eecada13b3c5f431183ee810de635912579f9669b816a",
+      "url": "https://github.com/vibe-motion/create-vibe-motion/blob/2657ae9abadb89714bdabf0d3aef210e60ce1223/packages/template/remotion/CompositionRoot.jsx"
+    },
+    {
+      "repo": "create-vibe-motion",
+      "path": "packages/template/remotion/ProjectRoot.jsx",
+      "local": "upstream/create-vibe-motion/packages/template/remotion/ProjectRoot.jsx",
+      "sha256": "445a099af0d8cb237aae76f5b4232547804d93037b6d2e2abfc7d4aa6326ddaf",
+      "url": "https://github.com/vibe-motion/create-vibe-motion/blob/2657ae9abadb89714bdabf0d3aef210e60ce1223/packages/template/remotion/ProjectRoot.jsx"
+    },
+    {
+      "repo": "create-vibe-motion",
+      "path": "packages/template/remotion/StudioAudioDropTarget.jsx",
+      "local": "upstream/create-vibe-motion/packages/template/remotion/StudioAudioDropTarget.jsx",
+      "sha256": "c4849939735567403ec68805d039984542b7a9aa62b5e4fb48ec14cdc6cb1bd5",
+      "url": "https://github.com/vibe-motion/create-vibe-motion/blob/2657ae9abadb89714bdabf0d3aef210e60ce1223/packages/template/remotion/StudioAudioDropTarget.jsx"
+    },
+    {
+      "repo": "create-vibe-motion",
+      "path": "packages/template/remotion/VideoComposition.jsx",
+      "local": "upstream/create-vibe-motion/packages/template/remotion/VideoComposition.jsx",
+      "sha256": "89f38749a6c4fdda3369847fb44f7162deae2fbd5c562b645d4c214eb0a70bd8",
+      "url": "https://github.com/vibe-motion/create-vibe-motion/blob/2657ae9abadb89714bdabf0d3aef210e60ce1223/packages/template/remotion/VideoComposition.jsx"
+    },
+    {
+      "repo": "create-vibe-motion",
+      "path": "packages/template/remotion/audioTrackManifest.js",
+      "local": "upstream/create-vibe-motion/packages/template/remotion/audioTrackManifest.js",
+      "sha256": "2c1b465d6cc71a2604d3136be98296caaf5e08ef71969744c8068b10f93cc6c0",
+      "url": "https://github.com/vibe-motion/create-vibe-motion/blob/2657ae9abadb89714bdabf0d3aef210e60ce1223/packages/template/remotion/audioTrackManifest.js"
+    },
+    {
+      "repo": "create-vibe-motion",
+      "path": "packages/template/remotion/index.jsx",
+      "local": "upstream/create-vibe-motion/packages/template/remotion/index.jsx",
+      "sha256": "52eb7ff317827a124aa06966d8d9f25f4681431d87966d40335f7b17ac2ca95e",
+      "url": "https://github.com/vibe-motion/create-vibe-motion/blob/2657ae9abadb89714bdabf0d3aef210e60ce1223/packages/template/remotion/index.jsx"
+    },
+    {
+      "repo": "create-vibe-motion",
+      "path": "packages/template/remotion/pluginRuntime.js",
+      "local": "upstream/create-vibe-motion/packages/template/remotion/pluginRuntime.js",
+      "sha256": "6ab08801c34113f13f842034a3b6a0abd76badb93bbe7d34d3c8b0c77ed35bb2",
+      "url": "https://github.com/vibe-motion/create-vibe-motion/blob/2657ae9abadb89714bdabf0d3aef210e60ce1223/packages/template/remotion/pluginRuntime.js"
+    },
+    {
+      "repo": "create-vibe-motion",
+      "path": "packages/template/scaffold-manifest.json",
+      "local": "upstream/create-vibe-motion/packages/template/scaffold-manifest.json",
+      "sha256": "b6bb3f710b5799bc475279a2fbcdd7dfe8feddfa10763e29c6a40b6a2a796447",
+      "url": "https://github.com/vibe-motion/create-vibe-motion/blob/2657ae9abadb89714bdabf0d3aef210e60ce1223/packages/template/scaffold-manifest.json"
+    },
+    {
+      "repo": "create-vibe-motion",
+      "path": "packages/template/scaffold-template-package.json",
+      "local": "upstream/create-vibe-motion/packages/template/scaffold-template-package.json",
+      "sha256": "d9fbb25eb9d0058d333c8e9192a6611444b47a6524637261ad63c4809a687899",
+      "url": "https://github.com/vibe-motion/create-vibe-motion/blob/2657ae9abadb89714bdabf0d3aef210e60ce1223/packages/template/scaffold-template-package.json"
+    },
+    {
+      "repo": "create-vibe-motion",
+      "path": "packages/template/scripts/remotion-browser-executable.mjs",
+      "local": "upstream/create-vibe-motion/packages/template/scripts/remotion-browser-executable.mjs",
+      "sha256": "2477737437b334e2204c29507ea9f28a87722ea2165c39d0f71c34cf78bd8af3",
+      "url": "https://github.com/vibe-motion/create-vibe-motion/blob/2657ae9abadb89714bdabf0d3aef210e60ce1223/packages/template/scripts/remotion-browser-executable.mjs"
+    },
+    {
+      "repo": "create-vibe-motion",
+      "path": "packages/template/scripts/remotion-cli.mjs",
+      "local": "upstream/create-vibe-motion/packages/template/scripts/remotion-cli.mjs",
+      "sha256": "b7debfe6d744fa86f7f425614788ba95fdb241dafcb2857bb4acd532b5ef72b2",
+      "url": "https://github.com/vibe-motion/create-vibe-motion/blob/2657ae9abadb89714bdabf0d3aef210e60ce1223/packages/template/scripts/remotion-cli.mjs"
+    },
+    {
+      "repo": "create-vibe-motion",
+      "path": "packages/template/scripts/remotion-ensure-browser.mjs",
+      "local": "upstream/create-vibe-motion/packages/template/scripts/remotion-ensure-browser.mjs",
+      "sha256": "cb8a787609c286c7a1aa8cb6f0a138206f502502031b17b8fe7ef509f9c6b6fe",
+      "url": "https://github.com/vibe-motion/create-vibe-motion/blob/2657ae9abadb89714bdabf0d3aef210e60ce1223/packages/template/scripts/remotion-ensure-browser.mjs"
+    },
+    {
+      "repo": "create-vibe-motion",
+      "path": "packages/template/scripts/remotion-render-demo.mjs",
+      "local": "upstream/create-vibe-motion/packages/template/scripts/remotion-render-demo.mjs",
+      "sha256": "d0503466aac9310d0b2280d79746eb5c5aff11c3c6c2f8fda9848b7a7ebfed33",
+      "url": "https://github.com/vibe-motion/create-vibe-motion/blob/2657ae9abadb89714bdabf0d3aef210e60ce1223/packages/template/scripts/remotion-render-demo.mjs"
+    },
+    {
+      "repo": "create-vibe-motion",
+      "path": "packages/template/scripts/remotion-render.mjs",
+      "local": "upstream/create-vibe-motion/packages/template/scripts/remotion-render.mjs",
+      "sha256": "2fe1413fc059dd155805d8f6bc3ef0a5a04d457426ba5461e0d5f54704fc7b70",
+      "url": "https://github.com/vibe-motion/create-vibe-motion/blob/2657ae9abadb89714bdabf0d3aef210e60ce1223/packages/template/scripts/remotion-render.mjs"
+    },
+    {
+      "repo": "create-vibe-motion-3d",
+      "path": "README.md",
+      "local": "upstream/create-vibe-motion-3d/README.md",
+      "sha256": "cc92e422829ed9fee0566b68c6de3e566f5ad337e7371489a2f3503f14ff0fc9",
+      "url": "https://github.com/vibe-motion/create-vibe-motion-3d/blob/b88aa9999ab37b6202b5d7370a91e85ded0e1919/README.md"
+    },
+    {
+      "repo": "create-vibe-motion-3d",
+      "path": "package.json",
+      "local": "upstream/create-vibe-motion-3d/package.json",
+      "sha256": "257b5d4c395422ee6fb37c5d8fc35e7d93b53a6b1ac2517f35e86e20bfaa160d",
+      "url": "https://github.com/vibe-motion/create-vibe-motion-3d/blob/b88aa9999ab37b6202b5d7370a91e85ded0e1919/package.json"
+    },
+    {
+      "repo": "create-vibe-motion-3d",
+      "path": "packages/template/README.md",
+      "local": "upstream/create-vibe-motion-3d/packages/template/README.md",
+      "sha256": "ed8b1fe9cc8d5c37691d734aa144a036db1e9814dd549a1cdd3d2a432c4b06e3",
+      "url": "https://github.com/vibe-motion/create-vibe-motion-3d/blob/b88aa9999ab37b6202b5d7370a91e85ded0e1919/packages/template/README.md"
+    },
+    {
+      "repo": "create-vibe-motion-3d",
+      "path": "packages/template/index.html",
+      "local": "upstream/create-vibe-motion-3d/packages/template/index.html",
+      "sha256": "cd4bf805320afc6eb698827830c581693a4ff8188ed3766f3b08e84356328a78",
+      "url": "https://github.com/vibe-motion/create-vibe-motion-3d/blob/b88aa9999ab37b6202b5d7370a91e85ded0e1919/packages/template/index.html"
+    },
+    {
+      "repo": "create-vibe-motion-3d",
+      "path": "packages/template/index.js",
+      "local": "upstream/create-vibe-motion-3d/packages/template/index.js",
+      "sha256": "bc28727c61c18a468013850648f12b041a487031c4c792526bbfae108c77f58e",
+      "url": "https://github.com/vibe-motion/create-vibe-motion-3d/blob/b88aa9999ab37b6202b5d7370a91e85ded0e1919/packages/template/index.js"
+    },
+    {
+      "repo": "create-vibe-motion-3d",
+      "path": "packages/template/package.json",
+      "local": "upstream/create-vibe-motion-3d/packages/template/package.json",
+      "sha256": "e5449a3785d1f9d77bba7a8d829611d699d9b49ddeb0e30cdf2be2f564d07357",
+      "url": "https://github.com/vibe-motion/create-vibe-motion-3d/blob/b88aa9999ab37b6202b5d7370a91e85ded0e1919/packages/template/package.json"
+    },
+    {
+      "repo": "create-vibe-motion-3d",
+      "path": "packages/template/scaffold-manifest.json",
+      "local": "upstream/create-vibe-motion-3d/packages/template/scaffold-manifest.json",
+      "sha256": "695f949d7ae4b695a14d32f1f135ea58fe60da849e0c2fbcbb1cea546cb4c877",
+      "url": "https://github.com/vibe-motion/create-vibe-motion-3d/blob/b88aa9999ab37b6202b5d7370a91e85ded0e1919/packages/template/scaffold-manifest.json"
+    },
+    {
+      "repo": "create-vibe-motion-3d",
+      "path": "packages/template/scaffold-template-package.json",
+      "local": "upstream/create-vibe-motion-3d/packages/template/scaffold-template-package.json",
+      "sha256": "aae058aa760413e56cd6f304ed9ea51842646fd01b3385bd34ec0e17138adccc",
+      "url": "https://github.com/vibe-motion/create-vibe-motion-3d/blob/b88aa9999ab37b6202b5d7370a91e85ded0e1919/packages/template/scaffold-template-package.json"
+    },
+    {
+      "repo": "create-vibe-motion-3d",
+      "path": "packages/template/scripts/export-api.mjs",
+      "local": "upstream/create-vibe-motion-3d/packages/template/scripts/export-api.mjs",
+      "sha256": "399a90da78bea26c3aac48289030e099297c4c1459a8d07f50c0740646254abd",
+      "url": "https://github.com/vibe-motion/create-vibe-motion-3d/blob/b88aa9999ab37b6202b5d7370a91e85ded0e1919/packages/template/scripts/export-api.mjs"
+    },
+    {
+      "repo": "create-vibe-motion-3d",
+      "path": "packages/template/src/sceneControls.js",
+      "local": "upstream/create-vibe-motion-3d/packages/template/src/sceneControls.js",
+      "sha256": "94c8d7a636b2e210dffbfa924be9c65fb941411dfa5c49db08a5a216c80c3fd0",
+      "url": "https://github.com/vibe-motion/create-vibe-motion-3d/blob/b88aa9999ab37b6202b5d7370a91e85ded0e1919/packages/template/src/sceneControls.js"
+    },
+    {
+      "repo": "auto-motion",
+      "path": "AGENTS.md",
+      "local": "upstream/auto-motion/AGENTS.md",
+      "sha256": "638550bd915a30c78a5950984e29fb2ac747c8c3284dc9d53a80d990d1fbcee2",
+      "url": "https://github.com/vibe-motion/auto-motion/blob/17ead629d010f7e5495f645d46fafd6876482c32/AGENTS.md"
+    },
+    {
+      "repo": "auto-motion",
+      "path": "PROMPT.md",
+      "local": "upstream/auto-motion/PROMPT.md",
+      "sha256": "2b7d1854d7cdde94e50f717faed14a0c14268f93846884c389baa8061350af1a",
+      "url": "https://github.com/vibe-motion/auto-motion/blob/17ead629d010f7e5495f645d46fafd6876482c32/PROMPT.md"
+    },
+    {
+      "repo": "auto-motion",
+      "path": "README.md",
+      "local": "upstream/auto-motion/README.md",
+      "sha256": "049be1c0871f11bc7f578fccca4ab51bacbfb56bde5094f7784363d0f380d03a",
+      "url": "https://github.com/vibe-motion/auto-motion/blob/17ead629d010f7e5495f645d46fafd6876482c32/README.md"
+    },
+    {
+      "repo": "auto-motion",
+      "path": "auto-test/run.sh",
+      "local": "upstream/auto-motion/auto-test/run.sh",
+      "sha256": "c553086cb25fbd89342656d934901792ebaa08317b742df68ee2734285b4218e",
+      "url": "https://github.com/vibe-motion/auto-motion/blob/17ead629d010f7e5495f645d46fafd6876482c32/auto-test/run.sh"
+    },
+    {
+      "repo": "auto-motion",
+      "path": "auto-test/transcription.srt",
+      "local": "upstream/auto-motion/auto-test/transcription.srt",
+      "sha256": "e2f69ea7188b9b63944f0dce3a5327e951adfb1f0845f737c9e63cb24c6eb0ad",
+      "url": "https://github.com/vibe-motion/auto-motion/blob/17ead629d010f7e5495f645d46fafd6876482c32/auto-test/transcription.srt"
+    },
+    {
+      "repo": "auto-motion",
+      "path": "auto-test/validate.sh",
+      "local": "upstream/auto-motion/auto-test/validate.sh",
+      "sha256": "0f5c4246d7de66863513eea238ea36a203d3539a8cdecde9895548147a347e4f",
+      "url": "https://github.com/vibe-motion/auto-motion/blob/17ead629d010f7e5495f645d46fafd6876482c32/auto-test/validate.sh"
+    },
+    {
+      "repo": "auto-motion",
+      "path": "exampleFolder/run-claude-ai.sh",
+      "local": "upstream/auto-motion/exampleFolder/run-claude-ai.sh",
+      "sha256": "b71926213c7887106ae23667e71d0a9d9e3df7129c2f01a26707a6e0b2593087",
+      "url": "https://github.com/vibe-motion/auto-motion/blob/17ead629d010f7e5495f645d46fafd6876482c32/exampleFolder/run-claude-ai.sh"
+    },
+    {
+      "repo": "skills",
+      "path": "3d-chladni-render/SKILL.md",
+      "local": "upstream/skills/3d-chladni-render/SKILL.md",
+      "sha256": "e3ea7d0c98f6d5089fa06f79c7e7c4f2cf948e6c37431fa8aa4b6fac82cae91b",
+      "url": "https://github.com/vibe-motion/skills/blob/cb3c905e4bc362e02e040035b5c88b13fdd54cf4/3d-chladni-render/SKILL.md"
+    },
+    {
+      "repo": "skills",
+      "path": "README.md",
+      "local": "upstream/skills/README.md",
+      "sha256": "f24dbd1d394cf8427432cc3d3347909f08e7af011431b3dede898728ec5a1108",
+      "url": "https://github.com/vibe-motion/skills/blob/cb3c905e4bc362e02e040035b5c88b13fdd54cf4/README.md"
+    },
+    {
+      "repo": "skills",
+      "path": "brand-launch-video-star/SKILL.md",
+      "local": "upstream/skills/brand-launch-video-star/SKILL.md",
+      "sha256": "db0f52e1406ff2bbabde4ec9981db01a19b7d090259f492abc9b5b22e885328d",
+      "url": "https://github.com/vibe-motion/skills/blob/cb3c905e4bc362e02e040035b5c88b13fdd54cf4/brand-launch-video-star/SKILL.md"
+    },
+    {
+      "repo": "skills",
+      "path": "claude-typer/SKILL.md",
+      "local": "upstream/skills/claude-typer/SKILL.md",
+      "sha256": "ae365910590f0717ec96594c60a580a66a2969bdc9d97631eb0e9aaa5b9dea41",
+      "url": "https://github.com/vibe-motion/skills/blob/cb3c905e4bc362e02e040035b5c88b13fdd54cf4/claude-typer/SKILL.md"
+    },
+    {
+      "repo": "skills",
+      "path": "disney-animation-rule-skill/SKILL.md",
+      "local": "upstream/skills/disney-animation-rule-skill/SKILL.md",
+      "sha256": "abeb405a3271578567dc4d785ed99f94b29f7192fbacc720931083238848924b",
+      "url": "https://github.com/vibe-motion/skills/blob/cb3c905e4bc362e02e040035b5c88b13fdd54cf4/disney-animation-rule-skill/SKILL.md"
+    },
+    {
+      "repo": "skills",
+      "path": "fisheye-motion/SKILL.md",
+      "local": "upstream/skills/fisheye-motion/SKILL.md",
+      "sha256": "1db8e8a9295430cd158204c07aa053e1191c88e288534cda7675b156bbdc6d56",
+      "url": "https://github.com/vibe-motion/skills/blob/cb3c905e4bc362e02e040035b5c88b13fdd54cf4/fisheye-motion/SKILL.md"
+    },
+    {
+      "repo": "skills",
+      "path": "light-spotlight-render/SKILL.md",
+      "local": "upstream/skills/light-spotlight-render/SKILL.md",
+      "sha256": "5419ecf63be72af5b97d6d05c1106e3fec9b3d7819281cd81f493289259d221a",
+      "url": "https://github.com/vibe-motion/skills/blob/cb3c905e4bc362e02e040035b5c88b13fdd54cf4/light-spotlight-render/SKILL.md"
+    },
+    {
+      "repo": "skills",
+      "path": "pixel2motion/SKILL.md",
+      "local": "upstream/skills/pixel2motion/SKILL.md",
+      "sha256": "2ad235160e6030a12bcf66042c4accad7ba89473af0e511698687e5f14a3c7e4",
+      "url": "https://github.com/vibe-motion/skills/blob/cb3c905e4bc362e02e040035b5c88b13fdd54cf4/pixel2motion/SKILL.md"
+    },
+    {
+      "repo": "skills",
+      "path": "printed-curtain-render/SKILL.md",
+      "local": "upstream/skills/printed-curtain-render/SKILL.md",
+      "sha256": "ffecb38665f614a5a6ec9341c17c52ab0e4348df680cd9511e2725a6cfb482c1",
+      "url": "https://github.com/vibe-motion/skills/blob/cb3c905e4bc362e02e040035b5c88b13fdd54cf4/printed-curtain-render/SKILL.md"
+    },
+    {
+      "repo": "skills",
+      "path": "printed-curtain-render/assets/printed-curtain-template/NOTICE.txt",
+      "local": "upstream/skills/printed-curtain-render/assets/printed-curtain-template/NOTICE.txt",
+      "sha256": "2e3954b0ae0276edc1a2f0e6e0a25f7f4533769e17808d4b8de397e02abaf25b",
+      "url": "https://github.com/vibe-motion/skills/blob/cb3c905e4bc362e02e040035b5c88b13fdd54cf4/printed-curtain-render/assets/printed-curtain-template/NOTICE.txt"
+    },
+    {
+      "repo": "skills",
+      "path": "procedural-fish-render/SKILL.md",
+      "local": "upstream/skills/procedural-fish-render/SKILL.md",
+      "sha256": "e6f1fa3f131fce65284aee3a690de2843c137341b5ffb2359cf11e9bda08f7f4",
+      "url": "https://github.com/vibe-motion/skills/blob/cb3c905e4bc362e02e040035b5c88b13fdd54cf4/procedural-fish-render/SKILL.md"
+    },
+    {
+      "repo": "skills",
+      "path": "remotion-3d-ticker/SKILL.md",
+      "local": "upstream/skills/remotion-3d-ticker/SKILL.md",
+      "sha256": "44ab9725bc61e6d496c3e725ab60e84d6f5ffbfa987e97b9bcee0ec4e81ec2f9",
+      "url": "https://github.com/vibe-motion/skills/blob/cb3c905e4bc362e02e040035b5c88b13fdd54cf4/remotion-3d-ticker/SKILL.md"
+    },
+    {
+      "repo": "skills",
+      "path": "remotion-candlestick/SKILL.md",
+      "local": "upstream/skills/remotion-candlestick/SKILL.md",
+      "sha256": "a8dc6088db9135446d60585df50e93b1e270cc04b64b77824fb08b894534df4c",
+      "url": "https://github.com/vibe-motion/skills/blob/cb3c905e4bc362e02e040035b5c88b13fdd54cf4/remotion-candlestick/SKILL.md"
+    },
+    {
+      "repo": "skills",
+      "path": "remotion-vinyl-player/SKILL.md",
+      "local": "upstream/skills/remotion-vinyl-player/SKILL.md",
+      "sha256": "2772f7e64a4c370bd22bd7702197ad2002e881c804ccdfc50ed4711ce9f1abd3",
+      "url": "https://github.com/vibe-motion/skills/blob/cb3c905e4bc362e02e040035b5c88b13fdd54cf4/remotion-vinyl-player/SKILL.md"
+    },
+    {
+      "repo": "skills",
+      "path": "ruler-progress-render/SKILL.md",
+      "local": "upstream/skills/ruler-progress-render/SKILL.md",
+      "sha256": "6bc9938857da7dd88628482a751f975ffb2b7810559899be5faf32f4ec03f5c9",
+      "url": "https://github.com/vibe-motion/skills/blob/cb3c905e4bc362e02e040035b5c88b13fdd54cf4/ruler-progress-render/SKILL.md"
+    },
+    {
+      "repo": "skills",
+      "path": "threejs-earth-render/SKILL.md",
+      "local": "upstream/skills/threejs-earth-render/SKILL.md",
+      "sha256": "1fb25d0785a9744446438bd42de0937878f6a661aa26a8cf952f441ee00b9322",
+      "url": "https://github.com/vibe-motion/skills/blob/cb3c905e4bc362e02e040035b5c88b13fdd54cf4/threejs-earth-render/SKILL.md"
+    },
+    {
+      "repo": "skills",
+      "path": "wechat-2d-render/SKILL.md",
+      "local": "upstream/skills/wechat-2d-render/SKILL.md",
+      "sha256": "2c7de0c376cb44fa539a2c4848c60468c52ded840d00b79fa6ba9566d2839ee3",
+      "url": "https://github.com/vibe-motion/skills/blob/cb3c905e4bc362e02e040035b5c88b13fdd54cf4/wechat-2d-render/SKILL.md"
+    },
+    {
+      "repo": "create-vibe-motion",
+      "path": "packages/create-vibe-motion/package.json",
+      "local": "upstream/create-vibe-motion/packages/create-vibe-motion/package.json",
+      "sha256": "05cc309e7af17b7edc6b59275c2e493b5fa9228a8e13a890231e1d520f1eb10b",
+      "url": "https://github.com/vibe-motion/create-vibe-motion/blob/2657ae9abadb89714bdabf0d3aef210e60ce1223/packages/create-vibe-motion/package.json"
+    },
+    {
+      "repo": "create-vibe-motion",
+      "path": "packages/create-vibe-motion/bin/create-vibe-motion.mjs",
+      "local": "upstream/create-vibe-motion/packages/create-vibe-motion/bin/create-vibe-motion.mjs",
+      "sha256": "f56a54881176bce5dd86b166d7903f083f40f62a8fa256e9c3fa75e3fae4c869",
+      "url": "https://github.com/vibe-motion/create-vibe-motion/blob/2657ae9abadb89714bdabf0d3aef210e60ce1223/packages/create-vibe-motion/bin/create-vibe-motion.mjs"
+    },
+    {
+      "repo": "create-vibe-motion",
+      "path": "scripts/sync-template-to-cli.mjs",
+      "local": "upstream/create-vibe-motion/scripts/sync-template-to-cli.mjs",
+      "sha256": "d9f99e094a9024a0c504b93e77c1c01932813384c1179e8e1c5eeacdce86ae4e",
+      "url": "https://github.com/vibe-motion/create-vibe-motion/blob/2657ae9abadb89714bdabf0d3aef210e60ce1223/scripts/sync-template-to-cli.mjs"
+    },
+    {
+      "repo": "create-vibe-motion-3d",
+      "path": "packages/create-vibe-motion-3d/package.json",
+      "local": "upstream/create-vibe-motion-3d/packages/create-vibe-motion-3d/package.json",
+      "sha256": "aff63aedf5be460dd0093599e8afb6266ce2fc79ac780d8b04c1760ec5ac2b89",
+      "url": "https://github.com/vibe-motion/create-vibe-motion-3d/blob/b88aa9999ab37b6202b5d7370a91e85ded0e1919/packages/create-vibe-motion-3d/package.json"
+    },
+    {
+      "repo": "create-vibe-motion-3d",
+      "path": "packages/create-vibe-motion-3d/bin/create-vibe-motion-3d.mjs",
+      "local": "upstream/create-vibe-motion-3d/packages/create-vibe-motion-3d/bin/create-vibe-motion-3d.mjs",
+      "sha256": "7d7a641ca744399566deeff426acdc14d23641536e5c1dbf5b5a057b28b406d3",
+      "url": "https://github.com/vibe-motion/create-vibe-motion-3d/blob/b88aa9999ab37b6202b5d7370a91e85ded0e1919/packages/create-vibe-motion-3d/bin/create-vibe-motion-3d.mjs"
+    },
+    {
+      "repo": "create-vibe-motion-3d",
+      "path": "scripts/sync-template-to-cli.mjs",
+      "local": "upstream/create-vibe-motion-3d/scripts/sync-template-to-cli.mjs",
+      "sha256": "f75ffc0c45e60c5d60f2a868b1335e18ad912ef05e9fae8d74495474ed9115fb",
+      "url": "https://github.com/vibe-motion/create-vibe-motion-3d/blob/b88aa9999ab37b6202b5d7370a91e85ded0e1919/scripts/sync-template-to-cli.mjs"
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "name": "@vibe-motion-3d/template",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "node ./scripts/export-api.mjs",
+    "export:server": "node ./scripts/export-api.mjs",
+    "verify": "node --check index.js && node --check src/sceneControls.js && node --check scripts/export-api.mjs"
+  },
+  "dependencies": {
+    "puppeteer-core": "24.41.0",
+    "three": "0.161.0"
+  }
+}

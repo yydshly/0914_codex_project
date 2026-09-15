@@ -1,0 +1,105 @@
+{
+  "scope": "Upstream pure functions only; no React rendering or audible playback",
+  "results": [
+    {
+      "name": "默认 3 秒 × 30fps = 90 帧",
+      "actual": 90,
+      "expected": 90,
+      "passed": true
+    },
+    {
+      "name": "乱序请求后同帧参数不变",
+      "actual": {
+        "title": "Vibe Motion Demo",
+        "subtitle": "Replace this scene with any React component animation.",
+        "badgeText": "Vibe Motion",
+        "cardDarkMode": false,
+        "speed": 1,
+        "cardTiltMax": 12,
+        "durationSeconds": 3,
+        "layout": {
+          "videoWidth": 1080,
+          "videoHeight": 1440
+        },
+        "durationInFrames": 90,
+        "frame": 45,
+        "progress": 0.5056179775280899,
+        "cardRotateDeg": 6.776496986221041,
+        "chipOffset": -22.370320461658547
+      },
+      "expected": {
+        "title": "Vibe Motion Demo",
+        "subtitle": "Replace this scene with any React component animation.",
+        "badgeText": "Vibe Motion",
+        "cardDarkMode": false,
+        "speed": 1,
+        "cardTiltMax": 12,
+        "durationSeconds": 3,
+        "layout": {
+          "videoWidth": 1080,
+          "videoHeight": 1440
+        },
+        "durationInFrames": 90,
+        "frame": 45,
+        "progress": 0.5056179775280899,
+        "cardRotateDeg": 6.776496986221041,
+        "chipOffset": -22.370320461658547
+      },
+      "passed": true
+    },
+    {
+      "name": "非循环超范围停在最后一帧",
+      "actual": 89,
+      "expected": 89,
+      "passed": true
+    },
+    {
+      "name": "循环模式对总帧数取余",
+      "actual": 5,
+      "expected": 5,
+      "passed": true
+    },
+    {
+      "name": "本模板 1920×1080 请求被限制为 1280×1080",
+      "actual": {
+        "videoWidth": 1280,
+        "videoHeight": 1080
+      },
+      "expected": {
+        "videoWidth": 1280,
+        "videoHeight": 1080
+      },
+      "passed": true
+    },
+    {
+      "name": "音轨保存独立起点、时长和音量",
+      "actual": [
+        30,
+        60,
+        0.8
+      ],
+      "expected": [
+        30,
+        60,
+        0.8
+      ],
+      "passed": true
+    },
+    {
+      "name": "移除缺失音频的引用",
+      "actual": [
+        1,
+        [
+          "voice.wav"
+        ]
+      ],
+      "expected": [
+        1,
+        [
+          "voice.wav"
+        ]
+      ],
+      "passed": true
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "title": "代码，让画面动起来",
+  "subtitle": "文字、位置、角度与进度，都由同一条时间轴驱动。",
+  "badgeText": "二维 · 参数化动画",
+  "cardDarkMode": false,
+  "videoWidth": 1080,
+  "videoHeight": 810,
+  "durationSeconds": 5,
+  "speed": 1,
+  "cardTiltMax": 8
+}

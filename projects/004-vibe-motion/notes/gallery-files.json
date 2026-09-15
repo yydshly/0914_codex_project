@@ -1,0 +1,130 @@
+[
+  {
+    "path": "app.js",
+    "sha256": "5a9addfc432f3c05003e0b6a938b806f2636dc45e4405998d28f95c4488c068f"
+  },
+  {
+    "path": "credits.html",
+    "sha256": "10bec38f274a6f68a9ba59dcc293207c3407c69dcf086cde0cdb8e720a43f2e3"
+  },
+  {
+    "path": "data/example.srt",
+    "sha256": "243ad4bc1a44d578f58303f4b9e88eb5c6e56f460cced972aff3cce533496efd"
+  },
+  {
+    "path": "data/storyboard.json",
+    "sha256": "6bdbac50ea866e312ae5de44eac2f1283aa4160bb511144e09034c91d8d8cdda"
+  },
+  {
+    "path": "demos/curtain/artwork.js",
+    "sha256": "1ca9ada2f078d4741f45a3da943c1f5868ec5fccc44e094e98facdfc0ebee8bf"
+  },
+  {
+    "path": "demos/curtain/controls.js",
+    "sha256": "74f16ef301553d5aadfd1ec2884737b1a5c56695d827089215a8d8195a62df20"
+  },
+  {
+    "path": "demos/curtain/curtain.js",
+    "sha256": "6c2da7cda096a9e066ff6645cedafd12085d0e017d8ced1c8aa7b3c171997c95"
+  },
+  {
+    "path": "demos/curtain/index.html",
+    "sha256": "c90f288cd76738c2dfeceec7cead80f614ac29354decebf354d2615325cfaa01"
+  },
+  {
+    "path": "demos/curtain/NOTICE.txt",
+    "sha256": "2e3954b0ae0276edc1a2f0e6e0a25f7f4533769e17808d4b8de397e02abaf25b"
+  },
+  {
+    "path": "demos/curtain/p5.min.js",
+    "sha256": "00a532c56e785c68d7c7bb6f9a084e2c856b71527f22c3260aff4a2f582d80c9"
+  },
+  {
+    "path": "demos/curtain/point.js",
+    "sha256": "413c7cbbf122d6568958944826ee7d4518fcf81b97344ed1a34bc2d18bfb697f"
+  },
+  {
+    "path": "demos/curtain/print.js",
+    "sha256": "202c381f2e60b6d5495dc720a8ae28cd7f5b53f0433e2b5c4b06a4e8d68ca90d"
+  },
+  {
+    "path": "demos/curtain/rigidBody.js",
+    "sha256": "0b176d18fa32f21e53b1cee47f432ca9c6c8a23cd66b047ba91c23018e12d903"
+  },
+  {
+    "path": "demos/curtain/segment.js",
+    "sha256": "a89497bca5a3df3e1495f3a69bc93ea70b142f79eb6bf5cb46cfcd49d8b1c0b7"
+  },
+  {
+    "path": "demos/curtain/sketch.js",
+    "sha256": "3aed75b1f669c6901b60aa061045eee2564b10369b9ba4f3bb883efeef7ffc98"
+  },
+  {
+    "path": "demos/curtain/style.css",
+    "sha256": "665cf784c46c38e5aa1b8242e3f6fb756e907c54e7685313c8bfc38a7ed653d8"
+  },
+  {
+    "path": "demos/spotlight/index.html",
+    "sha256": "97d88302b25ab8c183a22e6debe8a0247f43afc40192fe690bb89610b545351a"
+  },
+  {
+    "path": "demos/three/index.html",
+    "sha256": "187eb1210ee4fd7612391e381a123671ec40b6e6c7fa61aaf02c9f77194595e5"
+  },
+  {
+    "path": "demos/three/index.js",
+    "sha256": "bc28727c61c18a468013850648f12b041a487031c4c792526bbfae108c77f58e"
+  },
+  {
+    "path": "demos/three/src/sceneControls.js",
+    "sha256": "94c8d7a636b2e210dffbfa924be9c65fb941411dfa5c49db08a5a216c80c3fd0"
+  },
+  {
+    "path": "demos/three/vendor/controls/OrbitControls.js",
+    "sha256": "471672386f759e4348da366831215c1b96b4f2c5aa31269d29a0258b98f9995e"
+  },
+  {
+    "path": "demos/three/vendor/THREE-LICENSE.txt",
+    "sha256": "4c40a1ef62450b857c3b2aaf294936304cd552d965fbcd9d32d4c5bcf4ba4454"
+  },
+  {
+    "path": "demos/three/vendor/three.module.js",
+    "sha256": "e7348ab8c7bf7a41f7afc5fe503c20a0ed090d9536aacf1ee975d7aaee24d394"
+  },
+  {
+    "path": "index.html",
+    "sha256": "f190c0188d967fa26feee3ef5e40553ee5df58fb8a33a439e4c87e3f9af2f67a"
+  },
+  {
+    "path": "media/cover.png",
+    "sha256": "85dbe1b7330897e25e04631c40fa0c527cca3883058af867c2c2bef5ebc4ee33"
+  },
+  {
+    "path": "media/demo-2d.mp4",
+    "sha256": "e5bda18ebd5ce5852b9ce65f8c31310aeb30d5e29ec659dde177574632628bbf"
+  },
+  {
+    "path": "media/demo-3d.mp4",
+    "sha256": "d12da343fd4a7ba57e3b80839d5602bef153481e01473574fd301cd361dc8e78"
+  },
+  {
+    "path": "media/poster-2d.jpg",
+    "sha256": "14654878fea09441fed08092189fec4fb5d195da65fbbf831f1949b248ce6d3c"
+  },
+  {
+    "path": "media/technology-map.png",
+    "sha256": "ae26164ab095c43fafd0f8ce59baccb96b41e6aa120506288cacab9e07a4423d"
+  },
+  {
+    "path": "media/technology-map.svg",
+    "sha256": "a77dbf1c4b63dbe0bb7abaf8dfc79cda710338e2cec3b75a5871f368c7853de4"
+  },
+  {
+    "path": "style.css",
+    "sha256": "c41317345154d1555ec86fb523d3b20ccb64c99f8ad94b8bdd8a4326f4d7b6cf"
+  },
+  {
+    "path": "vendor/gsap-3.12.2.min.js",
+    "sha256": "efc85c7eb141819717cda0033484a84b1c890d13b02e355a2fec79d424b20e7a"
+  }
+]

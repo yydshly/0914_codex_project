@@ -1,0 +1,29 @@
+{
+  "type": "preauthored_explanatory_demo",
+  "model_called": false,
+  "fps": 30,
+  "duration_seconds": 12,
+  "scenes": [
+    {
+      "start": 0,
+      "end": 4,
+      "text": "先把分散的信息汇总起来。",
+      "meaning": "汇总",
+      "visual": "散卡片归位"
+    },
+    {
+      "start": 4,
+      "end": 8,
+      "text": "再按重要程度排出优先级。",
+      "meaning": "优先级",
+      "visual": "列表重排"
+    },
+    {
+      "start": 8,
+      "end": 12,
+      "text": "最后，把任务安排到时间轴上。",
+      "meaning": "安排",
+      "visual": "任务落到时间轴"
+    }
+  ]
+}

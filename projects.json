@@ -68,6 +68,24 @@
       "cover": "projects/003-video-talkcraft/assets/video-talkcraft-workflow.png",
       "cover_alt": "Video TalkCraft 理解图：输入、选卡分镜、组装输出、三层一致性、八项约束与修改回退",
       "demo": "https://yydshly.github.io/0914_codex_project/003-video-talkcraft/"
+    },
+    {
+      "id": "004",
+      "order": 40,
+      "slug": "vibe-motion",
+      "name": "Vibe Motion：AI 驱动的代码动画工具集",
+      "repo": "https://github.com/vibe-motion",
+      "summary": "把 AI 编写代码与动画引擎连接，让二维、三维和动效成为可编辑、可复用、可批量渲染的工程，适合教学、产品讲解与数据展示；附技术引导图、交互示例及 SRT 语义分镜原理。",
+      "status": "已完成",
+      "tags": [
+        "代码动画",
+        "Three.js",
+        "Remotion",
+        "Agent Skills"
+      ],
+      "cover": "projects/004-vibe-motion/assets/technology-map.png",
+      "cover_alt": "Vibe Motion 技术引导图：二维、三维、动效技能及 SRT 语义分镜到代码渲染视频的实现原理",
+      "demo": "https://yydshly.github.io/0914_codex_project/004-vibe-motion/"
     }
   ]
 }

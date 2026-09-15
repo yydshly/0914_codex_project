@@ -1,0 +1,6 @@
+# Preserve snapshot and packaged bytes for SHA-256 verification across platforms.
+upstream/** -text
+src/demo-2d/** -text
+src/demo-3d/** -text
+web/dist/** -text
+assets/*.svg -text
