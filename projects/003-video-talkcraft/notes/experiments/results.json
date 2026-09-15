@@ -1,0 +1,72 @@
+{
+  "date": "2026-09-15",
+  "method": "人为构造带时间的 ASR 词表，运行固定版本的上游原始脚本。未运行语音模型，不代表真实音频精度。",
+  "dependencies": {
+    "python": "3.10.11",
+    "pypinyin": "0.55.0",
+    "zhconv": "1.4.3"
+  },
+  "results": [
+    {
+      "id": "exact",
+      "passed": true,
+      "match": 1.0,
+      "conclusion": "完全匹配时，直接使用输入词表的时间。"
+    },
+    {
+      "id": "homophone",
+      "passed": true,
+      "match": 1.0,
+      "conclusion": "拼音相同的识别错字仍能成为锚点；match 不是转写正确率。"
+    },
+    {
+      "id": "latin-interpolation",
+      "passed": true,
+      "match": 1.0,
+      "conclusion": "英文品牌词完全缺失时仍可插值补齐，中文锚点覆盖率仍为 100%。"
+    },
+    {
+      "id": "low-coverage",
+      "passed": true,
+      "match": 0.375,
+      "conclusion": "锚点覆盖不足会标记听核。"
+    },
+    {
+      "id": "global-shift",
+      "passed": true,
+      "match": 1.0,
+      "conclusion": "所有词时间整体错后 2 秒，match 仍是 100%；覆盖率不能证明声学时间准确。"
+    },
+    {
+      "id": "no-anchors",
+      "passed": true,
+      "conclusion": "完全无匹配锚点时退出，不伪造整句对齐结果。"
+    },
+    {
+      "id": "timing-expansion",
+      "passed": true,
+      "conclusion": "整段英文 token 被展开为逐字母时间，保持全文字符与时间表一一对应。"
+    },
+    {
+      "id": "beat-correct",
+      "passed": true,
+      "expected_exit": "pass",
+      "actual_exit": 0,
+      "output": "OK   t=   2.900 「十万」词起 2.900  Δ+0.000s  数字落定\n\nPASS: 1/1 beats 对齐（tol 0.1s）"
+    },
+    {
+      "id": "beat-off-by-300ms",
+      "passed": true,
+      "expected_exit": "reject",
+      "actual_exit": 1,
+      "output": "FAIL t=   3.200 「十万」词起 2.900  Δ+0.300s  数字落定\n\nFAIL: 0/1 beats 对齐（tol 0.1s）"
+    },
+    {
+      "id": "beat-tail-too-short",
+      "passed": true,
+      "expected_exit": "reject",
+      "actual_exit": 1,
+      "output": "FAIL t=   2.900 「十万」距镜尾(s1 end 3.1)仅 0.20s < 0.5s——会被转场吞，提前或挪镜  数字落定\n\nFAIL: 0/1 beats 对齐（tol 0.1s）"
+    }
+  ]
+}

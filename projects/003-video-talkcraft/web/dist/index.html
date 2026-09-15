@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Video TalkCraft：口播视频制作 Skill · 能力、价值与用法</title>
+  <meta name="description" content="将口播稿、成品配音和素材组织为逐字同步的动效视频及可编辑工程；了解如何用于培训、产品讲解与系列口播，复用选卡、分镜、风格一致性和局部修改能力。附理解图、使用步骤与实验依据。">
+  <link rel="canonical" href="https://yydshly.github.io/0914_codex_project/003-video-talkcraft/">
+  <meta property="og:title" content="Video TalkCraft：口播视频制作 Skill">
+  <meta property="og:description" content="稿件与配音如何成为动效视频？一图理解输入、选卡分镜、组装输出、一致性与返工，并给出培训和产品讲解的复用方式。">
+  <meta property="og:image" content="https://yydshly.github.io/0914_codex_project/003-video-talkcraft/assets/video-talkcraft-workflow.png">
+  <meta property="og:image:alt" content="Video TalkCraft 输入、制作、输出与一致性理解图">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://yydshly.github.io/0914_codex_project/003-video-talkcraft/">
+  <link rel="stylesheet" href="style.css"><link rel="stylesheet" href="enhancements.css"><link rel="stylesheet" href="production.css"><script src="app.js" defer></script>
+</head>
+<body>
+<header><a class="brand" href="#"><span class="mark">TC</span><span>TalkCraft <small>研究室 / 003</small></span></a><nav aria-label="研究导航"><a href="#use">如何用</a><a href="#effects">效果</a><a href="#principle">原理</a><a href="#consistency">一致性</a><a href="#production">制作闭环</a><a href="#overview">理解图</a><a href="#evidence">验证</a></nav></header>
+<main>
+  <section class="intro guide-intro" aria-labelledby="study-title"><div><p class="eyebrow">CAPABILITY STUDY · 2026.09.16 · 修订 03</p><h1 id="study-title">从口播稿和配音，<br>到可修改的动效视频。</h1><p class="study-summary">Video TalkCraft 是一套口播视频制作 Skill：Agent 理解文案并设计分镜，脚本对齐声音时间，动画组件负责画面，Remotion 输出视频与工程。</p><dl class="study-points"><dt>它能做什么</dt><dd>把数字、字幕、对比、截图、人物窗口和转场安排到对应的口播位置，固定研究版本含 108 套动效配方。</dd><dt>对我的意义</dt><dd>用于培训、教学、产品讲解与系列口播；复用制作方式、保持全片风格，方便后续修改内容。</dd><dt>从哪里开始</dt><dd>准备一致的稿件、成品配音和必要素材，先做一镜有声样板，再完成与复核全片。</dd></dl><div class="reading-path"><a href="#use">输入准备与需求示例 →</a><a href="#overview">完整理解图 →</a><a href="https://github.com/yydshly/0914_codex_project/tree/main/projects/003-video-talkcraft">研究文档 ↗</a></div></div><figure class="guide-preview"><a href="assets/video-talkcraft-workflow.png" target="_blank" rel="noopener"><img src="assets/video-talkcraft-workflow.png" width="3300" height="6600" alt="专门整理的 Video TalkCraft 理解图：输入、制作、输出、三层一致性、约束与返工"></a><figcaption>我们的完整理解图 · 点击查看高清原图<br><a href="#overview">阅读大图与下载 SVG</a></figcaption></figure></section>
+  <section id="use" class="research-section" aria-labelledby="use-title"><div class="section-title"><h2 id="use-title">如何复用 / 从一条短片开始</h2><span>安装 → 准备 → 样板镜 → 全片与复核</span></div><ol class="usage-steps"><li><strong>安装上游完整 Skill</strong><p>把上游仓库链接交给支持 Skill 的 Agent 安装。这份研究快照不包含完整安装所需的全部文件。</p><a data-source="README.md#-快速开始">上游安装说明 ↗</a></li><li><strong>给出目标与输入</strong><p>确定受众、表达目标、画幅与风格，提供一致的稿件和成品配音。需要人物时提供同步视频，并准备或采集真实截图、图片和实拍。</p></li><li><strong>先确认一镜有声样板</strong><p>Agent 生成时间表、分镜与选卡理由，按素材、时长和全片风格筛选效果。先检查一个镜头的表达与听感，再展开全片。</p></li><li><strong>检查并保留可修改产物</strong><p>核对事实、声画同步、阅读时间与跨镜衔接；交付成片、可编辑工程、来源及检查记录。改配音时重新判断整条时间轴的影响。</p></li></ol><details class="usage-prompt"><summary>展开可交给 Agent 的需求示例</summary><pre>用 video-talkcraft 制作一条约 30 秒的产品功能讲解。
+受众是首次使用的同事，目标是让他们理解一个功能解决什么问题。
+口播稿为 script.txt，成品配音为 voiceover.wav，真实产品截图在 assets/。
+横屏 16:9，本次不需要人物出镜，保持统一字体、主题色和数据口径。
+先检查稿音一致性和素材，再给出分镜、词锚与选卡理由。
+优先表达清楚、阅读来得及；先交付一镜有声样板供确认，再完成全片。
+最终交付视频、Remotion 工程、素材来源与检查记录；缺失项单独说明。</pre><p>在已安装 Skill 的环境中使用，并替换为自己的素材路径。</p></details><p class="notice">只有文案时，先录音或通过外部工具准备配音。本库不自带 TTS 或数字人生成模型；选卡由 Agent 结合条件判断，不保证自动选出最优效果。圆形人物窗可保留背景，轮廓贴角需要抠像。此网页展示研究与案例，不提供上传生成服务。</p></section>
+  <section id="effects" class="workspace" aria-labelledby="effects-title">
+    <div class="section-title"><h2 id="effects-title">01 / 看效果</h2><span>六个代表案例 · 原作者 HTML 演示</span></div>
+    <div class="studio"><aside aria-label="选择演示效果" id="effect-list"></aside><div class="player-area"><div class="player-top"><span id="demo-name">数字滚动</span><a id="original-link" target="_blank" rel="noopener">单独打开 ↗</a></div><div class="screen"><iframe id="demo-frame" title="原版动效演示：数字滚动" sandbox="allow-scripts allow-same-origin" allow="autoplay" src="vendor/demos/number-counter/index.html?embed=1&amp;controls=1"></iframe></div><p class="caption">原作者演示已保存在本地。点击画面播放；示例内容不是你的口播成片，人物可能是演示占位。</p></div></div>
+    <div class="explain-grid"><div><span class="label">输入什么</span><p id="demo-input"></p></div><div><span class="label">如何运动</span><p id="demo-how"></p></div><div><span class="label">复用时注意</span><p id="demo-limit"></p><a id="source-link" target="_blank" rel="noopener">查看对应源码 ↗</a></div></div>
+  </section>
+  <section id="principle" class="research-section">
+    <div class="section-title"><h2>02 / 原理：先确定时间，再组织画面</h2><span>语义由 Agent 理解 · 画面由代码计算</span></div>
+    <p class="lede">输入是口播稿与成品配音。Agent 按规则设计镜头，语音识别提供时间锚点，Remotion 把动画组件渲染成视频。人物视频与素材按呈现需求准备。</p>
+    <div class="pipeline">
+      <div class="step"><span class="step-no">01</span><b>输入与预剪</b><small>稿件、配音；真人录音可先去口水词和长停顿。</small></div>
+      <div class="step"><span class="step-no">02</span><b>逐字时间表</b><small>识别词表与原稿匹配，缺失部分在锚点间插值。</small></div>
+      <div class="step"><span class="step-no">03</span><b>分镜工作单</b><small>决定每镜素材、主次关系和关键词上的动作。</small></div>
+      <div class="step"><span class="step-no">04</span><b>动画组件</b><small>复用配方源码，修改内容、风格与触发时间。</small></div>
+      <div class="step"><span class="step-no">05</span><b>分段渲染</b><small>镜头缓存，局部重渲，最后混入整条音轨。</small></div>
+      <div class="step"><span class="step-no">06</span><b>检查与交付</b><small>校验节拍、帧数、音效和画面，再独立审片。</small></div>
+    </div>
+    <div class="experiment">
+      <div><span class="label">可拖动的时间锚点示意 · 无声音</span><h3>为什么动画能跟着一个词落定？</h3><p>例句为“用户从一万增长到十万”。这里使用实验中的人工词表：“十”从 2.90 秒开始，计数动画在这一刻到达十万。</p><p>试着把画面延后 0.30 秒：文字时间不动，数字落定变晚。节拍检查能发现这类相对偏移。</p><label for="offset">画面相对词锚</label> <select id="offset"><option value="0">对齐</option><option value="0.3">延后 0.30 秒</option></select><p id="beat-status" role="status"></p></div>
+      <div><span class="time-value" id="time-value">0.00s</span><span class="label">模拟播放头</span><div class="words" id="words"></div><div class="demo-result"><span class="counter" id="counter">10,000</span><span class="result-tag" id="result-tag">等待计数</span></div><label for="time-slider" class="label">拖动查看任意时刻</label><input id="time-slider" type="range" min="0" max="4" step="0.01" value="0"><div class="control-row"><button class="btn" id="play">播放示意</button><button class="btn" id="reset">回到开头</button><span class="label">逐帧计算 · 30 帧/秒</span></div></div>
+    </div>
+    <p class="notice">“字级”是输出粒度。汉字多用识别锚点；识别错漏、英文词及词内字符可能使用插值。它不是每个字都经过独立声学定位。</p>
+  </section>
+<!-- PRODUCTION_MODEL:START -->
+<section id="consistency" class="research-section">
+<div class="section-title"><h2>03 / 一致性：全片、局部与镜头之间</h2><span>先定全片规则，再受约束地分镜与选卡</span></div>
+<p class="lede">各镜头分别好看，不代表整片协调。一致性允许有目的的变化，但变化须服务同一表达目标。</p><div class="consistency-grid">
+<article class="consistency-card"><h3>全片一致性</h3><p>整条片子是否遵循同一目标与表达规则？</p><p>统一受众、事实口径、术语、主题色、字阶、图表和运动语言。允许有目的的变化，不要求所有镜头相同。</p><p class="case-example">同一个十万，不能上一镜指注册用户、下一镜无说明地变成活跃用户。</p><small>已有规范＋共享配置；语义仍需审片</small></article>
+<article class="consistency-card"><h3>局部一致性</h3><p>这一镜的声、画、字、动作是否互相配合？</p><p>一个节拍突出一个主角；词锚、数字、字幕、音效协调；标注圈对目标，布局不遮脸、不相撞。</p><p class="case-example">旁白说十万时数字落定；标注与截图中的目标一起移动。</p><small>已有规范＋部分机器检查</small></article>
+<article class="consistency-card"><h3>跨镜头一致性</h3><p>从上一镜到下一镜是否保持连续和可理解？</p><p>对象身份、人物位置变化、相机语言与转场峰值保持连续；检查过渡全过程，而不只检查两端静帧。</p><p class="case-example">人物缩成角标时，字幕应等其换位结束再调整，不能在中途穿过人脸。</p><small>已有跨幕评审与过渡检查规范</small></article>
+</div><h3>技术正确、表达正确、观看有效，是三件事</h3><div class="correctness-grid">
+<div><strong>技术正确</strong><p>视频能播、帧数吻合、相对词锚无明显错位。</p><small>机器可检查一部分。</small></div>
+<div><strong>表达正确</strong><p>声、画、字忠实表达同一事实，没有概念或数据误导。</p><small>需要语义与事实复核。</small></div>
+<div><strong>观看有效</strong><p>观众来得及读清，理解重点与前后关系。</p><small>需要看完整片和用户反馈。</small></div>
+</div><p class="notice">声画同步但把“增长到十万”写成“增长了十万”，仍是表达错误。事实正确但来不及读清，也不代表观看有效。</p></section>
+<section id="production" class="research-section"><div class="section-title"><h2>04 / 从做出来，到做对与可修改</h2><span>已有规范、自动机制与研究建议分别标明</span></div>
+<p class="lede">仓库已有机制与规范来自固定版本源码；研究建议是本项目的补充理解，不是新增自动化能力。尚未用完整多镜头口播片验证。</p><div class="production-grid">
+<article class="production-card"><span class="pill">01 · 规范＋审片</span><h3>语义正确性</h3><p><strong>画面是否忠实于口播及事实？</strong></p><p>核对术语、单位、数据口径和图表比例。增长到十万不等于增长了十万；声画对齐也不能代替事实核验。</p><small>已有事实清单与审片规范；非自动事实保证</small></article>
+<article class="production-card"><span class="pill">02 · 机制＋建议</span><h3>选卡优先级</h3><p><strong>多个效果都能用，先取舍什么？</strong></p><p>先满足事实与表达目标，再按素材可用性、画幅、时间容量和全片风格筛选，最后追求视觉丰富度。信息已经清楚时可降低动效强度。</p><small>输入类型筛选已存在；完整优先级为研究建议</small></article>
+<article class="production-card"><span class="pill">03 · 检查＋判断</span><h3>时间容量</h3><p><strong>这一段是否装得下动画与阅读时间？</strong></p><p>核对入场、强调、停留、退场与配音时长。空间拥挤或阅读来不及，应减少内容、拆镜或调整稿件，不能只加速动画。</p><small>已有镜尾保护与排版预算；阅读效果需判断</small></article>
+<article class="production-card"><span class="pill">04 · 预检＋规范</span><h3>素材可用性</h3><p><strong>找到的素材是否真的适合这个镜头？</strong></p><p>检查分辨率、构图、真实性、人物口型、帧率和抠像边缘；缺素材时改方案或记录未完成，不能用示意图冒充真实证据。</p><small>已有素材预检与真图规范</small></article>
+<article class="production-card"><span class="pill">05 · 流程＋整理</span><h3>职责与确认</h3><p><strong>谁理解、谁执行、谁批准表达方向？</strong></p><p>Skill 提供规范；Agent 理解、分镜、选卡和实现；模型及脚本处理时间与渲染；用户确认需求、样板镜和重要取舍。</p><small>已有样板镜确认；职责分层为研究整理</small></article>
+<article class="production-card"><span class="pill">06 · 机制＋建议</span><h3>修改影响范围</h3><p><strong>哪些产物因这次修改而失效？</strong></p><p>改静态文字与换整条配音的影响不同。沿素材→时间表→分镜→组件→渲染→验收传播变更，不能默认只重渲编辑过的那一镜。</p><small>已有邻镜重渲、缓存指纹；非完整依赖追踪</small></article>
+<article class="production-card"><span class="pill">07 · 纪律＋整理</span><h3>失败与回退</h3><p><strong>错误应该回到制作的哪一步？</strong></p><p>词锚差回到音频与对齐；素材缺失回采集；拥挤回分镜布局；运行报错先修实现；语义错误回事实与稿件，再更新受影响产物。</p><small>已有闸门与返修纪律；统一回退表为研究整理</small></article>
+<article class="production-card"><span class="pill">08 · 规范＋评估</span><h3>交付与成本</h3><p><strong>何时算完成，是否值得采用？</strong></p><p>既核对可播放，也核对表达和可读性；交付成片、工程、来源与遗留问题。计入Agent、模型、渲染、素材与授权成本。</p><small>已有交付与许可说明；成本收益需按项目评估</small></article>
+</div><h3>改了什么，哪些结果需要重做？</h3><p>下表是复核指南；现有邻镜缓存与音轨指纹不等于完整自动依赖追踪。</p><div class="table-scroll"><table><thead><tr><th>修改</th><th>影响范围</th><th>返回路径</th></tr></thead><tbody>
+<tr><td>改局部标题或数字样式，口播不变</td><td>重查排版、语义及本镜；影响转场交叠时覆盖邻镜。</td><td>组件／布局 → 相关镜头渲染 → 局部与衔接复核</td></tr>
+<tr><td>改稿、换配音或重新预剪</td><td>重新对齐；检查句界、词锚、镜头边界、字幕、动效与整条混音。未必局限在一镜。</td><td>音频／对齐 → 分镜时序 → 全部受影响产物</td></tr>
+<tr><td>换人物、图片或网页截图</td><td>重新量测画幅、人脸与标注坐标；换人物还需核对口型和时长。</td><td>素材预检 → 布局／标注 → 渲染与复核</td></tr>
+<tr><td>改全片风格、画幅或公共组件</td><td>复核所有受影响镜头的字体、几何、相机、字幕及过渡，旧验收不能直接沿用。</td><td>全局配置 → 受影响场景 → 全片一致性复核</td></tr>
+</tbody></table></div><h3>失败时回到根因所在步骤</h3><div class="return-grid">
+<article><h4>对齐覆盖不足或听起来错位</h4><p>检查稿音一致性与预剪结果，重做对齐并听核；不靠挪动画掩盖根因。</p></article>
+<article><h4>缺素材、标注套错或排版拥挤</h4><p>回采集／坐标量测／分镜，替换素材或减少信息；记录仍未完成的部分。</p></article>
+<article><h4>组件报错、缺依赖或导出失败</h4><p>先修素材路径、组件实现或运行环境，再重渲并核验，避免重复无效渲染。</p></article>
+<article><h4>事实错误、口径不一或整片难理解</h4><p>回到事实、稿件和全片设计，更新受影响声音、时间与画面，再审片。</p></article>
+</div><p class="notice"><strong>完整模型：</strong>目标与约束 → 制作过程 → 过程产物 → 反馈与返工。修改后更新受影响产物，再做局部、跨镜与全片复核。</p><div class="sources">
+<a data-source="SKILL.md">风格、素材、时间与交付流程</a>
+<a data-source="references/review-protocol.md">跨幕一致性、事实与返修协议</a>
+<a data-source="scripts/render_shots.mjs">局部帧与音轨缓存机制</a>
+<a data-source="scripts/beat_lint.py">词锚与镜尾停留检查</a>
+</div></section><section id="overview" class="research-section"><div class="section-title"><h2>05 / 一图汇总</h2><span>输入、制作、一致性、回退与交付</span></div>
+<p class="lede">沿主流程阅读，再看贯穿约束和返工路径。点击图片可查看高清版本。</p>
+<figure class="workflow-figure"><a href="assets/video-talkcraft-workflow.png" target="_blank" rel="noopener"><img src="assets/video-talkcraft-workflow.png" loading="lazy" width="3300" height="6600" alt="Video TalkCraft 完整制作模型：输入与输出、七步制作、三层一致性、八项约束、技术与表达及观看三种正确，以及修改和失败的回退路径"></a><figcaption>包含已有机制与研究建议；完整多镜头口播制作尚未实测。</figcaption></figure>
+<div class="control-row"><a class="btn" href="assets/video-talkcraft-workflow.png" download>下载高清 PNG</a><a class="btn" href="assets/video-talkcraft-workflow.svg" target="_blank" rel="noopener">打开可缩放 SVG</a></div></section>
+<!-- PRODUCTION_MODEL:END -->
+  <section id="value" class="research-section">
+    <div class="section-title"><h2>06 / 价值：把制作经验变成可复用流程</h2><span>以下是基于实现的研究判断</span></div>
+    <div class="value-grid">
+      <article class="value-box"><h3>把声音变成共同时间轴</h3><p>字幕、数字、强调和音效引用同一组词锚，减少分别调整造成的偏移。上游时间戳错误也会传递到整个画面，需要抽听复核。</p></article>
+      <article class="value-box"><h3>让已有动效成为生产积木</h3><p>配方把意图、参数、代码与常见问题放在一起。内容和风格可以改，关键运动结构可以保留；素材更换后仍需检查布局。</p></article>
+      <article class="value-box"><h3>让修改的范围变小</h3><p>视频按镜头分段缓存，改一镜可只重渲受影响片段。整条声音最后统一混入；收益受镜头交叠、素材和机器性能影响。</p></article>
+      <article class="value-box"><h3>把一部分经验变成检查</h3><p>节拍偏移、镜尾停留不足、素材缺失等可由脚本阻止进入交付。美感、信息准确性与叙事是否有效，仍需要独立评审。</p></article>
+    </div>
+    <h3>什么需求适合它？</h3>
+    <div class="table-scroll"><table><thead><tr><th>需求</th><th>适配程度</th><th>需要补齐什么</th></tr></thead><tbody>
+      <tr><td>科普、产品介绍、观点解说</td><td>适合：以口播为主，画面负责解释和强调。</td><td>准确稿件、清晰配音与有信息量的素材。</td></tr>
+      <tr><td>带出镜人物的解说</td><td>适合合成与排版，可用圆窗或透明人物。</td><td>与声音同步的人物视频；轮廓贴角需抠像。</td></tr>
+      <tr><td>品牌系列内容</td><td>有复用价值：统一颜色、字阶和动效语言。</td><td>固定风格规范；商用前核对上游授权。</td></tr>
+      <tr><td>文案直接变配音或数字人</td><td>不在库内能力范围。</td><td>另外的 TTS 或数字人生成工具。</td></tr>
+      <tr><td>电影实拍感的全新场景生成</td><td>不是它的核心能力。</td><td>拍摄、素材库或视频生成工具提供画面。</td></tr>
+      <tr><td>任意 MP4 自动拆回图层</td><td>不支持这种逆向还原。</td><td>工作台拆解依赖特定 Remotion 工程契约。</td></tr>
+    </tbody></table></div>
+  </section>
+  <section id="evidence" class="research-section">
+    <div class="section-title"><h2>07 / 验证：哪些已经确认？</h2><span id="experiment-summary">正在读取本地实验记录</span></div>
+    <p class="lede">固定版本的上游原始脚本，用人工构造的识别词表验证逻辑。没有运行 FireRed / Whisper 模型，因此这些实验不代表真实录音精度。</p>
+    <div class="results"><article class="result-card"><span class="pill">实际运行 · 对齐算法</span><h3>英文缺失，也能返回 100%</h3><p>“TalkCraft”完全不在模拟识别词表中，仍通过两侧中文锚点补齐时间。中文锚点覆盖率为 100%，并不代表英文时间已经被精确识别。</p></article><article class="result-card"><span class="pill">实际运行 · 反例</span><h3>整体晚两秒，覆盖率不变</h3><p>把所有输入时间统一推后 2 秒，match 仍是 100%。它衡量文本锚点覆盖，不能独立发现整条时间轴错位。</p></article><article class="result-card"><span class="pill">实际运行 · 节拍检查</span><h3>能拦住相对错拍和过短停留</h3><p>正确词锚通过；动画晚 0.30 秒被拒绝；距镜尾只剩 0.20 秒也被拒绝。通过检查仍不等于完整成片已通过审片。</p></article></div>
+    <div class="render-proof" id="render-proof" hidden><div><span class="pill">实际运行 · Remotion 渲染</span><h3>原始数字组件 → MP4</h3><p>使用同一版本的 <code>number-counter.tsx</code>，保留原始参数，直接渲染 86 帧。灰色人物轮廓是模板占位，没有生成数字人；该测试片无配音。</p><p id="render-meta"></p><a href="assets/number-counter.mp4" download>下载原始测试片</a></div><video controls muted playsinline preload="metadata" src="assets/number-counter.mp4" aria-label="由上游数字滚动组件渲染的测试视频"></video></div>
+    <details class="experiment-details"><summary>查看可复现实验记录</summary><div class="table-scroll"><table><thead><tr><th>实验</th><th>结果</th><th>观察</th></tr></thead><tbody id="experiment-rows"></tbody></table></div><a href="experiments.json" download>下载完整实验数据</a></details>
+    <p class="notice">尚未验证：真实配音的识别误差、完整长片制作、全片音效混音、工作台工程拆解、人物抠像质量。作者的速度与精度数据属于特定样本实测，不作为本机性能承诺。</p>
+  </section>
+  <section id="catalog-section" class="research-section">
+    <div class="section-title"><h2>08 / 108 套动效的源码索引</h2><span>配方、组件、演示目录一一核对</span></div>
+    <details id="catalog-details"><summary>展开完整动效目录</summary><div class="filters"><input id="search" type="search" placeholder="搜索名称或关键词" aria-label="搜索动效"><select id="category" aria-label="按类别筛选"><option value="">全部类别</option></select></div><p id="catalog-count" role="status"></p><div id="catalog" class="catalog"></div></details>
+    <p class="notice">六个代表案例已保存到本地。其余动效通过原作者在线演示与固定版本源码查看；在线页面可能随上游更新。</p>
+  </section>
+  <section class="research-section"><h2>来源与许可</h2><p class="lede">研究版本：<code>8829ca31fb8aeb1b850e85e47a7d7584c349bc4a</code>。本页是独立能力研究，不是作者提供的视频生成服务。</p><div class="sources"><a data-source="SKILL.md">制作流程</a><a data-source="scripts/timestamps_cpu.py">时间对齐</a><a data-source="scripts/render_shots.mjs">分段渲染</a><a data-source="references/host-footage.md">人物处理</a><a data-source="workbench/README.md">工作台边界</a><a href="vendor/LICENSE">原始许可证</a><a href="vendor/THIRD_PARTY_NOTICES.md">第三方说明</a><a href="vendor/demos/_lib/media/ATTRIBUTION.md">示例素材来源</a><a href="vendor/demos/_lib/sfx/ATTRIBUTION.md">音效来源</a></div><p class="notice">上游采用 PolyForm Noncommercial 1.0.0，作者声明商业使用工具需要事先授权。原作代码与演示的许可保持不变；Remotion、音效及素材各有其使用条款。</p></section>
+</main>
+<footer><span>独立研究 · 原作 © 2026 Vincent Wei</span><a href="https://vincentwei1021.github.io/video-talkcraft/" target="_blank" rel="noopener">原作者完整画廊 ↗</a><span>源码快照 8829ca31 · 非商业研究</span></footer>
+</body></html>

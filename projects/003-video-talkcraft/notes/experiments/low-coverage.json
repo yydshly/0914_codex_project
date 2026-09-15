@@ -1,0 +1,102 @@
+{
+  "script": "今天发布全新工具",
+  "mock_asr_words": [
+    {
+      "text": "今",
+      "start": 0.5,
+      "end": 0.7
+    },
+    {
+      "text": "天",
+      "start": 0.8,
+      "end": 1.0
+    },
+    {
+      "text": "再",
+      "start": 1.1,
+      "end": 1.3
+    },
+    {
+      "text": "看",
+      "start": 1.4,
+      "end": 1.6
+    },
+    {
+      "text": "明",
+      "start": 1.7,
+      "end": 1.9
+    },
+    {
+      "text": "天",
+      "start": 2.0,
+      "end": 2.2
+    },
+    {
+      "text": "新",
+      "start": 2.3,
+      "end": 2.5
+    },
+    {
+      "text": "闻",
+      "start": 2.6,
+      "end": 2.8
+    }
+  ],
+  "output": {
+    "sr": 16000,
+    "total": 2.7,
+    "sentences": [
+      {
+        "i": 0,
+        "text": "今天发布全新工具",
+        "start": 0.5,
+        "end": 2.7,
+        "asr": "",
+        "match": 0.375,
+        "ok": false,
+        "words": [
+          {
+            "text": "今",
+            "start": 0.5,
+            "end": 0.7
+          },
+          {
+            "text": "天",
+            "start": 0.8,
+            "end": 1.0
+          },
+          {
+            "text": "发",
+            "start": 1.0,
+            "end": 1.325
+          },
+          {
+            "text": "布",
+            "start": 1.325,
+            "end": 1.65
+          },
+          {
+            "text": "全",
+            "start": 1.65,
+            "end": 1.975
+          },
+          {
+            "text": "新",
+            "start": 2.3,
+            "end": 2.5
+          },
+          {
+            "text": "工",
+            "start": 2.5,
+            "end": 2.6
+          },
+          {
+            "text": "具",
+            "start": 2.5,
+            "end": 2.7
+          }
+        ]
+      }
+    ]
+  }
+}

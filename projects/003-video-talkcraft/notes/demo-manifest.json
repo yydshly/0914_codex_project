@@ -1,0 +1,250 @@
+{
+  "commit": "8829ca31fb8aeb1b850e85e47a7d7584c349bc4a",
+  "files": [
+    {
+      "path": "demos/_lib/demo-shell.css",
+      "bytes": 5225,
+      "sha256": "f43f40b9caa1899ef5f1015d4e6b5567acd63935c4aa555447040a5c43fafcb3"
+    },
+    {
+      "path": "demos/_lib/demo-shell.js",
+      "bytes": 15284,
+      "sha256": "f58397a72c439f2b07a564ed14095933dde4954376cae5e1d76638fb3d80fbd5"
+    },
+    {
+      "path": "demos/_lib/dh-host.mov",
+      "bytes": 503133,
+      "sha256": "5d5f11580ba94f4ec74b301ee75f6c621868952f4dc2ee4388fb36fda21fed27"
+    },
+    {
+      "path": "demos/_lib/dh-host.webm",
+      "bytes": 292744,
+      "sha256": "02fd74fcaf4bd5e945b64a8d7d9dd67549351fbe00d3f30f54fcc09d2505b0af"
+    },
+    {
+      "path": "demos/_lib/gsap.min.js",
+      "bytes": 72304,
+      "sha256": "5468a19b889d234135baaad67b35ac892701f45fe3328b27eeab3aa4f4a479a7"
+    },
+    {
+      "path": "demos/_lib/lottie.min.js",
+      "bytes": 305543,
+      "sha256": "a0757321f974527bda3cc2593bf56cc7ffe4578421249ced6ae49ffb1c529f90"
+    },
+    {
+      "path": "demos/_lib/media/ATTRIBUTION.md",
+      "bytes": 1932,
+      "sha256": "2b62437d16ae4a6fbffd6ad6ee92c612e5d21cffadf7def9c3384b32f763a00a"
+    },
+    {
+      "path": "demos/_lib/media/p-0.jpg",
+      "bytes": 57921,
+      "sha256": "d91b8db3ded913eac99572c2752aaec64b9aef1b37cdbb9be0ae58c0e0336af7"
+    },
+    {
+      "path": "demos/_lib/media/p-1015.jpg",
+      "bytes": 158108,
+      "sha256": "5195c86a6b93cc5414bf9cd16fdeb0b6cba161ad1e6c5470db8dea8dcc04d418"
+    },
+    {
+      "path": "demos/_lib/media/p-1018.jpg",
+      "bytes": 105554,
+      "sha256": "19e04a103c0628400e0df6950aa4523238607ddfc00f3b84f6abe6dfd2c329c8"
+    },
+    {
+      "path": "demos/_lib/media/p-1027.jpg",
+      "bytes": 35969,
+      "sha256": "ed1ee17422ec9fda0b6d6f93325f72e8e84ba5b741237c749ddfa460777868a7"
+    },
+    {
+      "path": "demos/_lib/media/p-1036.jpg",
+      "bytes": 113554,
+      "sha256": "746c55cc52dab07083a922bc69c065cc9d93f80a279a347d7103cd1a5ae4b55c"
+    },
+    {
+      "path": "demos/_lib/media/p-1039.jpg",
+      "bytes": 194315,
+      "sha256": "62862552af4992522846304127b4cb1f3064ccd56626899fc87d83302e950b2f"
+    },
+    {
+      "path": "demos/_lib/media/p-1043.jpg",
+      "bytes": 218708,
+      "sha256": "fbfc1389bb10bc784449fa36df86edc91d4ba620e4e199adb5bfaeb61a27e4d7"
+    },
+    {
+      "path": "demos/_lib/media/p-1050.jpg",
+      "bytes": 142685,
+      "sha256": "c2d2399edbb81beb2755a960cd5ac439099ffb762cbff3a0e7b3f8d8b52a2e20"
+    },
+    {
+      "path": "demos/_lib/media/p-1053.jpg",
+      "bytes": 203176,
+      "sha256": "4726f777408172beff7b4eaadc2d6abf2244c4eefb839f9b36351f7238b8a33b"
+    },
+    {
+      "path": "demos/_lib/media/p-1057.jpg",
+      "bytes": 124356,
+      "sha256": "68ba0538305099027ea2c2255fcf94a98e338f6b5297df071ec3b1d8fd46b4f7"
+    },
+    {
+      "path": "demos/_lib/media/p-1059.jpg",
+      "bytes": 94998,
+      "sha256": "c86fed528fa8ddd1a6814218c0123ec89e42633c62fdc7c741bc3b92bc86df15"
+    },
+    {
+      "path": "demos/_lib/media/p-1067.jpg",
+      "bytes": 96568,
+      "sha256": "110596cf1e09f5221de0b0ad4ae46c709bca8bcd5df4d5db7b160a81078ccbd7"
+    },
+    {
+      "path": "demos/_lib/media/p-160.jpg",
+      "bytes": 22943,
+      "sha256": "9941c5af296dc8f5c110224310d58637726a42be0fa5442292d324d4e0e8f96f"
+    },
+    {
+      "path": "demos/_lib/media/p-177.jpg",
+      "bytes": 85543,
+      "sha256": "47dc7b23bb376101d1bac7da96e2297bf9ff282122021fd14d38c7739246f7c5"
+    },
+    {
+      "path": "demos/_lib/media/p-180.jpg",
+      "bytes": 82128,
+      "sha256": "0e8cd549129f7081e10ce7bd006bcc712c82d631f841f3b5c2386f7a4499d1c0"
+    },
+    {
+      "path": "demos/_lib/media/p-24.jpg",
+      "bytes": 33289,
+      "sha256": "cbbb695ce5b784453879025f730785cbba3d505dc5847c0eb72179c9f369fcbb"
+    },
+    {
+      "path": "demos/_lib/media/p-250.jpg",
+      "bytes": 56497,
+      "sha256": "643c70261d5606de5887b9f9d7978e815f81f5666d6e3d9fe92b9f663dd0bb58"
+    },
+    {
+      "path": "demos/_lib/media/p-274.jpg",
+      "bytes": 105141,
+      "sha256": "a43c9b9cdf710a305f19412a5f1a6ce1ebe63e145cf0f7a2e99e929fa84d8b7c"
+    },
+    {
+      "path": "demos/_lib/media/p-319.jpg",
+      "bytes": 49972,
+      "sha256": "ae37d242ce0754289aaf7d9d14a1dcd0850dbf38fe3e4f87811b114374c95eba"
+    },
+    {
+      "path": "demos/_lib/media/p-349.jpg",
+      "bytes": 28814,
+      "sha256": "8a597cf98ee48e948790d99cdc3359f8fc43bee9afcc5c442c8f85f319146c8c"
+    },
+    {
+      "path": "demos/_lib/media/p-355.jpg",
+      "bytes": 79994,
+      "sha256": "3268183c7033daabb55c3cafce8356eda7d174e78c0598e25bc51578b7ef54ba"
+    },
+    {
+      "path": "demos/_lib/media/p-366.jpg",
+      "bytes": 51995,
+      "sha256": "0bb7bb16a4ae1a2243e2c64c270f3212fed376a6a14079899a6e353a3f26b252"
+    },
+    {
+      "path": "demos/_lib/media/p-367.jpg",
+      "bytes": 73794,
+      "sha256": "9ad0501210a2590293411a0128f735d3ee09b7b4e5faf7607b13f63257d2f219"
+    },
+    {
+      "path": "demos/_lib/media/p-392.jpg",
+      "bytes": 67967,
+      "sha256": "7fce0f5c7cc920a9ee7a8a672e211a61deafb7938c73c30e7e1d12b0e5f1f4b0"
+    },
+    {
+      "path": "demos/_lib/media/p-60.jpg",
+      "bytes": 39810,
+      "sha256": "ddb49dc09886c023888ff53bcb2608fcb8f270645c0c09811016ad9ccec80e65"
+    },
+    {
+      "path": "demos/_lib/media/p-63.jpg",
+      "bytes": 18746,
+      "sha256": "6cd949d965adacebba0eddb6d5804e69fdc6623302c1a4fa38db3bb5464bd457"
+    },
+    {
+      "path": "demos/_lib/media/p-816.jpg",
+      "bytes": 34571,
+      "sha256": "bdfa15a13e352cf0e54b9c696a1f2b1ee0620fc64ee041aa8ce87501c5e23701"
+    },
+    {
+      "path": "demos/_lib/media/p-823.jpg",
+      "bytes": 97177,
+      "sha256": "69f97db90ff6c2dd9094552420c6f087f1d9768baaa5217c75be5cdbb849d474"
+    },
+    {
+      "path": "demos/_lib/media/p-845.jpg",
+      "bytes": 30646,
+      "sha256": "781bcda6dbffd670f7e7b110d4232a2a88eef8a50b577a39557ff656cf008fe3"
+    },
+    {
+      "path": "demos/_lib/media/p-866.jpg",
+      "bytes": 33722,
+      "sha256": "2d5aacc4019c00fdbc08f7da625b3816928088a47c0effe0ab18c2988125baa7"
+    },
+    {
+      "path": "demos/_lib/media/v-ocean.webm",
+      "bytes": 1517159,
+      "sha256": "27a5027a92f74e8de594e3fe9653857fd705e9fc05cea38fd8e96341c2d5cd45"
+    },
+    {
+      "path": "demos/_lib/media/v-typing.webm",
+      "bytes": 390864,
+      "sha256": "b314d507fbe21e9f9588ea216722861cc9423e66722a46396f6529f0d6816c5f"
+    },
+    {
+      "path": "demos/_lib/sfx-map.js",
+      "bytes": 37222,
+      "sha256": "2976e0f1314539a4bccd4cc7cffa296413ad85f800edc76217429fca6d1a099c"
+    },
+    {
+      "path": "demos/_lib/sfx-samples.js",
+      "bytes": 1764034,
+      "sha256": "ac584c9b91f29c1290a0b5f6cacb3afec9791f9201b4e741a4d9b8e8f95700f3"
+    },
+    {
+      "path": "demos/_lib/sfx.js",
+      "bytes": 16997,
+      "sha256": "37b79d779383e900b0eab504166611f38e99a4f486c724bafffbacae75bc3a09"
+    },
+    {
+      "path": "demos/_lib/sfx/ATTRIBUTION.md",
+      "bytes": 5454,
+      "sha256": "4a86e63f54f03ae41d620aa54ddfb2cf53cffd6e4129768f20ad0b9a5d1af647"
+    },
+    {
+      "path": "demos/number-counter/index.html",
+      "bytes": 7024,
+      "sha256": "65ac05cf87fb674bb8fbe530e8b80fcacac144f4f6dc2c300075d998e4cf5544"
+    },
+    {
+      "path": "demos/highlighter-sweep/index.html",
+      "bytes": 3583,
+      "sha256": "ad730bf4a697f120e44e62a71a779a1925868374bba4dd10c345fce2420f3cb3"
+    },
+    {
+      "path": "demos/evidence-scroll-tour/index.html",
+      "bytes": 8609,
+      "sha256": "9a21fc183c0d911207b17145023e4c783e050ef7162668f915b2745a6c7a6d53"
+    },
+    {
+      "path": "demos/host-shrink-to-chip/index.html",
+      "bytes": 8525,
+      "sha256": "f955584338221fb0232572413229bd9b9b7ef13340b431cb590c69f10c4fcd36"
+    },
+    {
+      "path": "demos/split-compare-slider/index.html",
+      "bytes": 7837,
+      "sha256": "7bc49db14ffce7c8ea7d666f2926115f61384aae5cdcf08b65d783f2fefa5cf8"
+    },
+    {
+      "path": "demos/shape-wipe-transition/index.html",
+      "bytes": 6513,
+      "sha256": "384bb80b88823af30a5d2631d250286f1aa425b138ba842907ab83849423d5d0"
+    }
+  ]
+}

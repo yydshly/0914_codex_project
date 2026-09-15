@@ -1,0 +1,238 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2200" height="4400" viewBox="0 0 2200 4400" role="img"><title>Video TalkCraft：完整制作与一致性模型</title><desc>输入、七步制作、输出与词锚示例；三层一致性、八项生产约束、三种正确，以及变更传播与失败回退。已有规范和研究建议分别标明。</desc><rect width="2200" height="4400" fill="#f3f6fb"/>
+<text x="70" y="44" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="25" font-weight="700" fill="#3158d5" dominant-baseline="text-before-edge">VIDEO TALKCRAFT  /  完整制作模型 · 修订版 02</text>
+<text x="70" y="99" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="65" font-weight="700" fill="#17233e" dominant-baseline="text-before-edge">从一份口播稿，到一条动效视频</text>
+<text x="70" y="193" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="30" font-weight="400" fill="#53647c" dominant-baseline="text-before-edge">你提供内容与声音；AI Agent 按 Skill 规范设计分镜，调用现成组件，再渲染与验收。</text>
+<text x="70" y="263" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="34" font-weight="700" fill="#3158d5" dominant-baseline="text-before-edge">01</text>
+<text x="140" y="263" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="36" font-weight="700" fill="#17233e" dominant-baseline="text-before-edge">我们给它什么？</text>
+<text x="1770.0" y="272" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="24" font-weight="400" fill="#53647c" dominant-baseline="text-before-edge">配音与数字人生成由外部工具完成</text>
+<rect x="70" y="325" width="670" height="270" rx="20" fill="#ffffff" stroke="#d5deed" stroke-width="2"/>
+<text x="98" y="348" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="23" font-weight="700" fill="#3158d5" dominant-baseline="text-before-edge">必需输入</text>
+<text x="98" y="389" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="33" font-weight="700" fill="#17233e" dominant-baseline="text-before-edge">口播稿 ＋ 对应配音</text>
+<text x="98" y="435" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="27" font-weight="400" fill="#53647c" dominant-baseline="text-before-edge">文稿：要讲什么、每句说什么。</text>
+<text x="98" y="475" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="27" font-weight="400" fill="#53647c" dominant-baseline="text-before-edge">音频：真人录音或已生成的配音。</text>
+<text x="98" y="515" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="27" font-weight="400" fill="#53647c" dominant-baseline="text-before-edge">两者内容应一致，声音决定节奏。</text>
+<rect x="765" y="325" width="670" height="270" rx="20" fill="#ffffff" stroke="#d5deed" stroke-width="2"/>
+<text x="793" y="348" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="23" font-weight="700" fill="#3158d5" dominant-baseline="text-before-edge">按需输入</text>
+<text x="793" y="389" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="33" font-weight="700" fill="#17233e" dominant-baseline="text-before-edge">人物视频 ＋ 视觉素材</text>
+<text x="793" y="435" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="27" font-weight="400" fill="#53647c" dominant-baseline="text-before-edge">出镜讲话：提供口型同步的视频。</text>
+<text x="793" y="475" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="27" font-weight="400" fill="#53647c" dominant-baseline="text-before-edge">图片、录屏、截图、实拍按镜头准备；</text>
+<text x="793" y="515" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="27" font-weight="400" fill="#53647c" dominant-baseline="text-before-edge">缺少的素材可在制作阶段采集。</text>
+<rect x="1460" y="325" width="670" height="270" rx="20" fill="#ffffff" stroke="#d5deed" stroke-width="2"/>
+<text x="1488" y="348" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="23" font-weight="700" fill="#3158d5" dominant-baseline="text-before-edge">建议说明</text>
+<text x="1488" y="389" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="33" font-weight="700" fill="#17233e" dominant-baseline="text-before-edge">用途、画幅与风格</text>
+<text x="1488" y="435" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="27" font-weight="400" fill="#53647c" dominant-baseline="text-before-edge">例如：横屏产品介绍、竖屏科普。</text>
+<text x="1488" y="475" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="27" font-weight="400" fill="#53647c" dominant-baseline="text-before-edge">指定受众、配色、必须呈现的事实。</text>
+<text x="1488" y="515" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="27" font-weight="400" fill="#53647c" dominant-baseline="text-before-edge">也可直接点名想使用的动效卡。</text>
+<line x1="1100" y1="610" x2="1100" y2="641" stroke="#3158d5" stroke-width="4"/>
+<polygon points="1100,641 1093.5350915424192,628.58207108109 1106.4649084575808,628.58207108109" fill="#3158d5"/>
+<text x="70" y="654" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="34" font-weight="700" fill="#3158d5" dominant-baseline="text-before-edge">A</text>
+<text x="140" y="654" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="36" font-weight="700" fill="#17233e" dominant-baseline="text-before-edge">贯穿全流程的三层一致性</text>
+<text x="1626.0" y="663" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="24" font-weight="400" fill="#53647c" dominant-baseline="text-before-edge">已有规范与部分机制；不等于自动保证全片质量</text>
+<rect x="70" y="713" width="670" height="250" rx="20" fill="#eef8f6" stroke="#d5deed" stroke-width="2"/>
+<text x="98" y="736" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="23" font-weight="700" fill="#087c79" dominant-baseline="text-before-edge">从全片约束到镜内协调</text>
+<text x="98" y="777" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="33" font-weight="700" fill="#17233e" dominant-baseline="text-before-edge">全片一致性</text>
+<text x="98" y="823" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="27" font-weight="400" fill="#53647c" dominant-baseline="text-before-edge">统一事实口径、术语、风格与节奏。</text>
+<text x="98" y="863" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="27" font-weight="400" fill="#53647c" dominant-baseline="text-before-edge">所有镜头服从同一表达目标；</text>
+<text x="98" y="903" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="27" font-weight="400" fill="#53647c" dominant-baseline="text-before-edge">变化有依据，不等于画面都相同。</text>
+<rect x="765" y="713" width="670" height="250" rx="20" fill="#eef8f6" stroke="#d5deed" stroke-width="2"/>
+<text x="793" y="736" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="23" font-weight="700" fill="#087c79" dominant-baseline="text-before-edge">从全片约束到镜内协调</text>
+<text x="793" y="777" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="33" font-weight="700" fill="#17233e" dominant-baseline="text-before-edge">局部一致性</text>
+<text x="793" y="823" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="27" font-weight="400" fill="#53647c" dominant-baseline="text-before-edge">同镜头的声音、文字、图像配合。</text>
+<text x="793" y="863" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="27" font-weight="400" fill="#53647c" dominant-baseline="text-before-edge">词锚对齐、标注准确、布局避让；</text>
+<text x="793" y="903" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="27" font-weight="400" fill="#53647c" dominant-baseline="text-before-edge">一个节拍突出一个主角。</text>
+<rect x="1460" y="713" width="670" height="250" rx="20" fill="#eef8f6" stroke="#d5deed" stroke-width="2"/>
+<text x="1488" y="736" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="23" font-weight="700" fill="#087c79" dominant-baseline="text-before-edge">从全片约束到镜内协调</text>
+<text x="1488" y="777" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="33" font-weight="700" fill="#17233e" dominant-baseline="text-before-edge">跨镜头一致性</text>
+<text x="1488" y="823" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="27" font-weight="400" fill="#53647c" dominant-baseline="text-before-edge">对象身份、人物换位、转场要连贯。</text>
+<text x="1488" y="863" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="27" font-weight="400" fill="#53647c" dominant-baseline="text-before-edge">检查过渡起点、中点和终点；</text>
+<text x="1488" y="903" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="27" font-weight="400" fill="#53647c" dominant-baseline="text-before-edge">各镜好看不代表整片协调。</text>
+<line x1="1100" y1="977" x2="1100" y2="1008" stroke="#087c79" stroke-width="4"/>
+<polygon points="1100,1008 1093.5350915424192,995.58207108109 1106.4649084575808,995.58207108109" fill="#087c79"/>
+<text x="70" y="1026" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="34" font-weight="700" fill="#3158d5" dominant-baseline="text-before-edge">02</text>
+<text x="140" y="1026" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="36" font-weight="700" fill="#17233e" dominant-baseline="text-before-edge">内部如何处理、选择、划分和组装？</text>
+<text x="1662.2083333333333" y="1035" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="24" font-weight="400" fill="#53647c" dominant-baseline="text-before-edge">选择依赖 Agent 的设计判断，并非保证最优</text>
+<rect x="70" y="1094" width="1010" height="253" rx="20" fill="#ffffff" stroke="#d5deed" stroke-width="2"/>
+<text x="98" y="1117" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="23" font-weight="700" fill="#3158d5" dominant-baseline="text-before-edge">STEP 1 · 先稳定素材</text>
+<text x="98" y="1158" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="33" font-weight="700" fill="#17233e" dominant-baseline="text-before-edge">预剪与输入检查</text>
+<text x="98" y="1204" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="27" font-weight="400" fill="#53647c" dominant-baseline="text-before-edge">真人录音可先剪口水词、重说和过长停顿；先预览剪辑报告。</text>
+<text x="98" y="1244" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="27" font-weight="400" fill="#53647c" dominant-baseline="text-before-edge">如果人物与声音来自同次录制，用同一剪辑表同步裁切。</text>
+<text x="98" y="1284" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="27" font-weight="400" fill="#53647c" dominant-baseline="text-before-edge">检查人物帧率、画幅、音画时长及素材文件。</text>
+<rect x="1120" y="1094" width="1010" height="253" rx="20" fill="#ffffff" stroke="#d5deed" stroke-width="2"/>
+<text x="1148" y="1117" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="23" font-weight="700" fill="#3158d5" dominant-baseline="text-before-edge">STEP 2 · 建立共同时间轴</text>
+<text x="1148" y="1158" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="33" font-weight="700" fill="#17233e" dominant-baseline="text-before-edge">识别 → 文本匹配 → 逐字时间表</text>
+<text x="1148" y="1204" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="27" font-weight="400" fill="#53647c" dominant-baseline="text-before-edge">默认 FireRed ASR（可换 Whisper）识别带时间的词表。</text>
+<text x="1148" y="1244" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="27" font-weight="400" fill="#53647c" dominant-baseline="text-before-edge">与原稿做繁简、数字及拼音匹配；缺失字符在锚点间插值。</text>
+<text x="1148" y="1284" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="27" font-weight="400" fill="#53647c" dominant-baseline="text-before-edge">产出每句、每字的起止时间；低匹配覆盖率标记人工听核。</text>
+<line x1="1086" y1="1220" x2="1114" y2="1220" stroke="#3158d5" stroke-width="4"/>
+<polygon points="1114,1220 1101.58207108109,1226.4649084575808 1101.58207108109,1213.5350915424192" fill="#3158d5"/>
+<line x1="1625" y1="1360" x2="1625" y2="1388" stroke="#3158d5" stroke-width="4"/>
+<polygon points="1625,1388 1618.5350915424192,1375.58207108109 1631.4649084575808,1375.58207108109" fill="#3158d5"/>
+<line x1="575" y1="1373" x2="1625" y2="1373" stroke="#3158d5" stroke-width="3"/>
+<line x1="575" y1="1373" x2="575" y2="1390" stroke="#3158d5" stroke-width="4"/>
+<polygon points="575,1390 568.5350915424192,1377.58207108109 581.4649084575808,1377.58207108109" fill="#3158d5"/>
+<rect x="70" y="1405" width="1010" height="290" rx="20" fill="#ffffff" stroke="#d5deed" stroke-width="2"/>
+<text x="98" y="1428" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="23" font-weight="700" fill="#3158d5" dominant-baseline="text-before-edge">STEP 3 · 按语义划分</text>
+<text x="98" y="1469" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="33" font-weight="700" fill="#17233e" dominant-baseline="text-before-edge">把文案变成 SHOTBOOK 分镜表</text>
+<text x="98" y="1515" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="27" font-weight="400" fill="#53647c" dominant-baseline="text-before-edge">按完整信息段落分镜，不机械地“一句一个新元素”。</text>
+<text x="98" y="1555" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="27" font-weight="400" fill="#53647c" dominant-baseline="text-before-edge">每镜明确：表达意图、主视觉、素材、背景／主体／文字层。</text>
+<text x="98" y="1595" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="27" font-weight="400" fill="#53647c" dominant-baseline="text-before-edge">找出数字、转折、结论等语义拍，把动作落点绑定到词锚。</text>
+<text x="98" y="1635" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="27" font-weight="400" fill="#53647c" dominant-baseline="text-before-edge">限制同屏主角数量，避免堆字、遮脸与过快切换。</text>
+<rect x="1120" y="1405" width="1010" height="290" rx="20" fill="#ffffff" stroke="#d5deed" stroke-width="2"/>
+<text x="1148" y="1428" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="23" font-weight="700" fill="#3158d5" dominant-baseline="text-before-edge">STEP 4 · 按输入和表达意图选卡</text>
+<text x="1148" y="1469" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="33" font-weight="700" fill="#17233e" dominant-baseline="text-before-edge">从 108 套配方中挑选合适效果</text>
+<text x="1148" y="1515" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="27" font-weight="400" fill="#53647c" dominant-baseline="text-before-edge">先看素材类型：人物、视频、图片、截图，还是纯文字。</text>
+<text x="1148" y="1555" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="27" font-weight="400" fill="#53647c" dominant-baseline="text-before-edge">再看表达：数字→计数／图表；差异→对比；证据→巡游。</text>
+<text x="1148" y="1595" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="27" font-weight="400" fill="#53647c" dominant-baseline="text-before-edge">读适用条件与已知问题，复核全片风格和阅读时间。</text>
+<text x="1148" y="1635" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="27" font-weight="400" fill="#53647c" dominant-baseline="text-before-edge">研究建议：先清楚和适配，再追求丰富，不必处处强动效。</text>
+<line x1="1086" y1="1550" x2="1114" y2="1550" stroke="#3158d5" stroke-width="4"/>
+<polygon points="1114,1550 1101.58207108109,1556.4649084575808 1101.58207108109,1543.5350915424192" fill="#3158d5"/>
+<line x1="1625" y1="1710" x2="1625" y2="1740" stroke="#3158d5" stroke-width="4"/>
+<polygon points="1625,1740 1618.5350915424192,1727.58207108109 1631.4649084575808,1727.58207108109" fill="#3158d5"/>
+<rect x="70" y="1755" width="2060" height="367" rx="20" fill="#eaf0ff" stroke="#c5d3f1" stroke-width="2"/>
+<text x="100" y="1779" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="24" font-weight="700" fill="#3158d5" dominant-baseline="text-before-edge">STEP 5 · 组装成可编辑的视频工程</text>
+<text x="100" y="1821" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="35" font-weight="700" fill="#17233e" dominant-baseline="text-before-edge">复制动效源码，改内容、定位置、对时间</text>
+<line x1="750" y1="1893" x2="750" y2="2078" stroke="#c5d3f1" stroke-width="2"/>
+<line x1="1440" y1="1893" x2="1440" y2="2078" stroke="#c5d3f1" stroke-width="2"/>
+<text x="100" y="1898" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="29" font-weight="700" fill="#17233e" dominant-baseline="text-before-edge">代码与参数</text>
+<text x="100" y="1946" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="28" font-weight="400" fill="#53647c" dominant-baseline="text-before-edge">复制对应的 Remotion / TSX 组件。</text>
+<text x="100" y="1989" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="28" font-weight="400" fill="#53647c" dominant-baseline="text-before-edge">换数字、文字、图片、颜色和字号；</text>
+<text x="100" y="2032" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="28" font-weight="400" fill="#53647c" dominant-baseline="text-before-edge">保留关键缓动、回弹与运动结构。</text>
+<text x="790" y="1898" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="29" font-weight="700" fill="#17233e" dominant-baseline="text-before-edge">图层与镜头</text>
+<text x="790" y="1946" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="28" font-weight="400" fill="#53647c" dominant-baseline="text-before-edge">组合素材、人物、字幕、动效和音效。</text>
+<text x="790" y="1989" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="28" font-weight="400" fill="#53647c" dominant-baseline="text-before-edge">安排入场、停留、降权和退场；</text>
+<text x="790" y="2032" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="28" font-weight="400" fill="#53647c" dominant-baseline="text-before-edge">相机缓推拉，转场连接前后镜头。</text>
+<text x="1480" y="1898" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="29" font-weight="700" fill="#17233e" dominant-baseline="text-before-edge">时间与逐帧计算</text>
+<text x="1480" y="1946" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="28" font-weight="400" fill="#53647c" dominant-baseline="text-before-edge">当前帧 → 时间 → 动画进度 → 画面。</text>
+<text x="1480" y="1989" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="28" font-weight="400" fill="#53647c" dominant-baseline="text-before-edge">开始／落定／转场峰值对应词锚；</text>
+<text x="1480" y="2032" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="28" font-weight="400" fill="#53647c" dominant-baseline="text-before-edge">先做代表样板镜，再继续其余镜头。</text>
+<line x1="1100" y1="2138" x2="1100" y2="2166" stroke="#3158d5" stroke-width="4"/>
+<polygon points="1100,2166 1093.5350915424192,2153.58207108109 1106.4649084575808,2153.58207108109" fill="#3158d5"/>
+<rect x="70" y="2183" width="1010" height="230" rx="20" fill="#ffffff" stroke="#d5deed" stroke-width="2"/>
+<text x="98" y="2206" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="23" font-weight="700" fill="#3158d5" dominant-baseline="text-before-edge">STEP 6 · 生成视频文件</text>
+<text x="98" y="2247" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="33" font-weight="700" fill="#17233e" dominant-baseline="text-before-edge">按镜头渲染 ＋ 混入整条音轨</text>
+<text x="98" y="2293" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="27" font-weight="400" fill="#53647c" dominant-baseline="text-before-edge">Remotion 把组件逐帧渲染，视频段缓存后拼装。</text>
+<text x="98" y="2333" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="27" font-weight="400" fill="#53647c" dominant-baseline="text-before-edge">修改时重渲受影响镜头及必要邻镜；声音整轨混入。</text>
+<text x="98" y="2373" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="27" font-weight="400" fill="#53647c" dominant-baseline="text-before-edge">核对每段与全片帧数，减少拼接导致的错位。</text>
+<rect x="1120" y="2183" width="1010" height="230" rx="20" fill="#ffffff" stroke="#d5deed" stroke-width="2"/>
+<text x="1148" y="2206" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="23" font-weight="700" fill="#3158d5" dominant-baseline="text-before-edge">STEP 7 · 修正后交付</text>
+<text x="1148" y="2247" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="33" font-weight="700" fill="#17233e" dominant-baseline="text-before-edge">机器检查 ＋ 独立审片</text>
+<text x="1148" y="2293" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="27" font-weight="400" fill="#53647c" dominant-baseline="text-before-edge">检查词锚偏差、镜尾停留、静止／抖动和音效。</text>
+<text x="1148" y="2333" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="27" font-weight="400" fill="#53647c" dominant-baseline="text-before-edge">审看排版、遮挡、叙事，修正问题后重渲对应部分。</text>
+<text x="1148" y="2373" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="27" font-weight="400" fill="#53647c" dominant-baseline="text-before-edge">对齐覆盖率不是声学精度，检查通过也不保证美感。</text>
+<line x1="1086" y1="2298" x2="1114" y2="2298" stroke="#3158d5" stroke-width="4"/>
+<polygon points="1114,2298 1101.58207108109,2304.464908457581 1101.58207108109,2291.535091542419" fill="#3158d5"/>
+<line x1="1100" y1="2429" x2="1100" y2="2458" stroke="#3158d5" stroke-width="4"/>
+<polygon points="1100,2458 1093.5350915424192,2445.58207108109 1106.4649084575808,2445.58207108109" fill="#3158d5"/>
+<text x="70" y="2480" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="34" font-weight="700" fill="#3158d5" dominant-baseline="text-before-edge">03</text>
+<text x="140" y="2480" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="36" font-weight="700" fill="#17233e" dominant-baseline="text-before-edge">最后输出什么？</text>
+<text x="1741.5833333333333" y="2489" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="24" font-weight="400" fill="#53647c" dominant-baseline="text-before-edge">视频成品 ＋ 可编辑工程 ＋ 制作记录</text>
+<rect x="70" y="2540" width="670" height="237" rx="20" fill="#ffffff" stroke="#d5deed" stroke-width="2"/>
+<text x="98" y="2563" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="23" font-weight="700" fill="#087c79" dominant-baseline="text-before-edge">成片效果</text>
+<text x="98" y="2604" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="33" font-weight="700" fill="#17233e" dominant-baseline="text-before-edge">配音驱动的解说视频</text>
+<text x="98" y="2650" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="27" font-weight="400" fill="#53647c" dominant-baseline="text-before-edge">MP4：动态字卡、数据图表、素材画面、</text>
+<text x="98" y="2690" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="27" font-weight="400" fill="#53647c" dominant-baseline="text-before-edge">字幕、转场、音效；人物出镜可选。</text>
+<text x="98" y="2730" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="27" font-weight="400" fill="#53647c" dominant-baseline="text-before-edge">横屏或竖屏，以项目设定为准。</text>
+<rect x="765" y="2540" width="670" height="237" rx="20" fill="#ffffff" stroke="#d5deed" stroke-width="2"/>
+<text x="793" y="2563" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="23" font-weight="700" fill="#087c79" dominant-baseline="text-before-edge">可继续修改</text>
+<text x="793" y="2604" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="33" font-weight="700" fill="#17233e" dominant-baseline="text-before-edge">工程与动效素材</text>
+<text x="793" y="2650" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="27" font-weight="400" fill="#53647c" dominant-baseline="text-before-edge">Remotion 工程、镜头代码及参数。</text>
+<text x="793" y="2690" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="27" font-weight="400" fill="#53647c" dominant-baseline="text-before-edge">可接工作台微调；符合契约才可拆轨。</text>
+<text x="793" y="2730" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="27" font-weight="400" fill="#53647c" dominant-baseline="text-before-edge">工作台还可导出透明背景动效片段。</text>
+<rect x="1460" y="2540" width="670" height="237" rx="20" fill="#ffffff" stroke="#d5deed" stroke-width="2"/>
+<text x="1488" y="2563" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="23" font-weight="700" fill="#087c79" dominant-baseline="text-before-edge">可检查与追溯</text>
+<text x="1488" y="2604" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="33" font-weight="700" fill="#17233e" dominant-baseline="text-before-edge">分镜、时间表与来源</text>
+<text x="1488" y="2650" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="27" font-weight="400" fill="#53647c" dominant-baseline="text-before-edge">保留 SHOTBOOK、逐字时间、节拍表、</text>
+<text x="1488" y="2690" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="27" font-weight="400" fill="#53647c" dominant-baseline="text-before-edge">素材来源及检查／审片记录。</text>
+<text x="1488" y="2730" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="27" font-weight="400" fill="#53647c" dominant-baseline="text-before-edge">换口播时，需更新配音和时间表。</text>
+<rect x="70" y="2810" width="2060" height="285" rx="20" fill="#17233e" stroke="#17233e" stroke-width="2"/>
+<text x="100" y="2835" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="34" font-weight="700" fill="#ffffff" dominant-baseline="text-before-edge">贯穿示例｜“用户从一万，增长到了十万。”</text>
+<text x="100" y="2897" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="26" font-weight="700" fill="#9db6f7" dominant-baseline="text-before-edge">输入</text>
+<text x="100" y="2940" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="27" font-weight="400" fill="#dce5f8" dominant-baseline="text-before-edge">稿件 ＋ 对应配音</text>
+<text x="100" y="2983" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="27" font-weight="400" fill="#dce5f8" dominant-baseline="text-before-edge">假设“十万”从 3.2s 开始</text>
+<line x1="670" y1="2961" x2="717" y2="2961" stroke="#9db6f7" stroke-width="4"/>
+<polygon points="717,2961 704.58207108109,2967.464908457581 704.58207108109,2954.535091542419" fill="#9db6f7"/>
+<text x="750" y="2897" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="26" font-weight="700" fill="#9db6f7" dominant-baseline="text-before-edge">选择与组装</text>
+<text x="750" y="2940" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="27" font-weight="400" fill="#dce5f8" dominant-baseline="text-before-edge">选数字滚动卡，设置目标十万</text>
+<text x="750" y="2983" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="27" font-weight="400" fill="#dce5f8" dominant-baseline="text-before-edge">2.2s 开始计数 → 3.2s 落定</text>
+<line x1="1410" y1="2961" x2="1457" y2="2961" stroke="#9db6f7" stroke-width="4"/>
+<polygon points="1457,2961 1444.58207108109,2967.464908457581 1444.58207108109,2954.535091542419" fill="#9db6f7"/>
+<text x="1490" y="2897" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="26" font-weight="700" fill="#9db6f7" dominant-baseline="text-before-edge">观众看到</text>
+<text x="1490" y="2940" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="27" font-weight="400" fill="#dce5f8" dominant-baseline="text-before-edge">说到“十万”时数字到位并强调</text>
+<text x="1490" y="2983" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="27" font-weight="400" fill="#dce5f8" dominant-baseline="text-before-edge">字幕同步，随后停留让人读清</text>
+<text x="100" y="3042" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="23" font-weight="400" fill="#a8badc" dominant-baseline="text-before-edge">时间为机制示意；真正制作必须读取你的配音时间，不能照抄这组秒数。</text>
+<text x="70" y="3135" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="34" font-weight="700" fill="#3158d5" dominant-baseline="text-before-edge">B</text>
+<text x="140" y="3135" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="36" font-weight="700" fill="#17233e" dominant-baseline="text-before-edge">还需核对的八个方面</text>
+<text x="1530.0" y="3144" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="24" font-weight="400" fill="#53647c" dominant-baseline="text-before-edge">标注为建议／整理／评估的部分，不是新实现的自动能力</text>
+<rect x="70" y="3200" width="485" height="195" rx="20" fill="#ffffff" stroke="#d5deed" stroke-width="2"/>
+<text x="94" y="3218" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="20" font-weight="700" fill="#a56a16" dominant-baseline="text-before-edge">规范＋审片</text>
+<text x="94" y="3253" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="28" font-weight="700" fill="#17233e" dominant-baseline="text-before-edge">01  语义正确性</text>
+<text x="94" y="3303" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="24" font-weight="400" fill="#53647c" dominant-baseline="text-before-edge">增长到十万≠增长了十万。</text>
+<text x="94" y="3339" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="24" font-weight="400" fill="#53647c" dominant-baseline="text-before-edge">核对口径、单位、图表含义。</text>
+<rect x="595" y="3200" width="485" height="195" rx="20" fill="#ffffff" stroke="#d5deed" stroke-width="2"/>
+<text x="619" y="3218" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="20" font-weight="700" fill="#a56a16" dominant-baseline="text-before-edge">机制＋建议</text>
+<text x="619" y="3253" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="28" font-weight="700" fill="#17233e" dominant-baseline="text-before-edge">02  选卡优先级</text>
+<text x="619" y="3303" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="24" font-weight="400" fill="#53647c" dominant-baseline="text-before-edge">先表达清楚与满足约束，</text>
+<text x="619" y="3339" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="24" font-weight="400" fill="#53647c" dominant-baseline="text-before-edge">再追求丰富；不必处处强动效。</text>
+<rect x="1120" y="3200" width="485" height="195" rx="20" fill="#ffffff" stroke="#d5deed" stroke-width="2"/>
+<text x="1144" y="3218" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="20" font-weight="700" fill="#a56a16" dominant-baseline="text-before-edge">检查＋判断</text>
+<text x="1144" y="3253" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="28" font-weight="700" fill="#17233e" dominant-baseline="text-before-edge">03  时间容量</text>
+<text x="1144" y="3303" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="24" font-weight="400" fill="#53647c" dominant-baseline="text-before-edge">入场、强调、阅读、退场</text>
+<text x="1144" y="3339" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="24" font-weight="400" fill="#53647c" dominant-baseline="text-before-edge">都要留时间，装不下就减或拆。</text>
+<rect x="1645" y="3200" width="485" height="195" rx="20" fill="#ffffff" stroke="#d5deed" stroke-width="2"/>
+<text x="1669" y="3218" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="20" font-weight="700" fill="#a56a16" dominant-baseline="text-before-edge">预检＋规范</text>
+<text x="1669" y="3253" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="28" font-weight="700" fill="#17233e" dominant-baseline="text-before-edge">04  素材可用性</text>
+<text x="1669" y="3303" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="24" font-weight="400" fill="#53647c" dominant-baseline="text-before-edge">检查构图、清晰度、口型。</text>
+<text x="1669" y="3339" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="24" font-weight="400" fill="#53647c" dominant-baseline="text-before-edge">能下载，不等于能用于此镜。</text>
+<rect x="70" y="3415" width="485" height="195" rx="20" fill="#ffffff" stroke="#d5deed" stroke-width="2"/>
+<text x="94" y="3433" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="20" font-weight="700" fill="#a56a16" dominant-baseline="text-before-edge">流程＋整理</text>
+<text x="94" y="3468" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="28" font-weight="700" fill="#17233e" dominant-baseline="text-before-edge">05  职责与确认</text>
+<text x="94" y="3518" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="24" font-weight="400" fill="#53647c" dominant-baseline="text-before-edge">Skill给规则，Agent作设计，</text>
+<text x="94" y="3554" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="24" font-weight="400" fill="#53647c" dominant-baseline="text-before-edge">工具执行，用户确认关键取舍。</text>
+<rect x="595" y="3415" width="485" height="195" rx="20" fill="#ffffff" stroke="#d5deed" stroke-width="2"/>
+<text x="619" y="3433" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="20" font-weight="700" fill="#a56a16" dominant-baseline="text-before-edge">机制＋建议</text>
+<text x="619" y="3468" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="28" font-weight="700" fill="#17233e" dominant-baseline="text-before-edge">06  修改影响范围</text>
+<text x="619" y="3518" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="24" font-weight="400" fill="#53647c" dominant-baseline="text-before-edge">换配音可能重做整条时间轴；</text>
+<text x="619" y="3554" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="24" font-weight="400" fill="#53647c" dominant-baseline="text-before-edge">局部改动也可能影响邻镜。</text>
+<rect x="1120" y="3415" width="485" height="195" rx="20" fill="#ffffff" stroke="#d5deed" stroke-width="2"/>
+<text x="1144" y="3433" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="20" font-weight="700" fill="#a56a16" dominant-baseline="text-before-edge">纪律＋整理</text>
+<text x="1144" y="3468" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="28" font-weight="700" fill="#17233e" dominant-baseline="text-before-edge">07  失败与回退</text>
+<text x="1144" y="3518" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="24" font-weight="400" fill="#53647c" dominant-baseline="text-before-edge">识别差回对齐，拥挤回分镜；</text>
+<text x="1144" y="3554" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="24" font-weight="400" fill="#53647c" dominant-baseline="text-before-edge">代码错先修实现，再重渲复核。</text>
+<rect x="1645" y="3415" width="485" height="195" rx="20" fill="#ffffff" stroke="#d5deed" stroke-width="2"/>
+<text x="1669" y="3433" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="20" font-weight="700" fill="#a56a16" dominant-baseline="text-before-edge">规范＋评估</text>
+<text x="1669" y="3468" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="28" font-weight="700" fill="#17233e" dominant-baseline="text-before-edge">08  交付与成本</text>
+<text x="1669" y="3518" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="24" font-weight="400" fill="#53647c" dominant-baseline="text-before-edge">能导出不等于可交付。</text>
+<text x="1669" y="3554" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="24" font-weight="400" fill="#53647c" dominant-baseline="text-before-edge">保留工程、来源，并计入成本。</text>
+<rect x="70" y="3655" width="2060" height="192" rx="20" fill="#edf2fc" stroke="#c5d3f1" stroke-width="2"/>
+<text x="100" y="3675" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="31" font-weight="700" fill="#3158d5" dominant-baseline="text-before-edge">三种正确不等价：技术通过 ≠ 表达准确 ≠ 观众理解</text>
+<text x="100" y="3733" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="28" font-weight="700" fill="#17233e" dominant-baseline="text-before-edge">技术正确</text>
+<text x="100" y="3776" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="26" font-weight="400" fill="#53647c" dominant-baseline="text-before-edge">机器可检查一部分。</text>
+<text x="780" y="3733" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="28" font-weight="700" fill="#17233e" dominant-baseline="text-before-edge">表达正确</text>
+<text x="780" y="3776" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="26" font-weight="400" fill="#53647c" dominant-baseline="text-before-edge">需要语义与事实复核。</text>
+<text x="1460" y="3733" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="28" font-weight="700" fill="#17233e" dominant-baseline="text-before-edge">观看有效</text>
+<text x="1460" y="3776" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="26" font-weight="400" fill="#53647c" dominant-baseline="text-before-edge">需要看完整片和用户反馈。</text>
+<text x="70" y="3890" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="34" font-weight="700" fill="#3158d5" dominant-baseline="text-before-edge">C</text>
+<text x="140" y="3890" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="36" font-weight="700" fill="#17233e" dominant-baseline="text-before-edge">修改与失败：回到根因，再更新受影响产物</text>
+<text x="1554.0" y="3899" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="24" font-weight="400" fill="#53647c" dominant-baseline="text-before-edge">研究整理｜结合已有缓存与返修规范，非完备依赖追踪</text>
+<rect x="70" y="3950" width="670" height="255" rx="20" fill="#ffffff" stroke="#d5deed" stroke-width="2"/>
+<text x="98" y="3973" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="23" font-weight="700" fill="#087c79" dominant-baseline="text-before-edge">影响范围决定返工范围</text>
+<text x="98" y="4014" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="33" font-weight="700" fill="#17233e" dominant-baseline="text-before-edge">改内容或素材</text>
+<text x="98" y="4060" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="27" font-weight="400" fill="#53647c" dominant-baseline="text-before-edge">静态文字改动 → 布局／语义复核。</text>
+<text x="98" y="4100" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="27" font-weight="400" fill="#53647c" dominant-baseline="text-before-edge">换人物或截图 → 重量测口型与坐标。</text>
+<text x="98" y="4140" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="27" font-weight="400" fill="#53647c" dominant-baseline="text-before-edge">必要时覆盖转场邻镜，再渲染复核。</text>
+<rect x="765" y="3950" width="670" height="255" rx="20" fill="#ffffff" stroke="#d5deed" stroke-width="2"/>
+<text x="793" y="3973" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="23" font-weight="700" fill="#087c79" dominant-baseline="text-before-edge">影响范围决定返工范围</text>
+<text x="793" y="4014" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="33" font-weight="700" fill="#17233e" dominant-baseline="text-before-edge">换配音或全局设定</text>
+<text x="793" y="4060" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="27" font-weight="400" fill="#53647c" dominant-baseline="text-before-edge">换配音／预剪 → 重新对齐与定时。</text>
+<text x="793" y="4100" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="27" font-weight="400" fill="#53647c" dominant-baseline="text-before-edge">改主题／画幅 → 全部受影响场景。</text>
+<text x="793" y="4140" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="27" font-weight="400" fill="#53647c" dominant-baseline="text-before-edge">旧缓存、旧验收不能直接沿用。</text>
+<rect x="1460" y="3950" width="670" height="255" rx="20" fill="#ffffff" stroke="#d5deed" stroke-width="2"/>
+<text x="1488" y="3973" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="23" font-weight="700" fill="#087c79" dominant-baseline="text-before-edge">影响范围决定返工范围</text>
+<text x="1488" y="4014" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="33" font-weight="700" fill="#17233e" dominant-baseline="text-before-edge">按失败类型回退</text>
+<text x="1488" y="4060" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="27" font-weight="400" fill="#53647c" dominant-baseline="text-before-edge">错位回对齐；拥挤回分镜与布局。</text>
+<text x="1488" y="4100" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="27" font-weight="400" fill="#53647c" dominant-baseline="text-before-edge">素材缺失回采集；运行报错修实现。</text>
+<text x="1488" y="4140" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="27" font-weight="400" fill="#53647c" dominant-baseline="text-before-edge">事实或叙事错误回稿件与全片设计。</text>
+<text x="70" y="4240" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="31" font-weight="700" fill="#17233e" dominant-baseline="text-before-edge">完整闭环：目标与约束 → 制作过程 → 过程产物 → 反馈返工 → 局部、跨镜与全片复核</text>
+<text x="70" y="4300" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="23" font-weight="400" fill="#53647c" dominant-baseline="text-before-edge">依据：固定版本 8829ca31 · SKILL.md / review-protocol.md / 时间与渲染脚本 · 研究建议已作区分</text>
+<text x="70" y="4340" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="23" font-weight="400" fill="#53647c" dominant-baseline="text-before-edge">验证边界：仅做过10项机制实验与单组件渲染，尚未验证完整多镜头口播片。成本、素材权利及交付仍需核对。</text>
+</svg>

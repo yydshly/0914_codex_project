@@ -13,6 +13,7 @@
 | --- | --- | --- | --- | --- | --- | --- |
 | 1 | 001 | [语音驱动纸艺剧场](projects/001-audio-locked-paper-theatre/README.md) | [audio\-locked\-paper\-theatre](https://github.com/jay-yangPY/audio-locked-paper-theatre) | 画板是舞台，物品是演员，代码是动作脚本，音频时间轴是演出节拍。用于培训视频制作、教学微课、科普与产品说明，附四个有声演示和场景指南。 | 已完成 | [在线演示](https://yydshly.github.io/0914_codex_project/001-audio-locked-paper-theatre/) |
 | 2 | 002 | [Agent Skills Eval：Skill 能力校验引擎](projects/002-agent-skills-eval/README.md) | [agent\-skills\-eval](https://github.com/darkrishabh/agent-skills-eval) | 读取已编写的 Skill 与测试标准，自动调用模型、评分并对比有无 Skill 的效果，为校验能力 Skill 提供底层评测引擎。 | 已完成 | [在线演示](https://yydshly.github.io/0914_codex_project/002-agent-skills-eval/) |
+| 3 | 003 | [Video TalkCraft：口播视频制作 Skill](projects/003-video-talkcraft/README.md) | [video\-talkcraft](https://github.com/Vincentwei1021/video-talkcraft) | 将口播稿、成品配音和素材组织为逐字同步的动效视频及可编辑工程；可复用到培训、产品讲解与系列口播，统一表达风格并支持局部修改。附输入准备、选卡原理与一致性指南。 | 已完成 | — |
 <!-- PROJECT_INDEX:END -->
 
 ## 项目预览
@@ -37,6 +38,16 @@
 [研究记录](projects/002-agent-skills-eval/README.md) · [上游仓库](https://github.com/darkrishabh/agent-skills-eval) · [在线演示](https://yydshly.github.io/0914_codex_project/002-agent-skills-eval/)
 
 标签：Agent Skills / 自动评测 / LLM Judge / 可复现实验
+
+### 003 · Video TalkCraft：口播视频制作 Skill
+
+将口播稿、成品配音和素材组织为逐字同步的动效视频及可编辑工程；可复用到培训、产品讲解与系列口播，统一表达风格并支持局部修改。附输入准备、选卡原理与一致性指南。
+
+![Video TalkCraft 理解图：输入、选卡分镜、组装输出、三层一致性、八项约束与修改回退](projects/003-video-talkcraft/assets/video-talkcraft-workflow.png)
+
+[研究记录](projects/003-video-talkcraft/README.md) · [上游仓库](https://github.com/Vincentwei1021/video-talkcraft)
+
+标签：口播视频 / Remotion / 音画同步 / 动效研究
 <!-- PROJECT_PREVIEWS:END -->
 
 ## 开始研究

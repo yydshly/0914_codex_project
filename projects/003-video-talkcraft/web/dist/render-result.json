@@ -1,0 +1,13 @@
+{
+  "status": "passed",
+  "component": "number-counter",
+  "commit": "8829ca31fb8aeb1b850e85e47a7d7584c349bc4a",
+  "width": 960,
+  "height": 540,
+  "frames": 86,
+  "fps": 30,
+  "duration": 2.867,
+  "codec": "h264",
+  "audio": false,
+  "note": "Original component, placeholder host, no narration. Not end-to-end production."
+}

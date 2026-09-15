@@ -1,0 +1,122 @@
+{
+  "script": "用户从一万增长到十万",
+  "mock_asr_words": [
+    {
+      "text": "用",
+      "start": 2.5,
+      "end": 2.7
+    },
+    {
+      "text": "户",
+      "start": 2.8,
+      "end": 3.0
+    },
+    {
+      "text": "从",
+      "start": 3.1,
+      "end": 3.3
+    },
+    {
+      "text": "一",
+      "start": 3.4,
+      "end": 3.6
+    },
+    {
+      "text": "万",
+      "start": 3.7,
+      "end": 3.9
+    },
+    {
+      "text": "增",
+      "start": 4.0,
+      "end": 4.2
+    },
+    {
+      "text": "长",
+      "start": 4.3,
+      "end": 4.5
+    },
+    {
+      "text": "到",
+      "start": 4.6,
+      "end": 4.8
+    },
+    {
+      "text": "十",
+      "start": 4.9,
+      "end": 5.1
+    },
+    {
+      "text": "万",
+      "start": 5.2,
+      "end": 5.4
+    }
+  ],
+  "output": {
+    "sr": 16000,
+    "total": 5.4,
+    "sentences": [
+      {
+        "i": 0,
+        "text": "用户从一万增长到十万",
+        "start": 2.5,
+        "end": 5.4,
+        "asr": "",
+        "match": 1.0,
+        "ok": true,
+        "words": [
+          {
+            "text": "用",
+            "start": 2.5,
+            "end": 2.7
+          },
+          {
+            "text": "户",
+            "start": 2.8,
+            "end": 3.0
+          },
+          {
+            "text": "从",
+            "start": 3.1,
+            "end": 3.3
+          },
+          {
+            "text": "一",
+            "start": 3.4,
+            "end": 3.6
+          },
+          {
+            "text": "万",
+            "start": 3.7,
+            "end": 3.9
+          },
+          {
+            "text": "增",
+            "start": 4.0,
+            "end": 4.2
+          },
+          {
+            "text": "长",
+            "start": 4.3,
+            "end": 4.5
+          },
+          {
+            "text": "到",
+            "start": 4.6,
+            "end": 4.8
+          },
+          {
+            "text": "十",
+            "start": 4.9,
+            "end": 5.1
+          },
+          {
+            "text": "万",
+            "start": 5.2,
+            "end": 5.4
+          }
+        ]
+      }
+    ]
+  }
+}

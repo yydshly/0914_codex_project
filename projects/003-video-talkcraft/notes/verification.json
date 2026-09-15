@@ -1,0 +1,66 @@
+{
+  "date": "2026-09-15",
+  "browser_ui_tested": false,
+  "checks": [
+    {
+      "check": "108 catalog entries",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "108 complete recipe/code/demo mappings",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Upstream and demo files unchanged",
+      "passed": true,
+      "detail": "80 hashes"
+    },
+    {
+      "check": "License copy LICENSE",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "License copy THIRD_PARTY_NOTICES.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "HTML entrypoints, resources and JavaScript syntax",
+      "passed": true,
+      "detail": "7 pages; 6 inline scripts"
+    },
+    {
+      "check": "App DOM bindings exist",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Controlled experiments",
+      "passed": true,
+      "detail": "10/10 expected outcomes, synthetic ASR words"
+    },
+    {
+      "check": "Rendered MP4 exists",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Actual MP4 dimensions and frame count",
+      "passed": true,
+      "detail": {
+        "codec_name": "h264",
+        "width": 960,
+        "height": 540,
+        "avg_frame_rate": "30/1",
+        "duration": "2.866667",
+        "nb_read_frames": "86",
+        "side_data_list": [
+          {}
+        ]
+      }
+    }
+  ]
+}

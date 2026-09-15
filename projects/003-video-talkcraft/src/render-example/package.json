@@ -1,0 +1,7 @@
+{
+  "name": "talkcraft-research-render",
+  "private": true,
+  "scripts": {"render": "remotion render index.tsx NumberCounter ../../web/dist/assets/number-counter.mp4 --concurrency=1 --codec=h264 --crf=18"},
+  "dependencies": {"@remotion/cli":"4.0.525","remotion":"4.0.525","react":"19.1.0","react-dom":"19.1.0"},
+  "devDependencies": {"typescript":"5.9.3","@types/react":"19.1.0"}
+}
