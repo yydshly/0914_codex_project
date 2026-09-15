@@ -1,0 +1,3 @@
+upstream/** -text
+artifacts/mechanism-demo.html -whitespace
+web/dist/data/mechanism-demo.html -whitespace

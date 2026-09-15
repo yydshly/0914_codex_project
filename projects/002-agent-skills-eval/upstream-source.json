@@ -1,0 +1,113 @@
+{
+  "repository": "https://github.com/darkrishabh/agent-skills-eval",
+  "commit": "b60eebe3c6edaa917a284e13b9b0e9fa00f1c957",
+  "retrievedAt": "2026-09-15T14:44:34.0829524Z",
+  "license": "MIT",
+  "scope": "Unmodified src, test, examples, package files, tsconfig and LICENSE; docs and Git metadata omitted.",
+  "files": [
+    {
+      "path": "LICENSE",
+      "sha256": "725b6ad1dda1cbc479d11053df393f3bf27c479c7aea1d5651538163aa0259ef"
+    },
+    {
+      "path": "examples/agent-skills-eval.yaml",
+      "sha256": "cf2bdbb724e6c2bd18eb9e1bd2013d6ef384bd19698477cb085508e266889843"
+    },
+    {
+      "path": "examples/basic-skill/SKILL.md",
+      "sha256": "331e3175c15200eadbe04cd814e2a893670dd824f239b465245db91f571e33ef"
+    },
+    {
+      "path": "examples/basic-skill/evals/evals.json",
+      "sha256": "b41f7f81c3eb1dcf5e2a1f6de595cc4ceb593e554aa957d1a653bfecdcc8f15e"
+    },
+    {
+      "path": "examples/basic-skill/evals/files/revenue.csv",
+      "sha256": "e4872134b7f6fa4e1796d9a47eca9725dcf0ca1fd09b734fa9c15fbfcfbb8897"
+    },
+    {
+      "path": "package-lock.json",
+      "sha256": "7557a5ce46cd1115e026dac2c857534cb6dafda6785428a31a3cc2a2eec996fb"
+    },
+    {
+      "path": "package.json",
+      "sha256": "69eb8bd9d4b76471fdbf356c76d52aebeefb9b624eeef5bf7c1e0d2993c3328a"
+    },
+    {
+      "path": "src/artifacts.ts",
+      "sha256": "88bc54428cdf8eb910a47e378629d72444ae13f3ec2917df94087756b5e61c7f"
+    },
+    {
+      "path": "src/cli.ts",
+      "sha256": "954200c73a315270aa099810bd18d10c258f32736775d9308e20e29526d05095"
+    },
+    {
+      "path": "src/config.ts",
+      "sha256": "8e1ade6ba362c67d7337859f97dc1c090fe1ad0223a0b13d745f6995f1ae9462"
+    },
+    {
+      "path": "src/console-reporter.ts",
+      "sha256": "3fe51c106058060701135e74792f9143a0cd692ef30a3a15e44f8762ea1b2587"
+    },
+    {
+      "path": "src/discover.ts",
+      "sha256": "2f11936cc8d9f83f19490189c222cea999d80db28c9f5438cb7387e1201b6a69"
+    },
+    {
+      "path": "src/evaluate-skills.ts",
+      "sha256": "0a71e9f3bc54bba416b61bfe7f0598e33d2474c3215b55212241408bb4c4dd5d"
+    },
+    {
+      "path": "src/fs-utils.ts",
+      "sha256": "c73d7c7996bd9febf25bdc8a1e86f64019a3655b6f2e7f188479c24bb84376f1"
+    },
+    {
+      "path": "src/grade.ts",
+      "sha256": "520f54d1fc198134968470949262af1515e88c23e92b34357369d2454cdf4e7e"
+    },
+    {
+      "path": "src/jsonl-reporter.ts",
+      "sha256": "102ab28bf10f6ec82f90bce70c6bca1574f13668d361f2a579dd0d328c849026"
+    },
+    {
+      "path": "src/openai-compatible-provider.ts",
+      "sha256": "fc9a4b303058fde5e537ae4ca6998c15cc509daea9297e7691d51199c852f47b"
+    },
+    {
+      "path": "src/provider.ts",
+      "sha256": "bbe30715b0d838ec1394bf8f9c943f287de9493e340b03820f81ae94da213758"
+    },
+    {
+      "path": "src/report.ts",
+      "sha256": "95e0fb476c295ac26f09566f608cc59b5ef7cce84d6a03d451876e2f98af9828"
+    },
+    {
+      "path": "src/run-eval.ts",
+      "sha256": "0e4d2f4b08b298b5eb48c2feb184aa889a05c6a60ef119895f880bff65b2e004"
+    },
+    {
+      "path": "src/skill.ts",
+      "sha256": "b8d1c3ecdf3bff1473eceb25c837d978702ac4e785d3386ea65df8de6660dacf"
+    },
+    {
+      "path": "src/types.ts",
+      "sha256": "eba4514c65ac3550423389711003004946bc8d5c28ace49580d37fdf9c21caea"
+    },
+    {
+      "path": "test/cli.test.mjs",
+      "sha256": "859c53fe4159aee9ef8112afcb62baee04d2fb272c11b59d9249a43203b4e67a"
+    },
+    {
+      "path": "test/skills.test.mjs",
+      "sha256": "6a5b6cec524868f71fa0916484881667c482fa404f259a1f3b5d54b11dcde34e"
+    },
+    {
+      "path": "tsconfig.json",
+      "sha256": "447dfc8c188c9fdbfd4e94ef4f45787cb5e4bd48cc80a8167b20c67a6027a390"
+    },
+    {
+      "path": "src/index.ts",
+      "sha256": "da0fce2fb3c97fc1ecd70e6eaf8724e2542672117a7cc2d83971213bbefc03c9"
+    }
+  ]
+}

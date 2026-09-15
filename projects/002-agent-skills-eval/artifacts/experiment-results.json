@@ -1,0 +1,170 @@
+{
+  "generatedAt": "2026-09-15T14:48:08.430Z",
+  "upstreamCommit": "b60eebe3c6edaa917a284e13b9b0e9fa00f1c957",
+  "node": "v22.15.0",
+  "platform": "win32/x64",
+  "methodology": "Deterministic synthetic providers and one loopback HTTP stub; no external model inference.",
+  "realModelQualityMeasured": false,
+  "total": 12,
+  "verified": 12,
+  "observations": [
+    {
+      "id": "E01",
+      "title": "附件不对称可制造虚假的 Skill 增益",
+      "verified": true,
+      "observed": {
+        "withSkill": 1,
+        "withoutSkill": 0,
+        "deltaPercentagePoints": 100,
+        "targetReadsSkill": false,
+        "explanation": "Synthetic scores. Input-data availability alone accounts for the entire difference."
+      }
+    },
+    {
+      "id": "E02",
+      "title": "相同任务数据放入 prompt 后，虚假增益消失",
+      "verified": true,
+      "observed": {
+        "rates": [
+          1,
+          1
+        ],
+        "deltaPercentagePoints": 0,
+        "identicalUserInput": true
+      }
+    },
+    {
+      "id": "E03",
+      "title": "只有工具检查时不调用 AI 裁判",
+      "verified": true,
+      "observed": {
+        "passed": 4,
+        "failed": 1,
+        "total": 5,
+        "pass_rate": 0.8,
+        "judgeCalls": 0
+      }
+    },
+    {
+      "id": "E04",
+      "title": "裁判 JSON 无法解析时重试一次并判失败",
+      "verified": true,
+      "observed": {
+        "attempts": 2,
+        "passed": 0,
+        "failed": 1,
+        "total": 1,
+        "pass_rate": 0
+      }
+    },
+    {
+      "id": "E05",
+      "title": "裁判给出 PASS 但没有证据，仍计为通过",
+      "verified": true,
+      "observed": {
+        "assertion_results": [
+          {
+            "text": "Must be correct",
+            "passed": true,
+            "evidence": "judge did not provide concrete evidence"
+          }
+        ],
+        "summary": {
+          "passed": 1,
+          "failed": 0,
+          "total": 1,
+          "pass_rate": 1
+        }
+      }
+    },
+    {
+      "id": "E06",
+      "title": "无评分条件时，目标调用出错仍可显示 100%",
+      "verified": true,
+      "observed": {
+        "rawOutput": "ERROR: Controlled upstream failure",
+        "passed": 0,
+        "failed": 0,
+        "total": 0,
+        "pass_rate": 1
+      }
+    },
+    {
+      "id": "E07",
+      "title": "裁判结果按数组位置匹配，未验证条件文本对应关系",
+      "verified": true,
+      "observed": {
+        "assertion_results": [
+          {
+            "text": "A",
+            "passed": true,
+            "evidence": "Evidence for B"
+          },
+          {
+            "text": "B",
+            "passed": false,
+            "evidence": "Evidence for A"
+          }
+        ],
+        "summary": {
+          "passed": 1,
+          "failed": 1,
+          "total": 2,
+          "pass_rate": 0.5
+        }
+      }
+    },
+    {
+      "id": "E08",
+      "title": "已有 assertions 时，预期答案及原任务不会自动传给裁判",
+      "verified": true,
+      "observed": {
+        "seesModelOutput": true,
+        "seesOriginalTask": false,
+        "seesExpectedOutput": false
+      }
+    },
+    {
+      "id": "E09",
+      "title": "没有 assertions 时 expected_output 会成为一条评分条件",
+      "verified": true,
+      "observed": {
+        "totalAssertions": 1
+      }
+    },
+    {
+      "id": "E10",
+      "title": "内置 Provider 记录工具调用后结束，没有工具执行回合",
+      "verified": true,
+      "observed": {
+        "httpRequests": 1,
+        "capturedToolCalls": 1,
+        "finalText": "",
+        "passRate": 1,
+        "toolResultMessages": 0
+      }
+    },
+    {
+      "id": "E11",
+      "title": "不同统计口径：用例平均 50%，检查条件整体通过率 10%",
+      "verified": true,
+      "observed": {
+        "benchmarkMean": 0.5,
+        "overallAssertionPassRate": 0.1,
+        "passed": 1,
+        "failed": 9
+      }
+    },
+    {
+      "id": "E12",
+      "title": "CLI 没有发现任何 Skill 时仍返回成功退出码",
+      "verified": true,
+      "observed": {
+        "exitCode": 0,
+        "skills": 0,
+        "passed": 0,
+        "failed": 0
+      }
+    }
+  ]
+}

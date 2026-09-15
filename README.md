@@ -9,13 +9,23 @@
 编号是永久标识；展示顺序由 `projects.json` 的 `order` 决定。调整顺序不需要重命名目录。
 
 <!-- PROJECT_INDEX:START -->
-暂无研究项目。添加首个项目后，这里会自动生成有序索引。
+| 顺序 | 编号 | 项目 | 源库 | 能力摘要 | 状态 | 演示 |
+| --- | --- | --- | --- | --- | --- | --- |
+| 1 | 002 | [Agent Skills Eval：Skill 能力校验引擎](projects/002-agent-skills-eval/README.md) | [agent\-skills\-eval](https://github.com/darkrishabh/agent-skills-eval) | 读取已编写的 Skill 与测试标准，自动调用模型、评分并对比有无 Skill 的效果，为校验能力 Skill 提供底层评测引擎。 | 已完成 | — |
 <!-- PROJECT_INDEX:END -->
 
 ## 项目预览
 
 <!-- PROJECT_PREVIEWS:START -->
-待添加项目摘要和截图。
+### 002 · Agent Skills Eval：Skill 能力校验引擎
+
+读取已编写的 Skill 与测试标准，自动调用模型、评分并对比有无 Skill 的效果，为校验能力 Skill 提供底层评测引擎。
+
+![Skill 能力校验闭环：用户与 AI 准备、评测引擎自动验证、人工复核后修改再测](projects/002-agent-skills-eval/assets/skill-validation-workflow.png)
+
+[研究记录](projects/002-agent-skills-eval/README.md) · [上游仓库](https://github.com/darkrishabh/agent-skills-eval)
+
+标签：Agent Skills / 自动评测 / LLM Judge / 可复现实验
 <!-- PROJECT_PREVIEWS:END -->
 
 ## 开始研究

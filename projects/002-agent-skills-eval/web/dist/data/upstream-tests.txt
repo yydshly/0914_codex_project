@@ -1,0 +1,170 @@
+
+> research-agent-skills-eval@1.0.0 test:upstream
+> npm --prefix upstream test
+
+
+> agent-skills-eval@0.1.1 test
+> npm run build && node --test test/*.test.mjs
+
+
+> agent-skills-eval@0.1.1 build
+> tsc -p tsconfig.json
+
+TAP version 13
+# Subtest: CLI runs from YAML config and writes JSONL logs plus report artifacts
+ok 1 - CLI runs from YAML config and writes JSONL logs plus report artifacts
+  ---
+  duration_ms: 409.1298
+  type: 'test'
+  ...
+# ▶ csv-analyzer  csv-analyzer
+#   1 eval  target=target  judge=judge  modes=with_skill,without_skill
+#   \#1 top-months  [with_skill] (+2 files)  [1]
+#     system:  <skill name="csv-analyzer"> <description>Analyze CSV files.</description> <instructions> Use CSV-specific checks. </instructions> <references> <reference path="references/REFERENCE.md" kind="text" by…
+#     user:    Find top revenue months.
+#     output:  Top revenue months: Jan
+#     asserts: ✓ 1
+#     25ms · 7 tokens · PASS
+#   \#1 top-months  [without_skill]  [2]
+#     user:    Find top revenue months.
+#     output:  Top revenue months: Jan
+#     asserts: ✓ 1
+#     25ms · 7 tokens · PASS
+#   summary  with_skill 100.0%  vs  without_skill 100.0%
+#     Δ pass-rate +0.0pp  time +0.0s  tokens +0.0
+#     with_skill:    0.03s avg · 7 tok avg
+#     without_skill: 0.03s avg · 7 tok avg
+#   benchmark: C:\\Users\\yun68\\AppData\\Local\\Temp\\agent-skills-eval-UVqOdx\\bench-workspace\\csv-analyzer\\benchmark.json
+# ▶ concurrent-skill  concurrent-skill
+#   3 evals  target=target  judge=judge  modes=with_skill
+# Subtest: loadSkill reads spec files and safe attachment states
+ok 2 - loadSkill reads spec files and safe attachment states
+  ---
+  duration_ms: 13.8007
+  type: 'test'
+  ...
+# Subtest: discoverSkills finds nested skills and plugin names
+ok 3 - discoverSkills finds nested skills and plugin names
+  ---
+  duration_ms: 7.3045
+  type: 'test'
+  ...
+# Subtest: gradeOutputs returns spec grading JSON and fails closed
+ok 4 - gradeOutputs returns spec grading JSON and fails closed
+  ---
+  duration_ms: 1.2009
+  type: 'test'
+  ...
+# Subtest: buildBenchmark and ensureIterationDir follow spec shapes
+ok 5 - buildBenchmark and ensureIterationDir follow spec shapes
+  ---
+  duration_ms: 1.3547
+  type: 'test'
+  ...
+# Subtest: runEval supports complete-only provider fallback and writes artifacts
+ok 6 - runEval supports complete-only provider fallback and writes artifacts
+  ---
+  duration_ms: 8.6778
+  type: 'test'
+  ...
+# Subtest: evaluateSkills produces spec workspace layout and summary
+ok 7 - evaluateSkills produces spec workspace layout and summary
+  ---
+  duration_ms: 23.9932
+  type: 'test'
+  ...
+# Subtest: loadSkill normalizes mixed-shape assertions to strings
+ok 8 - loadSkill normalizes mixed-shape assertions to strings
+  ---
+  duration_ms: 7.2349
+  type: 'test'
+  ...
+# Subtest: loadSkill throws with path-aware message on malformed assertion entry
+ok 9 - loadSkill throws with path-aware message on malformed assertion entry
+  ---
+  duration_ms: 7.8446
+  type: 'test'
+  ...
+#   \#1 case-a  [with_skill]  [1]
+#     system:  <skill name="concurrent-skill"> <description>Concurrency test.</description> <instructions> Body. </instructions> </skill>
+#     user:    do A
+#     output:  ok response
+#     asserts: ✓ 1
+#     200ms · 2 tokens · PASS
+#   \#2 case-b  [with_skill]  [2]
+#     system:  <skill name="concurrent-skill"> <description>Concurrency test.</description> <instructions> Body. </instructions> </skill>
+#     user:    do B
+#     output:  ok response
+#     asserts: ✓ 1
+#     200ms · 2 tokens · PASS
+#   \#3 case-c  [with_skill]  [3]
+#     system:  <skill name="concurrent-skill"> <description>Concurrency test.</description> <instructions> Body. </instructions> </skill>
+#     user:    do C
+#     output:  ok response
+#     asserts: ✓ 1
+#     200ms · 2 tokens · PASS
+#   summary  with_skill 100.0%  · 0.20s avg · 2 tok avg
+#   benchmark: C:\\Users\\yun68\\AppData\\Local\\Temp\\agent-skills-eval-nhtYl1\\bench-workspace\\concurrent-skill\\benchmark.json
+# ▶ csv-analyzer  csv-analyzer
+#   1 eval  target=target  judge=judge  modes=with_skill,without_skill
+#   \#1 top-months  [with_skill] (+2 files)  [1]
+#     system:  <skill name="csv-analyzer"> <description>Analyze CSV files.</description> <instructions> Use CSV-specific checks. </instructions> <references> <reference path="references/REFERENCE.md" kind="text" by…
+#     user:    Find top revenue months.
+#     output:  Top revenue months: Jan
+#     asserts: ✓ 1
+#     25ms · 7 tokens · PASS
+#   \#1 top-months  [without_skill]  [2]
+#     user:    Find top revenue months.
+#     output:  Top revenue months: Jan
+#     asserts: ✓ 1
+#     25ms · 7 tokens · PASS
+#   summary  with_skill 100.0%  vs  without_skill 100.0%
+#     Δ pass-rate +0.0pp  time +0.0s  tokens +0.0
+#     with_skill:    0.03s avg · 7 tok avg
+#     without_skill: 0.03s avg · 7 tok avg
+#   benchmark: C:\\Users\\yun68\\AppData\\Local\\Temp\\agent-skills-eval-2vQrFH\\workspace\\iteration-1\\benchmark.json
+# Subtest: evaluateSkills runs eval cases in parallel under concurrency
+ok 10 - evaluateSkills runs eval cases in parallel under concurrency
+  ---
+  duration_ms: 447.8466
+  type: 'test'
+  ...
+# Subtest: strict loadSkill validates required agentskills.io frontmatter
+ok 11 - strict loadSkill validates required agentskills.io frontmatter
+  ---
+  duration_ms: 10.2193
+  type: 'test'
+  ...
+# Subtest: expected_output becomes a judge assertion when assertions are omitted
+ok 12 - expected_output becomes a judge assertion when assertions are omitted
+  ---
+  duration_ms: 15.4048
+  type: 'test'
+  ...
+# Subtest: evaluateSkills can write the official iteration-N agentskills workspace layout
+ok 13 - evaluateSkills can write the official iteration-N agentskills workspace layout
+  ---
+  duration_ms: 13.9079
+  type: 'test'
+  ...
+# Subtest: loadConfigFile accepts YAML config for evaluator options
+ok 14 - loadConfigFile accepts YAML config for evaluator options
+  ---
+  duration_ms: 9.522
+  type: 'test'
+  ...
+# Subtest: jsonlReporter emits machine-readable event logs
+ok 15 - jsonlReporter emits machine-readable event logs
+  ---
+  duration_ms: 0.2381
+  type: 'test'
+  ...
+1..15
+# tests 15
+# suites 0
+# pass 15
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 660.7228

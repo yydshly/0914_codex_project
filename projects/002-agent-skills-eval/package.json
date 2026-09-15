@@ -1,0 +1,15 @@
+{
+  "name": "research-agent-skills-eval",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "setup": "npm --prefix upstream ci --ignore-scripts",
+    "verify:source": "node src/verify-source.mjs",
+    "test:upstream": "npm --prefix upstream test",
+    "experiment": "npm --prefix upstream run build && node src/experiments.mjs",
+    "live": "npm --prefix upstream run build && node src/live-eval.mjs",
+    "check": "npm run verify:source && npm run test:upstream && npm run experiment"
+  },
+  "engines": { "node": ">=20" }
+}

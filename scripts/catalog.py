@@ -98,13 +98,15 @@ def render(projects):
     if not projects:
         return ("暂无研究项目。添加首个项目后，这里会自动生成有序索引。",
                 "待添加项目摘要和截图。")
-    rows = ["| 顺序 | 编号 | 项目 | 研究摘要 | 状态 | 演示 |",
-            "| --- | --- | --- | --- | --- | --- |"]
+    rows = ["| 顺序 | 编号 | 项目 | 源库 | 能力摘要 | 状态 | 演示 |",
+            "| --- | --- | --- | --- | --- | --- | --- |"]
     previews = []
     for position, project in enumerate(sorted(projects, key=lambda p: (p["order"], int(p["id"]))), 1):
         detail = folder(project) + "/README.md"
         demo = link("在线演示", project["demo"]) if project["demo"] else "—"
+        source_name = urlsplit(project["repo"]).path.rstrip("/").split("/")[-1]
         rows.append(f"| {position} | {project['id']} | {link(project['name'], detail)} | "
+                    f"{link(source_name, project['repo'])} | "
                     f"{md(project['summary'])} | {project['status']} | {demo} |")
         block = [f"### {project['id']} · {md(project['name'])}", "", md(project["summary"]), ""]
         if project["cover"]:
