@@ -19,6 +19,7 @@ def build(output):
     if output.exists():raise ValueError('Choose a new output directory to avoid stale files')
     output.mkdir(parents=True)
     files=[*ROOT.glob('web/*.html')]
+    files += [ROOT/'assets'/name for name in ['audio-animation-architecture.png','audio-animation-architecture.svg']]
     files += [ROOT/p for p in ['assets/cover.jpg','assets/narration.mp3','assets/library-overview.png','assets/library-overview.svg','output/paper-theatre-demo.mp4','output/captions.srt','output/contact-sheet.jpg']]
     for slug in ['dns','task-training','english']:
         files += [ROOT/'demos'/slug/p for p in ['assets/cover.jpg','assets/narration.mp3','output/demo.mp4','output/captions.srt','output/contact-sheet.jpg']]

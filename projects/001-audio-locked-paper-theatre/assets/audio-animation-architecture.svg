@@ -1,0 +1,95 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1760" viewBox="0 0 1600 1760" role="img" aria-labelledby="title desc"><title id="title">音频时间轴怎样驱动画板对象</title><desc id="desc">讲稿和分镜分别驱动语音合成、对象准备与动作编排。真实时间戳提供时间依据。渲染器读取时间、动作规则和独立图层，逐帧绘制画面，再与原始音轨合成视频。</desc><rect width="1600" height="1760" fill="#f5f1e6"/>
+<text x="72" y="69.5" font-size="25" font-weight="700" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" fill="#267b69">PAPER THEATRE / 音频驱动动画架构</text>
+<text x="72" y="154.4" font-size="56" font-weight="700" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" fill="#213f39">声音给时间，代码让物品演出</text>
+<text x="72" y="214.1" font-size="29" font-weight="400" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" fill="#5b7067">画板是舞台，物品是演员，代码是动作脚本，音频时间轴是演出节拍。</text>
+<rect x="72" y="253" width="344" height="98" rx="14" fill="#e5ecdf" stroke="#cfd8ca" stroke-width="2"/>
+<text x="93" y="294.2" font-size="28" font-weight="700" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" fill="#267b69">画板 / 舞台</text>
+<text x="93" y="331.6" font-size="24" font-weight="400" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" fill="#5b7067">场景与空间关系</text>
+<rect x="442" y="253" width="344" height="98" rx="14" fill="#e5ecdf" stroke="#cfd8ca" stroke-width="2"/>
+<text x="463" y="294.2" font-size="28" font-weight="700" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" fill="#267b69">物品 / 演员</text>
+<text x="463" y="331.6" font-size="24" font-weight="400" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" fill="#5b7067">可独立控制的图层</text>
+<rect x="812" y="253" width="344" height="98" rx="14" fill="#e5ecdf" stroke="#cfd8ca" stroke-width="2"/>
+<text x="833" y="294.2" font-size="28" font-weight="700" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" fill="#267b69">代码 / 动作脚本</text>
+<text x="833" y="331.6" font-size="24" font-weight="400" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" fill="#5b7067">路径、状态与遮挡</text>
+<rect x="1182" y="253" width="344" height="98" rx="14" fill="#e5ecdf" stroke="#cfd8ca" stroke-width="2"/>
+<text x="1203" y="294.2" font-size="28" font-weight="700" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" fill="#267b69">时间轴 / 演出节拍</text>
+<text x="1203" y="331.6" font-size="24" font-weight="400" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" fill="#5b7067">统一的时间参数 t</text>
+<text x="72" y="408.0" font-size="30" font-weight="700" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" fill="#213f39">制作准备：把“演什么”和“何时演”对应起来</text>
+<rect x="72" y="441" width="430" height="180" rx="14" fill="#fffdf7" stroke="#cfd8ca" stroke-width="2"/>
+<text x="96" y="493.6" font-size="34" font-weight="700" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" fill="#267b69">讲稿与分镜</text>
+<text x="96" y="541.3" font-size="27" font-weight="700" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" fill="#213f39">确定讲解内容和画面含义</text>
+<text x="96" y="582.5" font-size="25" font-weight="400" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" fill="#5b7067">例：小球进入盒子，表现 in</text>
+<rect x="577" y="441" width="430" height="180" rx="14" fill="#fffdf7" stroke="#cfd8ca" stroke-width="2"/>
+<text x="601" y="493.6" font-size="34" font-weight="700" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" fill="#267b69">语音合成</text>
+<text x="601" y="541.3" font-size="27" font-weight="700" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" fill="#213f39">本地使用 MiniMax</text>
+<text x="601" y="582.5" font-size="25" font-weight="400" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" fill="#5b7067">生成真实配音与句级时间戳</text>
+<rect x="1082" y="441" width="430" height="180" rx="14" fill="#f2e8d9" stroke="#cfd8ca" stroke-width="2"/>
+<text x="1106" y="493.6" font-size="34" font-weight="700" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" fill="#aa6631">锁定音频结果</text>
+<text x="1106" y="541.3" font-size="27" font-weight="700" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" fill="#213f39">音轨文件 + 句子起止时间</text>
+<text x="1106" y="582.5" font-size="25" font-weight="400" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" fill="#5b7067">制作端保留最终配音节奏</text>
+<polyline points="503,531 568,531" fill="none" stroke="#267b69" stroke-width="4"/>
+<polygon points="568,531 555.7317064793859,537.744551437424 555.7317064793859,524.255448562576" fill="#267b69"/>
+<polyline points="1008,531 1073,531" fill="none" stroke="#aa6631" stroke-width="4"/>
+<polygon points="1073,531 1060.7317064793858,537.744551437424 1060.7317064793858,524.255448562576" fill="#aa6631"/>
+<polyline points="287,621 287,742" fill="none" stroke="#267b69" stroke-width="4"/>
+<polygon points="287,742 280.25544856257596,729.7317064793859 293.74455143742404,729.7317064793859" fill="#267b69"/>
+<text x="84" y="685.6" font-size="24" font-weight="400" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" fill="#267b69">准备角色与素材</text>
+<polyline points="397,621 397,687 792,687 792,742" fill="none" stroke="#267b69" stroke-width="4"/>
+<polygon points="792,742 785.255448562576,729.7317064793859 798.744551437424,729.7317064793859" fill="#267b69"/>
+<text x="550" y="670.6" font-size="24" font-weight="400" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" fill="#267b69">把语义编成动作规则</text>
+<polyline points="1297,621 1297,742" fill="none" stroke="#aa6631" stroke-width="4"/>
+<polygon points="1297,742 1290.255448562576,729.7317064793859 1303.744551437424,729.7317064793859" fill="#aa6631"/>
+<text x="1323" y="683.6" font-size="24" font-weight="400" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" fill="#aa6631">时间依据</text>
+<polyline points="1297,705 962,705 962,742" fill="none" stroke="#aa6631" stroke-width="4"/>
+<polygon points="962,742 955.255448562576,729.7317064793859 968.744551437424,729.7317064793859" fill="#aa6631"/>
+<text x="914" y="670.6" font-size="24" font-weight="400" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" fill="#aa6631">校准动作时段</text>
+<rect x="72" y="753" width="430" height="208" rx="14" fill="#fffdf7" stroke="#cfd8ca" stroke-width="2"/>
+<text x="96" y="805.6" font-size="34" font-weight="700" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" fill="#267b69">独立对象与场景</text>
+<text x="96" y="853.3" font-size="27" font-weight="700" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" fill="#213f39">舞台 + 演员</text>
+<text x="96" y="894.5" font-size="25" font-weight="400" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" fill="#5b7067">球、盒子、桌子、词卡、字幕</text>
+<text x="96" y="930.5" font-size="25" font-weight="400" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" fill="#5b7067">位置、尺寸、图层顺序与遮罩</text>
+<rect x="577" y="753" width="430" height="208" rx="14" fill="#fffdf7" stroke="#cfd8ca" stroke-width="2"/>
+<text x="601" y="805.6" font-size="34" font-weight="700" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" fill="#267b69">动作脚本</text>
+<text x="601" y="853.3" font-size="27" font-weight="700" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" fill="#213f39">代码规定怎样演</text>
+<text x="601" y="894.5" font-size="25" font-weight="400" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" fill="#5b7067">何时开始、持续多久、走哪条路</text>
+<text x="601" y="930.5" font-size="25" font-weight="400" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" fill="#5b7067">移动、缩放、显隐、组合与遮挡</text>
+<rect x="1082" y="753" width="430" height="208" rx="14" fill="#f2e8d9" stroke="#cfd8ca" stroke-width="2"/>
+<text x="1106" y="805.6" font-size="34" font-weight="700" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" fill="#aa6631">音频主时间轴</text>
+<text x="1106" y="853.3" font-size="27" font-weight="700" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" fill="#213f39">统一时间 t</text>
+<text x="1106" y="894.5" font-size="25" font-weight="400" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" fill="#5b7067">时间戳用于安排动作边界</text>
+<text x="1106" y="930.5" font-size="25" font-weight="400" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" fill="#5b7067">离线导出：t = 帧序号 ÷ 帧率</text>
+<text x="72" y="1049.0" font-size="30" font-weight="700" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" fill="#213f39">逐帧执行</text>
+<polyline points="287,961 287,1180 568,1180" fill="none" stroke="#267b69" stroke-width="4"/>
+<polygon points="568,1180 555.7317064793859,1186.744551437424 555.7317064793859,1173.255448562576" fill="#267b69"/>
+<text x="326" y="1157.6" font-size="24" font-weight="400" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" fill="#267b69">对象与图层</text>
+<polyline points="792,961 792,1100" fill="none" stroke="#267b69" stroke-width="4"/>
+<polygon points="792,1100 785.255448562576,1087.7317064793858 798.744551437424,1087.7317064793858" fill="#267b69"/>
+<text x="816" y="1037.6" font-size="24" font-weight="400" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" fill="#267b69">动作规则</text>
+<polyline points="1297,961 1297,1180 1016,1180" fill="none" stroke="#aa6631" stroke-width="4"/>
+<polygon points="1016,1180 1028.2682935206142,1173.255448562576 1028.2682935206142,1186.744551437424" fill="#aa6631"/>
+<text x="1093" y="1157.6" font-size="24" font-weight="400" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" fill="#aa6631">当前时间 t</text>
+<rect x="577" y="1111" width="430" height="208" rx="14" fill="#e5ecdf" stroke="#cfd8ca" stroke-width="2"/>
+<text x="601" y="1163.6" font-size="34" font-weight="700" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" fill="#267b69">逐帧渲染器</text>
+<text x="601" y="1211.3" font-size="27" font-weight="700" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" fill="#213f39">状态 = 动作规则（对象，t）</text>
+<text x="601" y="1252.5" font-size="25" font-weight="400" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" fill="#5b7067">计算这一刻的位置、大小与透明度</text>
+<text x="601" y="1288.5" font-size="25" font-weight="400" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" fill="#5b7067">按图层与遮罩绘制当前画面</text>
+<text x="591" y="1368.7" font-size="23" font-weight="400" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" fill="#5b7067">本地：Pillow · 1920 × 1080 · 24 fps</text>
+<polyline points="792,1378 792,1430" fill="none" stroke="#267b69" stroke-width="4"/>
+<polygon points="792,1430 785.255448562576,1417.7317064793858 798.744551437424,1417.7317064793858" fill="#267b69"/>
+<text x="821" y="1403.6" font-size="24" font-weight="400" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" fill="#267b69">连续画面帧</text>
+<polyline points="1512,531 1550,531 1550,1532 1016,1532" fill="none" stroke="#aa6631" stroke-width="4"/>
+<polygon points="1016,1532 1028.2682935206142,1525.255448562576 1028.2682935206142,1538.744551437424" fill="#aa6631"/>
+<text x="1101" y="1476.5" font-size="25" font-weight="700" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" fill="#aa6631">固定音轨直接加入合成</text>
+<rect x="577" y="1441" width="430" height="180" rx="14" fill="#fffdf7" stroke="#cfd8ca" stroke-width="2"/>
+<text x="601" y="1493.6" font-size="34" font-weight="700" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" fill="#267b69">音画合成与验证</text>
+<text x="601" y="1541.3" font-size="27" font-weight="700" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" fill="#213f39">FFmpeg → 有声 MP4</text>
+<text x="601" y="1582.5" font-size="25" font-weight="400" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" fill="#5b7067">检查同步、对象关系与完整播放</text>
+<rect x="72" y="1320" width="430" height="301" rx="14" fill="#fffdf7" stroke="#cfd8ca" stroke-width="2"/>
+<text x="97" y="1373.0" font-size="30" font-weight="700" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" fill="#267b69">小球进入盒子时</text>
+<text x="97" y="1420.5" font-size="25" font-weight="400" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" fill="#213f39">时间 t → 算出球的位置</text>
+<text x="97" y="1463.5" font-size="25" font-weight="400" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" fill="#213f39">图层顺序 → 前壁遮住球</text>
+<text x="97" y="1506.5" font-size="25" font-weight="400" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" fill="#213f39">同一时间 → 得到同一画面</text>
+<text x="97" y="1559.7" font-size="23" font-weight="400" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" fill="#5b7067">修改配音后，重新安排时间线。</text>
+<text x="72" y="1684.5" font-size="25" font-weight="400" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" fill="#5b7067">上游 Skill 提供制作规范、模板和验证工具；本图以本地复现说明各工具如何配合。</text>
+<text x="72" y="1728.5" font-size="25" font-weight="400" font-family="Microsoft YaHei,Noto Sans CJK SC,sans-serif" fill="#5b7067">音频提供时间依据，分镜与代码负责语义表达。观众答题、拖拽等交互需另加逻辑。</text>
+</svg>

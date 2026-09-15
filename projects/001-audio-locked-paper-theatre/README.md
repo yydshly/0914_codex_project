@@ -28,6 +28,14 @@
 
 [一图读懂：意义、使用场景与实现原理](assets/library-overview.png) · [可编辑 SVG](assets/library-overview.svg) · [网页查看](web/guide.html#overview)
 
+## 音频驱动动画架构图
+
+讲稿与分镜决定对象和动作规则；真实音频时间戳帮助校准动作时段。渲染器根据统一时间 t、动作规则与独立图层生成每一帧，再与固定音轨合成视频。
+
+![音频时间轴、动作脚本与独立图层共同驱动逐帧渲染](assets/audio-animation-architecture.png)
+
+[查看高清架构图](assets/audio-animation-architecture.png) · [可编辑 SVG](assets/audio-animation-architecture.svg)
+
 ## 直接观看
 
 ### 四个有声样例
