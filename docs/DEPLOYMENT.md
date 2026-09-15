@@ -2,11 +2,11 @@
 
 ## 当前状态
 
-已配置统一的 GitHub Actions 发布流程 `.github/workflows/pages.yml`。`pages.json` 显式选择要发布的项目编号，目前为 `002`；`scripts/build_pages.py` 将各项目的 `web/dist/` 打包到 `_site/<编号-slug>/`，并生成站点导航页。
+已配置统一的 GitHub Actions 发布流程 `.github/workflows/pages.yml`。`pages.json` 显式选择要发布的项目编号，目前为 `001`、`002`、`003`；`scripts/build_pages.py` 将各项目的 `web/dist/` 打包到 `_site/<编号-slug>/`，并生成站点导航页。
 
 发布状态以 GitHub Actions 部署成功且网页实际可访问为准。只有经过访问验证的演示地址才写入 `projects.json`，并同步到仓库索引。
 
-已验证的在线入口：[演示导航页](https://yydshly.github.io/0914_codex_project/) · [002：Skill 能力校验](https://yydshly.github.io/0914_codex_project/002-agent-skills-eval/)。
+已验证的在线入口：[演示导航页](https://yydshly.github.io/0914_codex_project/) · [001：语音驱动纸艺剧场](https://yydshly.github.io/0914_codex_project/001-audio-locked-paper-theatre/) · [002：Skill 能力校验](https://yydshly.github.io/0914_codex_project/002-agent-skills-eval/) · [003：Video TalkCraft](https://yydshly.github.io/0914_codex_project/003-video-talkcraft/)。003 于 2026-09-16 发布，导读采用专门整理的输入、制作、输出与一致性理解图。
 
 ## GitHub Pages 地址规划
 

@@ -4,7 +4,7 @@
 
 它是一套供 Agent 执行的制作规范、动效配方和工具。Agent 理解文案、设计分镜并选择组件，语音识别与对齐脚本提供时间表，Remotion 根据代码渲染画面，最后检查和审片。画廊展示可复用的组件效果；“最适合哪种效果”仍需要结合内容、素材、时长和全片风格判断。
 
-[查看理解图原图](assets/video-talkcraft-workflow.png) · [可缩放 SVG](assets/video-talkcraft-workflow.svg) · [完整制作模型](notes/production-model.md)
+[在线研究网页](https://yydshly.github.io/0914_codex_project/003-video-talkcraft/) · [查看理解图原图](assets/video-talkcraft-workflow.png) · [可缩放 SVG](assets/video-talkcraft-workflow.svg) · [完整制作模型](notes/production-model.md)
 
 ![Video TalkCraft 理解图：输入、分镜选卡、组装输出、一致性与修改回退](assets/video-talkcraft-workflow.png)
 
@@ -46,7 +46,7 @@
 | 研究范围 | 源码研究、六例 HTML 展示、对齐实验与单组件渲染 |
 | 研究状态 | 本次范围已完成，完整口播生产与真实语音精度未验证 |
 | 开始日期 | 2026-09-15 |
-| 演示 | [本地研究页面](http://127.0.0.1:8033/)，需启动下述本地服务；未在线发布 |
+| 演示 | [GitHub Pages 在线研究页面](https://yydshly.github.io/0914_codex_project/003-video-talkcraft/)，2026-09-16 发布并验证可访问 |
 
 ## 先看什么
 
