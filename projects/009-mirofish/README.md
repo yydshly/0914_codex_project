@@ -62,7 +62,7 @@ python -m http.server 8079 --bind 127.0.0.1 --directory projects/009-mirofish/we
 
 访问 [本机展示页](http://127.0.0.1:8079/)，或直接打开构建后的 `web/dist/index.html`。构建只使用 Python 标准库；网页无需网络，外部来源链接除外。
 
-已接入总仓库 GitHub Pages 构建配置。推送后由工作流构建静态教学展示；线上地址经访问验证后登记。这里的展示不包含 MiroFish 原版后端服务。
+已于 2026-09-16 发布并验证：[在线能力展示](https://yydshly.github.io/0914_codex_project/009-mirofish/)。17 个公开文件与本地产物内容核对一致（文本统一换行后比较），导航及九个项目入口均可访问。这里的展示不包含 MiroFish 原版后端服务。
 
 ## 原版能力与实际价值
 

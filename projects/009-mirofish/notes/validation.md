@@ -1,5 +1,9 @@
 # 检查记录 · 2026-09-16
 
+## 远端发布验证
+
+研究、图解与展示通过提交 `e46978a` 推送到远端 main；GitHub Actions 目录校验与 Pages 发布成功（运行 35062461376）。线上 17 个文件与本地内容逐项一致：图片按原始字节比较，文本统一 CRLF / LF 后比较。总导航包含 009，现有九个项目入口均返回 HTTP 200。验证地址：https://yydshly.github.io/0914_codex_project/009-mirofish/ 。仅发布静态教学页，不代表已部署原版模型后端。
+
 ## 能力全景图增补
 
 新增 1800×2480 的 `mirofish-capabilities.svg` 与 PNG，汇总五类场景、三类输入、内部处理循环、六种呈现方式及价值边界。明确区分官方舆情 / 红楼梦演示与可设计用途；标记模型、OASIS、Zep、MiroFish 和 ReportAgent 的分工。SVG 内含固定版本源码链接。
