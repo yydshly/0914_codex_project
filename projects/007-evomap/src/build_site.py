@@ -12,6 +12,8 @@ FILES = {
     'main.js': ROOT / 'web' / 'main.js',
     'assets/product-understanding.png': ROOT / 'assets' / 'product-understanding.png',
     'assets/product-understanding.svg': ROOT / 'assets' / 'product-understanding.svg',
+    'assets/swarm-understanding.png': ROOT / 'assets' / 'swarm-understanding.png',
+    'assets/swarm-understanding.svg': ROOT / 'assets' / 'swarm-understanding.svg',
     'evidence/test-summary.json': ROOT / 'notes' / 'test-summary.json',
     'evidence/probe-output.txt': ROOT / 'notes' / 'probe-output.txt',
 }

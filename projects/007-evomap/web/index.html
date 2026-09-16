@@ -10,7 +10,7 @@
 <a class="skip" href="#main">跳到正文</a>
 <header class="topbar"><a class="brand" href="#top"><span class="brand-icon" aria-hidden="true">E</span><span>EvoMap <b>理解手册</b></span></a><span class="edition">研究 007 <span aria-hidden="true">/</span> 2026.09</span></header>
 <div class="layout" id="top">
-<aside class="contents" aria-label="阅读导航"><p>从一个问题出发</p><nav><a href="#idea">01 <span>它在探索什么</span></a><a href="#method">02 <span>这套方案怎么做</span></a><a href="#example">03 <span>看一次经验流动</span></a><a href="#architecture">04 <span>谁负责哪一步</span></a><a href="#evidence">05 <span>证据走到哪里</span></a><a href="#next">06 <span>怎样证明有用</span></a></nav><div class="aside-note">独立研究笔记<br>概念图与示例<br>均非 EvoMap 产品界面</div></aside>
+<aside class="contents" aria-label="阅读导航"><p>从一个问题出发</p><nav><a href="#idea">01 <span>它在探索什么</span></a><a href="#method">02 <span>这套方案怎么做</span></a><a href="#swarm">03 <span>蜂群如何组织协作</span></a><a href="#example">04 <span>看一次经验流动</span></a><a href="#architecture">05 <span>谁负责哪一步</span></a><a href="#evidence">06 <span>证据走到哪里</span></a><a href="#next">07 <span>怎样证明有用</span></a></nav><div class="aside-note">独立研究笔记<br>概念图与示例<br>均非 EvoMap 产品界面</div></aside>
 <main id="main">
 <section class="intro" id="idea">
 <div class="eyebrow">愿景 · 方法 · 验证</div>
@@ -41,8 +41,26 @@
 <details><summary>看起来像定制规则：规则和经验各起什么作用？</summary><p>规则规定资产格式、使用条件、执行约束和验收办法；经验记录某种方法在什么环境下成功或失败。模型和工具负责执行，验证结果再影响后续选择。因此“配置规则”是其中一部分，持续积累可验证的经验才是我们关注的产品方向。</p></details>
 <div class="callout"><b>一个可落地的起点：技能 ＋ 本地经验库 ＋ 检索 ＋ 执行验证 ＋ 反馈回写。</b><p>先让一个 Agent 在后续任务里复用，再扩展到多个 Agent 共享。数据库本身不会产生群体智能；是否提高整体能力，需要对照实验。这是我们的产品化建议，不是对官方部署架构的复刻。</p></div>
 </section>
+<section id="swarm">
+<div class="section-heading"><span>03</span><div><h2>蜂群：按需组队，再让经验留下来</h2><p>能力决定能做什么，角色决定这次负责什么，经验帮助它做得更好。</p></div></div>
+<p><strong>在 EvoMap 语境里，蜂群属于多 Agent 协作的一种组织方式。</strong>多 Agent 协作是总称；蜂群强调围绕目标组织参与者、协调执行、审查和迭代。成熟的多 Agent 系统也能具备这些能力，不能只凭名称判断先进程度。</p>
+<figure class="understanding-map">
+<figcaption><h3>一张图理解：能力、岗位、经验怎样连接</h3><p>先按能力选参与者，再提供适用的方法与上下文；完成后核对结果，把有依据的经验留给下一次。</p></figcaption>
+<a href="./assets/swarm-understanding.png" target="_blank" rel="noopener" aria-label="打开蜂群理解图"><img src="./assets/swarm-understanding.png" width="1800" height="1940" loading="lazy" alt="蜂群属于多 Agent 协作。能力表示模型、工具、环境和权限；角色表示本次岗位；经验表示方法与案例。流程为提出目标、规划组队、Agent 执行、审查返工、汇总交付。共享经验库为任务提供方法，并保存成败供以后复用。云端蜂群效果尚未实测。"></a>
+<p class="source-note"><a href="./assets/swarm-understanding.png" download>下载高清 PNG</a> · <a href="./assets/swarm-understanding.svg" download>下载可编辑 SVG</a>。这是我们的概念归纳，不是官方部署架构。</p>
+</figure>
+<h3 class="swarm-subheading">“给一批 Agent 能力，再按需赋能”，要分开看</h3>
+<div class="two-paths"><article><span class="mini-label">先选谁来做</span><h3>按已有能力匹配</h3><p>例如网页实现需要编程工具，部署需要对应环境与权限。选人时要考虑它实际能做什么、当前是否可用。</p></article><article><span class="mini-label">再提供怎样做</span><h3>补充技能与经验</h3><p>提供页面规范、部署步骤、历史失败案例和当前任务上下文。这些能指导执行，但不会自动授予工具、权限或保证成功。</p></article></div>
+<div class="asset-key"><article><code>能力</code><h3>能做什么</h3><p>模型、工具、环境和权限共同构成执行条件。</p></article><article><code>角色</code><h3>这次负责什么</h3><p>任务中的岗位，不必是永久身份；同一 Agent 可以在不同任务承担不同职责。</p></article><article><code>经验</code><h3>如何做得更好</h3><p>方法、条件、案例与成败依据，需要在当前任务重新验证。</p></article></div>
+<h3 class="swarm-subheading">“蜂后、工蜂、不同工种”怎样对应？</h3>
+<div class="swarm-roles"><article><h4>协调者</h4><p>理解目标、拆任务、组织参与者、跟踪进度。</p></article><article><h4>执行者</h4><p>负责研究、实现或测试，交出具体结果。</p></article><article><h4>审查者</h4><p>核对证据和验收标准，必要时提出返工。</p></article><article><h4>汇总者</h4><p>处理结果衔接与冲突，整合最终交付。</p></article></div>
+<p class="plain-note">可以把“蜂后”当作软件协调者的比喻；这里只讨论任务岗位，不把它当成生物蜂群机制的复刻。工种可以预设，也可以按任务安排；“等上层派单”是一条路径，Agent 主动认领任务也是一条路径。</p>
+<details><summary>一定要有一个固定的“蜂后”吗？</summary><p>这个概念并不要求一个永久中央角色。本图展示的是方便理解的协调流程；具体系统可以由平台、规划 Agent 或任务发起者承担协调。EvoMap 文档同时描述了任务认领、平台调度、并行分工、独立探索、审议和流水线等方式。</p></details>
+<div class="callout"><b>蜂群组织当下的协作；经验库连接前后多次任务。</b><p>我们关注的产品方向，是把两者结合起来：先跑通可验收的小任务，再验证共享经验是否减少重复试错。多个 Agent 达成一致仍可能出错；需要实际验收，并衡量协作成本。</p></div>
+<p class="source-note">依据 <a href="https://evomap.ai/zh/wiki/10-swarm" target="_blank" rel="noopener">官方蜂群文档 ↗</a>（2026-09-16 查阅）。角色、能力、经验的区分与图示是本研究的解释框架。现有 77 项测试覆盖 Evolver 局部模块，未验证云端蜂群协作收益。</p>
+</section>
 <section id="example">
-<div class="section-heading"><span>03</span><div><h2>一条经验，怎样从 A 到达 B？</h2><p>以“上传大文件总是超时”为例。下面是机制示意，未连接真实 AI 或平台。</p></div></div>
+<div class="section-heading"><span>04</span><div><h2>一条经验，怎样从 A 到达 B？</h2><p>以“上传大文件总是超时”为例。下面是机制示意，未连接真实 AI 或平台。</p></div></div>
 <div class="example">
 <div class="step-controls" aria-label="选择示例步骤"><button type="button" data-step="0" aria-pressed="true"><span>1</span>遇到问题</button><button type="button" data-step="1" aria-pressed="false"><span>2</span>试出方法</button><button type="button" data-step="2" aria-pressed="false"><span>3</span>打包经验</button><button type="button" data-step="3" aria-pressed="false"><span>4</span>另一个 AI 复用</button><button type="button" data-step="4" aria-pressed="false"><span>5</span>重新验证</button></div>
 <div class="stage" aria-live="polite" aria-atomic="true">
@@ -57,7 +75,7 @@
 <p class="source-note">资产定义依据 <a href="https://evomap.ai/zh/wiki/16-gep-protocol" target="_blank" rel="noopener">GEP 文档 ↗</a>。案例中的分块上传仅用于说明，不保证适合所有超时故障。</p>
 </section>
 <section id="architecture">
-<div class="section-heading"><span>04</span><div><h2>网页、平台、客户端、AI，各做什么？</h2><p>把角色拆开，就能理解“打开网页”和“AI 真正干活”的关系。</p></div></div>
+<div class="section-heading"><span>05</span><div><h2>网页、平台、客户端、AI，各做什么？</h2><p>把角色拆开，就能理解“打开网页”和“AI 真正干活”的关系。</p></div></div>
 <div class="architecture">
 <div class="human-entry"><span>你</span><p>提出任务 · 阅读结果 · 反馈</p></div>
 <div class="architecture-columns"><article class="platform"><span class="mini-label">共享侧</span><h3>EvoMap 网页与 Hub</h3><ul><li>网页让人提问、浏览和管理</li><li>Hub 提供经验检索、发布与记录</li><li>平台还描述了任务分配与协作能力</li></ul><span class="scope">云端整体能力：本研究未实测</span></article><div class="exchange"><span>查询经验</span><b aria-hidden="true">⇄</b><span>提交结果</span><small>GEP 规定经验的格式与交换方式</small></div><article class="execution"><span class="mini-label">执行侧</span><h3>Evolver ＋ 执行宿主</h3><ul><li>Evolver 选择策略、组织执行提示</li><li>宿主模型理解任务并调用工具</li><li>在项目里修改、测试，再记录结果</li></ul><span class="scope">已验证：选择、哈希、提示词模块</span></article></div>
@@ -67,7 +85,7 @@
 <details><summary>是不是普通知识库换了一个名字？</summary><p>它与知识检索有重叠，但尝试进一步组织“适用条件、做法、执行结果、后续反馈”。这些结构是否比普通操作说明更有用，仍要用相同任务做对照，不能仅凭 Gene 的名字判断。</p></details>
 </section>
 <section id="evidence">
-<div class="section-heading"><span>05</span><div><h2>目前的证据，能支持到哪一步？</h2><p>把我们的实测、官方描述与长期愿景分开看。</p></div></div>
+<div class="section-heading"><span>06</span><div><h2>目前的证据，能支持到哪一步？</h2><p>把我们的实测、官方描述与长期愿景分开看。</p></div></div>
 <div class="evidence-summary"><strong>77<span> / 77</span></strong><div><b>上游模块测试通过</b><p>19 项内容哈希 · 47 项选择器 · 11 项提示词<br>这些是局部功能验证，没有测量整体任务成功率。</p></div><a href="./evidence/test-summary.json" target="_blank">查看测试摘要 ↗</a></div>
 <div class="evidence-list">
 <article><span class="tag proven">本研究已验证</span><div><h3>经验能被选中，指令能被生成</h3><p>实际调用原版模块，选出修复 Gene、匹配合成 Capsule，并生成含任务与策略的提示词。</p></div></article>
@@ -79,7 +97,7 @@
 <p class="source-note">研究固定在 Evolver 1.94.0。核心文件存在混淆，本次未完成逐行审计。<a href="./evidence/probe-output.txt" target="_blank">查看探针结果 ↗</a></p>
 </section>
 <section id="next">
-<div class="section-heading"><span>06</span><div><h2>接下来，怎样证明它真的有用？</h2><p>让三组 AI 做相同的任务，用相同的验收标准比较。</p></div></div>
+<div class="section-heading"><span>07</span><div><h2>接下来，怎样证明它真的有用？</h2><p>让三组 AI 做相同的任务，用相同的验收标准比较。</p></div></div>
 <div class="comparison"><article><span>A</span><h3>基础 Agent</h3><p>靠模型与工具完成任务。</p></article><article><span>B</span><h3>附普通操作说明</h3><p>额外提供整理好的步骤。</p></article><article><span>C</span><h3>附结构化经验与反馈</h3><p>使用 Gene、Capsule 和历史结果。</p></article></div>
 <p class="measure">共同衡量：<b>成功率</b><b>总成本</b><b>完成时间</b><b>错误采纳</b><b>人工干预</b></p>
 <p>如果 C 在新任务上仍能稳定提高质量、减少总开销，才是这套方案有效的证据。多人同时做事、保存更多资产、给结果打高分，都不能替代这个比较。</p>

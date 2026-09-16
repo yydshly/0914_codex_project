@@ -36,6 +36,7 @@
 - [Evolver 说明](https://evomap.ai/zh/wiki/34-evolver)：整体循环。
 - [GEP 说明](https://evomap.ai/zh/wiki/16-gep-protocol)：资产与交换。
 - [多 Agent 介绍](https://evomap.ai/zh/capabilities/multi-agent)：协作能力。
+- [蜂群文档](https://evomap.ai/zh/wiki/10-swarm)：2026-09-16 查阅，用于任务拆解、认领、调度和协作模式的描述。新增蜂群章节与理解图采用“能力、角色、经验”解释框架，属于我们的概念归纳；未进行云端蜂群实测。
 - [群体超级智能文章](https://evomap.ai/zh/blog/toward-collective-superintelligence)：方向愿景，未作为已交付能力证明。
 
 ## 文档与代码差异

@@ -24,6 +24,20 @@
 
 [高清 PNG](assets/product-understanding.png) · [可编辑 SVG](assets/product-understanding.svg)
 
+## 蜂群：按需组织 Agent，让经验跨任务复用
+
+蜂群属于多 Agent 协作，强调围绕目标组队、协调、审查和迭代。它可以结合共享经验，但这些机制并非“蜂群”名称独有。
+
+“按需赋能”应拆成两个动作：按已有能力选 Agent，再提供适用技能、案例和上下文。**能力决定能做什么，角色决定本次负责什么，经验帮助它做得更好。** 技能说明不会自动授予工具或权限；岗位也不必永久固定。
+
+“蜂后、工蜂”可作为协调、执行、审查与汇总岗位的比喻，不应据此认定必须有永久中央角色。任务可由平台派发，也可由 Agent 认领。我们的产品理解是：用蜂群组织当下工作，用经验沉淀连接前后多次任务。
+
+![蜂群理解图：能力、角色、经验；按需选人和提供方法；执行审查返工与经验回写](assets/swarm-understanding.png)
+
+[网页蜂群章节](https://yydshly.github.io/0914_codex_project/007-evomap/#swarm) · [高清 PNG](assets/swarm-understanding.png) · [可编辑 SVG](assets/swarm-understanding.svg) · [官方蜂群文档](https://evomap.ai/zh/wiki/10-swarm)
+
+图示是独立研究归纳，非官方部署架构；现有模块测试不构成云端蜂群收益的验证。
+
 ## 已确认的五件事
 
 1. **基础路径产出执行提示词。** 原版提示词模块产生 16,106 字符，包含任务上下文和选中 Gene。生成指令不等于执行指令。
@@ -88,7 +102,7 @@ python src/research.py
 | 研究日期 | 2026-09-16 |
 | 验证 | 19 项哈希＋47 项选择器＋11 项提示词测试通过；研究探针通过 |
 | 云端验证 | 未进行 |
-| 在线导读 | [GitHub Pages 理解手册](https://yydshly.github.io/0914_codex_project/007-evomap/)，已验证页面与全部 7 个静态文件 |
+| 在线导读 | [GitHub Pages 理解手册](https://yydshly.github.io/0914_codex_project/007-evomap/)，含产品方向图、蜂群理解图与经验流动示例 |
 
 ## 后续验证
 
