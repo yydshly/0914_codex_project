@@ -19,6 +19,7 @@ on:
       - 'projects/010-graft/**'
       - 'projects/011-background-agents/**'
       - 'projects/012-future-agi/**'
+      - 'projects/013-agent-data-sources/**'
   workflow_dispatch:
 
 permissions:
@@ -63,6 +64,8 @@ jobs:
         run: python projects/011-background-agents/src/build_site.py
       - name: Build Future AGI evaluation research guide
         run: python projects/012-future-agi/src/build_site.py
+      - name: Build Agent data sources research guide
+        run: python projects/013-agent-data-sources/src/build_site.py
       - name: Build combined project site
         run: python scripts/build_pages.py
       - uses: actions/configure-pages@v5

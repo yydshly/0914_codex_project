@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="用一张引导图理解 AgentKey 多源接入、AIsa API与模型聚合、TikHub 社交数据服务。整理148条来源、服务与能力，区分API等获取方式、后续清理和未实测边界。">
+  <meta name="theme-color" content="#184ee6">
+  <title>数据来源研究 · AgentKey / AIsa / TikHub</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="data.js" defer></script>
+  <script src="main.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#main">跳到内容</a>
+<aside class="sidebar">
+  <a class="brand" href="#overview"><span class="brand-mark">13</span><span>数据来源研究<small>RESEARCH COLLECTION</small></span></a>
+  <div class="side-label">研究内容</div>
+  <nav aria-label="研究导航">
+    <a href="#overview" data-view="overview"><span>00</span>研究导读</a>
+    <a href="#sources" data-view="sources" aria-current="page"><span>01</span>来源目录</a>
+    <a href="#access" data-view="access"><span>02</span>获取方式</a>
+    <a href="#compare" data-view="compare"><span>03</span>三家对比</a>
+    <a href="#process" data-view="process"><span>04</span>数据处理</a>
+    <a href="#evidence" data-view="evidence"><span>05</span>证据与边界</a>
+  </nav>
+  <div class="side-note"><span class="side-label">研究主线</span><p>先看来源，<br>再看数据如何变得可用。</p><div class="mini-flow">来源 / 获取 / 清理<br>检索 / 分析</div></div>
+  <footer class="side-footer">资料核查 · 2026.09.16<br><a href="notes/source-inventory.json" download>下载完整来源登记 ↗</a></footer>
+</aside>
+<div class="workspace">
+  <header class="topbar"><span>研究集 <span class="slash">/</span> AgentKey · AIsa · TikHub</span><span class="edition">公开资料研究</span></header>
+  <main id="main">
+    <section id="overview" class="view" hidden aria-labelledby="overview-title">
+      <div class="section-head"><div><p class="eyebrow">00 / RESEARCH GUIDE</p><h1 id="overview-title">让多源信息，成为可用的数据。</h1><p class="intro">三个网站的产品思路、来源范围，以及对我们的意义。</p></div></div>
+      <div class="overview-lead"><p><strong>来源选择是起点，稳定接入和可追溯结果才让数据产生价值。</strong>AgentKey、AIsa、TikHub 都降低外部能力的接入成本；清理、检索、分析和业务操作的覆盖各不相同。我们要沉淀的是来源登记、接入适配、质量规则和任务应用。</p><div class="overview-links"><a class="button" href="#sources">浏览完整来源目录 →</a><a href="notes/research-summary.md" download>下载研究摘要</a><a href="assets/agent-data-sources-guide.png" download>下载引导图</a></div></div>
+      <figure class="guide-figure"><a href="assets/agent-data-sources-guide.png" target="_blank" rel="noopener"><img src="assets/agent-data-sources-guide.png" width="1536" height="1024" alt="研究引导图：AgentKey 侧重多源接入，AIsa 聚合 API、模型与工具，TikHub 提供社交内容数据；列出六类代表来源，并展示从获取、保留证据、清理到检索分析的建议流程。"></a><figcaption>研究归纳图，点击可查看大图。名单为代表名称；每家覆盖与状态以逐条目录为准。</figcaption></figure>
+      <div class="subhead"><h2>先理解三个网站的分工</h2><p>它们是商业服务；下述定位来自公开文档归纳，实际效果尚待验证。</p></div>
+      <div class="overview-products">
+        <article><span>01 / 多源接入</span><h2>AgentKey</h2><p>把搜索、网页、社交、金融等数据能力接到统一密钥与工具入口，减少逐家管理接入和计费的工作。</p><p><strong>适合研究：</strong>如何给已有 Agent 补充外部数据。</p><a href="https://agentkey.app/" target="_blank" rel="noopener noreferrer">官网 ↗</a><button class="text-button" data-platform="AgentKey">查看 51 条登记 →</button></article>
+        <article><span>02 / 数据与工具聚合</span><h2>AIsa</h2><p>聚合数据 API、模型和处理工具，另含部分业务操作。既能取信息，也能参与生成、排序和执行。</p><p><strong>适合研究：</strong>如何组合获取、处理与应用能力。</p><a href="https://aisa.one/" target="_blank" rel="noopener noreferrer">官网 ↗</a><button class="text-button" data-platform="AIsa">查看登记（含规划项）→</button></article>
+        <article><span>03 / 社交内容数据</span><h2>TikHub</h2><p>围绕内容、账号、评论和社交电商提供平台接口，并提供 MCP、数据集和扩展等不同交付方式。</p><p><strong>适合研究：</strong>如何降低逐平台获取内容的成本。</p><a href="https://tikhub.io/" target="_blank" rel="noopener noreferrer">官网 ↗</a><button class="text-button" data-platform="TikHub">查看 20 条登记 →</button></article>
+      </div>
+      <div class="subhead"><h2>多个来源，具体有哪些？</h2><p>以下列出全部 73 条非“仅规划”的来源、服务或能力；其中也包含宣称和状态冲突，不代表全部已可用。点击名称查看逐家证据。另有 75 条仅规划项目，可在完整目录开启查看。</p></div>
+      <div id="source-map" class="source-map" aria-label="来源分类名录"></div>
+      <div class="subhead"><h2>获取方式已知，不代表后台机制和实际效果都已验证</h2></div>
+      <div class="comparison-grid"><article><h2>我们怎么拿数据？</h2><p>主要调用接入商 API，AI 也可通过 MCP 调用工具；部分场景使用数据集或浏览器扩展。46 条至少一家已列来源级接口目录。</p><a href="#access">查看具体入口与方式 →</a></article><article><h2>哪些仍然未知？</h2><p>后台使用原站 API、抓取还是授权数据，很多没有披露。业务接口尚未实测，成功率、完整度、权限和成本需要样本验证。三家的 RSS 接入本次未确认。</p><a href="#evidence">查看证据与边界 →</a></article></div>
+      <div class="conclusion"><span>对我们的产品设计意义 · 研究建议</span><h2>维护来源登记和接入适配，<br>用清理规则与证据链，支撑具体业务结果。</h2><p>先留存原始记录，再解析、去重、统一字段，最后检索与分析。同一帖子经两家获得仍通常是一条原始证据；模型生成内容另行标注。</p><a href="#process">查看九类数据的清理方式 →</a></div>
+    </section>
+    <section id="sources" class="view" aria-labelledby="sources-title">
+      <div class="section-head"><div><p class="eyebrow">01 / SOURCE DIRECTORY</p><h1 id="sources-title">从哪里获得数据？</h1><p class="intro">按来源、接入平台与证据状态，查看三家的能力范围。</p></div><div class="total"><strong id="total-count">148</strong><span>来源、服务与能力条目</span></div></div>
+      <div class="notice"><span class="notice-icon">i</span><p><strong>46 项已有来源级接口文档。</strong>“我们通过 API 获取”可以确定；“供应商后台怎么采集”是另一个问题。实际调用效果尚未测试。</p></div>
+      <div class="entry-summary" aria-label="按来源去重的接入明确程度"><div><strong data-entry-count="confirmed">46</strong><span>已列来源接口</span></div><div><strong data-entry-count="declared">26</strong><span>统一入口 / 来源待定位</span></div><div><strong data-entry-count="conflict">1</strong><span>上线状态冲突</span></div><div><strong data-entry-count="planned">75</strong><span>仅规划，默认隐藏</span></div></div>
+      <p class="entry-help">按来源去重统计；同一来源只要有一家列出接口，就计入第一类。<button id="show-confirmed" class="text-button">只看接口明确的来源 →</button></p>
+      <form id="filters" class="filters" role="search">
+        <div class="search-field"><label for="query">搜索来源或能力</label><input id="query" type="search" placeholder="例如：小红书、评论、Firecrawl" autocomplete="off"></div>
+        <div><label for="platform">接入平台</label><select id="platform"><option value="">全部平台</option><option>AgentKey</option><option>AIsa</option><option>TikHub</option></select></div>
+        <div><label for="category">来源类别</label><select id="category"><option value="">全部类别</option></select></div>
+        <div><label for="status">证据状态</label><select id="status"><option value="">全部状态</option><option>文档列示</option><option>接口目录列示</option><option>官网列示</option><option>官网提及</option><option>文档示例</option><option>状态冲突</option><option>即将上线</option></select></div>
+        <div class="method-filter"><label for="method">获取方式（含单列的原站直连）</label><select id="method"><option value="">全部方式</option><option>API</option><option>MCP</option><option>数据集下载</option><option>浏览器扩展</option><option value="RSS/Atom">RSS / Atom（原站）</option><option>Webhook</option><option>原站 API</option><option value="待核">获取入口待核</option></select></div>
+        <div class="entry-filter"><label for="entry">对外接入明确程度</label><select id="entry"><option value="">全部程度</option><option value="confirmed">已列来源接口</option><option value="declared">统一入口 / 来源待定位</option><option value="conflict">上线状态冲突</option><option value="planned">仅规划</option></select></div>
+        <label class="check"><input id="planned" type="checkbox">包含规划项目</label><button type="reset" class="reset">重置条件</button>
+      </form>
+      <div class="results-bar"><p id="result-count" role="status" aria-live="polite"></p><span>点击名称，查看各家能力与官方依据</span></div>
+      <div class="table-wrap"><table class="source-table"><caption class="sr-only">来源、内容与获取方式、三家平台覆盖与详情</caption><thead><tr><th scope="col">来源 / 服务</th><th scope="col">内容与获取方式</th><th scope="col">AgentKey</th><th scope="col">AIsa</th><th scope="col">TikHub</th></tr></thead><tbody id="source-rows"></tbody></table><div id="empty" hidden><strong>没有匹配的来源</strong><p>试试减少筛选条件，或开启“包含规划项目”。</p><button class="button secondary" id="empty-reset">重置筛选</button></div></div>
+      <div class="pager"><span id="page-label"></span><div><button id="previous" class="button secondary">上一页</button><button id="next" class="button secondary">下一页</button></div></div>
+      <p class="footnote">“—”表示本次资料未确认，并不代表绝对不支持。不同接入商指向同一原始平台，也不代表多份独立证据。</p>
+      <p class="footnote">“经服务”表示我们调用接入商的方式，不保证其后台使用原站官方 API；“另有原站”是独立核实的直连路径。<a href="#access">查看获取方式与不确定项 →</a></p>
+      <noscript><p class="notice">浏览来源目录需要启用 JavaScript，也可以下载<a href="notes/sources-inventory.md">完整文字版来源表</a>。</p></noscript>
+    </section>
+
+    <section id="access" class="view" hidden aria-labelledby="access-title">
+      <div class="section-head"><div><p class="eyebrow">02 / ACCESS METHODS</p><h1 id="access-title">通过什么方式，拿到哪些信息？</h1><p class="intro">先区分我们调用的入口，再追问原始数据是怎么取得的。</p></div></div>
+      <div class="access-chain"><div><span>我们 / AI</span><strong>调用入口</strong><p>API · MCP · 扩展 · 数据集</p></div><span class="chain-arrow" aria-hidden="true">→</span><div><span>AgentKey / AIsa / TikHub</span><strong>接入服务</strong><p>认证、工具调用、结果交付</p></div><span class="chain-arrow" aria-hidden="true">→</span><div><span>原始平台 / 数据供应商</span><strong>底层获取方式</strong><p>官方 API？网页抓取？授权数据？</p></div></div>
+      <div class="notice"><span class="notice-icon">i</span><p><strong>对我们而言，许多获取方式已经明确：调用接入商的 API。</strong>其后台是原站 API、抓取还是其他方式，可以单独列为未披露；不应因此把对外 API 也标成不确定。</p></div>
+      <div class="subhead"><h2>这些就是已经写明的请求入口</h2><p>文档可确认请求地址与用途；以下没有发送实际请求，效果仍需实测。</p></div>
+      <div class="endpoint-examples"><article><span>TikTok → TikHub API</span><h3>按视频 ID 获取资料</h3><code class="feed-template">GET https://api.tikhub.io/api/v1/tiktok/app/v3/fetch_one_video</code><p>传入 aweme_id，使用 TikHub Bearer token。</p><a href="https://tikhub.io/api-reference" target="_blank" rel="noopener noreferrer">请求示例依据 ↗</a></article><article><span>网页正文 → AIsa / Firecrawl API</span><h3>提取指定网页内容</h3><code class="feed-template">POST https://api.aisa.one/apis/v1/firecrawl/scrape</code><p>提供目标 URL 与文档要求的参数，使用 AIsa key。</p><a href="https://aisa.one/api/firecrawl" target="_blank" rel="noopener noreferrer">接口依据 ↗</a></article><article><span>文档排序 → AIsa / Jina API</span><h3>重排候选文档</h3><code class="feed-template">POST https://api.aisa.one/v1/rerank</code><p>提供查询与文档等参数。它是处理工具，不是新数据来源。</p><a href="https://aisa.one/api/embeddings-rerank-api" target="_blank" rel="noopener noreferrer">接口依据 ↗</a></article></div>
+      <div class="comparison-grid access-cards">
+        <article><h2>API / MCP</h2><p>API 供程序按参数请求数据；MCP 让 AI 发现和调用工具，常把 API 包装起来。MCP 不是另一份原始数据，API 存在也不保证对应 MCP 工具已上线。</p></article>
+        <article><h2>RSS / Atom / Webhook</h2><p>RSS、Atom 用于订阅更新；Webhook 由来源向回调地址推送事件。适合跟踪新增内容，不能默认拿到完整评论、全文或历史全量。</p></article>
+        <article><h2>网页抓取 / 正文提取</h2><p>Firecrawl、Jina Reader 等接受 URL，返回正文或 Markdown；Bright Data 的所列路径返回 HTML。我们仍可通过 API 调用它们，这是不同层面的“获取方式”。</p></article>
+        <article><h2>数据集 / SDK / 浏览器扩展</h2><p>数据集交付批量文件；SDK 是调用封装，扩展是操作界面。后两者通常仍依赖服务密钥和接口，不会自动增加数据覆盖或权限。</p></article>
+      </div>
+      <div class="subhead"><h2>三家的获取方式总结</h2><p>具体到每个来源，请点开来源详情查看方式、确认程度与依据。</p></div>
+      <div class="comparison-grid">
+        <article><h3>AgentKey：统一工具入口</h3><p>文档确认 MCP 工具调用与平台 API 能力。公开参考主要说明 MCP 工具契约，确切 REST 路径需查控制台。官网列名的来源，仍需发现和描述具体工具。</p><p>条件：master key 与相应额度；具体来源权限待核。</p><a href="https://docs.agentkey.app/api-reference/introduction" target="_blank" rel="noopener noreferrer">调用方式依据 ↗</a></article>
+        <article><h3>AIsa：HTTP API 与独立 MCP 目录</h3><p>已列接口可从各家族入口查看。MCP 状态需单独查目录，不能自动套用到全部 API。X 等写操作另需 OAuth 或对应委托凭证。</p><p>仅官网提及的 TikTok Shop 路径、Semrush 冲突状态仍待核。</p><a href="https://aisa.one/docs/by-interface" target="_blank" rel="noopener noreferrer">接口方式依据 ↗</a></article>
+        <article><h3>TikHub：API，加多种交付方式</h3><p>主要通过 HTTP API / Python SDK 获取 JSON。MCP 有具名平台与 others 分组；部分来源另有数据集下载和浏览器扩展。TikTok Creator 需要账号 Cookie。</p><p>Telegram 的 API 有文档，但本次未确认其 MCP 映射。</p><a href="https://tikhub.io/mcp" target="_blank" rel="noopener noreferrer">MCP 映射依据 ↗</a></article>
+        <article><h3>RSS：目前不能给三家统一打勾</h3><p>本次未确认三家为这些来源提供 RSS/Atom 订阅入口。这不代表原始平台没有订阅源，也不代表未来不能接入。</p><p>原站直连应另行登记，不能算作三家已提供的能力。</p></article>
+      </div>
+      <div class="subhead"><h2>另行核实的原站直连例子</h2><p>这两条路径独立于三家服务；其余来源的原站直连方式尚未逐项核查。</p></div>
+      <div class="comparison-grid"><article><h3>YouTube：Atom + 更新推送</h3><p>官方文档给出频道 Atom topic，可订阅视频上传、标题或描述变化。采用推送时需配置回调服务。不能替代评论、字幕或历史全量接口。</p><code class="feed-template">https://www.youtube.com/feeds/videos.xml?channel_id=CHANNEL_ID</code><p class="footnote">模板需替换真实频道 ID，不是已建立的订阅。</p><a href="https://developers.google.com/youtube/v3/guides/push_notifications" target="_blank" rel="noopener noreferrer">YouTube 官方依据 ↗</a></article><article><h3>FRED：官方数据 API</h3><p>官方 API 提供经济数据系列、观测值、发布等查询。可以另行评估直连；密钥、版本与调用条件按 FRED 官方文档配置。</p><p>不由此推定 AgentKey 后台实际采用该路径。RSS/Atom 方式尚未核查。</p><a href="https://fred.stlouisfed.org/docs/api/fred/" target="_blank" rel="noopener noreferrer">FRED 官方依据 ↗</a></article></div>
+      <div class="scope-note access-unknown"><h2>目前仍不确定</h2><ul><li>多数来源背后的具体采集机制与原站授权链路。</li><li>仅官网列示或规划中的来源，是否能调用对应工具。</li><li>每项接口的权限、历史覆盖、限流、分页完整度与实际费用。</li><li>未单独核实的原站 API、RSS、导出或下载入口。</li></ul><p>来源详情会保留这些未知项；“未确认”不写成“不支持”，也不写成“已可用”。</p></div>
+      <a class="document-link" href="notes/access-methods.md">完整逐来源获取方式与证据 ↗</a>
+    </section>
+
+    <section id="compare" class="view" hidden aria-labelledby="compare-title">
+      <div class="section-head"><div><p class="eyebrow">03 / PRODUCT COMPARISON</p><h1 id="compare-title">同样是接入，重点不同。</h1><p class="intro">它们把分散的能力交给 AI 使用，但承担的工作并不相同。</p></div></div>
+      <div class="product-grid">
+        <article class="product"><span class="product-code">AK / 多源接入</span><h2>AgentKey</h2><p class="product-core">把多个数据服务<br>整合成一个入口。</p><p>统一密钥、额度与调用方式，让现有 AI 更容易获取网页、社媒、金融和电商信息。</p><dl><dt>主要价值</dt><dd>减少供应商对接和管理</dd><dt>本次登记</dt><dd>51 个来源、服务或能力标签</dd></dl><button class="text-button" data-platform="AgentKey">查看它的来源 →</button><a class="official" href="https://docs.agentkey.app/" target="_blank" rel="noopener noreferrer">官方文档 ↗</a></article>
+        <article class="product"><span class="product-code">AI / 综合能力</span><h2>AIsa</h2><p class="product-core">把模型、数据和工具<br>放在同一个账户里。</p><p>除了数据接入，还提供模型调用、向量与排序、Skills，以及邮件等业务操作。</p><dl><dt>主要价值</dt><dd>统一更多 AI 工作环节</dd><dt>本次核查</dt><dd>31 个 API 家族，另有规划目录</dd></dl><button class="text-button" data-platform="AIsa">查看它的来源 →</button><a class="official" href="https://aisa.one/api" target="_blank" rel="noopener noreferrer">官方目录 ↗</a></article>
+        <article class="product"><span class="product-code">TH / 社媒数据</span><h2>TikHub</h2><p class="product-core">深入获取社交平台<br>内容与互动数据。</p><p>围绕账号、帖子、视频、评论、搜索与直播提供接口，也提供预处理数据集。</p><dl><dt>主要价值</dt><dd>减少社媒采集系统的维护</dd><dt>文档覆盖</dt><dd>19 个内容平台 + TikTok Shop</dd></dl><button class="text-button" data-platform="TikHub">查看它的来源 →</button><a class="official" href="https://docs.tikhub.io/" target="_blank" rel="noopener noreferrer">官方文档 ↗</a></article>
+      </div>
+      <div class="subhead"><h2>具体替我们做到了哪一步？</h2><p>按公开资料整理，未调用真实接口验证。</p></div>
+      <div class="comparison-grid">
+        <article><h3>数据获取</h3><p><b>AgentKey：</b>聚合多个领域的获取能力。</p><p><b>AIsa：</b>多源数据与模型、工具一起接入。</p><p><b>TikHub：</b>社交平台的账号、内容、评论等接口。</p></article>
+        <article><h3>清理与整理</h3><p><b>AgentKey / AIsa：</b>有正文提取；不能据此认为有完整跨源清洗。</p><p><b>TikHub：</b>数据集宣称清洗和去重，实时接口需另行核对。</p></article>
+        <article><h3>搜索与分析</h3><p>三家都有不同范围的搜索能力；AIsa 另有模型与重排序，TikHub 有特定分析接口。完整报告仍需要组织任务与证据。</p></article>
+        <article><h3>执行与操作</h3><p>AIsa 列有邮件、X 写入和 CRM 操作，需要对应授权。获取数据、生成报告与真正执行业务动作，应分别看待。</p></article>
+      </div>
+      <div class="conclusion"><span>我们的理解</span><h2>来源是起点，稳定获取是服务价值。<br>清理规则与业务判断，需要继续沉淀。</h2><a href="#process">看看后续处理怎么分工 →</a></div>
+      <a class="document-link" href="notes/capabilities.md">阅读完整能力对比与依据 ↗</a>
+    </section>
+
+    <section id="process" class="view" hidden aria-labelledby="process-title">
+      <div class="section-head"><div><p class="eyebrow">04 / DATA WORKFLOW</p><h1 id="process-title">拿到数据之后，还要做什么？</h1><p class="intro">结构化返回只是开始。我们需要让数据可比较、可检索、可追溯。</p></div></div>
+      <div class="pipeline" aria-label="建议的数据工作流程"><div><span>01</span><h2>选来源</h2><p>原始平台 / 接入商</p></div><div><span>02</span><h2>获取</h2><p>搜索 / 详情 / 分页</p></div><div><span>03</span><h2>清理</h2><p>解析 / 去重 / 统一</p></div><div><span>04</span><h2>检索</h2><p>索引 / 筛选 / 排序</p></div><div><span>05</span><h2>分析</h2><p>判断 / 引用 / 报告</p></div></div>
+      <p class="footnote">建议的自建流程，不代表三家都已提供完整流水线。获取后应先保存原始记录，再生成清理结果。</p>
+      <div class="responsibilities"><article><span class="eyebrow">平台已有的部分能力</span><h2>减少获取与基础处理工作</h2><ul><li>查询平台内容并返回结构化字段。</li><li>Firecrawl、Jina Reader 等提取网页正文。</li><li>TikHub 部分数据集提供预清洗数据。</li><li>AIsa 提供向量化与相关性排序工具。</li></ul></article><article><span class="eyebrow">我们仍需负责</span><h2>把数据变成可靠的研究材料</h2><ul><li>跨来源去重，统一时间、单位和字段。</li><li>识别缺失、截断、分页不完整和冲突。</li><li>保留原文、采集时间及处理版本。</li><li>区分事实、机器转写、翻译与 AI 推断。</li></ul></article></div>
+      <div class="subhead"><h2>按数据类型，确定清理规则</h2><p>选择一种资料，查看建议处理与验收重点。</p></div>
+      <div class="cleaning-layout"><div id="cleaning-options" class="cleaning-options" role="group" aria-label="数据类型"></div><article id="cleaning-detail" class="cleaning-detail" aria-live="polite"></article></div>
+      <div class="subhead"><h2>三种“搜索”，解决三个问题</h2></div><div class="search-types"><article><span>外部发现</span><h3>有什么材料？</h3><p>搜索网页、帖子、论文，找到候选链接。找到结果不等于读过全文。</p></article><article><span>资料库检索</span><h3>我们保存了什么？</h3><p>在清理过的本地资料中查找。需要建立索引、更新机制与权限。</p></article><article><span>相关性排序</span><h3>哪些更符合问题？</h3><p>重新排列候选材料的优先级。排序不会自动修复错误事实。</p></article></div>
+      <a class="document-link" href="notes/data-cleaning.md">查看完整清理规则、记录字段与验证方案 ↗</a>
+    </section>
+
+    <section id="evidence" class="view" hidden aria-labelledby="evidence-title">
+      <div class="section-head"><div><p class="eyebrow">05 / EVIDENCE & SCOPE</p><h1 id="evidence-title">依据在哪里，边界在哪里？</h1><p class="intro">2026 年 9 月 16 日核查了 <span data-evidence-count>25</span> 个官方页面。以下为资料研究，不是接口质量评测。</p></div></div>
+      <div class="evidence-summary"><article><strong>148</strong><span>去重后的混合类型条目</span></article><article><strong data-evidence-count>25</strong><span>官方网页与文档</span></article><article><strong>0</strong><span>已实测的业务接口</span></article></div>
+      <div class="scope-note"><h2>目录数量不能直接当作可用能力数量</h2><p>AIsa 的目录有 80 个“即将上线”名称，其中 Semrush 同时列有具体接口，已标为冲突。TikHub 首页的平台计数与文档分组不同；本研究按具名平台登记。AgentKey 部分来源只在官网出现，证据强度与具体文档不同。</p><p>未注册账号、购买套餐或调用付费数据；真实权限、字段、成功率、延迟和费用仍待验证。</p></div>
+      <div class="subhead"><h2>官方证据目录</h2><p>每条来源记录也保留对应链接。</p></div><div id="evidence-list" class="evidence-list"></div>
+      <div class="downloads"><h2>研究材料</h2><a href="notes/sources-inventory.md">完整来源总表 ↗</a><a href="notes/access-methods.md">逐来源获取方式 ↗</a><a href="notes/source-inventory.json" download>结构化来源登记 ↓</a><a href="notes/capabilities.md">产品能力对比 ↗</a><a href="notes/data-cleaning.md">数据清理规则 ↗</a><a href="notes/sources.md">核查方法与不一致项 ↗</a></div>
+    </section>
+  </main>
+  <footer class="main-footer"><span>013 · 数据来源与处理能力研究</span><span>以具体接口文档和实际验证为准</span></footer>
+</div>
+<dialog id="source-detail" aria-labelledby="detail-title"><div class="dialog-top"><span>来源详情</span><button id="close-detail" class="icon-button" aria-label="关闭来源详情">×</button></div><div id="detail-content"></div></dialog>
+</body>
+</html>

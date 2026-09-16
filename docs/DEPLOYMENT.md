@@ -2,7 +2,7 @@
 
 ## 当前状态
 
-已配置统一的 GitHub Actions 发布流程 `.github/workflows/pages.yml`。`pages.json` 显式选择要发布的项目编号，目前为 `001` 至 `012`；`scripts/build_pages.py` 将各项目的 `web/dist/` 打包到 `_site/<编号-slug>/`，并生成站点导航页。001、005、006、007、008、009、010、011、012 在 CI 中从源码构建，其余项目沿用已登记的静态产物。
+已配置统一的 GitHub Actions 发布流程 `.github/workflows/pages.yml`。`pages.json` 显式选择要发布的项目编号，目前为 `001` 至 `013`；`scripts/build_pages.py` 将各项目的 `web/dist/` 打包到 `_site/<编号-slug>/`，并生成站点导航页。001、005、006、007、008、009、010、011、012、013 在 CI 中从源码构建，其余项目沿用已登记的静态产物。
 
 发布状态以 GitHub Actions 部署成功且网页实际可访问为准。只有经过访问验证的演示地址才写入 `projects.json`，并同步到仓库索引。
 
@@ -57,3 +57,6 @@ GitHub Pages 托管静态 HTML、CSS 和 JavaScript。需要服务端、数据�
 011 Background Agents 已发布并验证：[在线研究导读](https://yydshly.github.io/0914_codex_project/011-background-agents/)。包含能力、入口、执行流程、AI 接入、Codex 关系、PNG/SVG 总览图与理解汇总。13 个静态文件逐项核对一致，总导航及全部 11 个项目入口可访问；已关联仓库索引和项目说明。此次只发布研究网页，未部署 Open-Inspect 后端或执行沙箱。
 
 012 Future AGI 于 2026-09-16 发布并验证：[AI 能力检测与评测研究](https://yydshly.github.io/0914_codex_project/012-future-agi/)。内容定位为检测和评估 AI 应用的能力与表现，说明七类检测方式，并明确根本原理需后期深入研究、实际效果待实测。21 个静态文件逐项核对一致，总导航摘要与 12 个项目入口可访问；正式地址已登记到项目索引。
+
+
+013 AgentKey / AIsa / TikHub 数据来源研究已加入统一发布流程。包含研究摘要、引导图、73 条非“仅规划”的分类名录、148 条完整登记、获取方式、清理规则和逐条官方依据。正式地址在部署和访问验证后登记；不调用付费业务接口。

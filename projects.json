@@ -279,6 +279,25 @@
       "cover": "projects/012-future-agi/assets/future-agi-technical-overview.png",
       "cover_alt": "Future AGI 技术总览：证据输入、模型请求与遥测路径、七类评测手段、错误诊断、优化实验及使用边界。",
       "demo": "https://yydshly.github.io/0914_codex_project/012-future-agi/"
+    },
+    {
+      "id": "013",
+      "order": 130,
+      "slug": "agent-data-sources",
+      "name": "AgentKey / AIsa / TikHub：数据来源与处理能力研究",
+      "repo": "https://docs.agentkey.app/capabilities/overview",
+      "summary": "AgentKey 多源接入、AIsa API与模型工具聚合、TikHub 社交内容数据：用引导图和中文网页整理148条来源、服务与能力，说明API等获取方式、清理规则及产品价值，区分已列接口、后台未知与未实测边界。",
+      "status": "研究中",
+      "tags": [
+        "数据来源",
+        "数据清理",
+        "API聚合",
+        "社交数据",
+        "产品思路"
+      ],
+      "cover": "projects/013-agent-data-sources/assets/agent-data-sources-guide.png",
+      "cover_alt": "三个网站的产品定位、六类代表来源、获取方式与从清理到可追溯结果的建议流程。",
+      "demo": ""
     }
   ]
 }
