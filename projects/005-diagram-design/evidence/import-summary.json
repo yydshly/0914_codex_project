@@ -1,0 +1,32 @@
+[
+  {
+    "format": "mermaid",
+    "input": "inputs/research.mmd",
+    "result": "mermaid-ir.json",
+    "exit_code": 0,
+    "nodes": 6,
+    "edges": 5,
+    "content_equivalence_checked": true,
+    "digest": "# Mermaid IR — research.mmd\n\n1 diagram(s): [0] flowchart (6n/5e)\n\n## Diagram 0 — flowchart\n\n- source layout: none (Mermaid is layout-free); direction: LR\n- nodes: 6 total / 6 drawable / 0 containers, depth 0\n- edges: 5 (0 labeled, 0 dangling), cycle: False\n- shapes: {'rect': 6}\n- type candidates: architecture\n- budget: nodes ok (max 9), edges ok (max 12)\n- hubs (focal candidates): 生成图形(2), 整理图规格(2), 核实事实(2), 提取关系(2), 检查与导出(1)\n- entry points: 原始资料\n- terminals: 检查与导出\n\n### Nodes\n\n| id | label | shape | depth | parent | deg | fields |\n|---|---|---|---|---|---|---|\n| n0 | 原始资料 | rect | 0 | - | 0/1 | - |\n| n1 | 提取关系 | rect | 0 | - | 1/1 | - |\n| n2 | 核实事实 | rect | 0 | - | 1/1 | - |\n| n3 | 整理图规格 | rect | 0 | - | 1/1 | - |\n| n4 | 生成图形 | rect | 0 | - | 1/1 | - |\n| n5 | 检查与导出 | rect | 0 | - | 1/0 | - |\n\n### Edges\n\n| source | target | label | style |\n|---|---|---|---|\n| 原始资料 | 提取关系 | - | solid arrow |\n| 提取关系 | 核实事实 | - | solid arrow |\n| 核实事实 | 整理图规格 | - | solid arrow |\n| 整理图规格 | 生成图形 | - | solid arrow |\n| 生成图形 | 检查与导出 | - | solid arrow |\n"
+  },
+  {
+    "format": "drawio",
+    "input": "inputs/research.drawio",
+    "result": "drawio-ir.json",
+    "exit_code": 0,
+    "nodes": 6,
+    "edges": 5,
+    "content_equivalence_checked": true,
+    "digest": "# draw.io IR — research\\.drawio\n\n1 page(s): [0] 研究流程 (6n/5e)\n\n## Page 0 — 研究流程\n\n- source canvas: 1480×116 px (aspect 12.76)\n- nodes: 6 total / 6 drawable / 0 containers, depth 0\n- edges: 5 (0 labeled, 0 dangling), cycle: False\n- shapes: {'rect': 6}\n- type candidates: tree, architecture\n- budget: nodes ok (max 9), edges ok (max 12)\n- hubs (focal candidates): 提取关系(2), 核实事实(2), 整理图规格(2), 生成图形(2), 原始资料(1)\n- entry points: 原始资料\n- terminals: 检查与导出\n\n### Nodes\n\n| id | label | shape | depth | parent | deg | box |\n|---|---|---|---|---|---|---|\n| n0 | 原始资料 | rect | 0 | 1 | 0/1 | 60,100 180×80 |\n| n1 | 提取关系 | rect | 0 | 1 | 1/1 | 320,136 180×80 |\n| n2 | 核实事实 | rect | 0 | 1 | 1/1 | 580,100 180×80 |\n| n3 | 整理图规格 | rect | 0 | 1 | 1/1 | 840,136 180×80 |\n| n4 | 生成图形 | rect | 0 | 1 | 1/1 | 1100,100 180×80 |\n| n5 | 检查与导出 | rect | 0 | 1 | 1/0 | 1360,136 180×80 |\n\n### Edges\n\n| source | target | label | style |\n|---|---|---|---|\n| 原始资料 | 提取关系 | - | - |\n| 提取关系 | 核实事实 | - | - |\n| 核实事实 | 整理图规格 | - | - |\n| 整理图规格 | 生成图形 | - | - |\n| 生成图形 | 检查与导出 | - | - |\n"
+  },
+  {
+    "format": "excalidraw",
+    "input": "inputs/research.excalidraw",
+    "result": "excalidraw-ir.json",
+    "exit_code": 0,
+    "nodes": 6,
+    "edges": 5,
+    "content_equivalence_checked": true,
+    "digest": "# Excalidraw IR — research\\.excalidraw\n\n1 scene: research (6n/5e)\n\n## Scene — research\n\n- source canvas: 1480×116 px (aspect 12.76)\n- nodes: 6 total / 6 drawable / 0 containers, depth 0\n- edges: 5 (0 labeled, 0 dangling), cycle: False\n- shapes: {'rect': 6}\n- type candidates: tree, architecture\n- budget: nodes ok (max 9), edges ok (max 12)\n- hubs (focal candidates): 提取关系(2), 核实事实(2), 整理图规格(2), 生成图形(2), 原始资料(1)\n- entry points: 原始资料\n- terminals: 检查与导出\n\n### Nodes\n\n| id | label | shape | depth | parent | deg | box |\n|---|---|---|---|---|---|---|\n| n0 | 原始资料 | rect | 0 | \\- | 0/1 | 60,100 180×80 |\n| n1 | 提取关系 | rect | 0 | \\- | 1/1 | 320,136 180×80 |\n| n2 | 核实事实 | rect | 0 | \\- | 1/1 | 580,100 180×80 |\n| n3 | 整理图规格 | rect | 0 | \\- | 1/1 | 840,136 180×80 |\n| n4 | 生成图形 | rect | 0 | \\- | 1/1 | 1100,100 180×80 |\n| n5 | 检查与导出 | rect | 0 | \\- | 1/0 | 1360,136 180×80 |\n\n### Edges\n\n| source | target | label | style |\n|---|---|---|---|\n| 原始资料 | 提取关系 | - | - |\n| 提取关系 | 核实事实 | - | - |\n| 核实事实 | 整理图规格 | - | - |\n| 整理图规格 | 生成图形 | - | - |\n| 生成图形 | 检查与导出 | - | - |\n"
+  }
+]

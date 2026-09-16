@@ -86,6 +86,39 @@
       "cover": "projects/004-vibe-motion/assets/technology-map.png",
       "cover_alt": "Vibe Motion 技术引导图：二维、三维、动效技能及 SRT 语义分镜到代码渲染视频的实现原理",
       "demo": "https://yydshly.github.io/0914_codex_project/004-vibe-motion/"
+    },
+    {
+      "id": "005",
+      "order": 50,
+      "slug": "diagram-design",
+      "name": "Diagram Design：图形设计规范与效果展厅",
+      "repo": "https://github.com/cathrynlavery/diagram-design",
+      "summary": "让 AI 将文字、数据或旧图源文件绘制为可编辑 HTML/SVG 并导出 PNG，覆盖七类 40 种基础图型，支持品牌、动画和三格式重绘；附 57 组 155 个原版示例、8 版中文案例、2 版理解总览及完整绘图清单。",
+      "status": "已完成",
+      "tags": [
+        "图形设计",
+        "HTML/SVG",
+        "Agent Skill",
+        "旧图重绘",
+        "中文配图"
+      ],
+      "cover": "projects/005-diagram-design/assets/research-workflow.png",
+      "cover_alt": "按 Diagram Design 规范编写的中文研究流程：资料、提取、核实、图规格、生成和检查交付",
+      "demo": "https://yydshly.github.io/0914_codex_project/005-diagram-design/",
+      "preview_images": [
+        {
+          "title": "理解总览：原理、选型与绘图方法",
+          "path": "projects/005-diagram-design/assets/diagram-design-overview-v2.png",
+          "alt": "Diagram Design 的技术流程、七类四十种图型、语义模式、绘图步骤、工具分工和验证范围",
+          "caption": "第二版总览解释这个库怎样绘图、如何选图、静态与动画及旧图重绘的关系，并汇总现有验证与扩展方向；两版原图和全部案例均可在项目页下载。"
+        },
+        {
+          "title": "八种中文表达与视觉效果",
+          "path": "projects/005-diagram-design/assets/case-contact-sheet.jpg",
+          "alt": "中文研究流程的边注、蓝色、深色、概览、完整页面单图、橙色、手绘与幻灯片效果",
+          "caption": "同一份内容，比较配色、完整页面、详细程度、尺寸、手绘线条和边注；PNG为单图导出。"
+        }
+      ]
     }
   ]
 }

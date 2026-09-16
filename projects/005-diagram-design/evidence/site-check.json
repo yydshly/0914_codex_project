@@ -1,0 +1,19 @@
+{
+  "groups": 57,
+  "basic_types": 40,
+  "derived_examples": 11,
+  "animated_examples": 3,
+  "import_examples": 3,
+  "taxonomy_categories": 7,
+  "upstream_type_table_match": "passed",
+  "original_html_files": 155,
+  "chinese_cases": 8,
+  "local_references": "passed",
+  "original_hashes": "passed",
+  "case_svg_xml": "passed",
+  "png_dimensions": "passed",
+  "javascript_syntax": "passed",
+  "authored_overviews": 2,
+  "inventory_links": "155 upstream + 24 authored case files",
+  "browser_interactions": "recorded separately in browser-check.json"
+}

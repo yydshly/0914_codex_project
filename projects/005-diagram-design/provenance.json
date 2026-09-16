@@ -1,0 +1,28 @@
+{
+  "repo": "https://github.com/cathrynlavery/diagram-design",
+  "commit": "ce9344c52cb9be811de187bf2a6d58c712c9c9fe",
+  "plugin_version": "2.6.23",
+  "research_date": "2026-09-16",
+  "license": "MIT",
+  "copyright": "Copyright (c) 2025 Cathryn Lavery",
+  "copied_paths": [
+    "README.md",
+    "LICENSE",
+    "THIRD_PARTY_LICENSES.md",
+    "skills/diagram-design/",
+    "scripts/verify-geometry.py",
+    "scripts/verify-block-registry.py"
+  ],
+  "original_examples": {
+    "groups": 57,
+    "html_files": 155,
+    "triple_groups": 49,
+    "single_examples": 8
+  },
+  "authored_cases": 8,
+  "preservation": "upstream examples copied unchanged from pinned checkout; inventory stores per-file SHA-256",
+  "custom_work": "Chinese navigation, case authoring, source fixtures, experiments, export helper and research documents; not upstream capabilities",
+  "deployment": "GitHub Pages; source-built by existing repository workflow",
+  "authored_overviews": 2,
+  "site_url": "https://yydshly.github.io/0914_codex_project/005-diagram-design/"
+}

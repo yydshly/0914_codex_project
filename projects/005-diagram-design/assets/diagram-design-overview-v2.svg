@@ -1,0 +1,255 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2400" height="4110" viewBox="0 0 2400 4110" role="img" aria-labelledby="title desc">
+<title id="title">Diagram Design 全景指南 · 第二版</title><desc id="desc">原理、八种语义模式、七类四十种图型、十七组扩展示例、绘图方法、历史工具分工、实验与扩展路线。</desc>
+<defs><marker id="arrow" markerWidth="9" markerHeight="9" refX="7" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8" fill="#087e8b"/></marker></defs>
+<g font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif">
+<rect x="0" y="0" width="2400" height="4110" rx="0" fill="#f4f7f9" stroke="none"/>
+<rect x="0" y="0" width="2400" height="270" rx="0" fill="#102d42" stroke="none"/>
+<rect x="90" y="45" width="8" height="46" rx="3" fill="#64d6c6" stroke="none"/>
+<text x="122" y="79" font-size="30" font-weight="700" fill="#94e0d7">DIAGRAM DESIGN  /  从理解到交付</text>
+<text x="90" y="158" font-size="64" font-weight="700" fill="white">一张图看懂：原理、选型与绘图方法</text>
+<text x="93" y="222" font-size="32" font-weight="400" fill="#d7e7ed">主要产物是可编辑的 HTML / SVG 图形代码；PNG 是浏览器渲染后的图片。</text>
+<text x="1930" y="79" font-size="27" font-weight="700" fill="#94e0d7">研究总览 · 优化版 02</text>
+<text x="1930" y="122" font-size="25" font-weight="400" fill="#d7e7ed">固定版本 v2.6.23</text>
+<text x="1930" y="162" font-size="24" font-weight="400" fill="#d7e7ed">40 基础 / 57 示例 / 155 文件</text>
+<rect x="90" y="296" width="56" height="52" rx="10" fill="#087e8b" stroke="none"/>
+<text x="101" y="334" font-size="29" font-weight="700" fill="white">01</text>
+<text x="168" y="334" font-size="39" font-weight="700" fill="#102d42">三条使用路径，三个可组合的维度</text>
+<text x="168" y="380" font-size="27" font-weight="400" fill="#587080">创建新图、添加动画、导入重绘可以衔接使用；先区分内容结构、呈现方式与输入来源。</text>
+<rect x="90" y="407" width="720" height="162" rx="14" fill="#ffffff" stroke="#d4e0e7"/>
+<rect x="90" y="407" width="6" height="162" rx="2" fill="#087e8b" stroke="none"/>
+<text x="117" y="453" font-size="32" font-weight="700" fill="#087e8b">图形类型｜表达什么关系</text>
+<text x="117" y="502" font-size="27" font-weight="400" fill="#183b50">架构、流程、层级、策略、数值等</text>
+<text x="117" y="544" font-size="27" font-weight="400" fill="#183b50">按问题选图；七类共 40 种基础图型。</text>
+<rect x="840" y="407" width="720" height="162" rx="14" fill="#ffffff" stroke="#d4e0e7"/>
+<rect x="840" y="407" width="6" height="162" rx="2" fill="#2862ca" stroke="none"/>
+<text x="867" y="453" font-size="32" font-weight="700" fill="#2862ca">表现方式｜怎样讲清楚</text>
+<text x="867" y="502" font-size="27" font-weight="400" fill="#183b50">默认静态；按需分步显示或播放动画</text>
+<text x="867" y="544" font-size="27" font-weight="400" fill="#183b50">主题、品牌、手绘、批注与细节量可调整。</text>
+<rect x="1590" y="407" width="720" height="162" rx="14" fill="#ffffff" stroke="#d4e0e7"/>
+<rect x="1590" y="407" width="6" height="162" rx="2" fill="#c8612d" stroke="none"/>
+<text x="1617" y="453" font-size="32" font-weight="700" fill="#c8612d">输入来源｜根据什么来画</text>
+<text x="1617" y="502" font-size="27" font-weight="400" fill="#183b50">描述 / 数据，或已有图的可解析源文件</text>
+<text x="1617" y="544" font-size="27" font-weight="400" fill="#183b50">draw.io · Mermaid · Excalidraw</text>
+<rect x="90" y="591" width="2220" height="62" rx="10" fill="#e0f1ef" stroke="none"/>
+<text x="117" y="632" font-size="30" font-weight="600" fill="#087e8b">组合示例：Mermaid 源文件 → 提取关系 → 重绘流程图 → 深色主题 + 分步动画 → HTML 演示 / 静态 PNG 分享</text>
+<rect x="90" y="689" width="56" height="52" rx="10" fill="#087e8b" stroke="none"/>
+<text x="101" y="727" font-size="29" font-weight="700" fill="white">02</text>
+<text x="168" y="727" font-size="39" font-weight="700" fill="#102d42">原理：事实 → 语义 → 布局 → 图形代码 → 渲染</text>
+<text x="168" y="773" font-size="27" font-weight="400" fill="#587080">AI 负责理解与编写；库提供 Skill 规范、模板和辅助脚本；浏览器执行代码，把图画出来。</text>
+<rect x="90" y="803" width="416" height="192" rx="14" fill="white" stroke="#d4e0e7"/>
+<text x="110" y="846" font-size="31" font-weight="700" fill="#087e8b">01  输入与提取</text>
+<text x="110" y="892" font-size="25" font-weight="400" fill="#183b50">描述 / 数据由 AI 整理</text>
+<text x="110" y="929" font-size="25" font-weight="400" fill="#183b50">旧图经 Python 解析</text>
+<text x="110" y="966" font-size="25" font-weight="400" fill="#183b50">产出节点、边与分组</text>
+<path d="M511 900 L530 900" fill="none" stroke="#087e8b" stroke-width="3" marker-end="url(#arrow)"/>
+<rect x="541" y="803" width="416" height="192" rx="14" fill="white" stroke="#d4e0e7"/>
+<text x="561" y="846" font-size="31" font-weight="700" fill="#087e8b">02  语义与选图</text>
+<text x="561" y="892" font-size="25" font-weight="400" fill="#183b50">确认行为、状态与风险</text>
+<text x="561" y="929" font-size="25" font-weight="400" fill="#183b50">选择语义模式和图型</text>
+<text x="561" y="966" font-size="25" font-weight="400" fill="#183b50">控制层级与信息密度</text>
+<path d="M962 900 L981 900" fill="none" stroke="#087e8b" stroke-width="3" marker-end="url(#arrow)"/>
+<rect x="992" y="803" width="416" height="192" rx="14" fill="white" stroke="#d4e0e7"/>
+<text x="1012" y="846" font-size="31" font-weight="700" fill="#087e8b">03  布局与样式</text>
+<text x="1012" y="892" font-size="25" font-weight="400" fill="#183b50">计算坐标、间距和路径</text>
+<text x="1012" y="929" font-size="25" font-weight="400" fill="#183b50">使用模板 / 部分公式</text>
+<text x="1012" y="966" font-size="25" font-weight="400" fill="#183b50">设置字体、颜色与品牌</text>
+<path d="M1413 900 L1432 900" fill="none" stroke="#087e8b" stroke-width="3" marker-end="url(#arrow)"/>
+<rect x="1443" y="803" width="416" height="192" rx="14" fill="white" stroke="#d4e0e7"/>
+<text x="1463" y="846" font-size="31" font-weight="700" fill="#087e8b">04  代码与动画</text>
+<text x="1463" y="892" font-size="25" font-weight="400" fill="#183b50">SVG：图元、标签、连线</text>
+<text x="1463" y="929" font-size="25" font-weight="400" fill="#183b50">HTML / CSS：页面样式</text>
+<text x="1463" y="966" font-size="25" font-weight="400" fill="#183b50">可选 JS / CSS 控制动画</text>
+<path d="M1864 900 L1883 900" fill="none" stroke="#087e8b" stroke-width="3" marker-end="url(#arrow)"/>
+<rect x="1894" y="803" width="416" height="192" rx="14" fill="white" stroke="#d4e0e7"/>
+<text x="1914" y="846" font-size="31" font-weight="700" fill="#087e8b">05  检查与输出</text>
+<text x="1914" y="892" font-size="25" font-weight="400" fill="#183b50">脚本检查 + 人工核对</text>
+<text x="1914" y="929" font-size="25" font-weight="400" fill="#183b50">浏览器渲染与预览</text>
+<text x="1914" y="966" font-size="25" font-weight="400" fill="#183b50">交付 HTML / SVG / PNG</text>
+<rect x="90" y="1016" width="1095" height="170" rx="12" fill="#eaf0f6" stroke="none"/>
+<text x="115" y="1057" font-size="29" font-weight="700" fill="#183b50">几何图：按坐标放图元，按关系连线</text>
+<rect x="118" y="1087" width="170" height="63" rx="8" fill="white" stroke="#2862ca"/>
+<text x="147" y="1129" font-size="27" font-weight="600" fill="#2862ca">接口服务</text>
+<path d="M298 1118 L367 1118" fill="none" stroke="#087e8b" stroke-width="3" marker-end="url(#arrow)"/>
+<rect x="386" y="1087" width="164" height="63" rx="8" fill="white" stroke="#087e8b"/>
+<text x="425" y="1129" font-size="27" font-weight="600" fill="#087e8b">数据库</text>
+<text x="590" y="1095" font-size="25" font-weight="400" fill="#587080">x / y 定位；rect / text / path 构成图</text>
+<text x="590" y="1134" font-size="25" font-weight="400" fill="#587080">布局仍包含 AI / 作者决策与人工调整。</text>
+<rect x="1210" y="1016" width="1100" height="170" rx="12" fill="#eaf0f6" stroke="none"/>
+<text x="1236" y="1057" font-size="29" font-weight="700" fill="#183b50">数据图：把数值映射为长度、位置、面积或带宽</text>
+<rect x="1243" y="1148" width="43" height="17" rx="3" fill="#087e8b" stroke="none"/>
+<text x="1241" y="1139" font-size="19" font-weight="400" fill="#587080">50</text>
+<rect x="1312" y="1131" width="43" height="34" rx="3" fill="#087e8b" stroke="none"/>
+<text x="1310" y="1122" font-size="19" font-weight="400" fill="#587080">100</text>
+<rect x="1381" y="1097" width="43" height="68" rx="3" fill="#087e8b" stroke="none"/>
+<text x="1379" y="1088" font-size="19" font-weight="400" fill="#587080">200</text>
+<text x="1495" y="1095" font-size="25" font-weight="400" fill="#587080">零起点柱状图：柱高 = 数值 ÷ 最大值 × 可用高度</text>
+<text x="1495" y="1134" font-size="25" font-weight="400" fill="#587080">核对单位、刻度、负值与比例，避免视觉误导。</text>
+<rect x="90" y="1208" width="2220" height="179" rx="14" fill="white" stroke="#d4e0e7"/>
+<text x="116" y="1251" font-size="30" font-weight="700" fill="#183b50">补充：8 种语义模式负责“讲什么行为”，图型负责“怎么排布”</text>
+<text x="116" y="1301" font-size="26" font-weight="400" fill="#587080">队列与瓶颈 → 数据流　｜　阶段语义槽位 → 多角色过程　｜　散乱输入变为结构化产物 → 数据流　｜　双路径策略轨迹 → 流程图</text>
+<text x="116" y="1343" font-size="26" font-weight="400" fill="#587080">安全路径 → 架构　｜　治理控制目录 → 分层　｜　补偿性安全分层 → 分层　｜　可追溯模块分解 → 层级树</text>
+<rect x="90" y="1425" width="56" height="52" rx="10" fill="#087e8b" stroke="none"/>
+<text x="101" y="1463" font-size="29" font-weight="700" fill="white">03</text>
+<text x="168" y="1463" font-size="39" font-weight="700" fill="#102d42">按问题选图：七类、40 种基础图型，全量列出</text>
+<text x="168" y="1509" font-size="27" font-weight="400" fill="#587080">七类是本研究的导航分类；语义模式、动画、输入格式和主题版本，都属于不同统计维度。</text>
+<rect x="90" y="1539" width="2220" height="68" rx="12" fill="#102d42" stroke="none"/>
+<text x="116" y="1585" font-size="37" font-weight="700" fill="white">40 基础图型 + 11 派生示例 + 3 动画演示 + 3 导入重绘 = 57 示例组</text>
+<text x="1850" y="1582" font-size="26" font-weight="400" fill="#bfd7e1">共 155 个 HTML 文件</text>
+<rect x="90" y="1630" width="2220" height="85" rx="10" fill="white" stroke="none"/>
+<path d="M165 1654 L165 1700" fill="none" stroke="#087e8b" stroke-width="3"/>
+<path d="M130 1684 L200 1684" fill="none" stroke="#087e8b" stroke-width="3"/>
+<rect x="147" y="1634" width="36" height="25" rx="5" fill="#e2f1f1" stroke="#087e8b"/>
+<rect x="112" y="1684" width="36" height="25" rx="5" fill="#e2f1f1" stroke="#087e8b"/>
+<rect x="182" y="1684" width="36" height="25" rx="5" fill="#e2f1f1" stroke="#087e8b"/>
+<text x="227" y="1664" font-size="30" font-weight="700" fill="#183b50">架构与部署</text>
+<text x="227" y="1698" font-size="24" font-weight="400" fill="#587080">5 基础 / 9 示例</text>
+<text x="575" y="1661" font-size="24" font-weight="600" fill="#087e8b">组件怎样连接、运行在哪里？</text>
+<text x="575" y="1698" font-size="27" font-weight="400" fill="#183b50">系统架构 · IT 现状 · 平台总览 · 部署图 · 平台集成</text>
+<rect x="90" y="1724" width="2220" height="85" rx="10" fill="#e7eff3" stroke="none"/>
+<rect x="113" y="1752" width="25" height="30" rx="4" fill="#e2f1f1" stroke="#087e8b"/>
+<path d="M138 1767 L147 1767" fill="none" stroke="#087e8b" stroke-width="3"/>
+<rect x="147" y="1752" width="25" height="30" rx="4" fill="#e2f1f1" stroke="#087e8b"/>
+<path d="M172 1767 L181 1767" fill="none" stroke="#087e8b" stroke-width="3"/>
+<rect x="181" y="1752" width="25" height="30" rx="4" fill="#e2f1f1" stroke="#087e8b"/>
+<text x="227" y="1758" font-size="30" font-weight="700" fill="#183b50">流程与交互</text>
+<text x="227" y="1792" font-size="24" font-weight="400" fill="#587080">7 基础 / 13 示例</text>
+<text x="575" y="1755" font-size="24" font-weight="600" fill="#087e8b">先做什么、谁交互、怎样变化？</text>
+<text x="575" y="1792" font-size="27" font-weight="400" fill="#183b50">流程图 · 时序图 · 状态机 · 泳道图 · 多角色过程 · 数据流 · 循环与飞轮</text>
+<rect x="90" y="1818" width="2220" height="85" rx="10" fill="white" stroke="none"/>
+<path d="M165 1842 L165 1888" fill="none" stroke="#087e8b" stroke-width="3"/>
+<path d="M130 1872 L200 1872" fill="none" stroke="#087e8b" stroke-width="3"/>
+<rect x="147" y="1822" width="36" height="25" rx="5" fill="#e2f1f1" stroke="#087e8b"/>
+<rect x="112" y="1872" width="36" height="25" rx="5" fill="#e2f1f1" stroke="#087e8b"/>
+<rect x="182" y="1872" width="36" height="25" rx="5" fill="#e2f1f1" stroke="#087e8b"/>
+<text x="227" y="1852" font-size="30" font-weight="700" fill="#183b50">层级与组织</text>
+<text x="227" y="1886" font-size="24" font-weight="400" fill="#587080">6 基础 / 7 示例</text>
+<text x="575" y="1849" font-size="24" font-weight="600" fill="#087e8b">怎样拆解、包含、分层与分工？</text>
+<text x="575" y="1886" font-size="27" font-weight="400" fill="#183b50">嵌套关系 · 层级树 · 组织与路由 · 分层结构 · 分层数据存储 · 金字塔与漏斗</text>
+<rect x="90" y="1912" width="2220" height="85" rx="10" fill="#e7eff3" stroke="none"/>
+<path d="M165 1936 L165 1982" fill="none" stroke="#087e8b" stroke-width="3"/>
+<path d="M130 1966 L200 1966" fill="none" stroke="#087e8b" stroke-width="3"/>
+<rect x="147" y="1916" width="36" height="25" rx="5" fill="#e2f1f1" stroke="#087e8b"/>
+<rect x="112" y="1966" width="36" height="25" rx="5" fill="#e2f1f1" stroke="#087e8b"/>
+<rect x="182" y="1966" width="36" height="25" rx="5" fill="#e2f1f1" stroke="#087e8b"/>
+<path d="M148 1990 L196 1990" fill="none" stroke="#087e8b" stroke-width="3"/>
+<text x="227" y="1946" font-size="30" font-weight="700" fill="#183b50">数据模型与依赖</text>
+<text x="227" y="1980" font-size="24" font-weight="400" fill="#587080">4 基础 / 4 示例</text>
+<text x="575" y="1943" font-size="24" font-weight="600" fill="#087e8b">实体、表、类和模块怎样关联？</text>
+<text x="575" y="1980" font-size="27" font-weight="400" fill="#183b50">实体关系 · 数据库结构 · UML 类图 · 依赖图</text>
+<rect x="90" y="2006" width="2220" height="85" rx="10" fill="white" stroke="none"/>
+<rect x="115" y="2019" width="58" height="13" rx="3" fill="#087e8b" stroke="none"/>
+<rect x="129" y="2042" width="74" height="13" rx="3" fill="#087e8b" stroke="none"/>
+<rect x="143" y="2065" width="43" height="13" rx="3" fill="#087e8b" stroke="none"/>
+<text x="227" y="2040" font-size="30" font-weight="700" fill="#183b50">时间与工作规划</text>
+<text x="227" y="2074" font-size="24" font-weight="400" fill="#587080">5 基础 / 5 示例</text>
+<text x="575" y="2037" font-size="24" font-weight="600" fill="#087e8b">何时发生、进度与体验怎样规划？</text>
+<text x="575" y="2074" font-size="27" font-weight="400" fill="#183b50">时间线 · 甘特图 · 看板 · 用户故事地图 · 用户旅程</text>
+<rect x="90" y="2100" width="2220" height="85" rx="10" fill="#e7eff3" stroke="none"/>
+<path d="M158 2104 L158 2182" fill="none" stroke="#087e8b" stroke-width="2"/>
+<path d="M115 2143 L201 2143" fill="none" stroke="#087e8b" stroke-width="2"/>
+<circle cx="130" cy="2122" r="9" fill="#087e8b"/>
+<circle cx="174" cy="2161" r="9" fill="#087e8b"/>
+<text x="227" y="2134" font-size="30" font-weight="700" fill="#183b50">策略与关系分析</text>
+<text x="227" y="2168" font-size="24" font-weight="400" fill="#587080">5 基础 / 6 示例</text>
+<text x="575" y="2131" font-size="24" font-weight="600" fill="#087e8b">怎样定位、归因、比较与授权？</text>
+<text x="575" y="2168" font-size="27" font-weight="400" fill="#183b50">四象限 · Wardley 地图 · 鱼骨图 · 韦恩图 · 权限矩阵</text>
+<rect x="90" y="2194" width="2220" height="85" rx="10" fill="white" stroke="none"/>
+<rect x="117" y="2249" width="19" height="29" rx="3" fill="#087e8b" stroke="none"/>
+<rect x="145" y="2221" width="19" height="57" rx="3" fill="#087e8b" stroke="none"/>
+<rect x="173" y="2201" width="19" height="77" rx="3" fill="#087e8b" stroke="none"/>
+<text x="227" y="2228" font-size="30" font-weight="700" fill="#183b50">数值与统计</text>
+<text x="227" y="2262" font-size="24" font-weight="400" fill="#587080">8 基础 / 13 示例</text>
+<text x="575" y="2225" font-size="24" font-weight="600" fill="#087e8b">数量、趋势、分布和流量如何变化？</text>
+<text x="575" y="2262" font-size="27" font-weight="400" fill="#183b50">柱状图 · 折线图 · 散点图 · 矩形树图 · 雷达图 · 极坐标图 · 桑基图 · 瀑布图</text>
+<rect x="90" y="2312" width="2220" height="182" rx="12" fill="#fff7ed" stroke="#ebdac8"/>
+<text x="116" y="2354" font-size="29" font-weight="700" fill="#c8612d">17 组扩展示例，也能逐一找到归属</text>
+<text x="116" y="2397" font-size="25" font-weight="400" fill="#183b50">派生 11：令牌刷新时序、平台总览纵向、数据湖、蜂群、气泡、排名变化、山脊、坡度、可追溯模块树、四象限情景矩阵、终端循环。</text>
+<text x="116" y="2436" font-size="25" font-weight="400" fill="#183b50">动画 3：策略轨迹、队列瓶颈、安全路径。　导入 3：draw.io、Mermaid、Excalidraw 重绘。</text>
+<text x="116" y="2475" font-size="25" font-weight="400" fill="#183b50">版本口径：49 组三版本 × 3 + 8 个单独版本 = 155 文件；浅色、深色与完整页面不增加基础图型。</text>
+<rect x="90" y="2531" width="56" height="52" rx="10" fill="#087e8b" stroke="none"/>
+<text x="101" y="2569" font-size="29" font-weight="700" fill="white">04</text>
+<text x="168" y="2569" font-size="39" font-weight="700" fill="#102d42">实际绘图：六步完成，核对后再交付</text>
+<text x="168" y="2615" font-size="27" font-weight="400" fill="#587080">首次使用先确定品牌与中文字体；内容复杂时拆分总览和细节，保留事实来源与合并说明。</text>
+<rect x="90" y="2648" width="720" height="97" rx="12" fill="white" stroke="#d4e0e7"/>
+<text x="113" y="2684" font-size="30" font-weight="700" fill="#087e8b">1  提供事实</text>
+<text x="113" y="2724" font-size="26" font-weight="400" fill="#183b50">节点、边、原始数据、单位和资料来源。</text>
+<rect x="840" y="2648" width="720" height="97" rx="12" fill="white" stroke="#d4e0e7"/>
+<text x="863" y="2684" font-size="30" font-weight="700" fill="#087e8b">2  明确读者</text>
+<text x="863" y="2724" font-size="26" font-weight="400" fill="#183b50">读者是谁？看完要理解或决定什么？</text>
+<rect x="1590" y="2648" width="720" height="97" rx="12" fill="white" stroke="#d4e0e7"/>
+<text x="1613" y="2684" font-size="30" font-weight="700" fill="#087e8b">3  选择表达</text>
+<text x="1613" y="2724" font-size="26" font-weight="400" fill="#183b50">先确定行为含义，再选择图型与方向。</text>
+<rect x="90" y="2763" width="720" height="97" rx="12" fill="white" stroke="#d4e0e7"/>
+<text x="113" y="2799" font-size="30" font-weight="700" fill="#087e8b">4  设定约束</text>
+<text x="113" y="2839" font-size="26" font-weight="400" fill="#183b50">格式、尺寸、细节量、受众与品牌样式。</text>
+<rect x="840" y="2763" width="720" height="97" rx="12" fill="white" stroke="#d4e0e7"/>
+<text x="863" y="2799" font-size="30" font-weight="700" fill="#087e8b">5  生成与核对</text>
+<text x="863" y="2839" font-size="26" font-weight="400" fill="#183b50">核对事实、数字、连线、字重、遮挡和字体。</text>
+<rect x="1590" y="2763" width="720" height="97" rx="12" fill="white" stroke="#d4e0e7"/>
+<text x="1613" y="2799" font-size="30" font-weight="700" fill="#087e8b">6  迭代与输出</text>
+<text x="1613" y="2839" font-size="26" font-weight="400" fill="#183b50">按反馈调整；保存源文件与内容取舍记录。</text>
+<rect x="90" y="2894" width="2220" height="122" rx="14" fill="#102d42" stroke="none"/>
+<text x="116" y="2935" font-size="26" font-weight="700" fill="#94e0d7">需求模板</text>
+<text x="300" y="2935" font-size="29" font-weight="400" fill="white">“基于这些资料 / 源文件，为【受众】解释【问题】，选用【图型】，输出【尺寸、格式、主题】；</text>
+<text x="300" y="2982" font-size="29" font-weight="400" fill="white">必须保留【关键事实与关系】，可合并【次要细节】，列出删减项与待核实项。”</text>
+<rect x="90" y="3053" width="56" height="52" rx="10" fill="#087e8b" stroke="none"/>
+<text x="101" y="3091" font-size="29" font-weight="700" fill="white">05</text>
+<text x="168" y="3091" font-size="39" font-weight="700" fill="#102d42">与我们研究过的工具，怎样分工？</text>
+<text x="168" y="3137" font-size="27" font-weight="400" fill="#587080">依据已有研究记录比较职责；这些工具有能力重叠，下面的流程是可扩展方案，尚未自动接通。</text>
+<rect x="90" y="3167" width="537" height="191" rx="14" fill="#ffffff" stroke="#d4e0e7"/>
+<rect x="90" y="3167" width="6" height="191" rx="2" fill="#087e8b" stroke="none"/>
+<text x="117" y="3213" font-size="32" font-weight="700" fill="#087e8b">Graphify</text>
+<text x="117" y="3262" font-size="27" font-weight="400" fill="#183b50">提取关系、建图与查询</text>
+<text x="117" y="3304" font-size="27" font-weight="400" fill="#183b50">适合寻找项目事实线索</text>
+<text x="117" y="3346" font-size="27" font-weight="400" fill="#183b50">静态关系需结合实际核实</text>
+<rect x="651" y="3167" width="537" height="191" rx="14" fill="#ffffff" stroke="#d4e0e7"/>
+<rect x="651" y="3167" width="6" height="191" rx="2" fill="#2862ca" stroke="none"/>
+<text x="678" y="3213" font-size="32" font-weight="700" fill="#2862ca">Archify</text>
+<text x="678" y="3262" font-size="27" font-weight="400" fill="#183b50">交互探索架构、路径与差异</text>
+<text x="678" y="3304" font-size="27" font-weight="400" fill="#183b50">适合上下游探索与交接</text>
+<text x="678" y="3346" font-size="27" font-weight="400" fill="#183b50">帮助定位来源与查看关联</text>
+<rect x="1212" y="3167" width="537" height="191" rx="14" fill="#ffffff" stroke="#d4e0e7"/>
+<rect x="1212" y="3167" width="6" height="191" rx="2" fill="#2862ca" stroke="none"/>
+<text x="1239" y="3213" font-size="32" font-weight="700" fill="#2862ca">Fireworks</text>
+<text x="1239" y="3262" font-size="27" font-weight="400" fill="#183b50">技术图生成与工程约束</text>
+<text x="1239" y="3304" font-size="27" font-weight="400" fill="#183b50">适合工程配图及格式交付</text>
+<text x="1239" y="3346" font-size="27" font-weight="400" fill="#183b50">部分流程有原生生成器</text>
+<rect x="1773" y="3167" width="537" height="191" rx="14" fill="#ffffff" stroke="#d4e0e7"/>
+<rect x="1773" y="3167" width="6" height="191" rx="2" fill="#c8612d" stroke="none"/>
+<text x="1800" y="3213" font-size="32" font-weight="700" fill="#c8612d">Diagram Design</text>
+<text x="1800" y="3262" font-size="27" font-weight="400" fill="#183b50">信息取舍、版式、品牌与重绘</text>
+<text x="1800" y="3304" font-size="27" font-weight="400" fill="#183b50">适合研究说明与面向读者的汇报</text>
+<text x="1800" y="3346" font-size="27" font-weight="400" fill="#183b50">与 Fireworks 有较多重叠</text>
+<rect x="90" y="3378" width="2220" height="59" rx="10" fill="#e0f1ef" stroke="none"/>
+<text x="116" y="3417" font-size="29" font-weight="600" fill="#087e8b">我们的组合方向：资料 / 代码 → 提取关系 → 人 / AI 核实 → 选图与图形制作 → 按读者调整 → 发布研究说明</text>
+<rect x="90" y="3474" width="56" height="52" rx="10" fill="#087e8b" stroke="none"/>
+<text x="101" y="3512" font-size="29" font-weight="700" fill="white">06</text>
+<text x="168" y="3512" font-size="39" font-weight="700" fill="#102d42">价值、证据与下一步：知道能做什么，也知道验证到哪里</text>
+<text x="168" y="3558" font-size="27" font-weight="400" fill="#587080">直接用途：研究配图、方案汇报、教学解释、流程交接和旧图整理；判断质量要同时看内容与画面。</text>
+<rect x="90" y="3590" width="720" height="244" rx="14" fill="#ffffff" stroke="#d4e0e7"/>
+<rect x="90" y="3590" width="6" height="244" rx="2" fill="#087e8b" stroke="none"/>
+<text x="117" y="3636" font-size="32" font-weight="700" fill="#087e8b">已完成的研究验证</text>
+<text x="117" y="3685" font-size="27" font-weight="400" fill="#183b50">155 个原版：结构 / 部分遮挡检查通过。</text>
+<text x="117" y="3727" font-size="27" font-weight="400" fill="#183b50">8 个中文案例：生成、导出并目视检查。</text>
+<text x="117" y="3769" font-size="27" font-weight="400" fill="#183b50">3 种简单输入：均提取 6 节点、5 关系。</text>
+<text x="117" y="3811" font-size="27" font-weight="400" fill="#183b50">复杂导入与逐张原版视觉验收尚未覆盖。</text>
+<rect x="840" y="3590" width="720" height="244" rx="14" fill="#ffffff" stroke="#d4e0e7"/>
+<rect x="840" y="3590" width="6" height="244" rx="2" fill="#2862ca" stroke="none"/>
+<text x="867" y="3636" font-size="32" font-weight="700" fill="#2862ca">交付时怎样选格式</text>
+<text x="867" y="3685" font-size="27" font-weight="400" fill="#183b50">HTML：页面阅读，可承载交互 / 动画。</text>
+<text x="867" y="3727" font-size="27" font-weight="400" fill="#183b50">SVG：独立矢量图，可编辑、放大清晰。</text>
+<text x="867" y="3769" font-size="27" font-weight="400" fill="#183b50">PNG：静态像素图，便于插入文档。</text>
+<text x="867" y="3811" font-size="27" font-weight="400" fill="#183b50">单图导出不含页面外围摘要；检查字体。</text>
+<rect x="1590" y="3590" width="720" height="244" rx="14" fill="#ffffff" stroke="#d4e0e7"/>
+<rect x="1590" y="3590" width="6" height="244" rx="2" fill="#c8612d" stroke="none"/>
+<text x="1617" y="3636" font-size="32" font-weight="700" fill="#c8612d">扩展建议 · 按优先级推进</text>
+<text x="1617" y="3685" font-size="27" font-weight="400" fill="#183b50">① 固定中文字体、术语、配色与模板。</text>
+<text x="1617" y="3727" font-size="27" font-weight="400" fill="#183b50">② 接入关系来源，保留稳定 ID 与证据。</text>
+<text x="1617" y="3769" font-size="27" font-weight="400" fill="#183b50">③ 批量更新、版本对比与人工审核。</text>
+<text x="1617" y="3811" font-size="27" font-weight="400" fill="#183b50">④ 同题比较耗时、修改次数与理解效果。</text>
+<text x="94" y="3880" font-size="26" font-weight="400" fill="#587080">能力边界：检查通过不证明业务事实正确；旧图重绘保留内容结构的目标需逐项核对，不保证原坐标、样式或复杂语法完整还原。</text>
+<text x="94" y="3922" font-size="26" font-weight="400" fill="#587080">当前展厅展示已保存的示例，切换不调用模型；本库依赖宿主 AI，不是独立模型服务，也没有覆盖所有图型的通用自动布局引擎。</text>
+<path d="M90 3954 L2310 3954" fill="none" stroke="#cedbe3" stroke-width="2"/>
+<text x="94" y="3998" font-size="25" font-weight="400" fill="#587080">来源：cathrynlavery/diagram-design · 插件清单 v2.6.23 · ce9344c52cb9 · MIT ｜ 本地固定版本研究 · 2026-09-16</text>
+<text x="94" y="4045" font-size="27" font-weight="600" fill="#087e8b">阅读路径：分清维度 → 理解技术 → 按问题选型 → 提供内容与约束 → 核对与交付 → 逐步扩展</text>
+</g></svg>

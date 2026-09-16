@@ -15,6 +15,7 @@
 | 2 | 002 | [Agent Skills Eval：Skill 能力校验引擎](projects/002-agent-skills-eval/README.md) | [agent\-skills\-eval](https://github.com/darkrishabh/agent-skills-eval) | 读取已编写的 Skill 与测试标准，自动调用模型、评分并对比有无 Skill 的效果，为校验能力 Skill 提供底层评测引擎。 | 已完成 | [在线演示](https://yydshly.github.io/0914_codex_project/002-agent-skills-eval/) |
 | 3 | 003 | [Video TalkCraft：口播视频制作 Skill](projects/003-video-talkcraft/README.md) | [video\-talkcraft](https://github.com/Vincentwei1021/video-talkcraft) | 将口播稿、成品配音和素材组织为逐字同步的动效视频及可编辑工程；可复用到培训、产品讲解与系列口播，统一表达风格并支持局部修改。附输入准备、选卡原理与一致性指南。 | 已完成 | [在线演示](https://yydshly.github.io/0914_codex_project/003-video-talkcraft/) |
 | 4 | 004 | [Vibe Motion：AI 驱动的代码动画工具集](projects/004-vibe-motion/README.md) | [vibe\-motion](https://github.com/vibe-motion) | 把 AI 编写代码与动画引擎连接，让二维、三维和动效成为可编辑、可复用、可批量渲染的工程，适合教学、产品讲解与数据展示；附技术引导图、交互示例及 SRT 语义分镜原理。 | 已完成 | [在线演示](https://yydshly.github.io/0914_codex_project/004-vibe-motion/) |
+| 5 | 005 | [Diagram Design：图形设计规范与效果展厅](projects/005-diagram-design/README.md) | [diagram\-design](https://github.com/cathrynlavery/diagram-design) | 让 AI 将文字、数据或旧图源文件绘制为可编辑 HTML/SVG 并导出 PNG，覆盖七类 40 种基础图型，支持品牌、动画和三格式重绘；附 57 组 155 个原版示例、8 版中文案例、2 版理解总览及完整绘图清单。 | 已完成 | [在线演示](https://yydshly.github.io/0914_codex_project/005-diagram-design/) |
 <!-- PROJECT_INDEX:END -->
 
 ## 项目预览
@@ -73,6 +74,30 @@
 [研究记录](projects/004-vibe-motion/README.md) · [上游仓库](https://github.com/vibe-motion) · [在线演示](https://yydshly.github.io/0914_codex_project/004-vibe-motion/)
 
 标签：代码动画 / Three\.js / Remotion / Agent Skills
+
+### 005 · Diagram Design：图形设计规范与效果展厅
+
+让 AI 将文字、数据或旧图源文件绘制为可编辑 HTML/SVG 并导出 PNG，覆盖七类 40 种基础图型，支持品牌、动画和三格式重绘；附 57 组 155 个原版示例、8 版中文案例、2 版理解总览及完整绘图清单。
+
+#### 理解总览：原理、选型与绘图方法
+
+第二版总览解释这个库怎样绘图、如何选图、静态与动画及旧图重绘的关系，并汇总现有验证与扩展方向；两版原图和全部案例均可在项目页下载。
+
+![Diagram Design 的技术流程、七类四十种图型、语义模式、绘图步骤、工具分工和验证范围](projects/005-diagram-design/assets/diagram-design-overview-v2.png)
+
+#### 八种中文表达与视觉效果
+
+同一份内容，比较配色、完整页面、详细程度、尺寸、手绘线条和边注；PNG为单图导出。
+
+![中文研究流程的边注、蓝色、深色、概览、完整页面单图、橙色、手绘与幻灯片效果](projects/005-diagram-design/assets/case-contact-sheet.jpg)
+
+#### 演示效果
+
+![按 Diagram Design 规范编写的中文研究流程：资料、提取、核实、图规格、生成和检查交付](projects/005-diagram-design/assets/research-workflow.png)
+
+[研究记录](projects/005-diagram-design/README.md) · [上游仓库](https://github.com/cathrynlavery/diagram-design) · [在线演示](https://yydshly.github.io/0914_codex_project/005-diagram-design/)
+
+标签：图形设计 / HTML/SVG / Agent Skill / 旧图重绘 / 中文配图
 <!-- PROJECT_PREVIEWS:END -->
 
 ## 开始研究

@@ -1,0 +1,18 @@
+{
+  "revision": 2,
+  "png_size": [
+    3600,
+    6165
+  ],
+  "text_count": 153,
+  "text_overlaps": [],
+  "text_overflow": [],
+  "base_types": 40,
+  "example_groups": 57,
+  "sources": [
+    "notes/analysis.md",
+    "notes/taxonomy.md",
+    "notes/experiments.md",
+    "upstream/skills/diagram-design/SKILL.md"
+  ]
+}

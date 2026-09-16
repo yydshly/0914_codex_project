@@ -1,0 +1,40 @@
+{
+  "source": "example-tree-block-decomposition.html",
+  "blocks": [
+    {
+      "id": "PAY-001",
+      "name": "Payment Gateway",
+      "output": "Settled transaction record",
+      "constraint": "Every transaction reaches exactly one terminal state",
+      "impl": "src/payments/gateway/"
+    },
+    {
+      "id": "PAY-001-01",
+      "parent": "PAY-001",
+      "name": "Card Authorization",
+      "input": "Raw card details from checkout",
+      "output": "Authorization token or decline",
+      "constraint": "Never persists a raw card number",
+      "assumption": "Runs behind the PCI-scoped boundary",
+      "impl": "src/payments/authorization/"
+    },
+    {
+      "id": "PAY-001-02",
+      "parent": "PAY-001",
+      "name": "Fraud Screening",
+      "input": "Authorization token",
+      "output": "Risk score and hold/release decision",
+      "constraint": "Blocks release above the configured risk threshold",
+      "impl": "src/payments/fraud/"
+    },
+    {
+      "id": "PAY-001-03",
+      "parent": "PAY-001",
+      "name": "Settlement Ledger",
+      "input": "Released authorization",
+      "output": "Settled transaction record",
+      "constraint": "Append-only, no ledger row is ever mutated after write",
+      "impl": "src/payments/ledger/"
+    }
+  ]
+}

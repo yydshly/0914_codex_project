@@ -1,0 +1,31 @@
+{
+  "source": "research-content.json",
+  "source_nodes": 6,
+  "source_edges": 5,
+  "faithful": {
+    "drawn_nodes": 6,
+    "drawn_edges": 5,
+    "merged": [],
+    "dropped": []
+  },
+  "simplified": {
+    "drawn_nodes": 3,
+    "drawn_edges": 2,
+    "merged": {
+      "理解资料": [
+        "n0",
+        "n1"
+      ],
+      "确认表达": [
+        "n2",
+        "n3"
+      ],
+      "制作交付": [
+        "n4",
+        "n5"
+      ]
+    },
+    "dropped": []
+  },
+  "note": "节点描述由本研究提供；重绘由 AI 按规范编写，不是上游提取器自动生成。"
+}

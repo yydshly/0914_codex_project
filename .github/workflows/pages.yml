@@ -11,6 +11,7 @@ on:
       - 'scripts/catalog.py'
       - 'projects/**/web/dist/**'
       - 'projects/001-audio-locked-paper-theatre/**'
+      - 'projects/005-diagram-design/**'
   workflow_dispatch:
 
 permissions:
@@ -32,6 +33,8 @@ jobs:
         run: python scripts/catalog.py check
       - name: Package selected static demos
         run: python projects/001-audio-locked-paper-theatre/src/package_site.py
+      - name: Build Diagram Design research gallery
+        run: python projects/005-diagram-design/src/build.py
       - name: Build combined project site
         run: python scripts/build_pages.py
       - uses: actions/configure-pages@v5

@@ -1,0 +1,66 @@
+[
+  {
+    "file": "research-annotation.svg",
+    "png": "research-annotation.png",
+    "width": 2560,
+    "height": 1440,
+    "font_stack": "Georgia, SimSun, serif",
+    "microsoft_yahei_available": true
+  },
+  {
+    "file": "research-blue.svg",
+    "png": "research-blue.png",
+    "width": 2560,
+    "height": 1440,
+    "font_stack": "\"Microsoft YaHei\", \"PingFang SC\", \"Noto Sans SC\", sans-serif",
+    "microsoft_yahei_available": true
+  },
+  {
+    "file": "research-dark.svg",
+    "png": "research-dark.png",
+    "width": 2560,
+    "height": 1440,
+    "font_stack": "\"Microsoft YaHei\", \"PingFang SC\", \"Noto Sans SC\", sans-serif",
+    "microsoft_yahei_available": true
+  },
+  {
+    "file": "research-executive.svg",
+    "png": "research-executive.png",
+    "width": 2560,
+    "height": 1440,
+    "font_stack": "\"Microsoft YaHei\", \"PingFang SC\", \"Noto Sans SC\", sans-serif",
+    "microsoft_yahei_available": true
+  },
+  {
+    "file": "research-full.svg",
+    "png": "research-full.png",
+    "width": 2560,
+    "height": 1440,
+    "font_stack": "\"Microsoft YaHei\", \"PingFang SC\", \"Noto Sans SC\", sans-serif",
+    "microsoft_yahei_available": true
+  },
+  {
+    "file": "research-orange.svg",
+    "png": "research-orange.png",
+    "width": 2560,
+    "height": 1440,
+    "font_stack": "\"Microsoft YaHei\", \"PingFang SC\", \"Noto Sans SC\", sans-serif",
+    "microsoft_yahei_available": true
+  },
+  {
+    "file": "research-sketchy.svg",
+    "png": "research-sketchy.png",
+    "width": 2560,
+    "height": 1440,
+    "font_stack": "\"Microsoft YaHei\", \"PingFang SC\", \"Noto Sans SC\", sans-serif",
+    "microsoft_yahei_available": true
+  },
+  {
+    "file": "research-slide.svg",
+    "png": "research-slide.png",
+    "width": 3200,
+    "height": 1800,
+    "font_stack": "\"Microsoft YaHei\", \"PingFang SC\", \"Noto Sans SC\", sans-serif",
+    "microsoft_yahei_available": true
+  }
+]

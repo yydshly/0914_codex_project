@@ -1,0 +1,2 @@
+# Preserve the archived snapshot byte-for-byte across Windows and Linux.
+upstream/** -text

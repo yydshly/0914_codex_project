@@ -1,0 +1,57 @@
+{
+  "subject": "GitHub 项目研究流程（本研究建议流程，非运行轨迹）",
+  "nodes": [
+    {
+      "id": "n0",
+      "name": "原始资料",
+      "description": "源码、文档与需求"
+    },
+    {
+      "id": "n1",
+      "name": "提取关系",
+      "description": "节点、方向与分组"
+    },
+    {
+      "id": "n2",
+      "name": "核实事实",
+      "description": "确认来源与关系"
+    },
+    {
+      "id": "n3",
+      "name": "整理图规格",
+      "description": "受众、尺寸与重点"
+    },
+    {
+      "id": "n4",
+      "name": "生成图形",
+      "description": "按规范编写 SVG"
+    },
+    {
+      "id": "n5",
+      "name": "检查与导出",
+      "description": "检查、渲染、交付"
+    }
+  ],
+  "edges": [
+    {
+      "from": "n0",
+      "to": "n1"
+    },
+    {
+      "from": "n1",
+      "to": "n2"
+    },
+    {
+      "from": "n2",
+      "to": "n3"
+    },
+    {
+      "from": "n3",
+      "to": "n4"
+    },
+    {
+      "from": "n4",
+      "to": "n5"
+    }
+  ]
+}

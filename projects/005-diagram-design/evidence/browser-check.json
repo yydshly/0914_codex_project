@@ -1,0 +1,13 @@
+{
+  "url": "http://127.0.0.1:8785/",
+  "checks": [
+    "overview is default; high-resolution image loads",
+    "all seven navigation panels",
+    "57-example list, kind/category filters and variant switching",
+    "eight authored cases and download links",
+    "standalone inventory: 155 originals and 24 authored case files",
+    "390px mobile viewport: no page-level horizontal overflow"
+  ],
+  "javascript_errors": [],
+  "scope": "Chromium smoke checks; not exhaustive multi-browser or 155-diagram visual review"
+}
