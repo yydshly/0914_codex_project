@@ -1,7 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="1940" viewBox="0 0 1800 1940" role="img" aria-labelledby="title desc">
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="2220" viewBox="0 0 1800 2220" role="img" aria-labelledby="title desc">
 <title id="title">蜂群：按需组织 Agent，让经验跨任务复用</title>
 <desc id="desc">蜂群属于多 Agent 协作。按能力组队，提供技能经验，执行后审查、返工或汇总交付，并记录结果。角色、能力、经验分别表示负责什么、能做什么、如何做得更好。本图为概念归纳，未验证 EvoMap 云端蜂群效果。</desc>
-<rect width="1800" height="1940" fill="#f4f7fc"/>
+<rect width="1800" height="2220" fill="#f4f7fc"/>
 <text x="64" y="63.120000000000005" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="24" font-weight="700" fill="#2855db">EVOMAP · SWARM    /    蜂群理解图</text>
 <text x="64" y="143.76" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="52" font-weight="700" fill="#172840">按需组织 Agent，让经验跨任务复用</text>
 <text x="64" y="205.52" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="29" font-weight="400" fill="#52647d">蜂群属于多 Agent 协作，强调围绕目标组队、协调、审查与迭代。</text>
@@ -74,9 +74,22 @@
 <rect x="1354" y="1487" width="382" height="132" rx="18" fill="#ffffff" stroke="#d5dfed" stroke-width="2"/>
 <text x="1376" y="1535.4" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="30" font-weight="700" fill="#172840">汇总者</text>
 <text x="1376" y="1587.0" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="25" font-weight="400" fill="#52647d">整合产物、形成交付</text>
-<rect x="64" y="1671" width="1672" height="172" rx="18" fill="#142852" stroke="#142852" stroke-width="2"/>
-<text x="92" y="1725.04" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="33" font-weight="700" fill="#ffffff">协作组织当下的工作；经验沉淀连接前后多次任务。</text>
-<text x="92" y="1776.88" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="26" font-weight="400" fill="#d0ddf5">多 Agent 系统也能实现这些机制。“蜂群”名称本身不保证更强、更便宜或更正确。</text>
-<text x="92" y="1820.0" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="25" font-weight="400" fill="#d0ddf5">群体智能是探索愿景；本研究尚未实测 EvoMap 云端蜂群的协作收益。</text>
-<text x="64" y="1897.24" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="23" font-weight="400" fill="#52647d">独立研究概念图 · 依据官方 Swarm 文档与我们的理解归纳，并非官方部署架构。</text>
+<text x="64" y="1690.52" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="29" font-weight="700" fill="#172840">04   不只沉淀工种技能，也积累流程与组织反馈</text>
+<rect x="64" y="1720" width="536" height="170" rx="18" fill="#eaf5f1" stroke="#c7dfd5" stroke-width="2"/>
+<text x="88" y="1771.28" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="31" font-weight="700" fill="#176b5a">方法沉淀</text>
+<text x="88" y="1822.0" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="25" font-weight="400" fill="#52647d">怎样做事：策略与执行案例</text>
+<text x="88" y="1867.12" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="24" font-weight="400" fill="#52647d">跨角色复用，仍需验证适用性</text>
+<rect x="632" y="1720" width="536" height="170" rx="18" fill="#eaf5f1" stroke="#c7dfd5" stroke-width="2"/>
+<text x="656" y="1771.28" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="31" font-weight="700" fill="#176b5a">流程沉淀</text>
+<text x="656" y="1822.0" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="25" font-weight="400" fill="#52647d">怎样接力：可复用流程模板</text>
+<text x="656" y="1867.12" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="24" font-weight="400" fill="#52647d">留下步骤、角色和交接约定</text>
+<rect x="1200" y="1720" width="536" height="170" rx="18" fill="#eaf5f1" stroke="#c7dfd5" stroke-width="2"/>
+<text x="1224" y="1771.28" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="31" font-weight="700" fill="#176b5a">组织反馈</text>
+<text x="1224" y="1822.0" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="25" font-weight="400" fill="#52647d">怎样组队：协同与编排记录</text>
+<text x="1224" y="1867.12" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="24" font-weight="400" fill="#52647d">为后续选人和选流程提供依据</text>
+<rect x="64" y="1945" width="1672" height="172" rx="18" fill="#142852" stroke="#142852" stroke-width="2"/>
+<text x="92" y="1999.04" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="33" font-weight="700" fill="#ffffff">协作组织当下的工作；经验沉淀连接前后多次任务。</text>
+<text x="92" y="2050.88" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="26" font-weight="400" fill="#d0ddf5">平台还描述：任务通信、超时候补、预算并发控制，以及贡献结算。</text>
+<text x="92" y="2094.0" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="25" font-weight="400" fill="#d0ddf5">上述为平台文档与概念归纳；不等于本地库独立具备全部能力，云端收益尚未实测。</text>
+<text x="64" y="2180.24" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="23" font-weight="400" fill="#52647d">独立研究概念图 · 依据官方 Swarm 文档与我们的理解归纳，并非官方部署架构。</text>
 </svg>

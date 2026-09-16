@@ -4,7 +4,7 @@ from html import escape
 from PIL import Image, ImageDraw, ImageFont
 
 OUT = Path(__file__).resolve().parents[1] / 'assets'
-W, H = 1800, 1940
+W, H = 1800, 2220
 BG, INK, MUTED, BLUE, GREEN = '#f4f7fc', '#172840', '#52647d', '#2855db', '#176b5a'
 image = Image.new('RGB', (W, H), BG)
 draw = ImageDraw.Draw(image)
@@ -89,11 +89,20 @@ for x,title,body in [(64,'协调者','拆任务、组织参与者'),(494,'执行
     text(x+22,1509,title,30,INK,True,max_width=338)
     text(x+22,1565,body,25,MUTED,max_width=338)
 
-box(64,1671,1672,172,'#142852','#142852')
-text(92,1696,'协作组织当下的工作；经验沉淀连接前后多次任务。',33,'#ffffff',True)
-text(92,1754,'多 Agent 系统也能实现这些机制。“蜂群”名称本身不保证更强、更便宜或更正确。',26,'#d0ddf5')
-text(92,1798,'群体智能是探索愿景；本研究尚未实测 EvoMap 云端蜂群的协作收益。',25,'#d0ddf5')
-text(64,1877,'独立研究概念图 · 依据官方 Swarm 文档与我们的理解归纳，并非官方部署架构。',23,MUTED)
+text(64,1665,'04   不只沉淀工种技能，也积累流程与组织反馈',29,INK,True)
+for x,title,a,b in [
+    (64,'方法沉淀','怎样做事：策略与执行案例','跨角色复用，仍需验证适用性'),
+    (632,'流程沉淀','怎样接力：可复用流程模板','留下步骤、角色和交接约定'),
+    (1200,'组织反馈','怎样组队：协同与编排记录','为后续选人和选流程提供依据')]:
+    box(x,1720,536,170,'#eaf5f1','#c7dfd5')
+    text(x+24,1744,title,31,GREEN,True,max_width=488)
+    text(x+24,1800,a,25,MUTED,max_width=488)
+    text(x+24,1846,b,24,MUTED,max_width=488)
+box(64,1945,1672,172,'#142852','#142852')
+text(92,1970,'协作组织当下的工作；经验沉淀连接前后多次任务。',33,'#ffffff',True)
+text(92,2028,'平台还描述：任务通信、超时候补、预算并发控制，以及贡献结算。',26,'#d0ddf5')
+text(92,2072,'上述为平台文档与概念归纳；不等于本地库独立具备全部能力，云端收益尚未实测。',25,'#d0ddf5')
+text(64,2160,'独立研究概念图 · 依据官方 Swarm 文档与我们的理解归纳，并非官方部署架构。',23,MUTED)
 OUT.mkdir(exist_ok=True)
 svg.append('</svg>')
 (OUT/'swarm-understanding.svg').write_text('\n'.join(svg)+'\n',encoding='utf-8')

@@ -44,9 +44,12 @@
 <section id="swarm">
 <div class="section-heading"><span>03</span><div><h2>蜂群：按需组队，再让经验留下来</h2><p>能力决定能做什么，角色决定这次负责什么，经验帮助它做得更好。</p></div></div>
 <p><strong>在 EvoMap 语境里，蜂群属于多 Agent 协作的一种组织方式。</strong>多 Agent 协作是总称；蜂群强调围绕目标组织参与者、协调执行、审查和迭代。成熟的多 Agent 系统也能具备这些能力，不能只凭名称判断先进程度。</p>
+<div class="callout" id="swarm-value"><b>每个工种积累技能，是其中一部分价值。</b><p>更完整的理解是：既复用“怎么做事”的方法，也改进“怎样组织大家做事”。经验可以按任务、领域、条件组织并跨角色复用，不必给每个固定工种分配一个独立知识库；有了角色名称，也不代表它已经具备可靠技能。</p></div>
+<div class="asset-key"><article><code>方法沉淀</code><h3>这件事怎样做</h3><p>例如接口接入步骤、部署条件、失败原因和验证方法。供执行者按需参考。</p></article><article><code>流程沉淀</code><h3>几个人怎样配合</h3><p>例如把“研究 → 实现 → 审查”的交接流程保存为模板，用于后续任务。</p></article><article><code>协作记录</code><h3>以后怎样组织更合适</h3><p>记录团队配合和编排结果，为后续选人、选择协作方式提供依据。</p></article></div>
+<p class="source-note">这是我们的三层归纳。方法资产依据 <a href="https://evomap.ai/zh/wiki/16-gep-protocol" target="_blank" rel="noopener">GEP 文档</a>；流水线模板、协作历史与编排反馈依据 <a href="https://evomap.ai/zh/wiki/10-swarm" target="_blank" rel="noopener">蜂群文档</a>。这些记录不等于模型权重自动训练，也不保证每次都能选对。</p>
 <figure class="understanding-map">
 <figcaption><h3>一张图理解：能力、岗位、经验怎样连接</h3><p>先按能力选参与者，再提供适用的方法与上下文；完成后核对结果，把有依据的经验留给下一次。</p></figcaption>
-<a href="./assets/swarm-understanding.png" target="_blank" rel="noopener" aria-label="打开蜂群理解图"><img src="./assets/swarm-understanding.png" width="1800" height="1940" loading="lazy" alt="蜂群属于多 Agent 协作。能力表示模型、工具、环境和权限；角色表示本次岗位；经验表示方法与案例。流程为提出目标、规划组队、Agent 执行、审查返工、汇总交付。共享经验库为任务提供方法，并保存成败供以后复用。云端蜂群效果尚未实测。"></a>
+<a href="./assets/swarm-understanding.png" target="_blank" rel="noopener" aria-label="打开蜂群理解图"><img src="./assets/swarm-understanding.png" width="1800" height="2220" loading="lazy" alt="蜂群属于多 Agent 协作。能力表示模型、工具、环境和权限；角色表示本次岗位；经验表示方法与案例。流程为提出目标、规划组队、Agent 执行、审查返工、汇总交付。共享经验库为任务提供方法，并保存成败供以后复用。云端蜂群效果尚未实测。"></a>
 <p class="source-note"><a href="./assets/swarm-understanding.png" download>下载高清 PNG</a> · <a href="./assets/swarm-understanding.svg" download>下载可编辑 SVG</a>。这是我们的概念归纳，不是官方部署架构。</p>
 </figure>
 <h3 class="swarm-subheading">“给一批 Agent 能力，再按需赋能”，要分开看</h3>
@@ -56,6 +59,24 @@
 <div class="swarm-roles"><article><h4>协调者</h4><p>理解目标、拆任务、组织参与者、跟踪进度。</p></article><article><h4>执行者</h4><p>负责研究、实现或测试，交出具体结果。</p></article><article><h4>审查者</h4><p>核对证据和验收标准，必要时提出返工。</p></article><article><h4>汇总者</h4><p>处理结果衔接与冲突，整合最终交付。</p></article></div>
 <p class="plain-note">可以把“蜂后”当作软件协调者的比喻；这里只讨论任务岗位，不把它当成生物蜂群机制的复刻。工种可以预设，也可以按任务安排；“等上层派单”是一条路径，Agent 主动认领任务也是一条路径。</p>
 <details><summary>一定要有一个固定的“蜂后”吗？</summary><p>这个概念并不要求一个永久中央角色。本图展示的是方便理解的协调流程；具体系统可以由平台、规划 Agent 或任务发起者承担协调。EvoMap 文档同时描述了任务认领、平台调度、并行分工、独立探索、审议和流水线等方式。</p></details>
+<h3 class="swarm-subheading" id="swarm-capabilities">官方介绍的蜂群，具体提供哪些能力？</h3>
+<p class="plain-note"><strong>以下是官方平台能力描述，尚未由本研究进行云端实测。</strong>每张卡片同时给出我们的用途解读，便于理解这些机制解决什么问题。</p>
+<div class="swarm-roles">
+<article><span class="mini-label">01 · 规划与分工</span><h4>拆任务，按依赖推进</h4><p>文档描述任务拆解、并行求解与依赖协调。</p><p><strong>用途解读：</strong>独立工作同时做，依赖接口结果的工作等前置完成。</p></article>
+<article><span class="mini-label">02 · 按需找人</span><h4>能力目录与动态组队</h4><p>结合能力、信誉、可用性等信息匹配 Agent；Worker 池承接工作。</p><p><strong>用途解读：</strong>任务来了再找适合且有空的执行者。</p></article>
+<article><span class="mini-label">03 · 多种求解方式</span><h4>分工、独立探索、审议、接力</h4><p>支持并行分解、发散收敛、多轮审议与角色流水线。</p><p><strong>用途解读：</strong>调研可分工，难题可独立提案，交付可逐步接力。</p></article>
+<article><span class="mini-label">04 · 工作中的协调</span><h4>消息、共享上下文与进度</h4><p>描述结构化对话、共享工作区和事件通知。</p><p><strong>用途解读：</strong>让接口约定、产物和变更通知能交到相关参与者手中。</p></article>
+<article><span class="mini-label">05 · 质量控制</span><h4>计划、执行、审查、迭代</h4><p>PDRI 循环把审查与返工纳入任务过程。</p><p><strong>用途解读：</strong>产物提交后仍要验收；评分只是信号，实际测试也要通过。</p></article>
+<article><span class="mini-label">06 · 失败恢复</span><h4>超时释放与候补改派</h4><p>任务失败或过期后，可按策略尝试候补节点。</p><p><strong>用途解读：</strong>某个执行者掉线时，任务还有继续推进的路径。</p></article>
+<article><span class="mini-label">07 · 长期复用</span><h4>共享知识与流程模板</h4><p>描述共享记忆、主题订阅和可复用流水线。</p><p><strong>用途解读：</strong>保存的不只有答案，也包括方法和组织步骤。</p></article>
+<article><span class="mini-label">08 · 改进组织方式</span><h4>协同记录与编排反馈</h4><p>用协作历史及任务结果辅助后续组队与策略选择。</p><p><strong>用途解读：</strong>把“谁配合过、哪种流程有用”变成可参考的记录。</p></article>
+<article><span class="mini-label">09 · 控制规模与成本</span><h4>预算、并发与组织策略</h4><p>平台描述预算、并发、审查、重试等配置及组织管理。</p><p><strong>用途解读：</strong>把无人值守任务限制在可接受的资源范围内。</p></article>
+<article><span class="mini-label">10 · 网络参与机制</span><h4>认领、贡献记录与结算</h4><p>悬赏与 Worker 任务提供参与和结算机制。</p><p><strong>用途解读：</strong>让不同执行者有参与入口；有奖励不等于答案可靠。</p></article>
+</div>
+<p class="source-note">能力 01、03、04、07、08、10：<a href="https://evomap.ai/zh/wiki/10-swarm" target="_blank" rel="noopener">官方蜂群文档</a>。能力 02、05、06、09：<a href="https://evomap.ai/zh/blog/swarm-privacy-computing" target="_blank" rel="noopener">官方蜂群更新说明</a>。卡片为能力摘要，不代表本地 Evolver 包含全部平台服务。</p>
+<details><summary>文档提到的隐私计算，也属于蜂群能力吗？</summary><p>官方将加密任务与受限计算工具作为扩展集成，意图让敏感数据任务参与协作。本研究未审计相关执行与信任边界，不把它写成已经证实的隐私保障。参见上面的官方更新说明。</p></details>
+<details><summary>这些能力在 Evolver 库里，还是在 EvoMap 平台里？</summary><p><strong>应分三层看：</strong>Hub 组织网络任务与协作；Evolver 处理执行侧的经验、提示和网络接入；宿主模型及工具完成实际操作。固定版本 README 描述了客户端 Worker 接入，但本研究未启用。现有 77 项测试只验证选择器、哈希和提示词模块，没有覆盖上述云端蜂群能力。</p></details>
+<details><summary>它是不是已经证明“团队越做越聪明”？</summary><p>还不能这样推导。保存经验、记录协同、按历史推荐，是可以检查的机制；任务成功率提升和总成本下降，需要对照实验。官方博客和 Wiki 对部分默认阈值、返工次数的描述也有差异，因此这里不把某个默认数值当作统一保证。</p></details>
 <div class="callout"><b>蜂群组织当下的协作；经验库连接前后多次任务。</b><p>我们关注的产品方向，是把两者结合起来：先跑通可验收的小任务，再验证共享经验是否减少重复试错。多个 Agent 达成一致仍可能出错；需要实际验收，并衡量协作成本。</p></div>
 <p class="source-note">依据 <a href="https://evomap.ai/zh/wiki/10-swarm" target="_blank" rel="noopener">官方蜂群文档 ↗</a>（2026-09-16 查阅）。角色、能力、经验的区分与图示是本研究的解释框架。现有 77 项测试覆盖 Evolver 局部模块，未验证云端蜂群协作收益。</p>
 </section>
