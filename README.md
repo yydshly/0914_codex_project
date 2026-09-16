@@ -16,7 +16,7 @@
 | 3 | 003 | [Video TalkCraft：口播视频制作 Skill](projects/003-video-talkcraft/README.md) | [video\-talkcraft](https://github.com/Vincentwei1021/video-talkcraft) | 将口播稿、成品配音和素材组织为逐字同步的动效视频及可编辑工程；可复用到培训、产品讲解与系列口播，统一表达风格并支持局部修改。附输入准备、选卡原理与一致性指南。 | 已完成 | [在线演示](https://yydshly.github.io/0914_codex_project/003-video-talkcraft/) |
 | 4 | 004 | [Vibe Motion：AI 驱动的代码动画工具集](projects/004-vibe-motion/README.md) | [vibe\-motion](https://github.com/vibe-motion) | 把 AI 编写代码与动画引擎连接，让二维、三维和动效成为可编辑、可复用、可批量渲染的工程，适合教学、产品讲解与数据展示；附技术引导图、交互示例及 SRT 语义分镜原理。 | 已完成 | [在线演示](https://yydshly.github.io/0914_codex_project/004-vibe-motion/) |
 | 5 | 005 | [Diagram Design：图形设计规范与效果展厅](projects/005-diagram-design/README.md) | [diagram\-design](https://github.com/cathrynlavery/diagram-design) | 让 AI 将文字、数据或旧图源文件绘制为可编辑 HTML/SVG 并导出 PNG，覆盖七类 40 种基础图型，支持品牌、动画和三格式重绘；附 57 组 155 个原版示例、8 版中文案例、2 版理解总览及完整绘图清单。 | 已完成 | [在线演示](https://yydshly.github.io/0914_codex_project/005-diagram-design/) |
-| 6 | 006 | [Dashy：网页式应用工作台与信息看板](projects/006-dashy/README.md) | [dashy](https://github.com/Lissy93/dashy) | 用网页集中应用入口、API 数据和服务状态，减少记网址、找入口和逐个查看后台的操作；支持搜索、分组、编辑与嵌入工作区，适合个人首页、家庭服务器和团队工具导航。附架构全景图、原版实拍及网页与桌面应用边界说明。 | 已完成 | — |
+| 6 | 006 | [Dashy：网页式应用工作台与信息看板](projects/006-dashy/README.md) | [dashy](https://github.com/Lissy93/dashy) | 用网页集中应用入口、API 数据和服务状态，减少记网址、找入口和逐个查看后台的操作；支持搜索、分组、编辑与嵌入工作区，适合个人首页、家庭服务器和团队工具导航。附架构全景图、原版实拍及网页与桌面应用边界说明。 | 已完成 | [在线演示](https://yydshly.github.io/0914_codex_project/006-dashy/) |
 <!-- PROJECT_INDEX:END -->
 
 ## 项目预览
@@ -114,7 +114,7 @@
 
 ![Dashy 原版中文工作台实拍：集中应用入口、时钟、本机信息与状态分组](projects/006-dashy/assets/cover.png)
 
-[研究记录](projects/006-dashy/README.md) · [上游仓库](https://github.com/Lissy93/dashy)
+[研究记录](projects/006-dashy/README.md) · [上游仓库](https://github.com/Lissy93/dashy) · [在线演示](https://yydshly.github.io/0914_codex_project/006-dashy/)
 
 标签：应用导航 / 动态看板 / Vue / 自托管
 <!-- PROJECT_PREVIEWS:END -->

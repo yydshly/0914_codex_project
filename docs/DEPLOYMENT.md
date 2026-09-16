@@ -8,6 +8,8 @@
 
 已验证的在线入口：[演示导航页](https://yydshly.github.io/0914_codex_project/) · [001：语音驱动纸艺剧场](https://yydshly.github.io/0914_codex_project/001-audio-locked-paper-theatre/) · [002：Skill 能力校验](https://yydshly.github.io/0914_codex_project/002-agent-skills-eval/) · [003：Video TalkCraft](https://yydshly.github.io/0914_codex_project/003-video-talkcraft/)。003 于 2026-09-16 发布，导读采用专门整理的输入、制作、输出与一致性理解图。
 
+006 于 2026-09-16 发布并验证：[Dashy 能力与原理研究页](https://yydshly.github.io/0914_codex_project/006-dashy/)。引导图采用能力架构全景图和原版工作台实拍；已核对线上页面与全部静态资源。
+
 ## GitHub Pages 地址规划
 
 GitHub Pages 每个仓库最多有一个站点，可把多个静态演示放在同一站点的不同子目录：
