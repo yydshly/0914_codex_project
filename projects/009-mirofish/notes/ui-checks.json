@@ -1,0 +1,14 @@
+{
+  "date": "2026-09-16",
+  "checks": 165,
+  "passed": true,
+  "browser": "Chromium via chrome",
+  "viewports": [
+    1440,
+    900,
+    390,
+    320
+  ],
+  "errors": [],
+  "scope": "Independent teaching exhibit, not upstream simulation"
+}

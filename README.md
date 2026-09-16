@@ -19,6 +19,7 @@
 | 6 | 006 | [Dashy：网页式应用工作台与信息看板](projects/006-dashy/README.md) | [dashy](https://github.com/Lissy93/dashy) | 用网页集中应用入口、API 数据和服务状态，减少记网址、找入口和逐个查看后台的操作；支持搜索、分组、编辑与嵌入工作区，适合个人首页、家庭服务器和团队工具导航。附架构全景图、原版实拍及网页与桌面应用边界说明。 | 已完成 | [在线演示](https://yydshly.github.io/0914_codex_project/006-dashy/) |
 | 7 | 007 | [EvoMap / Evolver：AI 经验复用与自进化研究](projects/007-evomap/README.md) | [evolver](https://github.com/EvoMap/evolver) | 以群体智能为愿景，探索类似 RAG 的经验检索与沉淀，让多个 Agent 复用方法，并用执行验证与反馈持续积累。作为产品方向具有参考价值，整体收益仍待对照验证；附理解图、交互导读及 Evolver 1\.94\.0 的 77 项离线测试与模块探针。 | 研究中 | [在线演示](https://yydshly.github.io/0914_codex_project/007-evomap/) |
 | 8 | 008 | [Douyin Downloader：抖音采集与下载原理研究](projects/008-douyin-downloader/README.md) | [douyin\-downloader](https://github.com/jiji262/douyin-downloader) | 围绕抖音作品、搜索热榜与评论，提供采集、媒体下载、语音转写和本地归档的工程基础，作为素材库、内容研究与后续 AI 分析的数据获取与整理层；附交互导读、全景图及账号、接口、浏览器分工说明，明确当前风控与未实测边界。 | 研究中 | [在线演示](https://yydshly.github.io/0914_codex_project/008-douyin-downloader/) |
+| 9 | 009 | [MiroFish：多智能体社会推演能力展示](projects/009-mirofish/README.md) | [MiroFish](https://github.com/666ghj/MiroFish) | 将资料与假设问题转成角色，由知识图谱组织背景、大模型决策、OASIS 执行动作，输出图谱、互动记录、报告与对话；用于舆情和故事推演，可设计市场调研、产品与规则评审。附能力全景图、交互教学和真实案例，尚未实测预测效果。 | 研究中 | — |
 <!-- PROJECT_INDEX:END -->
 
 ## 项目预览
@@ -147,6 +148,30 @@
 [研究记录](projects/008-douyin-downloader/README.md) · [上游仓库](https://github.com/jiji262/douyin-downloader) · [在线演示](https://yydshly.github.io/0914_codex_project/008-douyin-downloader/)
 
 标签：抖音采集 / 账号会话 / 网页接口 / 浏览器桥接 / 源码研究
+
+### 009 · MiroFish：多智能体社会推演能力展示
+
+将资料与假设问题转成角色，由知识图谱组织背景、大模型决策、OASIS 执行动作，输出图谱、互动记录、报告与对话；用于舆情和故事推演，可设计市场调研、产品与规则评审。附能力全景图、交互教学和真实案例，尚未实测预测效果。
+
+#### 能力全景：场景、输入、原理与六种呈现
+
+输入资料与问题，生成角色并多轮互动，再分析与追问。区分官方案例和可设计用途；多 Agent 可共用同一模型，模拟不等于真实调研或准确预测。
+
+![MiroFish 的五类使用场景、三类输入、模型与 OASIS 互动循环、图谱记录报告对话等输出及价值边界。](projects/009-mirofish/assets/mirofish-capabilities.png)
+
+#### 真实场景：Unity 收费变更与信任问题
+
+历史事实有公开来源，方案比较为研究者提出的实验设计；没有证据表明 Unity 使用过 MiroFish，也未在本次运行真实模型。
+
+![Unity 真实案例：开发者反馈、官方修订和取消公告，三种候选实验方案与真实价值验证。](projects/009-mirofish/assets/unity-real-case.png)
+
+#### 演示效果
+
+![MiroFish 独立教学展示实拍：产品调价资料、六角色关系图、角色动机与两种预设情景。](projects/009-mirofish/assets/cover.png)
+
+[研究记录](projects/009-mirofish/README.md) · [上游仓库](https://github.com/666ghj/MiroFish)
+
+标签：多智能体社会模拟 / 知识图谱 / OASIS / 舆情与故事推演 / 调研辅助
 <!-- PROJECT_PREVIEWS:END -->
 
 ## 开始研究

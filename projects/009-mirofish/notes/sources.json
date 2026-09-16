@@ -1,0 +1,64 @@
+{
+  "repository": "https://github.com/666ghj/MiroFish",
+  "commit": "39d849138ef254f6c737ab4c4705e5545dbe31d4",
+  "reviewed_on": "2026-09-16",
+  "license": "AGPL-3.0",
+  "scope": "Documentation and source review; no end-to-end upstream execution. Teaching cases are independently authored fixtures.",
+  "assets": [
+    {
+      "file": "assets/upstream-screen-2.png",
+      "source": "https://github.com/666ghj/MiroFish/blob/39d849138ef254f6c737ab4c4705e5545dbe31d4/static/image/Screenshot/运行截图2.png",
+      "sha256": "fd2e8f3dfa4b3f687fc0bfbe92ef18bc2c925309fad98f988da72a70e7c8ded2",
+      "modified": false
+    },
+    {
+      "file": "assets/upstream-screen-3.png",
+      "source": "https://github.com/666ghj/MiroFish/blob/39d849138ef254f6c737ab4c4705e5545dbe31d4/static/image/Screenshot/运行截图3.png",
+      "sha256": "e4ff1efdc898cbdb1dfb2b00d014c355d3a9333e790b5344e7079d0951d8dcc3",
+      "modified": false
+    },
+    {
+      "file": "assets/upstream-screen-4.png",
+      "source": "https://github.com/666ghj/MiroFish/blob/39d849138ef254f6c737ab4c4705e5545dbe31d4/static/image/Screenshot/运行截图4.png",
+      "sha256": "b4a1c225ef5e0b40e6a9fa26db469ffe4caa2cf5ed7903a4312787ac65b256bd",
+      "modified": false
+    },
+    {
+      "file": "assets/upstream-screen-6.png",
+      "source": "https://github.com/666ghj/MiroFish/blob/39d849138ef254f6c737ab4c4705e5545dbe31d4/static/image/Screenshot/运行截图6.png",
+      "sha256": "3501831a354044daee314a50b7fff789951ecce0ede5f04a5dc0e122ac99dda5",
+      "modified": false
+    }
+  ],
+  "reviewed_files": [
+    "README-ZH.md",
+    "backend/app/utils/file_parser.py",
+    "backend/app/services/graph_builder.py",
+    "backend/app/services/oasis_profile_generator.py",
+    "backend/app/services/simulation_config_generator.py",
+    "backend/scripts/run_parallel_simulation.py",
+    "backend/app/services/report_agent.py"
+  ],
+  "real_case": {
+    "title": "Unity Runtime Fee 2023–2024",
+    "input_cutoff": "2023-09-22",
+    "status": "Historical facts and proposed experiment; not a MiroFish run or evidence Unity used MiroFish",
+    "sources": [
+      {
+        "published": "2023-09-13",
+        "type": "participant statement",
+        "url": "https://garry.net/posts/unity-can-get-fucked"
+      },
+      {
+        "published": "2023-09-22",
+        "type": "official policy revision",
+        "url": "https://unity.com/blog/an-open-letter-to-our-community"
+      },
+      {
+        "published": "2024-09-12",
+        "type": "later outcome; excluded from seed",
+        "url": "https://unity.com/blog/unity-is-canceling-the-runtime-fee"
+      }
+    ]
+  }
+}

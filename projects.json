@@ -190,6 +190,39 @@
       "cover": "projects/008-douyin-downloader/assets/douyin-overview.png",
       "cover_alt": "抖音内容采集的能力、账号与服务器交互、Python直连与浏览器路径、输出及当前限制",
       "demo": "https://yydshly.github.io/0914_codex_project/008-douyin-downloader/"
+    },
+    {
+      "id": "009",
+      "order": 90,
+      "slug": "mirofish",
+      "name": "MiroFish：多智能体社会推演能力展示",
+      "repo": "https://github.com/666ghj/MiroFish",
+      "summary": "将资料与假设问题转成角色，由知识图谱组织背景、大模型决策、OASIS 执行动作，输出图谱、互动记录、报告与对话；用于舆情和故事推演，可设计市场调研、产品与规则评审。附能力全景图、交互教学和真实案例，尚未实测预测效果。",
+      "status": "研究中",
+      "tags": [
+        "多智能体社会模拟",
+        "知识图谱",
+        "OASIS",
+        "舆情与故事推演",
+        "调研辅助"
+      ],
+      "cover": "projects/009-mirofish/assets/cover.png",
+      "cover_alt": "MiroFish 独立教学展示实拍：产品调价资料、六角色关系图、角色动机与两种预设情景。",
+      "demo": "",
+      "preview_images": [
+        {
+          "title": "能力全景：场景、输入、原理与六种呈现",
+          "path": "projects/009-mirofish/assets/mirofish-capabilities.png",
+          "alt": "MiroFish 的五类使用场景、三类输入、模型与 OASIS 互动循环、图谱记录报告对话等输出及价值边界。",
+          "caption": "输入资料与问题，生成角色并多轮互动，再分析与追问。区分官方案例和可设计用途；多 Agent 可共用同一模型，模拟不等于真实调研或准确预测。"
+        },
+        {
+          "title": "真实场景：Unity 收费变更与信任问题",
+          "path": "projects/009-mirofish/assets/unity-real-case.png",
+          "alt": "Unity 真实案例：开发者反馈、官方修订和取消公告，三种候选实验方案与真实价值验证。",
+          "caption": "历史事实有公开来源，方案比较为研究者提出的实验设计；没有证据表明 Unity 使用过 MiroFish，也未在本次运行真实模型。"
+        }
+      ]
     }
   ]
 }

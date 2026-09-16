@@ -1,0 +1,127 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1830" viewBox="0 0 1600 1830" role="img" aria-labelledby="title desc">
+<title id="title">MiroFish：从使用场景、资料和角色定制，到多智能体互动与输出</title>
+<desc id="desc">部署网页和后端，配置模型与 Zep。用户输入资料和问题；系统抽取实体关系，生成角色档案与环境配置；OASIS 调度多个角色观察、行动和更新上下文；最后输出互动记录、分析报告与角色访谈。同一模型可以驱动多个角色，不需要为角色训练新模型。结论需人工和现实验证。</desc>
+<defs><marker id="arrow" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto"><path d="M0 0 L8 4.5 L0 9" fill="none" stroke="#72968d" stroke-width="1.5"/></marker></defs>
+<style>text{font-family:"Microsoft YaHei","Noto Sans CJK SC","Segoe UI",sans-serif}</style>
+<rect width="1600" height="1830" fill="#f3f7f9"/>
+<text x="45" y="45" font-size="20" fill="#127569" font-weight="700">MIROFISH / 多智能体社会推演</text>
+<text x="45" y="103" font-size="42" fill="#153442" font-weight="700">把资料变成角色，让角色互动，再分析过程。</text>
+<text x="45" y="144" font-size="25" fill="#506874" font-weight="400">你提供问题与背景；系统组织“谁知道什么、关心什么、看见什么、接着做什么”。</text>
+<rect x="45" y="179" width="364" height="100" rx="12" fill="#e9f1f3" stroke="#d9e6ea"/>
+<text x="65" y="216" font-size="25" fill="#153442" font-weight="700">舆情与公关</text>
+<text x="65" y="253" font-size="21" fill="#506874" font-weight="400">公告可能引发哪些疑问？</text>
+<rect x="427" y="179" width="364" height="100" rx="12" fill="#e9f1f3" stroke="#d9e6ea"/>
+<text x="447" y="216" font-size="25" fill="#153442" font-weight="700">产品与收费</text>
+<text x="447" y="253" font-size="21" fill="#506874" font-weight="400">不同用户在意什么变化？</text>
+<rect x="809" y="179" width="364" height="100" rx="12" fill="#e9f1f3" stroke="#d9e6ea"/>
+<text x="829" y="216" font-size="25" fill="#153442" font-weight="700">规则与政策讨论</text>
+<text x="829" y="253" font-size="21" fill="#506874" font-weight="400">哪些群体的顾虑被遗漏？</text>
+<rect x="1191" y="179" width="364" height="100" rx="12" fill="#e9f1f3" stroke="#d9e6ea"/>
+<text x="1211" y="216" font-size="25" fill="#153442" font-weight="700">故事与人物推演</text>
+<text x="1211" y="253" font-size="21" fill="#506874" font-weight="400">人物动机会怎样碰撞？</text>
+<rect x="45" y="300" width="1510" height="138" rx="12" fill="#153442" stroke="#153442"/>
+<text x="69" y="336" font-size="25" fill="#80e0c6" font-weight="700">先搭运行环境</text>
+<text x="69" y="375" font-size="22" fill="#e1eef2" font-weight="400">MiroFish 网页 + Python 后端</text>
+<text x="69" y="407" font-size="22" fill="#e1eef2" font-weight="400">提供操作入口，编排各个步骤</text>
+<text x="535" y="375" font-size="22" fill="#e1eef2" font-weight="400">大模型 API + Zep 服务</text>
+<text x="535" y="407" font-size="22" fill="#e1eef2" font-weight="400">模型负责生成与判断，Zep 管理图谱与记忆</text>
+<text x="1150" y="375" font-size="22" fill="#e1eef2" font-weight="400">OASIS 仿真引擎</text>
+<text x="1150" y="407" font-size="22" fill="#e1eef2" font-weight="400">提供虚拟社交环境</text>
+<rect x="45" y="467" width="990" height="157" rx="12" fill="#fff" stroke="#d6e2e7"/>
+<rect x="65" y="488" width="48" height="40" rx="8" fill="#e8f5ef" stroke="#e8f5ef"/>
+<text x="75" y="517" font-size="23" fill="#127569" font-weight="700">01</text>
+<text x="132" y="518" font-size="28" fill="#153442" font-weight="700">你提供：背景资料 + 明确的问题</text>
+<text x="132" y="550" font-size="20" fill="#127569" font-weight="400">定制入口是“资料与需求”，而不只是随便给一个话题</text>
+<text x="76" y="581" font-size="23" fill="#506874" font-weight="400">例：上传旧套餐、新方案、用户反馈；提出“改价可能引发哪些反应？”</text>
+<text x="76" y="608" font-size="21" fill="#506874" font-weight="400">材料可以是 PDF / Markdown / TXT。资料越少，越容易依赖模型补全。</text>
+<path d="M540 627 L540 646" fill="none" stroke="#72968d" stroke-width="2.3" marker-end="url(#arrow)"/>
+<rect x="45" y="653" width="990" height="157" rx="12" fill="#fff" stroke="#d6e2e7"/>
+<rect x="65" y="674" width="48" height="40" rx="8" fill="#e8f5ef" stroke="#e8f5ef"/>
+<text x="75" y="703" font-size="23" fill="#127569" font-weight="700">02</text>
+<text x="132" y="704" font-size="28" fill="#153442" font-weight="700">系统整理：人物、组织、事件与关系</text>
+<text x="132" y="736" font-size="20" fill="#127569" font-weight="400">从材料抽取实体，建立知识图谱，准备角色的背景依据</text>
+<text x="76" y="768" font-size="22" fill="#506874" font-weight="400">例：产品团队 → 提供订阅 → 老用户；行业作者 → 传播信息 → 潜在用户</text>
+<text x="76" y="795" font-size="21" fill="#506874" font-weight="400">关系图帮助组织背景，不等于已经知道真实的因果关系。</text>
+<path d="M540 813 L540 831" fill="none" stroke="#72968d" stroke-width="2.3" marker-end="url(#arrow)"/>
+<rect x="45" y="839" width="990" height="238" rx="12" fill="#fff" stroke="#d6e2e7"/>
+<rect x="65" y="860" width="48" height="40" rx="8" fill="#e8f5ef" stroke="#e8f5ef"/>
+<text x="75" y="889" font-size="23" fill="#127569" font-weight="700">03</text>
+<text x="132" y="890" font-size="28" fill="#153442" font-weight="700">AI 定制：角色档案 + 环境参数</text>
+<text x="132" y="922" font-size="20" fill="#127569" font-weight="400">结合实体资料补充人设，再根据需求生成活动与情景配置</text>
+<rect x="70" y="945" width="299" height="80" rx="8" fill="#eff7f3" stroke="#d8eae2"/>
+<text x="84" y="976" font-size="24" fill="#127569" font-weight="700">老用户</text>
+<text x="84" y="1007" font-size="20" fill="#506874" font-weight="400">关注已有权益与长期承诺</text>
+<rect x="386" y="945" width="299" height="80" rx="8" fill="#eff7f3" stroke="#d8eae2"/>
+<text x="400" y="976" font-size="24" fill="#127569" font-weight="700">企业采购</text>
+<text x="400" y="1007" font-size="20" fill="#506874" font-weight="400">关注预算、续约与迁移</text>
+<rect x="702" y="945" width="299" height="80" rx="8" fill="#eff7f3" stroke="#d8eae2"/>
+<text x="716" y="976" font-size="24" fill="#127569" font-weight="700">产品团队</text>
+<text x="716" y="1007" font-size="20" fill="#506874" font-weight="400">解释变更与回应问题</text>
+<text x="76" y="1055" font-size="21" fill="#506874" font-weight="400">同时生成：活跃程度、发言频率、初始帖子、模拟时长等。上方角色为机制示例。</text>
+<path d="M540 1080 L540 1098" fill="none" stroke="#72968d" stroke-width="2.3" marker-end="url(#arrow)"/>
+<rect x="45" y="1106" width="990" height="255" rx="12" fill="#fff" stroke="#d6e2e7"/>
+<rect x="65" y="1127" width="48" height="40" rx="8" fill="#e8f5ef" stroke="#e8f5ef"/>
+<text x="75" y="1156" font-size="23" fill="#127569" font-weight="700">04</text>
+<text x="132" y="1157" font-size="28" fill="#153442" font-weight="700">多个角色互动：观察 → 判断 → 行动 → 下一轮</text>
+<text x="132" y="1189" font-size="20" fill="#127569" font-weight="400">在 Twitter / Reddit 风格的虚拟环境中，由 OASIS 调度</text>
+<rect x="70" y="1211" width="283" height="80" rx="8" fill="#f1f5f8" stroke="#dbe5ea"/>
+<text x="84" y="1242" font-size="24" fill="#153442" font-weight="700">看到信息</text>
+<text x="84" y="1273" font-size="20" fill="#506874" font-weight="400">背景 / 当前可见帖子</text>
+<path d="M359 1251 L380 1251" fill="none" stroke="#72968d" stroke-width="2.3" marker-end="url(#arrow)"/>
+<rect x="386" y="1211" width="283" height="80" rx="8" fill="#f1f5f8" stroke="#dbe5ea"/>
+<text x="400" y="1242" font-size="24" fill="#153442" font-weight="700">按角色判断</text>
+<text x="400" y="1273" font-size="20" fill="#506874" font-weight="400">身份 + 目标 + 上下文</text>
+<path d="M675 1251 L696 1251" fill="none" stroke="#72968d" stroke-width="2.3" marker-end="url(#arrow)"/>
+<rect x="702" y="1211" width="283" height="80" rx="8" fill="#f1f5f8" stroke="#dbe5ea"/>
+<text x="716" y="1242" font-size="24" fill="#153442" font-weight="700">采取行动</text>
+<text x="716" y="1273" font-size="20" fill="#506874" font-weight="400">发帖 / 评论 / 转发等</text>
+<text x="76" y="1325" font-size="22" fill="#127569" font-weight="600">保存动作记录，更新可用上下文与时序记忆，再进入下一轮。</text>
+<text x="76" y="1350" font-size="20" fill="#506874" font-weight="400">可以赞同、质疑、转述或不回应；不要求所有角色都辩论，也不要求同时发言。</text>
+<path d="M540 1364 L540 1382" fill="none" stroke="#72968d" stroke-width="2.3" marker-end="url(#arrow)"/>
+<rect x="45" y="1390" width="990" height="192" rx="12" fill="#fff" stroke="#d6e2e7"/>
+<rect x="65" y="1411" width="48" height="40" rx="8" fill="#e8f5ef" stroke="#e8f5ef"/>
+<text x="75" y="1440" font-size="23" fill="#127569" font-weight="700">05</text>
+<text x="132" y="1441" font-size="28" fill="#153442" font-weight="700">输出：互动记录 + 分析报告 + 可继续访谈的角色</text>
+<text x="132" y="1473" font-size="20" fill="#127569" font-weight="400">ReportAgent 检索模拟信息、调用工具并可采访角色</text>
+<text x="76" y="1507" font-size="23" fill="#506874" font-weight="400">你可以检查：谁提出什么问题 → 谁回应 → 哪些疑问仍未解决。</text>
+<text x="76" y="1542" font-size="23" fill="#506874" font-weight="400">你还可以追问角色、核对报告依据，形成待验证的风险与改进建议。</text>
+<rect x="1060" y="467" width="495" height="188" rx="12" fill="#fff" stroke="#d6e2e7"/>
+<text x="1083" y="507" font-size="26" fill="#153442" font-weight="700">只给一个问题就可以吗？</text>
+<text x="1083" y="550" font-size="22" fill="#506874" font-weight="400">标准路径是“材料 + 问题”。</text>
+<text x="1083" y="584" font-size="22" fill="#506874" font-weight="400">从材料识别角色，再由模型补充设定。</text>
+<text x="1083" y="618" font-size="22" fill="#506874" font-weight="400">仅凭话题构造角色，更容易脱离现实。</text>
+<rect x="1060" y="677" width="495" height="250" rx="12" fill="#fff" stroke="#d6e2e7"/>
+<text x="1083" y="719" font-size="26" fill="#153442" font-weight="700">“定制身份”具体是什么？</text>
+<text x="1083" y="763" font-size="22" fill="#506874" font-weight="400">生成姓名 / 简介 / 背景 / 详细人设，</text>
+<text x="1083" y="799" font-size="22" fill="#506874" font-weight="400">以及立场、活动频率等配置。</text>
+<text x="1083" y="835" font-size="22" fill="#506874" font-weight="400">人设会进入角色提示词和上下文。</text>
+<rect x="1080" y="865" width="455" height="43" rx="7" fill="#e7f5ef" stroke="#e7f5ef"/>
+<text x="1094" y="894" font-size="21" fill="#127569" font-weight="700">这是配置角色，不是训练一个新模型。</text>
+<rect x="1060" y="949" width="495" height="354" rx="12" fill="#fff" stroke="#d6e2e7"/>
+<text x="1083" y="991" font-size="26" fill="#153442" font-weight="700">需要多个不同的 AI 吗？</text>
+<text x="1083" y="1031" font-size="22" fill="#127569" font-weight="600">需要多个 Agent，不必用多种大模型。</text>
+<rect x="1179" y="1055" width="263" height="55" rx="8" fill="#153442" stroke="#153442"/>
+<text x="1201" y="1091" font-size="25" fill="#e6f5ef" font-weight="700">同一个大模型 API</text>
+<path d="M1310 1113 L1150 1140" fill="none" stroke="#72968d" stroke-width="2.3" marker-end="url(#arrow)"/>
+<rect x="1090" y="1148" width="126" height="49" rx="7" fill="#edf7f2" stroke="#b9dcd0"/>
+<text x="1111" y="1180" font-size="23" fill="#127569" font-weight="600">角色 A</text>
+<path d="M1310 1113 L1307 1140" fill="none" stroke="#72968d" stroke-width="2.3" marker-end="url(#arrow)"/>
+<rect x="1247" y="1148" width="126" height="49" rx="7" fill="#edf7f2" stroke="#b9dcd0"/>
+<text x="1268" y="1180" font-size="23" fill="#127569" font-weight="600">角色 B</text>
+<path d="M1310 1113 L1464 1140" fill="none" stroke="#72968d" stroke-width="2.3" marker-end="url(#arrow)"/>
+<rect x="1404" y="1148" width="126" height="49" rx="7" fill="#edf7f2" stroke="#b9dcd0"/>
+<text x="1425" y="1180" font-size="23" fill="#127569" font-weight="600">角色 C</text>
+<text x="1083" y="1236" font-size="21" fill="#506874" font-weight="400">同一模型，多次调用，不同人设与上下文。</text>
+<text x="1083" y="1269" font-size="21" fill="#506874" font-weight="400">代码也支持可选的第二套模型服务配置。</text>
+<rect x="1060" y="1325" width="495" height="257" rx="12" fill="#fff" stroke="#d6e2e7"/>
+<text x="1083" y="1367" font-size="26" fill="#153442" font-weight="700">哪些工作仍然需要人？</text>
+<text x="1083" y="1412" font-size="22" fill="#506874" font-weight="400">提供可靠资料与明确问题；</text>
+<text x="1083" y="1448" font-size="22" fill="#506874" font-weight="400">检查角色是否遗漏、设定是否失真；</text>
+<text x="1083" y="1484" font-size="22" fill="#506874" font-weight="400">调整输入或配置后重新运行；</text>
+<text x="1083" y="1520" font-size="22" fill="#506874" font-weight="400">用真实访谈、数据和实验检验结论。</text>
+<rect x="45" y="1611" width="1510" height="124" rx="12" fill="#e6f3ed" stroke="#bad9cb"/>
+<text x="70" y="1654" font-size="27" fill="#127569" font-weight="700">适合得到：可能的反应路径、分歧和遗漏问题，供方案评审与真实调研使用。</text>
+<text x="70" y="1696" font-size="24" fill="#153442" font-weight="400">多个角色可以共享同一个模型的偏差。模拟讨论、报告完整度与角色数量，都不能自动证明预测准确。</text>
+<text x="45" y="1775" font-size="19" fill="#506874" font-weight="400">机制示意，非实际运行记录。依据固定版本 39d849138ef2：角色生成器、配置生成器、双平台脚本、ReportAgent。</text>
+<text x="45" y="1808" font-size="19" fill="#506874" font-weight="400">本地展示中的案例发言仍为预设教学内容；这张图解释原版的构建与使用链路。</text>
+</svg>

@@ -1,0 +1,13 @@
+{
+  "date": "2026-09-16",
+  "checks": 22,
+  "passed": true,
+  "viewports": [
+    1440,
+    900,
+    390,
+    320
+  ],
+  "errors": [],
+  "scope": "Real historical case presentation and proposed experiments; no model simulation"
+}

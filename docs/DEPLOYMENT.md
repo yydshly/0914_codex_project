@@ -2,7 +2,7 @@
 
 ## 当前状态
 
-已配置统一的 GitHub Actions 发布流程 `.github/workflows/pages.yml`。`pages.json` 显式选择要发布的项目编号，目前为 `001` 至 `008`；`scripts/build_pages.py` 将各项目的 `web/dist/` 打包到 `_site/<编号-slug>/`，并生成站点导航页。001、005、006、007、008 在 CI 中从源码构建，其余项目沿用已登记的静态产物。
+已配置统一的 GitHub Actions 发布流程 `.github/workflows/pages.yml`。`pages.json` 显式选择要发布的项目编号，目前为 `001` 至 `009`；`scripts/build_pages.py` 将各项目的 `web/dist/` 打包到 `_site/<编号-slug>/`，并生成站点导航页。001、005、006、007、008、009 在 CI 中从源码构建，其余项目沿用已登记的静态产物。
 
 发布状态以 GitHub Actions 部署成功且网页实际可访问为准。只有经过访问验证的演示地址才写入 `projects.json`，并同步到仓库索引。
 
@@ -25,6 +25,8 @@ https://yydshly.github.io/0914_codex_project/
 ```
 
 以上子项目路径是规划示例，并非已上线地址。每个演示沿用稳定的项目目录名；调整首页顺序不改变链接。
+
+009 MiroFish 已接入统一构建，发布能力全景图、原理说明、真实案例与预设交互教学。推送后由 Pages 工作流发布；访问验证后登记线上入口。它不包含原版后端或真实模型推演。
 
 ## 添加后续演示
 
