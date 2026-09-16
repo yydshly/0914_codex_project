@@ -1,0 +1,131 @@
+pageInfo:
+  title: 我的数字工作台
+  description: 在线互动体验 · 搜索、换主题、编辑卡片与嵌入工作区
+  navLinks:
+    - title: 先看体验指南
+      path: https://yydshly.github.io/0914_codex_project/006-dashy/workbench/guide.html
+    - title: 项目源码
+      path: https://github.com/Lissy93/dashy
+
+appConfig:
+  theme: colorful
+  language: zh-CN
+  layout: auto
+  iconSize: large
+  enableFontAwesome: false
+  enableServiceWorker: false
+  preventWriteToDisk: true
+  disableUpdateChecks: true
+  statusCheckInterval: 10
+  defaultOpeningMethod: newtab
+  customCss: |
+    body { font-family: "Segoe UI", "Microsoft YaHei", sans-serif; }
+
+sections:
+  - name: 01 · 常用工具，一键直达
+    icon: 🚀
+    items:
+      - title: GitHub
+        description: 代码仓库与开源项目 · 搜索「代码」试试
+        icon: 💻
+        url: https://github.com
+        tags: [代码, 开源, 开发]
+      - title: Notion
+        description: 笔记、文档与知识库
+        icon: 📝
+        url: https://www.notion.so
+        tags: [笔记, 文档, 知识库]
+      - title: Figma
+        description: 产品设计与团队协作
+        icon: 🎨
+        url: https://www.figma.com
+        tags: [设计, 原型]
+      - title: 哔哩哔哩
+        description: 教程、课程与视频
+        icon: 📺
+        url: https://www.bilibili.com
+        tags: [视频, 教程]
+
+  - name: 02 · 已有研究，集中入口
+    icon: 📚
+    items:
+      - title: 研究项目总览
+        description: 打开当前研究仓库的在线演示目录
+        icon: 🗂️
+        url: https://yydshly.github.io/0914_codex_project/
+        tags: [研究, 项目]
+      - title: 纸艺动画
+        description: 音频驱动纸艺剧场的实际视频
+        icon: 🎭
+        url: https://yydshly.github.io/0914_codex_project/001-audio-locked-paper-theatre/
+        tags: [研究, 动画, 视频]
+      - title: 图形设计展厅
+        description: 图形规范、原版示例与中文案例
+        icon: 📐
+        url: https://yydshly.github.io/0914_codex_project/005-diagram-design/
+        tags: [研究, 设计, 图表]
+
+  - name: 03 · 北京时间
+    icon: 🕐
+    widgets:
+      - type: clock
+        options:
+          timeZone: Asia/Shanghai
+          format: zh-CN
+          customCityName: 北京 · 实时时钟
+          use12Hour: false
+
+  - name: 04 · 数据组件（固定示例数据）
+    icon: 📊
+    widgets:
+      - type: custom-api
+        updateInterval: 60
+        options:
+          url: https://yydshly.github.io/0914_codex_project/006-dashy/workbench/sample-data.json
+          display: block
+          mappings:
+            - field: source
+              label: 数据来源
+            - field: freeMemory
+              label: 示例可用内存
+            - field: totalMemory
+              label: 示例总内存
+            - field: note
+              label: 说明
+
+  - name: 05 · 服务状态交互示例
+    icon: 🚦
+    items:
+      - title: 可切换的服务示例
+        description: 打开弹窗切换状态 · 仅浏览器模拟，不探测真实服务
+        icon: 🔧
+        url: https://yydshly.github.io/0914_codex_project/006-dashy/workbench/control.html
+        target: modal
+        tags: [状态, 服务, 控制]
+      - title: 了解真实服务探测
+        description: 本机演示可通过后端检查 HTTP 200 / 503；在线版不启用探测
+        icon: 📖
+        url: https://yydshly.github.io/0914_codex_project/006-dashy/#boundaries
+        tags: [状态, 说明]
+
+  - name: 06 · 动手试一试
+    icon: ✨
+    items:
+      - title: 三分钟体验指南
+        description: 搜索、换主题、编辑卡片，逐项看效果
+        icon: 🧭
+        url: https://yydshly.github.io/0914_codex_project/006-dashy/workbench/guide.html
+        target: modal
+        tags: [指南, 帮助]
+      - title: 体验嵌入工作区
+        description: 在工作台内打开示例控制面板
+        icon: 🪟
+        url: https://yydshly.github.io/0914_codex_project/006-dashy/workbench/control.html
+        target: workspace
+        tags: [工作区, 嵌入]
+      - title: 返回能力与架构说明
+        description: 查看架构图、能力解释与网页/桌面边界
+        icon: 🗺️
+        url: https://yydshly.github.io/0914_codex_project/006-dashy/
+        target: sametab
+        tags: [研究, 架构]

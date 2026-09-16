@@ -36,8 +36,15 @@ jobs:
         run: python projects/001-audio-locked-paper-theatre/src/package_site.py
       - name: Build Diagram Design research gallery
         run: python projects/005-diagram-design/src/build.py
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24.19.0'
+      - name: Prepare Dashy package manager
+        run: npm install --global yarn@1.22.22
       - name: Build Dashy capability study
-        run: python projects/006-dashy/src/build_site.py
+        run: |
+          python projects/006-dashy/src/build_workbench.py
+          python projects/006-dashy/src/build_site.py
       - name: Build combined project site
         run: python scripts/build_pages.py
       - uses: actions/configure-pages@v5

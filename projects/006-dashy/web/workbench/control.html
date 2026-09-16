@@ -1,0 +1,11 @@
+<!doctype html><html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>在线示例控制面板</title>
+<style>body{margin:0;background:#111a2a;color:#edf5ff;font:16px/1.8 'Segoe UI','Microsoft YaHei',sans-serif}main{max-width:620px;margin:auto;padding:32px 24px}small{color:#93adca}h1{font-size:28px}#state{font-size:23px;font-weight:700;padding:24px;background:#1d2b40;border-radius:12px;margin:20px 0}button{background:#7ae3cc;color:#101a26;border:0;border-radius:8px;padding:14px 24px;font-size:16px;cursor:pointer}p{color:#aebed3}a{color:#7ae3cc}</style>
+<main><small>我的数字工作台 · 在线交互示例</small><h1>在工作台里使用另一个网页</h1><div id="state" role="status"></div><button id="toggle" type="button">切换状态</button><p>这里保留了本地演示的控制面板交互。状态只在当前浏览器中模拟并保存，不发送控制命令，也不代表真实服务探测结果。</p><p>外层工作台负责导航与嵌入；切换按钮由这个示例网页实现。</p><p>当前时间：<time id="clock"></time></p><a href="./#/home" target="_top">返回工作台 →</a></main>
+<script>
+const key='dashy006:sampleOnline';let online=false;
+try{online=localStorage.getItem(key)==='true'}catch{}
+const state=document.querySelector('#state'),button=document.querySelector('#toggle');
+function draw(){state.textContent=online?'● 正常运行（模拟）':'● 维护中（模拟）';state.style.color=online?'#7ae3cc':'#ffba88';button.textContent=online?'切换为维护中':'恢复为正常运行'}
+button.onclick=()=>{online=!online;try{localStorage.setItem(key,String(online))}catch{}draw()};
+function tick(){document.querySelector('#clock').textContent=new Date().toLocaleTimeString('zh-CN',{timeZone:'Asia/Shanghai'})}draw();tick();setInterval(tick,1000);
+</script></html>

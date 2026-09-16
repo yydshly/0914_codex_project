@@ -1,4 +1,4 @@
-"""Build only the public Dashy study page; never publish runtime or local APIs."""
+"""Package the study and online workbench; never publish local runtime or APIs."""
 from pathlib import Path
 import json
 import shutil
@@ -20,8 +20,13 @@ def main():
         shutil.copy2(ROOT / 'web' / name, OUT / name)
     for name in PUBLIC_ASSETS:
         shutil.copy2(ROOT / 'assets' / name, OUT / 'assets' / name)
-    shutil.copy2(ROOT / 'user-data' / 'conf.yml', OUT / 'config-example.yml')
+    shutil.copy2(ROOT / 'web' / 'workbench' / 'conf.yml', OUT / 'config-example.yml')
+    workbench = ROOT / '.cache' / 'public-workbench'
+    if not (workbench / 'index.html').is_file():
+        raise ValueError('Run src/build_workbench.py before packaging')
+    shutil.copytree(workbench, OUT / 'workbench', dirs_exist_ok=True)
     expected = {'index.html', 'style.css', 'main.js', 'config-example.yml'} | {'assets/' + n for n in PUBLIC_ASSETS}
+    expected |= {'workbench/' + p.relative_to(workbench).as_posix() for p in workbench.rglob('*') if p.is_file()}
     actual = {str(p.relative_to(OUT)).replace('\\', '/') for p in OUT.rglob('*') if p.is_file()}
     if actual != expected:
         raise ValueError(f'Unexpected public output; inspect before publishing: {actual ^ expected}')

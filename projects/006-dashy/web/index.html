@@ -11,13 +11,21 @@
 </head>
 <body>
 <a class="skip" href="#main">跳到正文</a>
-<header class="topbar"><a class="brand" href="../"><span class="brand-mark">研</span> GitHub 项目研究集</a><nav aria-label="本页导航"><a href="#visuals">引导图</a><a href="#capabilities">能力与意义</a><a href="#boundaries">应用边界</a><a href="#experience">亲自体验</a></nav></header>
+<header class="topbar"><a class="brand" href="../"><span class="brand-mark">研</span> GitHub 项目研究集</a><nav aria-label="本页导航"><a href="#live-demo">在线工作台</a><a href="#visuals">引导图</a><a href="#capabilities">能力与意义</a><a href="#boundaries">应用边界</a><a href="#experience">亲自体验</a></nav></header>
 <main id="main">
   <section class="intro">
     <p class="eyebrow">006 / DASHY / 开源项目研究</p>
     <h1>把分散的应用入口，<br>整理成自己的<span>网页工作台。</span></h1>
     <p class="lead">Dashy 把常用网站、内部后台和服务信息集中到一个可搜索、可编辑的首页。它用网页提供桌面式交互，让你更快找到应用、查看概况；具体业务仍由各个应用自己完成。</p>
+    <p class="demo-cta"><a class="primary-link" href="./workbench/">直接体验我的数字工作台 →</a><a class="text-link" href="#live-demo">在本页操作 ↓</a></p>
     <div class="intro-bottom"><div class="tags"><span>应用导航</span><span>动态信息看板</span><span>配置驱动</span></div><a class="text-link" href="https://github.com/Lissy93/dashy" target="_blank" rel="noopener noreferrer">上游仓库 ↗</a></div>
+  </section>
+
+  <section id="live-demo" class="section live-demo" aria-labelledby="live-title">
+    <div class="section-heading"><div><p class="eyebrow">直接动手体验</p><h2 id="live-title">我的数字工作台</h2></div><a class="primary-link" href="./workbench/" target="_blank" rel="noopener">独立窗口打开 ↗</a></div>
+    <p>本地中文演示已接入这里。试着搜索“代码”、切换主题，或从“选项”进入编辑模式修改卡片。改动只保存到当前浏览器。</p>
+    <iframe class="workbench-frame" src="./workbench/" title="我的数字工作台在线交互演示" loading="lazy" allow="fullscreen"></iframe>
+    <p class="caption-note">时钟实时更新；内存数据为固定示例，服务状态按钮为浏览器模拟。真实服务探测和服务器配置写盘由本机完整版提供。</p>
   </section>
 
   <section id="visuals" class="visuals" aria-labelledby="visual-title">
@@ -32,7 +40,7 @@
         <div class="figure-links"><a href="./assets/cover.png" target="_blank" rel="noopener">查看原始截图</a><span>截图中的时间与数据为当时实拍</span></div>
       </figure>
     </div>
-    <p class="caption-note">这是研究展示页。截图展示的是已运行并验证的原版 Dashy；完整交互体验见下方“亲自体验”。</p>
+    <p class="caption-note">上方是可以直接操作的在线工作台；以下图片保留本机演示实拍与能力架构说明。</p>
   </section>
 
   <section id="capabilities" class="section" aria-labelledby="capability-title">
@@ -86,8 +94,8 @@
   </section>
 
   <section id="experience" class="section experience" aria-labelledby="experience-title">
-    <div class="section-heading"><div><p class="eyebrow">亲自体验</p><h2 id="experience-title">公开阅读研究，在本机运行完整演示</h2></div></div>
-    <div class="experience-grid"><div><h3>线上研究页</h3><p>本页通过 GitHub Pages 发布，可查看结论、放大图片、下载架构图和示例配置。它不连接你的电脑，也不在网上显示你的实时系统信息。</p><div class="link-row"><a href="./assets/dashy-capability-overview.png" download>下载总览图</a><a href="./config-example.yml" download>下载示例配置</a><a href="https://demo.dashy.to/" target="_blank" rel="noopener noreferrer">官方在线演示 ↗</a></div></div><div><h3>原版中文交互演示</h3><p>在研究仓库的 <code>projects/006-dashy</code> 目录运行启动脚本，打开它输出的本机地址。可以搜索、编辑卡片、查看动态数据、切换示例状态。</p><pre><code>.\start.ps1</code></pre><p class="small">首次运行需要联网下载与构建。服务只监听本机；停止使用 <code>.\stop.ps1</code>。完整说明见研究文档。</p><a class="text-link" href="https://github.com/yydshly/0914_codex_project/tree/main/projects/006-dashy">查看启动说明与项目文件 ↗</a></div></div>
+    <div class="section-heading"><div><p class="eyebrow">亲自体验</p><h2 id="experience-title">直接在线体验，按需运行本机完整版</h2></div></div>
+    <div class="experience-grid"><div><h3>我的数字工作台 · 在线版</h3><p>无需安装，直接搜索应用、切换主题、编辑并本地保存卡片、查看组件和使用嵌入工作区。在线版保留我们的中文配置，数据示例清楚标注。</p><p><a class="primary-link" href="./workbench/">打开在线工作台 →</a></p><div class="link-row"><a href="./assets/dashy-capability-overview.png" download>下载总览图</a><a href="./config-example.yml" download>下载示例配置</a><a href="https://demo.dashy.to/" target="_blank" rel="noopener noreferrer">官方在线演示 ↗</a></div></div><div><h3>本机完整版</h3><p>在研究仓库的 <code>projects/006-dashy</code> 目录运行启动脚本，打开它输出的本机地址。可以搜索、编辑卡片、查看动态数据、切换示例状态。</p><pre><code>.\start.ps1</code></pre><p class="small">首次运行需要联网下载与构建。服务只监听本机；停止使用 <code>.\stop.ps1</code>。完整说明见研究文档。</p><a class="text-link" href="https://github.com/yydshly/0914_codex_project/tree/main/projects/006-dashy">查看启动说明与项目文件 ↗</a></div></div>
   </section>
   <footer><div><strong>Dashy · 网页式应用工作台</strong><p>适合个人起始页、家庭服务器门户、团队工具导航与轻量信息总览。</p></div><div class="source-links"><a href="https://github.com/Lissy93/dashy/tree/6c56436d5f044d3c53371891c9d9a8c8df8c4606" target="_blank" rel="noopener noreferrer">研究源码</a><a href="https://dashy.to/docs/" target="_blank" rel="noopener noreferrer">官方文档</a><a href="https://github.com/yydshly/0914_codex_project/blob/main/projects/006-dashy/notes/capability-overview.md">完整结论与出处</a><a href="../">全部项目</a></div><p class="small">研究版本 4.6.14 · 上游 MIT 许可 · 研究日期 2026-09-16 · 架构图为研究整理，界面图片为原版实拍。</p></footer>
 </main>
