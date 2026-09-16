@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1780" viewBox="0 0 1600 1780" role="img" aria-labelledby="title desc">
+<title id="title">一眼看懂蜂群：几个 AI 一起做完一个网站</title>
+<desc id="desc">目标交给协调者，按能力分工。设计、编程、测试按依赖交接，失败返工，掉线改派，预算限制资源。通过验收后交付，把方法、流程与协作记录留给下一次。概念示例，尚未实测 EvoMap 云端蜂群收益。</desc>
+<rect width="1600" height="1780" fill="#f4f7fc"/>
+<text x="64" y="60.239999999999995" font-family="Microsoft YaHei,PingFang SC,sans-serif" font-size="23" font-weight="700" fill="#2855db">EVOMAP / SWARM · 下次从这张图看起</text>
+<text x="64" y="137.24" font-family="Microsoft YaHei,PingFang SC,sans-serif" font-size="48" font-weight="700" fill="#172840">蜂群：几个 AI，一起把一件事做完</text>
+<text x="64" y="192.76" font-family="Microsoft YaHei,PingFang SC,sans-serif" font-size="27" font-weight="400" fill="#52647d">把它想成一支临时 AI 团队：有人分工，有人做，有人检查，还能留下经验。</text>
+<rect x="64" y="238" width="1472" height="98" rx="18" fill="#142852" stroke="#142852" stroke-width="2"/>
+<text x="90" y="294.04" font-family="Microsoft YaHei,PingFang SC,sans-serif" font-size="33" font-weight="700" fill="#fff">你的目标：帮我做一个网站，而且登录功能要能正常使用。</text>
+<polyline points="800,346 800,383" fill="none" stroke="#2855db" stroke-width="4"/><polygon points="800,383 792,369 808,369" fill="#2855db"/>
+<rect x="64" y="397" width="1472" height="112" rx="18" fill="#fff" stroke="#d5dfed" stroke-width="2"/>
+<text x="90" y="447.28" font-family="Microsoft YaHei,PingFang SC,sans-serif" font-size="31" font-weight="700" fill="#2855db">协调者：拆任务、找合适的 AI，约定交付内容和验收方法</text>
+<text x="90" y="489.0" font-family="Microsoft YaHei,PingFang SC,sans-serif" font-size="25" font-weight="400" fill="#52647d">按需组队＝谁适合、谁有空，就安排谁；角色是本次岗位，不是永久身份。</text>
+<polyline points="800,519 800,567" fill="none" stroke="#2855db" stroke-width="4"/><polygon points="800,567 792,553 808,553" fill="#2855db"/>
+<rect x="64" y="580" width="448" height="178" rx="18" fill="#fff" stroke="#d5dfed" stroke-width="2"/>
+<text x="88" y="632.16" font-family="Microsoft YaHei,PingFang SC,sans-serif" font-size="32" font-weight="700" fill="#2855db">设计 AI</text>
+<text x="88" y="684.0" font-family="Microsoft YaHei,PingFang SC,sans-serif" font-size="25" font-weight="400" fill="#52647d">画页面、说明布局</text>
+<text x="88" y="731.12" font-family="Microsoft YaHei,PingFang SC,sans-serif" font-size="24" font-weight="400" fill="#52647d">交出：页面方案与交互说明</text>
+<rect x="576" y="580" width="448" height="178" rx="18" fill="#fff" stroke="#d5dfed" stroke-width="2"/>
+<text x="600" y="632.16" font-family="Microsoft YaHei,PingFang SC,sans-serif" font-size="32" font-weight="700" fill="#2855db">编程 AI</text>
+<text x="600" y="684.0" font-family="Microsoft YaHei,PingFang SC,sans-serif" font-size="25" font-weight="400" fill="#52647d">把页面和登录功能做出来</text>
+<text x="600" y="731.12" font-family="Microsoft YaHei,PingFang SC,sans-serif" font-size="24" font-weight="400" fill="#52647d">交出：可运行的网站</text>
+<rect x="1088" y="580" width="448" height="178" rx="18" fill="#fff" stroke="#d5dfed" stroke-width="2"/>
+<text x="1112" y="632.16" font-family="Microsoft YaHei,PingFang SC,sans-serif" font-size="32" font-weight="700" fill="#2855db">测试 AI</text>
+<text x="1112" y="684.0" font-family="Microsoft YaHei,PingFang SC,sans-serif" font-size="25" font-weight="400" fill="#52647d">检查登录是否真的可用</text>
+<text x="1112" y="731.12" font-family="Microsoft YaHei,PingFang SC,sans-serif" font-size="24" font-weight="400" fill="#52647d">交出：通过结果或问题清单</text>
+<polyline points="522,667 563,667" fill="none" stroke="#2855db" stroke-width="4"/><polygon points="563,667 549,659 549,675" fill="#2855db"/>
+<polyline points="1034,667 1075,667" fill="none" stroke="#2855db" stroke-width="4"/><polygon points="1075,667 1061,659 1061,675" fill="#2855db"/>
+<polyline points="1312,768 1312,805 800,805 800,768" fill="none" stroke="#2855db" stroke-width="4"/><polygon points="800,768 792,782 808,782" fill="#2855db"/>
+<text x="675" y="846.0" font-family="Microsoft YaHei,PingFang SC,sans-serif" font-size="25" font-weight="400" fill="#2855db">按钮没反应？交回修改，再测一次。</text>
+<text x="64" y="815.12" font-family="Microsoft YaHei,PingFang SC,sans-serif" font-size="24" font-weight="400" fill="#52647d">通信＝交接方案、产物和问题</text>
+<text x="64" y="850.36" font-family="Microsoft YaHei,PingFang SC,sans-serif" font-size="22" font-weight="400" fill="#52647d">此例按依赖接力；独立工作可以并行。</text>
+<rect x="64" y="904" width="448" height="152" rx="18" fill="#fff" stroke="#d5dfed" stroke-width="2"/>
+<text x="88" y="951.64" font-family="Microsoft YaHei,PingFang SC,sans-serif" font-size="28" font-weight="700" fill="#172840">有人掉线怎么办？</text>
+<text x="88" y="1001.12" font-family="Microsoft YaHei,PingFang SC,sans-serif" font-size="24" font-weight="400" fill="#52647d">尝试换一个合适的 AI 接手</text>
+<text x="88" y="1040.36" font-family="Microsoft YaHei,PingFang SC,sans-serif" font-size="22" font-weight="400" fill="#52647d">这叫失败改派</text>
+<rect x="576" y="904" width="448" height="152" rx="18" fill="#fff" stroke="#d5dfed" stroke-width="2"/>
+<text x="600" y="951.64" font-family="Microsoft YaHei,PingFang SC,sans-serif" font-size="28" font-weight="700" fill="#172840">怎样避免一直做下去？</text>
+<text x="600" y="1001.12" font-family="Microsoft YaHei,PingFang SC,sans-serif" font-size="24" font-weight="400" fill="#52647d">限制花费、并发和重试次数</text>
+<text x="600" y="1040.36" font-family="Microsoft YaHei,PingFang SC,sans-serif" font-size="22" font-weight="400" fill="#52647d">这叫预算与运行控制</text>
+<rect x="1088" y="904" width="448" height="152" rx="18" fill="#eaf5f1" stroke="#c7dfd5" stroke-width="2"/>
+<text x="1112" y="951.64" font-family="Microsoft YaHei,PingFang SC,sans-serif" font-size="28" font-weight="700" fill="#176b5a">通过验收后交付</text>
+<text x="1112" y="1001.12" font-family="Microsoft YaHei,PingFang SC,sans-serif" font-size="24" font-weight="400" fill="#52647d">你拿到网站和验证结果</text>
+<text x="1112" y="1040.36" font-family="Microsoft YaHei,PingFang SC,sans-serif" font-size="22" font-weight="400" fill="#52647d">这是期望产出，非本研究实测</text>
+<polyline points="1498,768 1498,892" fill="none" stroke="#176b5a" stroke-width="4"/><polygon points="1498,892 1490,878 1506,878" fill="#176b5a"/>
+<polyline points="1312,1066 1312,1149" fill="none" stroke="#176b5a" stroke-width="4"/><polygon points="1312,1149 1304,1135 1320,1135" fill="#176b5a"/>
+<text x="64" y="1127.4" font-family="Microsoft YaHei,PingFang SC,sans-serif" font-size="30" font-weight="700" fill="#176b5a">任务结束，再把可复用的内容留下来</text>
+<rect x="64" y="1163" width="1472" height="238" rx="18" fill="#eaf5f1" stroke="#a8cfbe" stroke-width="2"/>
+<text x="90" y="1214.4" font-family="Microsoft YaHei,PingFang SC,sans-serif" font-size="30" font-weight="700" fill="#176b5a">共享经验：下次先查已有做法，再结合当前任务验证</text>
+<text x="90" y="1276.64" font-family="Microsoft YaHei,PingFang SC,sans-serif" font-size="28" font-weight="700" fill="#172840">方法：怎么做</text>
+<text x="90" y="1323.12" font-family="Microsoft YaHei,PingFang SC,sans-serif" font-size="24" font-weight="400" fill="#52647d">登录问题的修复步骤</text>
+<text x="90" y="1366.12" font-family="Microsoft YaHei,PingFang SC,sans-serif" font-size="24" font-weight="400" fill="#52647d">适用条件与失败记录</text>
+<text x="583" y="1276.64" font-family="Microsoft YaHei,PingFang SC,sans-serif" font-size="28" font-weight="700" fill="#172840">流程：怎么配合</text>
+<text x="583" y="1323.12" font-family="Microsoft YaHei,PingFang SC,sans-serif" font-size="24" font-weight="400" fill="#52647d">设计 → 编程 → 测试</text>
+<text x="583" y="1366.12" font-family="Microsoft YaHei,PingFang SC,sans-serif" font-size="24" font-weight="400" fill="#52647d">各步骤要交接什么</text>
+<text x="1076" y="1276.64" font-family="Microsoft YaHei,PingFang SC,sans-serif" font-size="28" font-weight="700" fill="#172840">反馈：怎么组织</text>
+<text x="1076" y="1323.12" font-family="Microsoft YaHei,PingFang SC,sans-serif" font-size="24" font-weight="400" fill="#52647d">哪种配合与安排有用</text>
+<text x="1076" y="1366.12" font-family="Microsoft YaHei,PingFang SC,sans-serif" font-size="24" font-weight="400" fill="#52647d">给下次选人选流程作参考</text>
+<polyline points="64,1265 30,1265 30,451 53,451" fill="none" stroke="#176b5a" stroke-width="4"/><polygon points="53,451 39,443 39,459" fill="#176b5a"/>
+<rect x="64" y="1455" width="1472" height="195" rx="18" fill="#142852" stroke="#142852" stroke-width="2"/>
+<text x="90" y="1514.68" font-family="Microsoft YaHei,PingFang SC,sans-serif" font-size="36" font-weight="700" fill="#fff">记住：当下能协作，以后有经验可复用。</text>
+<text x="90" y="1567.76" font-family="Microsoft YaHei,PingFang SC,sans-serif" font-size="27" font-weight="400" fill="#d0ddf5">能力＝能做什么    ·    角色＝这次负责什么    ·    经验＝怎样做得更好</text>
+<text x="90" y="1619.0" font-family="Microsoft YaHei,PingFang SC,sans-serif" font-size="25" font-weight="400" fill="#d0ddf5">技能说明不会自动带来工具或权限；“工种都有技能”只是其中一部分。</text>
+<text x="64" y="1713.0" font-family="Microsoft YaHei,PingFang SC,sans-serif" font-size="25" font-weight="400" fill="#52647d">本图为机制示例，非运行截图。EvoMap 云端蜂群的效果尚未实测。</text>
+<text x="64" y="1755.24" font-family="Microsoft YaHei,PingFang SC,sans-serif" font-size="23" font-weight="400" fill="#52647d">蜂群属于多 Agent 协作；完整平台能力不能等同于 Evolver 本地库。</text>
+</svg>

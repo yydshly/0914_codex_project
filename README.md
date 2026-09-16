@@ -123,6 +123,14 @@
 
 以群体智能为愿景，探索类似 RAG 的经验检索与沉淀，让多个 Agent 复用方法，并用执行验证与反馈持续积累。作为产品方向具有参考价值，整体收益仍待对照验证；附理解图、交互导读及 Evolver 1\.94\.0 的 77 项离线测试与模块探针。
 
+#### 一眼看懂蜂群：几个 AI 一起做完一个网站
+
+当下能协作，以后有经验可复用。用做网站的例子串起分工、交接、检查、换人和经验沉淀；本图是机制示例，非运行截图，云端蜂群收益尚未实测。
+
+![蜂群汇总引导：协调者组队，设计、编程、测试交接，失败返工或改派，控制预算，验收后交付并保存方法、流程和协作反馈。](projects/007-evomap/assets/swarm-quickstart.png)
+
+#### 演示效果
+
 ![AI 技能与经验沉淀的产品方向：区分能力协作与经验积累，连接本地经验库与检索、执行、验证、回写流程，再探索团队共享及群体智能。](projects/007-evomap/assets/product-understanding.png)
 
 [研究记录](projects/007-evomap/README.md) · [上游仓库](https://github.com/EvoMap/evolver) · [在线演示](https://yydshly.github.io/0914_codex_project/007-evomap/)

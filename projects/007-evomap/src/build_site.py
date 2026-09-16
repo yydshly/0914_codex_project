@@ -14,6 +14,8 @@ FILES = {
     'assets/product-understanding.svg': ROOT / 'assets' / 'product-understanding.svg',
     'assets/swarm-understanding.png': ROOT / 'assets' / 'swarm-understanding.png',
     'assets/swarm-understanding.svg': ROOT / 'assets' / 'swarm-understanding.svg',
+    'assets/swarm-quickstart.png': ROOT / 'assets' / 'swarm-quickstart.png',
+    'assets/swarm-quickstart.svg': ROOT / 'assets' / 'swarm-quickstart.svg',
     'evidence/test-summary.json': ROOT / 'notes' / 'test-summary.json',
     'evidence/probe-output.txt': ROOT / 'notes' / 'probe-output.txt',
 }
