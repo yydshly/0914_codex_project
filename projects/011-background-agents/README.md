@@ -8,6 +8,8 @@
 
 ## 中文交互网页
 
+[打开在线研究网页](https://yydshly.github.io/0914_codex_project/011-background-agents/) · [总览图](https://yydshly.github.io/0914_codex_project/011-background-agents/#overview) · [总导航](https://yydshly.github.io/0914_codex_project/)
+
 网页以“网页派任务，服务端 Agent 干活”为主线，汇总能力与入口、四步执行流程、代理与模型接入、前后端实现、Codex 关系及总览图。
 
 在仓库根目录执行：
@@ -109,7 +111,7 @@ flowchart TD
 - [固定版本来源索引](notes/sources.md)：25 个文档或源码文件的定位链接。
 - [机器可读证据](notes/evidence.json)：文件哈希、检索定位与研究版本。
 
-当前状态设为“研究中”：能力与源码研究、中文交互导读已完成；端到端功能、成本、完成质量和故障恢复仍待连接真实服务验证。研究网页可本地运行，尚未发布公网。
+当前状态设为“研究中”：能力与源码研究、中文交互导读已完成；端到端功能、成本、完成质量和故障恢复仍待连接真实服务验证。研究网页已通过 GitHub Pages 发布并验证，可在线或本地阅读；上游平台及真实 Agent 尚未部署。
 
 ---
 

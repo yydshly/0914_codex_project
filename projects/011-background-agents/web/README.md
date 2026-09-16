@@ -2,6 +2,8 @@
 
 原生 HTML / CSS / JavaScript 静态网页，无需安装前端依赖。用于解释上游平台，不包含上游平台的后台服务或真实模型调用。
 
+在线入口：[Background Agents 研究导读](https://yydshly.github.io/0914_codex_project/011-background-agents/) · [总览图](https://yydshly.github.io/0914_codex_project/011-background-agents/#overview)。
+
 ## 内容
 
 - 网页、管理服务、代理程序、模型与工具的分工。
@@ -23,7 +25,7 @@ python -m http.server 8097 --bind 127.0.0.1 --directory projects/011-background-
 
 打开 [本地网页](http://127.0.0.1:8097/)，也可以直接打开 `dist/index.html`。
 
-构建产物位于 `web/dist`，被版本控制忽略。资源使用相对路径，可复制整个产物目录到静态托管服务。当前未配置本项目的公网发布。
+构建产物位于 `web/dist`，被版本控制忽略。资源使用相对路径，可复制整个产物目录到静态托管服务。已接入统一 GitHub Pages 构建与发布，线上页面及全部 13 个静态文件已验证。
 
 页面核心内容可离线阅读；外部源码链接需联网。关闭 JavaScript 后显示默认案例，正文和图示仍可访问。接入选择器只展示说明，不收集或保存账号凭据。
 

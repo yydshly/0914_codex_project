@@ -54,4 +54,4 @@ GitHub Pages 托管静态 HTML、CSS 和 JavaScript。需要服务端、数据�
 
 010 Graft 已接入统一构建与发布清单，打包交互导读、PNG/SVG 引导图和研究笔记。部署已成功，11 个静态文件逐项核对一致，总导航与十个项目入口均可访问；[在线导读](https://yydshly.github.io/0914_codex_project/010-graft/)已登记到仓库索引。能力定位为扫描源码构建索引、指导 AI 查找，构建原理待研究。
 
-011 Background Agents 已加入发布清单与源码构建步骤，输出中文交互导读、能力与架构总览图、理解汇总和固定版本依据。目标路径为 `011-background-agents/`；线上验证完成后登记演示入口。此页面只提供研究说明，未部署 Open-Inspect 后端或执行沙箱。
+011 Background Agents 已发布并验证：[在线研究导读](https://yydshly.github.io/0914_codex_project/011-background-agents/)。包含能力、入口、执行流程、AI 接入、Codex 关系、PNG/SVG 总览图与理解汇总。13 个静态文件逐项核对一致，总导航及全部 11 个项目入口可访问；已关联仓库索引和项目说明。此次只发布研究网页，未部署 Open-Inspect 后端或执行沙箱。

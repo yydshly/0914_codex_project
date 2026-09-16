@@ -259,7 +259,7 @@
       ],
       "cover": "projects/011-background-agents/assets/background-agents-overview.png",
       "cover_alt": "Background Agents 能力与实现总览：网页与集成入口、后台队列、沙箱代理、模型接入、交付结果与 Codex 关系。",
-      "demo": ""
+      "demo": "https://yydshly.github.io/0914_codex_project/011-background-agents/"
     }
   ]
 }
