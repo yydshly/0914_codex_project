@@ -2,7 +2,7 @@
 
 ## 当前状态
 
-已配置统一的 GitHub Actions 发布流程 `.github/workflows/pages.yml`。`pages.json` 显式选择要发布的项目编号，目前为 `001`、`002`、`003`；`scripts/build_pages.py` 将各项目的 `web/dist/` 打包到 `_site/<编号-slug>/`，并生成站点导航页。
+已配置统一的 GitHub Actions 发布流程 `.github/workflows/pages.yml`。`pages.json` 显式选择要发布的项目编号，目前为 `001` 至 `006`；`scripts/build_pages.py` 将各项目的 `web/dist/` 打包到 `_site/<编号-slug>/`，并生成站点导航页。001、005、006 在 CI 中从源码构建，其余项目沿用已登记的静态产物。
 
 发布状态以 GitHub Actions 部署成功且网页实际可访问为准。只有经过访问验证的演示地址才写入 `projects.json`，并同步到仓库索引。
 
@@ -36,6 +36,8 @@ https://yydshly.github.io/0914_codex_project/
 ## 带后端的项目
 
 GitHub Pages 托管静态 HTML、CSS 和 JavaScript。需要服务端、数据库或后台任务的研究项目，另行部署后端，并在子项目文档中记录服务地址、配置和运行方式；演示入口仍可统一收录到首页。
+
+006 Dashy 发布的是研究展示页，包含架构总览、原版截图、能力与意义、接入边界和本机启动说明。原版 Dashy 的 Node 服务、探测、代理及配置写盘仍由本机演示提供，不会随静态页面发布。公开页面不请求访问者的本机 API。
 
 ## 官方参考
 

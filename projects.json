@@ -119,6 +119,32 @@
           "caption": "同一份内容，比较配色、完整页面、详细程度、尺寸、手绘线条和边注；PNG为单图导出。"
         }
       ]
+    },
+    {
+      "id": "006",
+      "order": 60,
+      "slug": "dashy",
+      "name": "Dashy：网页式应用工作台与信息看板",
+      "repo": "https://github.com/Lissy93/dashy",
+      "summary": "用网页集中应用入口、API 数据和服务状态，减少记网址、找入口和逐个查看后台的操作；支持搜索、分组、编辑与嵌入工作区，适合个人首页、家庭服务器和团队工具导航。附架构全景图、原版实拍及网页与桌面应用边界说明。",
+      "status": "已完成",
+      "tags": [
+        "应用导航",
+        "动态看板",
+        "Vue",
+        "自托管"
+      ],
+      "cover": "projects/006-dashy/assets/cover.png",
+      "cover_alt": "Dashy 原版中文工作台实拍：集中应用入口、时钟、本机信息与状态分组",
+      "demo": "",
+      "preview_images": [
+        {
+          "title": "理解引导：能力、架构与应用边界",
+          "path": "projects/006-dashy/assets/dashy-capability-overview.png",
+          "alt": "Dashy 的能力、配置驱动架构、NAS 示例、网页与桌面应用边界、部署和验证范围",
+          "caption": "先看统一入口与动态看板如何实现，再区分原生功能、条件性接入与额外开发；提供高清 PNG 与可缩放 SVG。"
+        }
+      ]
     }
   ]
 }

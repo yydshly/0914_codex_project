@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Dashy 用网页构建可自定义的应用工作台：集中网站与后台入口，展示 API 数据和服务状态。通过架构图、原版实拍、NAS 示例理解能力、意义与桌面软件边界。">
+  <meta name="theme-color" content="#122c41">
+  <title>Dashy：网页式应用工作台｜能力、原理与实际效果</title>
+  <link rel="stylesheet" href="./style.css">
+  <script src="./main.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#main">跳到正文</a>
+<header class="topbar"><a class="brand" href="../"><span class="brand-mark">研</span> GitHub 项目研究集</a><nav aria-label="本页导航"><a href="#visuals">引导图</a><a href="#capabilities">能力与意义</a><a href="#boundaries">应用边界</a><a href="#experience">亲自体验</a></nav></header>
+<main id="main">
+  <section class="intro">
+    <p class="eyebrow">006 / DASHY / 开源项目研究</p>
+    <h1>把分散的应用入口，<br>整理成自己的<span>网页工作台。</span></h1>
+    <p class="lead">Dashy 把常用网站、内部后台和服务信息集中到一个可搜索、可编辑的首页。它用网页提供桌面式交互，让你更快找到应用、查看概况；具体业务仍由各个应用自己完成。</p>
+    <div class="intro-bottom"><div class="tags"><span>应用导航</span><span>动态信息看板</span><span>配置驱动</span></div><a class="text-link" href="https://github.com/Lissy93/dashy" target="_blank" rel="noopener noreferrer">上游仓库 ↗</a></div>
+  </section>
+
+  <section id="visuals" class="visuals" aria-labelledby="visual-title">
+    <div class="section-heading"><div><p class="eyebrow">先看两张图</p><h2 id="visual-title">一张理解原理，一张看到效果</h2></div><p>点击图片放大，或打开高清原图。</p></div>
+    <div class="visual-grid">
+      <figure class="visual-card"><figcaption><span class="figure-number">01</span><div><h3>能力与实现全景图</h3><p>原生能力 → 实现架构 → 接入边界 → 验证范围</p></div></figcaption>
+        <button class="image-button architecture" type="button" data-image="./assets/dashy-capability-overview.png" data-title="Dashy 能力与实现全景图" aria-label="放大能力与实现全景图"><img src="./assets/dashy-capability-overview.png" width="2400" height="3300" alt="Dashy 的能力地图、配置驱动架构、NAS 示例、桌面应用边界、部署扩展与本机验证范围"><span class="zoom-label">点击放大 ↗</span></button>
+        <div class="figure-links"><a href="./assets/dashy-capability-overview.png" target="_blank" rel="noopener">高清 PNG</a><a href="./assets/dashy-capability-overview.svg" target="_blank" rel="noopener">可缩放 SVG</a></div>
+      </figure>
+      <figure class="visual-card"><figcaption><span class="figure-number">02</span><div><h3>Dashy 原版运行效果</h3><p>中文配置 · 常用入口 · 时钟 · 本机实时信息</p></div></figcaption>
+        <button class="image-button screenshot" type="button" data-image="./assets/cover.png" data-title="原版 Dashy 中文工作台实拍" aria-label="放大原版工作台运行截图"><img src="./assets/cover.png" width="1019" height="891" alt="原版 Dashy 中文工作台截图，含应用卡片、研究入口、北京时间、本机信息和服务状态分组"><span class="zoom-label">点击放大 ↗</span></button>
+        <div class="figure-links"><a href="./assets/cover.png" target="_blank" rel="noopener">查看原始截图</a><span>截图中的时间与数据为当时实拍</span></div>
+      </figure>
+    </div>
+    <p class="caption-note">这是研究展示页。截图展示的是已运行并验证的原版 Dashy；完整交互体验见下方“亲自体验”。</p>
+  </section>
+
+  <section id="capabilities" class="section" aria-labelledby="capability-title">
+    <div class="section-heading"><div><p class="eyebrow">它的能力与意义</p><h2 id="capability-title">从“记住很多网址”到“打开一个首页”</h2></div></div>
+    <div class="capability-grid">
+      <article><span class="index">01 / 入口</span><h3>把应用摆在一起</h3><p>用卡片、分组和多页面整理常用网站、NAS 与内部后台，配上图标、标签、搜索和快捷键。</p><p class="value">意义：少记网址，少在收藏夹和后台之间来回找。</p></article>
+      <article><span class="index">02 / 信息</span><h3>在首页先看概况</h3><p>通过组件展示时钟、日历、RSS、天气和服务数据；使用 HTTP 或 Ping 检查服务是否响应。</p><p class="value">意义：不必逐一进入系统，就能看到常看的信息。</p></article>
+      <article><span class="index">03 / 组织</span><h3>按自己的工作方式调整</h3><p>更换主题、布局和排序，直接编辑卡片。支持普通首页、精简页、弹窗和嵌入工作区。</p><p class="value">意义：个人、家庭服务器和团队工具都能组织成合适的入口。</p></article>
+    </div>
+    <div class="scope-strip"><strong>更多能力</strong><p>多语言、响应式界面、可选 PWA、认证与编辑权限、配置导入导出、可选 REST 配置 API、加密备份与恢复。不同能力需要对应配置、服务端或第三方接口。</p></div>
+  </section>
+
+  <section class="section mechanism" aria-labelledby="mechanism-title">
+    <div class="section-heading"><div><p class="eyebrow">实现原理</p><h2 id="mechanism-title">配置生成界面，接口连接服务</h2></div><a class="text-link" href="./assets/dashy-capability-overview.svg" target="_blank" rel="noopener">查看完整架构 ↗</a></div>
+    <ol class="flow">
+      <li><b>1</b><h3>描述页面</h3><p>YAML 记录页面、分组、链接和组件；浏览器保存个人偏好。</p></li>
+      <li><b>2</b><h3>渲染工作台</h3><p>Vue 读取配置，生成卡片、搜索框和动态组件。</p></li>
+      <li><b>3</b><h3>打开或取数</h3><p>链接打开应用，组件请求 API；允许时在 iframe 内嵌网页。</p></li>
+      <li><b>4</b><h3>后端补足能力</h3><p>Node.js / Express 负责探测、代理、系统信息和配置写盘。</p></li>
+    </ol>
+    <div class="save-grid"><p><strong>保存到本地</strong><span>写入当前浏览器的 localStorage，属于这台设备的浏览器偏好。</span></p><p><strong>保存到磁盘</strong><span>经后端写入服务器 YAML 文件，需要后端和相应权限。</span></p></div>
+    <p class="technical">研究版本使用 Vue 3、Vuex、Vue Router、Vite 与 Node.js / Express；核心配置通常不需要数据库。</p>
+  </section>
+
+  <section class="section" aria-labelledby="nas-title">
+    <div class="section-heading"><div><p class="eyebrow">一个具体例子</p><h2 id="nas-title">添加一张 NAS 卡片，分别发生什么？</h2></div></div>
+    <div class="table-wrap"><table><thead><tr><th>你看到或执行的动作</th><th>实际由谁完成</th></tr></thead><tbody>
+      <tr><td>点击 NAS 卡片</td><td>Dashy 提供入口，浏览器打开 NAS 自己的管理网页。</td></tr>
+      <tr><td>卡片旁的状态灯变绿</td><td>Dashy 探测目标地址，收到正常响应后显示结果。</td></tr>
+      <tr><td>首页显示剩余容量</td><td>接入相应组件，由 NAS API 提供容量数据。</td></tr>
+      <tr><td>上传、下载或删除文件</td><td>由 NAS 管理页面或专门业务接口执行；只添加网址不会获得该能力。</td></tr>
+    </tbody></table></div>
+  </section>
+
+  <section id="boundaries" class="section" aria-labelledby="boundary-title">
+    <div class="section-heading"><div><p class="eyebrow">最重要的理解边界</p><h2 id="boundary-title">桌面式体验，和电脑桌面控制是两回事</h2></div></div>
+    <div class="table-wrap"><table><thead><tr><th>需求</th><th>支持程度</th><th>具体条件</th></tr></thead><tbody>
+      <tr><td>打开网页应用</td><td><span class="badge native">原生支持</span></td><td>卡片保存网址，由浏览器打开。</td></tr>
+      <tr><td>在工作区内使用网页</td><td><span class="badge conditional">有条件</span></td><td>目标网页允许被 iframe 嵌入。</td></tr>
+      <tr><td>打开桌面软件</td><td><span class="badge conditional">有条件</span></td><td>应用提供专用协议链接，已在本机安装，浏览器与操作系统允许唤起。</td></tr>
+      <tr><td>嵌入桌面软件窗口</td><td><span class="badge external">不原生支持</span></td><td>原生桌面窗口不能直接作为网页 iframe 嵌入。</td></tr>
+      <tr><td>执行 exe、命令或自动操作软件</td><td><span class="badge external">需要另接工具</span></td><td>需额外本地桥接程序、应用 API 或自动化工具。</td></tr>
+    </tbody></table></div>
+    <div class="boundary-notes"><p><strong>统一入口 ≠ 统一接管</strong>Dashy 的登录不会自动登录所有链接的应用，也不自动获得它们的业务权限。</p><p><strong>状态灯 ≠ 完整监控系统</strong>页面轮询不能等同于全天候监控与告警；后端探测反映的是服务器到目标的连通性。</p></div>
+  </section>
+
+  <section class="section evidence" aria-labelledby="evidence-title">
+    <div class="section-heading"><div><p class="eyebrow">原版运行记录</p><h2 id="evidence-title">界面可以编辑，也可以嵌入网页</h2></div></div>
+    <div class="evidence-grid"><figure><button class="image-button" type="button" data-image="./assets/edit-item.png" data-title="原版卡片编辑表单" aria-label="放大卡片编辑截图"><img src="./assets/edit-item.png" alt="Dashy 原版卡片编辑表单，可修改标题、说明、图标、网址和标签" loading="lazy"></button><figcaption>卡片编辑：修改的是页面配置中的标题、网址、图标和标签。</figcaption></figure><figure><button class="image-button" type="button" data-image="./assets/workspace.png" data-title="原版嵌入工作区" aria-label="放大工作区截图"><img src="./assets/workspace.png" alt="Dashy 工作区嵌入本地示例服务控制面板" loading="lazy"></button><figcaption>工作区：Dashy 提供外层导航，里面是另一个网页的真实界面。</figcaption></figure></div>
+    <div class="verification"><h3>本次验证范围</h3><p><strong>已验证：</strong>原版构建与配置校验、搜索过滤、时钟和本机数据刷新、HTTP 状态从 503 到 200 后状态灯变化、卡片编辑表单、弹窗与 iframe 工作区。</p><p><strong>未完整实测：</strong>第三方账号接入、认证、云备份、配置写盘完整交互、桌面软件唤起及全部组件。</p><p><strong>示例说明：</strong>状态切换按钮和本地数据接口由本研究额外编写。Dashy 原生负责嵌入面板、取数、探测和显示；按钮不代表它自带通用服务器控制能力。</p></div>
+  </section>
+
+  <section id="experience" class="section experience" aria-labelledby="experience-title">
+    <div class="section-heading"><div><p class="eyebrow">亲自体验</p><h2 id="experience-title">公开阅读研究，在本机运行完整演示</h2></div></div>
+    <div class="experience-grid"><div><h3>线上研究页</h3><p>本页通过 GitHub Pages 发布，可查看结论、放大图片、下载架构图和示例配置。它不连接你的电脑，也不在网上显示你的实时系统信息。</p><div class="link-row"><a href="./assets/dashy-capability-overview.png" download>下载总览图</a><a href="./config-example.yml" download>下载示例配置</a><a href="https://demo.dashy.to/" target="_blank" rel="noopener noreferrer">官方在线演示 ↗</a></div></div><div><h3>原版中文交互演示</h3><p>在研究仓库的 <code>projects/006-dashy</code> 目录运行启动脚本，打开它输出的本机地址。可以搜索、编辑卡片、查看动态数据、切换示例状态。</p><pre><code>.\start.ps1</code></pre><p class="small">首次运行需要联网下载与构建。服务只监听本机；停止使用 <code>.\stop.ps1</code>。完整说明见研究文档。</p><a class="text-link" href="https://github.com/yydshly/0914_codex_project/tree/main/projects/006-dashy">查看启动说明与项目文件 ↗</a></div></div>
+  </section>
+  <footer><div><strong>Dashy · 网页式应用工作台</strong><p>适合个人起始页、家庭服务器门户、团队工具导航与轻量信息总览。</p></div><div class="source-links"><a href="https://github.com/Lissy93/dashy/tree/6c56436d5f044d3c53371891c9d9a8c8df8c4606" target="_blank" rel="noopener noreferrer">研究源码</a><a href="https://dashy.to/docs/" target="_blank" rel="noopener noreferrer">官方文档</a><a href="https://github.com/yydshly/0914_codex_project/blob/main/projects/006-dashy/notes/capability-overview.md">完整结论与出处</a><a href="../">全部项目</a></div><p class="small">研究版本 4.6.14 · 上游 MIT 许可 · 研究日期 2026-09-16 · 架构图为研究整理，界面图片为原版实拍。</p></footer>
+</main>
+<dialog id="image-viewer" aria-labelledby="viewer-title"><div class="viewer-toolbar"><h2 id="viewer-title">图片预览</h2><a id="viewer-original" href="./assets/dashy-capability-overview.png" target="_blank" rel="noopener">打开原图 ↗</a><button id="viewer-close" type="button" aria-label="关闭图片预览">关闭 ×</button></div><div class="viewer-body"><img id="viewer-image" alt=""></div></dialog>
+</body></html>

@@ -1,0 +1,128 @@
+pageInfo:
+  title: 我的数字工作台
+  description: Dashy 原版体验 · 把常用入口、实时信息和服务状态放在一起
+  navLinks:
+    - title: 先看体验指南
+      path: http://127.0.0.1:8060/guide.html
+    - title: 项目源码
+      path: https://github.com/Lissy93/dashy
+
+appConfig:
+  theme: colorful
+  language: zh-CN
+  layout: auto
+  iconSize: large
+  enableFontAwesome: false
+  enableServiceWorker: false
+  statusCheckInterval: 10
+  defaultOpeningMethod: newtab
+  customCss: |
+    body { font-family: "Segoe UI", "Microsoft YaHei", sans-serif; }
+
+sections:
+  - name: 01 · 常用工具，一键直达
+    icon: 🚀
+    items:
+      - title: GitHub
+        description: 代码仓库与开源项目 · 搜索「代码」试试
+        icon: 💻
+        url: https://github.com
+        tags: [代码, 开源, 开发]
+      - title: Notion
+        description: 笔记、文档与知识库
+        icon: 📝
+        url: https://www.notion.so
+        tags: [笔记, 文档, 知识库]
+      - title: Figma
+        description: 产品设计与团队协作
+        icon: 🎨
+        url: https://www.figma.com
+        tags: [设计, 原型]
+      - title: 哔哩哔哩
+        description: 教程、课程与视频
+        icon: 📺
+        url: https://www.bilibili.com
+        tags: [视频, 教程]
+
+  - name: 02 · 已有研究，集中入口
+    icon: 📚
+    items:
+      - title: 研究项目总览
+        description: 打开当前研究仓库的在线演示目录
+        icon: 🗂️
+        url: https://yydshly.github.io/0914_codex_project/
+        tags: [研究, 项目]
+      - title: 纸艺动画
+        description: 音频驱动纸艺剧场的实际视频
+        icon: 🎭
+        url: https://yydshly.github.io/0914_codex_project/001-audio-locked-paper-theatre/
+        tags: [研究, 动画, 视频]
+      - title: 图形设计展厅
+        description: 图形规范、原版示例与中文案例
+        icon: 📐
+        url: https://yydshly.github.io/0914_codex_project/005-diagram-design/
+        tags: [研究, 设计, 图表]
+
+  - name: 03 · 北京时间
+    icon: 🕐
+    widgets:
+      - type: clock
+        options:
+          timeZone: Asia/Shanghai
+          format: zh-CN
+          customCityName: 北京 · 实时时钟
+          use12Hour: false
+
+  - name: 04 · 本机实时信息
+    icon: 📊
+    widgets:
+      - type: custom-api
+        updateInterval: 10
+        options:
+          url: http://127.0.0.1:8060/demo-api/metrics
+          display: block
+          mappings:
+            - field: freeMemory
+              label: 可用内存
+            - field: totalMemory
+              label: 总内存
+            - field: uptime
+              label: 演示运行时长
+            - field: requests
+              label: 数据请求累计
+            - field: updatedAt
+              label: 最近刷新
+
+  - name: 05 · 服务是否正常，一眼看见
+    icon: 🚦
+    items:
+      - title: 正常服务示例
+        description: 本地示例返回 HTTP 200，状态灯应为绿色
+        icon: ✅
+        url: http://127.0.0.1:8060/demo-api/healthy
+        statusCheck: true
+        tags: [状态, 服务]
+      - title: 可切换的服务示例
+        description: 默认返回 503；打开控制面板切换，观察状态灯
+        icon: 🔧
+        url: http://127.0.0.1:8060/control.html
+        statusCheckUrl: http://127.0.0.1:8060/demo-api/sample
+        statusCheck: true
+        target: modal
+        tags: [状态, 服务, 控制]
+
+  - name: 06 · 动手试一试
+    icon: ✨
+    items:
+      - title: 三分钟体验指南
+        description: 搜索、换主题、编辑卡片，逐项看效果
+        icon: 🧭
+        url: http://127.0.0.1:8060/guide.html
+        target: modal
+        tags: [指南, 帮助]
+      - title: 体验嵌入工作区
+        description: 在 Dashy 内打开示例控制面板
+        icon: 🪟
+        url: http://127.0.0.1:8060/control.html
+        target: workspace
+        tags: [工作区, 嵌入]

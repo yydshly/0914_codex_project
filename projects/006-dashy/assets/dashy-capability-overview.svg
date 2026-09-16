@@ -1,0 +1,170 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2400" height="3300" viewBox="0 0 2400 3300">
+<title>Dashy 能力与实现全景图</title><desc>Dashy 的能力地图、配置驱动架构、NAS 示例、网页与桌面应用边界、部署扩展和验证范围。</desc>
+<defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto-start-reverse"><path d="M0 1 L8 5 L0 9" fill="none" stroke="context-stroke" stroke-width="1.6"/></marker></defs>
+<rect width="2400" height="3300" fill="#f6f8fa"/>
+<g font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif">
+<rect x="0" y="0" width="2400" height="278" rx="0" fill="#122c41" stroke="#122c41" stroke-width="2"/>
+<text x="96" y="123" font-size="100" fill="#fff" font-weight="800">Dashy</text>
+<text x="459" y="119" font-size="73" fill="#fff" font-weight="700">能力与实现全景图</text>
+<text x="101" y="183" font-size="36" fill="#d6e8ee" font-weight="400">用网页构建桌面式工作台：统一入口、集中信息、组织交互</text>
+<rect x="96" y="213" width="698" height="44" rx="12" fill="#255166" stroke="#255166" stroke-width="2"/>
+<text x="120" y="245" font-size="29" fill="#c7f4ef" font-weight="700">应用入口 + 动态看板 + 配置编辑</text>
+<text x="856" y="246" font-size="30" fill="#ffdfa2" font-weight="600">桌面式体验 ≠ 操作系统桌面控制</text>
+<rect x="96" y="301" width="65" height="54" rx="14" fill="#122c41" stroke="#122c41" stroke-width="2"/>
+<text x="109" y="340" font-size="30" fill="#fff" font-weight="700">01</text>
+<text x="186" y="340" font-size="44" fill="#122c41" font-weight="700">它提供什么</text>
+<text x="2079" y="338" font-size="25" fill="#647887" font-weight="400">原生功能与可选能力</text>
+<rect x="96" y="376" width="720" height="158" rx="22" fill="#fff" stroke="#dce5ec" stroke-width="2"/>
+<rect x="118" y="401" width="7" height="105" rx="3" fill="#087e82" stroke="#087e82" stroke-width="2"/>
+<text x="145" y="424" font-size="35" fill="#087e82" font-weight="700">统一导航</text>
+<text x="145" y="470" font-size="29" fill="#264457" font-weight="400">链接卡片 / 分组 / 多页面</text>
+<text x="145" y="510" font-size="29" fill="#264457" font-weight="400">图标与标签 / 多种打开方式</text>
+<rect x="840" y="376" width="720" height="158" rx="22" fill="#fff" stroke="#dce5ec" stroke-width="2"/>
+<rect x="862" y="401" width="7" height="105" rx="3" fill="#087e82" stroke="#087e82" stroke-width="2"/>
+<text x="889" y="424" font-size="35" fill="#087e82" font-weight="700">快速查找</text>
+<text x="889" y="470" font-size="29" fill="#264457" font-weight="400">即时搜索 / 标签筛选 / 快捷键</text>
+<text x="889" y="510" font-size="29" fill="#264457" font-weight="400">外部搜索引擎 / 自定义搜索前缀</text>
+<rect x="1584" y="376" width="720" height="158" rx="22" fill="#fff" stroke="#dce5ec" stroke-width="2"/>
+<rect x="1606" y="401" width="7" height="105" rx="3" fill="#356dcc" stroke="#356dcc" stroke-width="2"/>
+<text x="1633" y="424" font-size="35" fill="#356dcc" font-weight="700">动态信息</text>
+<text x="1633" y="470" font-size="29" fill="#264457" font-weight="400">时钟、天气、RSS、日历</text>
+<text x="1633" y="510" font-size="29" fill="#264457" font-weight="400">自托管服务数据 / 通用 API 组件</text>
+<rect x="96" y="554" width="720" height="158" rx="22" fill="#fff" stroke="#dce5ec" stroke-width="2"/>
+<rect x="118" y="579" width="7" height="105" rx="3" fill="#356dcc" stroke="#356dcc" stroke-width="2"/>
+<text x="145" y="602" font-size="35" fill="#356dcc" font-weight="700">状态检查</text>
+<text x="145" y="648" font-size="29" fill="#264457" font-weight="400">HTTP 响应与耗时 / ICMP Ping</text>
+<text x="145" y="688" font-size="29" fill="#264457" font-weight="400">按需启用 / 可配置检查间隔</text>
+<rect x="840" y="554" width="720" height="158" rx="22" fill="#fff" stroke="#dce5ec" stroke-width="2"/>
+<rect x="862" y="579" width="7" height="105" rx="3" fill="#087e82" stroke="#087e82" stroke-width="2"/>
+<text x="889" y="602" font-size="35" fill="#087e82" font-weight="700">工作视图</text>
+<text x="889" y="648" font-size="29" fill="#264457" font-weight="400">普通首页 / 精简起始页</text>
+<text x="889" y="688" font-size="29" fill="#264457" font-weight="400">iframe 工作区 / 弹窗内嵌网页</text>
+<rect x="1584" y="554" width="720" height="158" rx="22" fill="#fff" stroke="#dce5ec" stroke-width="2"/>
+<rect x="1606" y="579" width="7" height="105" rx="3" fill="#087e82" stroke="#087e82" stroke-width="2"/>
+<text x="1633" y="602" font-size="35" fill="#087e82" font-weight="700">个性化配置</text>
+<text x="1633" y="648" font-size="29" fill="#264457" font-weight="400">主题与 CSS / 布局、尺寸、排序</text>
+<text x="1633" y="688" font-size="29" fill="#264457" font-weight="400">可视化编辑 / 原始配置编辑</text>
+<text x="98" y="756" font-size="29" fill="#647887" font-weight="400">还支持：多语言 · 响应式界面 · 可选 PWA 基础离线访问</text>
+<text x="98" y="798" font-size="28" fill="#a56913" font-weight="400">边界：页面轮询不能等同于独立运行的全天候监控与告警系统。</text>
+<rect x="96" y="828" width="65" height="54" rx="14" fill="#122c41" stroke="#122c41" stroke-width="2"/>
+<text x="109" y="867" font-size="30" fill="#fff" font-weight="700">02</text>
+<text x="186" y="867" font-size="44" fill="#122c41" font-weight="700">它怎样实现</text>
+<text x="1979" y="865" font-size="25" fill="#647887" font-weight="400">配置驱动界面，接口连接数据</text>
+<rect x="96" y="906" width="540" height="226" rx="22" fill="#eef7f7" stroke="#bfdcdd" stroke-width="2"/>
+<text x="124" y="954" font-size="37" fill="#087e82" font-weight="700">配置与偏好</text>
+<text x="124" y="1004" font-size="29" fill="#264457" font-weight="400">conf.yml</text>
+<text x="124" y="1050" font-size="29" fill="#264457" font-weight="400">页面 / 分组 / 链接 / 组件</text>
+<text x="124" y="1096" font-size="29" fill="#264457" font-weight="400">localStorage：浏览器偏好</text>
+<rect x="838" y="906" width="640" height="226" rx="22" fill="#edf3fe" stroke="#c8d7f3" stroke-width="2"/>
+<text x="870" y="954" font-size="37" fill="#356dcc" font-weight="700">浏览器中的 Dashy</text>
+<text x="870" y="1004" font-size="29" fill="#264457" font-weight="400">Vue 3 + Vuex + Vue Router</text>
+<text x="870" y="1050" font-size="29" fill="#264457" font-weight="400">生成界面 / 搜索过滤 / 响应点击</text>
+<text x="870" y="1096" font-size="29" fill="#264457" font-weight="400">编辑数据 / 组件刷新 / 链接跳转</text>
+<rect x="1680" y="906" width="624" height="150" rx="22" fill="#fff" stroke="#dce5ec" stroke-width="2"/>
+<text x="1712" y="953" font-size="36" fill="#122c41" font-weight="700">目标应用网页</text>
+<text x="1712" y="996" font-size="28" fill="#264457" font-weight="400">新标签页 / 当前页</text>
+<text x="1712" y="1033" font-size="28" fill="#264457" font-weight="400">对方允许时，用 iframe 嵌入</text>
+<rect x="1680" y="1102" width="624" height="256" rx="22" fill="#fff" stroke="#dce5ec" stroke-width="2"/>
+<text x="1712" y="1152" font-size="36" fill="#356dcc" font-weight="700">外部服务与数据</text>
+<text x="1712" y="1200" font-size="29" fill="#264457" font-weight="400">天气 / NAS / Nextcloud</text>
+<text x="1712" y="1249" font-size="29" fill="#264457" font-weight="400">Pi-hole / Proxmox / 其他 API</text>
+<text x="1712" y="1298" font-size="29" fill="#264457" font-weight="400">目标系统负责实际业务与权限</text>
+<rect x="838" y="1190" width="640" height="168" rx="22" fill="#eef7f7" stroke="#bfdcdd" stroke-width="2"/>
+<text x="870" y="1239" font-size="37" fill="#087e82" font-weight="700">Node.js + Express</text>
+<text x="870" y="1284" font-size="29" fill="#264457" font-weight="400">HTTP / Ping 探测 · CORS 代理</text>
+<text x="870" y="1327" font-size="29" fill="#264457" font-weight="400">配置写盘 · 系统信息</text>
+<path d="M 636 1024 L 824 1024" fill="none" stroke="#087e82" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<text x="653" y="985" font-size="24" fill="#087e82" font-weight="400">读取 / 解析</text>
+<text x="673" y="1072" font-size="24" fill="#087e82" font-weight="400">合并偏好</text>
+<path d="M 1478 974 L 1666 974" fill="none" stroke="#356dcc" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<text x="1518" y="947" font-size="24" fill="#356dcc" font-weight="400">打开网址</text>
+<path d="M 1478 1083 L 1579 1083 L 1579 1168 L 1666 1168" fill="none" stroke="#356dcc" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<text x="1509" y="1058" font-size="22" fill="#356dcc" font-weight="400">组件请求 API</text>
+<path d="M 1158 1132 L 1158 1176" fill="none" stroke="#087e82" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<text x="1192" y="1171" font-size="23" fill="#087e82" font-weight="400">需要后端能力</text>
+<path d="M 1478 1297 L 1666 1297" fill="none" stroke="#087e82" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<text x="1504" y="1269" font-size="23" fill="#087e82" font-weight="400">探测 / 代理</text>
+<path d="M 838 1278 L 366 1278 L 366 1146" fill="none" stroke="#087e82" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<text x="432" y="1247" font-size="28" fill="#087e82" font-weight="600">写回 YAML 配置</text>
+<text x="100" y="1409" font-size="28" fill="#264457" font-weight="400">保存到本地 → 当前浏览器 localStorage</text>
+<text x="1000" y="1409" font-size="28" fill="#264457" font-weight="400">保存到磁盘 → 后端接口 → 服务器 YAML</text>
+<text x="100" y="1453" font-size="28" fill="#647887" font-weight="400">Vite 负责构建；核心配置通常不需要数据库。Dashy 组织入口与展示，业务由原应用提供。</text>
+<rect x="96" y="1501" width="65" height="54" rx="14" fill="#122c41" stroke="#122c41" stroke-width="2"/>
+<text x="109" y="1540" font-size="30" fill="#fff" font-weight="700">03</text>
+<text x="186" y="1540" font-size="44" fill="#122c41" font-weight="700">用一个 NAS 例子看懂</text>
+<rect x="96" y="1580" width="1080" height="87" rx="22" fill="#fff" stroke="#dce5ec" stroke-width="2"/>
+<text x="122" y="1632" font-size="31" fill="#122c41" font-weight="700">点击 NAS 卡片</text>
+<path d="M 422 1623 L 498 1623" fill="none" stroke="#087e82" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<text x="526" y="1632" font-size="29" fill="#264457" font-weight="400">打开 NAS 自己的管理网页</text>
+<rect x="1224" y="1580" width="1080" height="87" rx="22" fill="#fff" stroke="#dce5ec" stroke-width="2"/>
+<text x="1250" y="1632" font-size="31" fill="#122c41" font-weight="700">状态灯变绿</text>
+<path d="M 1550 1623 L 1626 1623" fill="none" stroke="#087e82" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<text x="1654" y="1632" font-size="29" fill="#264457" font-weight="400">探测地址得到正常响应</text>
+<rect x="96" y="1685" width="1080" height="87" rx="22" fill="#fff" stroke="#dce5ec" stroke-width="2"/>
+<text x="122" y="1737" font-size="31" fill="#122c41" font-weight="700">显示剩余容量</text>
+<path d="M 422 1728 L 498 1728" fill="none" stroke="#087e82" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<text x="526" y="1737" font-size="29" fill="#264457" font-weight="400">组件通过 NAS API 读取</text>
+<rect x="1224" y="1685" width="1080" height="87" rx="22" fill="#fff" stroke="#dce5ec" stroke-width="2"/>
+<text x="1250" y="1737" font-size="31" fill="#122c41" font-weight="700">上传或删除文件</text>
+<path d="M 1550 1728 L 1626 1728" fill="none" stroke="#087e82" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<text x="1654" y="1737" font-size="29" fill="#264457" font-weight="400">由 NAS 页面或专门接口执行</text>
+<text x="100" y="1814" font-size="29" fill="#a56913" font-weight="600">只添加一个网址，不会自动获得 NAS 的文件管理权限。</text>
+<rect x="96" y="1861" width="65" height="54" rx="14" fill="#122c41" stroke="#122c41" stroke-width="2"/>
+<text x="109" y="1900" font-size="30" fill="#fff" font-weight="700">04</text>
+<text x="186" y="1900" font-size="44" fill="#122c41" font-weight="700">网页产品与桌面软件，支持到哪里</text>
+<rect x="96" y="1935" width="2208" height="439" rx="18" fill="#fff" stroke="#dce5ec" stroke-width="2"/>
+<rect x="96" y="1935" width="2208" height="64" rx="18" fill="#e8eef4" stroke="#e8eef4" stroke-width="2"/>
+<text x="128" y="1978" font-size="30" fill="#122c41" font-weight="700">目标</text>
+<text x="767" y="1978" font-size="30" fill="#122c41" font-weight="700">支持方式 / 边界</text>
+<text x="128" y="2048" font-size="27" fill="#087e82" font-weight="600">● 原生</text>
+<text x="309" y="2048" font-size="30" fill="#122c41" font-weight="600">网页应用</text>
+<text x="767" y="2048" font-size="29" fill="#264457" font-weight="400">链接打开；对方允许时可嵌入</text>
+<rect x="98" y="2074" width="2204" height="75" rx="0" fill="#f8fafc" stroke="#f8fafc" stroke-width="2"/>
+<text x="128" y="2123" font-size="27" fill="#a56913" font-weight="600">● 条件</text>
+<text x="309" y="2123" font-size="30" fill="#122c41" font-weight="600">桌面应用启动</text>
+<text x="767" y="2123" font-size="29" fill="#264457" font-weight="400">专用协议链接 + 已安装 + 浏览器允许</text>
+<text x="128" y="2198" font-size="27" fill="#aa4f49" font-weight="600">● 扩展</text>
+<text x="309" y="2198" font-size="30" fill="#122c41" font-weight="600">桌面应用窗口嵌入</text>
+<text x="767" y="2198" font-size="29" fill="#264457" font-weight="400">不原生支持；无法直接把本机软件窗口放进 iframe</text>
+<rect x="98" y="2224" width="2204" height="75" rx="0" fill="#f8fafc" stroke="#f8fafc" stroke-width="2"/>
+<text x="128" y="2273" font-size="27" fill="#aa4f49" font-weight="600">● 扩展</text>
+<text x="309" y="2273" font-size="30" fill="#122c41" font-weight="600">直接执行 .exe / 命令</text>
+<text x="767" y="2273" font-size="29" fill="#264457" font-weight="400">不原生支持；需额外本地桥接程序</text>
+<text x="128" y="2348" font-size="27" fill="#aa4f49" font-weight="600">● 扩展</text>
+<text x="309" y="2348" font-size="30" fill="#122c41" font-weight="600">软件控制与自动化</text>
+<text x="767" y="2348" font-size="29" fill="#264457" font-weight="400">不原生支持；需另接应用 API 或自动化工具</text>
+<text x="100" y="2416" font-size="28" fill="#647887" font-weight="400">专用链接由浏览器与操作系统唤起应用，桌面软件仍在独立窗口中运行。</text>
+<rect x="96" y="2463" width="65" height="54" rx="14" fill="#122c41" stroke="#122c41" stroke-width="2"/>
+<text x="109" y="2502" font-size="30" fill="#fff" font-weight="700">05</text>
+<text x="186" y="2502" font-size="44" fill="#122c41" font-weight="700">扩展、认证与部署</text>
+<rect x="96" y="2540" width="720" height="253" rx="22" fill="#fff" stroke="#dce5ec" stroke-width="2"/>
+<text x="124" y="2591" font-size="35" fill="#356dcc" font-weight="700">接入外部服务</text>
+<text x="124" y="2639" font-size="28" fill="#264457" font-weight="400">现成组件：配置地址与密钥</text>
+<text x="124" y="2680" font-size="28" fill="#264457" font-weight="400">通用 API / iframe：对接更多内容</text>
+<text x="124" y="2721" font-size="28" fill="#264457" font-weight="400">自定义 Vue 组件：扩展展示与交互</text>
+<text x="124" y="2762" font-size="28" fill="#264457" font-weight="400">数据刷新需要可访问的数据源</text>
+<rect x="840" y="2540" width="720" height="253" rx="22" fill="#fff" stroke="#dce5ec" stroke-width="2"/>
+<text x="868" y="2591" font-size="35" fill="#087e82" font-weight="700">账号与配置</text>
+<text x="868" y="2639" font-size="28" fill="#264457" font-weight="400">内置账号 / OIDC / Keycloak</text>
+<text x="868" y="2680" font-size="28" fill="#264457" font-weight="400">代理认证 / 角色与编辑权限</text>
+<text x="868" y="2721" font-size="28" fill="#264457" font-weight="400">导入导出 / 可选 REST 配置 API</text>
+<text x="868" y="2762" font-size="28" fill="#264457" font-weight="400">可选加密备份与恢复</text>
+<rect x="1584" y="2540" width="720" height="253" rx="22" fill="#fff" stroke="#dce5ec" stroke-width="2"/>
+<text x="1612" y="2591" font-size="35" fill="#122c41" font-weight="700">部署方式</text>
+<text x="1612" y="2639" font-size="28" fill="#264457" font-weight="400">Docker / Node.js 自托管</text>
+<text x="1612" y="2680" font-size="28" fill="#264457" font-weight="400">纯静态托管仅覆盖部分能力</text>
+<text x="1612" y="2721" font-size="28" fill="#264457" font-weight="400">探测、代理、写盘需要服务端</text>
+<text x="1612" y="2762" font-size="28" fill="#264457" font-weight="400">PWA 离线不等于外部服务可用</text>
+<rect x="96" y="2820" width="2208" height="109" rx="18" fill="#fff3df" stroke="#eed8b2" stroke-width="2"/>
+<text x="123" y="2862" font-size="29" fill="#a56913" font-weight="600">目标服务仍有自己的权限；Dashy 登录不会自动登录所有应用。</text>
+<text x="123" y="2902" font-size="27" fill="#a56913" font-weight="400">认证的保护范围取决于配置；跨域、嵌入策略、网络可达性与 API 权限都会影响接入效果。</text>
+<rect x="96" y="2968" width="65" height="54" rx="14" fill="#122c41" stroke="#122c41" stroke-width="2"/>
+<text x="109" y="3007" font-size="30" fill="#fff" font-weight="700">06</text>
+<text x="186" y="3007" font-size="44" fill="#122c41" font-weight="700">我们已经验证了什么</text>
+<text x="100" y="3053" font-size="29" fill="#087e82" font-weight="600">已验证：搜索过滤 · 时钟与本机数据刷新 · HTTP 状态变化 · 编辑表单 · iframe 工作区</text>
+<text x="100" y="3097" font-size="28" fill="#264457" font-weight="400">演示中的状态切换按钮为额外编写；Dashy 原生负责嵌入面板、探测并显示状态。</text>
+<text x="100" y="3139" font-size="27" fill="#647887" font-weight="400">未完整实测：外部账号接入、认证、云备份、配置写盘、桌面软件唤起。</text>
+<rect x="0" y="3180" width="2400" height="120" rx="0" fill="#122c41" stroke="#122c41" stroke-width="2"/>
+<text x="96" y="3229" font-size="34" fill="#fff" font-weight="600">适合：个人起始页 · 家庭服务器门户 · 团队工具导航 · 轻量信息总览</text>
+<text x="96" y="3272" font-size="25" fill="#c6d8e2" font-weight="400">依据：Dashy 4.6.14 源码、官方文档与本机演示  |  github.com/Lissy93/dashy  |  2026-09-16</text>
+</g></svg>
