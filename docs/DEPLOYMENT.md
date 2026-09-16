@@ -12,7 +12,7 @@
 
 ## GitHub Pages 地址规划
 
-008 Douyin Downloader 已整理为抖音信息的获取与整理层，涵盖搜索热榜、评论、媒体下载、转写与归档。研究文档、交互网页和 PNG/SVG 全景图已接入统一发布流程；线上地址在部署验证后登记。
+008 Douyin Downloader 已整理为抖音信息的获取与整理层，涵盖搜索热榜、评论、媒体下载、转写与归档。研究文档、交互网页和 PNG/SVG 全景图已发布至 [在线导读](https://yydshly.github.io/0914_codex_project/008-douyin-downloader/)；12 个文件逐项比对一致，总导航和八个项目入口验证通过。页面定位于获取与整理层，不登录抖音，也不把原理演示当下载实测。
 
 007 于 2026-09-16 发布并验证：[EvoMap 理解手册](https://yydshly.github.io/0914_codex_project/007-evomap/)。内容围绕群体智能愿景、类似 RAG 的经验检索与沉淀、多 Agent 复用和执行反馈展开；已核对全部 7 个静态文件内容，并确认原有研究入口可访问。
 

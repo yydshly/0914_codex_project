@@ -8,6 +8,8 @@
 
 ## 阅读入口
 
+- [在线交互导读](https://yydshly.github.io/0914_codex_project/008-douyin-downloader/)：三种请求路径、能力输出、全景图与源码证据。
+
 - [理解与交互原理](notes/understanding.md)：账号、浏览器、程序和抖音服务器如何交互。
 - [能力、输出与价值](notes/capabilities.md)：搜索、评论、下载、直播、转写、任务管理及边界。
 - [源码证据与版本](notes/sources.md)：固定版本链接、证据层级、许可和文档差异。
@@ -64,7 +66,7 @@ python -m http.server 8088 --bind 127.0.0.1 --directory projects/008-douyin-down
 | 上游许可 | MIT，见 [许可副本](notes/UPSTREAM-LICENSE.txt) |
 | 证据 | 源码静态核对＋作者现状披露 |
 | 在线采集 | 未执行；没有 Cookie 或真实账号数据进入本项目 |
-| 发布 | 已准备静态网页；线上状态以实际部署验证为准 |
+| 发布 | [GitHub Pages 在线导读](https://yydshly.github.io/0914_codex_project/008-douyin-downloader/)，已验证线上 12 个文件及总导航与八个项目入口 |
 
 目录：`notes/` 保存研究与验证，`assets/` 保存图片，`web/` 为网页源文件，`src/` 为打包检查脚本。后续实际可用性验证需分别测试搜索、详情、评论、主页及媒体传输，不把空列表直接解释成“没有内容”。
 

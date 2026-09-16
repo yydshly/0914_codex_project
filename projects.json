@@ -189,7 +189,7 @@
       ],
       "cover": "projects/008-douyin-downloader/assets/douyin-overview.png",
       "cover_alt": "抖音内容采集的能力、账号与服务器交互、Python直连与浏览器路径、输出及当前限制",
-      "demo": ""
+      "demo": "https://yydshly.github.io/0914_codex_project/008-douyin-downloader/"
     }
   ]
 }

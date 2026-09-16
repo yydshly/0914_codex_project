@@ -19,7 +19,7 @@
 - 调大根字号和 body 字号后，780 像素宽度下未发现页面横向溢出；不等同于全部文字均放大两倍的无障碍认证。
 - 图片、SVG 和六份公开文档本地 HTTP 请求均返回 200；未发现页面脚本异常或资源 HTTP 错误。
 - PNG 为 2400 × 2640、约 606 KB。已打开检查文字、箭头方向和布局；同时提供可编辑 SVG。
-- 总目录登记检查通过；008 已接入现有 Pages 构建步骤和发布清单，未把未经部署验证的 URL 写入 demo 字段。
+- 总目录登记检查通过；008 已接入现有 Pages 构建步骤和发布清单，部署验证通过后已登记正式 demo URL。
 - 统一 `scripts/build_pages.py` 已成功将 001–008 共八个网页打包到独立检查目录，保留已有入口；发布版本在独立工作区准备，只包含 008 及其目录与部署接入。
 
 ## 复核方法
@@ -27,3 +27,12 @@
 先运行 `src/build_site.py` 并在 8088 启动本地静态服务，再执行 `python projects/008-douyin-downloader/src/verify_web.py`（需 Playwright 与 Chromium）。结果写入项目 `.cache/web-verification.json`，截图也存放在 `.cache/`，不进入发布产物。生成图片另需 Pillow 与 Windows 微软雅黑。
 
 本次图片生成服务曾返回网络错误，未产生成图，最终图由可复现绘图源生成。详见 image-production.md。
+
+## GitHub Pages 发布验证
+
+- 内容提交：`28f007bf5e972d8109931521f9308f1a69be85cd`。
+- [部署运行 35057974287](https://github.com/yydshly/0914_codex_project/actions/runs/35057974287)：成功。
+- [在线网页](https://yydshly.github.io/0914_codex_project/008-douyin-downloader/)：12 个公开文件均返回 200，文本统一换行符后比较，图片按原始字节比较，全部与本地构建一致。
+- 总导航和 001–008 八个项目入口均返回 200，总导航包含新项目。
+- 可用 `python projects/008-douyin-downloader/src/verify_deployment.py --version <版本标记>` 重做比对，结果在项目 `.cache/deployment-verification.json`。
+- 该验证仅证明研究网页交付与资源完整，不证明上游抖音采集可用。
