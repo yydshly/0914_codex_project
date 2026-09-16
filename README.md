@@ -23,7 +23,7 @@
 | 10 | 010 | [Graft：代码库地图与按需上下文研究](projects/010-graft/README.md) | [Graft](https://github.com/trailhq/Graft) | 对源码进行扫描并构建代码索引与关系图，指导 AI 查找相关代码。构建原理待研究，效果待实测。 | 研究中 | [在线演示](https://yydshly.github.io/0914_codex_project/010-graft/) |
 | 11 | 011 | [Background Agents：后台 AI 编程平台能力研究](projects/011-background-agents/README.md) | [background\-agents](https://github.com/ColeMurray/background-agents) | 搭建给 AI 派开发任务的平台，在独立环境中修改代码、执行测试并提交 PR；附中文交互网页与前后端总览图，区分代理程序、模型接入及 Codex 关系，含 25 项固定版本来源，真实运行效果待验证。 | 研究中 | [在线演示](https://yydshly.github.io/0914_codex_project/011-background-agents/) |
 | 12 | 012 | [Future AGI：AI 应用评测与持续改进研究](projects/012-future-agi/README.md) | [future\-agi](https://github.com/future-agi/future-agi) | 检测和评估 AI 应用的能力与表现：记录执行过程，通过规则、参考比较、向量相似度、模型裁判、Agent 调查、工具调用及轨迹匹配进行检测。附网页与理解总览图；根本原理需后期深入研究，实际效果待实测。 | 研究中 | [在线演示](https://yydshly.github.io/0914_codex_project/012-future-agi/) |
-| 13 | 013 | [AgentKey / AIsa / TikHub：数据来源与处理能力研究](projects/013-agent-data-sources/README.md) | [overview](https://docs.agentkey.app/capabilities/overview) | AgentKey 多源接入、AIsa API与模型工具聚合、TikHub 社交内容数据：用引导图和中文网页整理148条来源、服务与能力，说明API等获取方式、清理规则及产品价值，区分已列接口、后台未知与未实测边界。 | 研究中 | — |
+| 13 | 013 | [AgentKey / AIsa / TikHub：数据来源与处理能力研究](projects/013-agent-data-sources/README.md) | [overview](https://docs.agentkey.app/capabilities/overview) | AgentKey 多源接入、AIsa API与模型工具聚合、TikHub 社交内容数据：用引导图和中文网页整理148条来源、服务与能力，说明API等获取方式、清理规则及产品价值，区分已列接口、后台未知与未实测边界。 | 研究中 | [在线演示](https://yydshly.github.io/0914_codex_project/013-agent-data-sources/) |
 <!-- PROJECT_INDEX:END -->
 
 ## 项目预览
@@ -213,7 +213,7 @@ AgentKey 多源接入、AIsa API与模型工具聚合、TikHub 社交内容数�
 
 ![三个网站的产品定位、六类代表来源、获取方式与从清理到可追溯结果的建议流程。](projects/013-agent-data-sources/assets/agent-data-sources-guide.png)
 
-[研究记录](projects/013-agent-data-sources/README.md) · [上游仓库](https://docs.agentkey.app/capabilities/overview)
+[研究记录](projects/013-agent-data-sources/README.md) · [上游仓库](https://docs.agentkey.app/capabilities/overview) · [在线演示](https://yydshly.github.io/0914_codex_project/013-agent-data-sources/)
 
 标签：数据来源 / 数据清理 / API聚合 / 社交数据 / 产品思路
 <!-- PROJECT_PREVIEWS:END -->

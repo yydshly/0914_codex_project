@@ -25,6 +25,6 @@ python -m http.server 8130 --bind 127.0.0.1 --directory projects/013-agent-data-
 
 维护源码：`index.html`、`style.css`、`main.js`；构建读取 `notes/source-inventory.json` 与 `notes/source-manifest.json`。修改后重新运行构建。产物放在被忽略的 `web/dist/`。
 
-网页通过仓库统一 GitHub Pages 流程发布；`pages.json` 登记 013，工作流从本项目源码构建并与其他项目一起打包。发布成功并访问核验后，在项目索引登记正式地址。
+网页通过仓库统一 GitHub Pages 流程发布；`pages.json` 登记 013，工作流从本项目源码构建并与其他项目一起打包。正式地址：[在线研究导读](https://yydshly.github.io/0914_codex_project/013-agent-data-sources/)，已通过发布和访问核验。
 
 默认打开“研究导读”，展示研究摘要、三家分工、引导图和 73 条非“仅规划”的分类名录；原有 `#sources`、`#access` 等链接保留。引导图与文字摘要支持下载；完整目录包含 148 条登记，规划条目默认隐藏。
