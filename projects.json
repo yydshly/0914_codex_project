@@ -154,7 +154,12 @@
       "repo": "https://github.com/EvoMap/evolver",
       "summary": "以群体智能为愿景，探索类似 RAG 的经验检索与沉淀，让多个 Agent 复用方法，并用执行验证与反馈持续积累。作为产品方向具有参考价值，整体收益仍待对照验证；附理解图、交互导读及 Evolver 1.94.0 的 77 项离线测试与模块探针。",
       "status": "研究中",
-      "tags": ["AI 经验复用", "GEP", "Agent 架构", "离线验证"],
+      "tags": [
+        "AI 经验复用",
+        "GEP",
+        "Agent 架构",
+        "离线验证"
+      ],
       "cover": "projects/007-evomap/assets/product-understanding.png",
       "cover_alt": "AI 技能与经验沉淀的产品方向：区分能力协作与经验积累，连接本地经验库与检索、执行、验证、回写流程，再探索团队共享及群体智能。",
       "demo": "https://yydshly.github.io/0914_codex_project/007-evomap/",
@@ -166,6 +171,25 @@
           "caption": "当下能协作，以后有经验可复用。用做网站的例子串起分工、交接、检查、换人和经验沉淀；本图是机制示例，非运行截图，云端蜂群收益尚未实测。"
         }
       ]
+    },
+    {
+      "id": "008",
+      "order": 80,
+      "slug": "douyin-downloader",
+      "name": "Douyin Downloader：抖音采集与下载原理研究",
+      "repo": "https://github.com/jiji262/douyin-downloader",
+      "summary": "围绕抖音作品、搜索热榜与评论，提供采集、媒体下载、语音转写和本地归档的工程基础，作为素材库、内容研究与后续 AI 分析的数据获取与整理层；附交互导读、全景图及账号、接口、浏览器分工说明，明确当前风控与未实测边界。",
+      "status": "研究中",
+      "tags": [
+        "抖音采集",
+        "账号会话",
+        "网页接口",
+        "浏览器桥接",
+        "源码研究"
+      ],
+      "cover": "projects/008-douyin-downloader/assets/douyin-overview.png",
+      "cover_alt": "抖音内容采集的能力、账号与服务器交互、Python直连与浏览器路径、输出及当前限制",
+      "demo": ""
     }
   ]
 }

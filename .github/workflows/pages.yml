@@ -14,6 +14,7 @@ on:
       - 'projects/005-diagram-design/**'
       - 'projects/006-dashy/**'
       - 'projects/007-evomap/**'
+      - 'projects/008-douyin-downloader/**'
   workflow_dispatch:
 
 permissions:
@@ -48,6 +49,8 @@ jobs:
           python projects/006-dashy/src/build_site.py
       - name: Build EvoMap understanding guide
         run: python projects/007-evomap/src/build_site.py
+      - name: Build Douyin Downloader research guide
+        run: python projects/008-douyin-downloader/src/build_site.py
       - name: Build combined project site
         run: python scripts/build_pages.py
       - uses: actions/configure-pages@v5

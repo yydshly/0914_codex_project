@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>抖音采集如何发生 · Douyin Downloader 研究</title>
+  <meta name="description" content="从账号、Cookie、Python、浏览器与抖音服务器的分工，理解搜索、评论、下载的原理、输出与边界。">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="style.css">
+  <script src="main.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#main">跳到正文</a>
+<header class="masthead"><a class="brand" href="#main"><span class="brand-mark">D</span><span>RESEARCH / 008<br><strong>Douyin Downloader</strong></span></a><nav aria-label="章节"><a href="#mechanism">交互原理</a><a href="#capabilities">能力与效果</a><a href="#overview">一张图</a><a href="#evidence">证据</a></nav></header>
+<main id="main">
+  <section class="intro"><div><p class="eyebrow">从一个链接，到一份本地资料</p><h1>登录之后，<br>请求从哪里发出？</h1><p class="lead">核心价值是抖音信息的获取与整理：自动采集、下载和归档，为素材库、内容研究与后续 AI 分析准备数据。</p></div><aside class="scope"><span class="scope-label">本次研究范围</span><p>公开源码核对<br>＋作者现状说明</p><span>2026.09.16 · commit 125ddf4</span><small>未登录实测；本页是原理导读，不连接抖音，也不读取 Cookie。</small></aside></section>
+
+  <section id="mechanism" class="mechanism" aria-labelledby="mechanism-title">
+    <div class="section-heading"><div><p class="eyebrow">01 / 交互原理</p><h2 id="mechanism-title">三条路径，一套采集后端</h2></div><p>切换路径，看清谁在发请求。</p></div>
+    <div class="route-controls" role="group" aria-label="选择请求路径"><button type="button" data-mode="direct" aria-pressed="true">01　Python 接口直连</button><button type="button" data-mode="fallback" aria-pressed="false">02　主页浏览器兜底</button><button type="button" data-mode="desktop" aria-pressed="false">03　桌面页面桥接</button></div>
+    <div class="route-panel" id="route-panel" aria-live="polite" aria-atomic="true">
+      <div class="route-top"><h3 id="route-title">公开 Python 版：登录后，通常由程序直接请求</h3><span id="route-status" class="tag">源码已核对</span></div>
+      <ol class="route" id="route"><li><span class="step-no">1</span><strong>浏览器登录</strong><p>你在抖音网页完成登录，建立会话。</p></li><li><span class="step-no">2</span><strong>读取 Cookie</strong><p>程序获得会话与浏览器相关信息。</p></li><li><span class="step-no">3</span><strong>Python 发请求</strong><p>携带参数、请求头和签名，访问网页接口。</p></li><li><span class="step-no">4</span><strong>平台返回数据</strong><p>接受请求后，返回搜索、评论或作品资料。</p></li></ol>
+      <div class="route-note"><strong id="route-key">登录过 ≠ 后续请求都经过浏览器</strong><p id="route-detail">这是公开版的主要路径。Cookie 能提供会话信息，但不能保证通过平台的环境校验与风控。</p></div>
+    </div>
+    <div class="identity"><div><span class="mini-label">访问身份</span><strong>你的账号 A</strong><p>随请求携带的会话影响身份与权限。</p></div><span class="identity-symbol" aria-hidden="true">≠</span><div><span class="mini-label">查询目标</span><strong>博主 B / 作品 ID</strong><p>决定查谁的作品，不需要 B 的密码。</p></div><div class="identity-result"><strong>内容来自抖音服务器</strong><p>不从博主的手机取文件；能看什么仍由平台决定。</p></div></div>
+  </section>
+
+  <section id="capabilities" class="content-section"><div class="section-heading"><div><p class="eyebrow">02 / 能力与效果</p><h2>同一套请求基础，三种不同产出</h2></div><p>展开查看处理步骤与能力边界。</p></div>
+    <div class="feature-list">
+      <details open><summary><span class="feature-no">A</span><span><strong>搜索与热榜</strong><small>从关键词得到作品列表，从热榜得到时间快照</small></span><span class="output-label">JSONL</span></summary><div class="feature-body"><div><h3>怎样实现</h3><p>关键词 → 抖音网页搜索接口 → 提取作品信息 → 游标翻页 → 按 ID 去重 → 保存。热榜直接获取词条列表，按采集时间形成快照。</p><p>匹配和排序由抖音完成。库没有自己建立搜索引擎，也不会把结果自动全部下载。</p></div><div class="output"><span>输出结构示例 · 非真实采集</span><code>search/<br>　露营装备_时间.jsonl<br>hot_board/<br>　采集时间.jsonl</code></div></div></details>
+      <details><summary><span class="feature-no">B</span><span><strong>视频、图集与音乐下载</strong><small>先获取作品资料，再从媒体服务器取文件</small></span><span class="output-label">媒体文件</span></summary><div class="feature-body"><div><h3>怎样实现</h3><p>短链跳转 → 作品 ID → 详情与媒体地址 → 优选来源 → 分块写入临时文件 → 长度校验与归档。主页、合集批量下载会先枚举作品。</p><p>“无水印”是优选媒体源，不是擦除画面；较高画质不保证作者原始文件。详情被拦截，后续下载也可能无法开始。</p></div><div class="output"><span>输出结构示例 · 非真实采集</span><code>作者 / post / 作品 /<br>　作品.mp4<br>　作品_cover.jpg<br>　作品_data.json</code></div></div></details>
+      <details><summary><span class="feature-no">C</span><span><strong>评论与二级回复</strong><small>作品 ID 确定评论区，分页游标控制继续读取</small></span><span class="output-label">JSON</span></summary><div class="feature-body"><div><h3>怎样实现</h3><p>作品 ID → 一级评论接口 → 分页与去重 → 保存 JSON。开启回复后，按评论 ID 额外请求回复接口。</p><p><strong>当前自动流程只取每条评论的第一页回复。</strong>采集文本不等于完成情绪分析；现成入口主要附在下载工作流上。</p></div><div class="output"><span>输出字段示例 · 非真实采集</span><code>作品_comments.json<br>　作品 ID<br>　评论列表<br>　可选回复列表</code></div></div></details>
+    </div>
+    <div class="secondary-grid"><article><span class="mini-label">保存与整理</span><h3>直播、回放、语音转写</h3><p>有直播录制和回放模块。主流程转写服务输出 TXT / JSON；独立本地 Whisper 脚本可输出 SRT。直播仍有实验性限制。</p></article><article><span class="mini-label">运行与归档</span><h3>并发、重试、增量与历史</h3><p>限速、失败处理、已有文件跳过、元数据与 SQLite 历史，组成下载管理基础。去重和重下载受配置影响。</p></article><article><span class="mini-label">接入其他系统</span><h3>HTTP 服务与通知</h3><p>提供下载任务入口、状态查询和通知。服务任务存在内存，重启会丢失；搜索与评论没有独立 HTTP 路由。</p></article></div>
+  </section>
+
+  <section class="server-section"><div><p class="eyebrow">两次请求，两个职责</p><h2>业务数据与媒体文件<br>走不同的传输阶段</h2><p>账号不会主动发请求。运行在你电脑或服务器上的程序，才是实际客户端。</p></div><div class="network"><div class="network-row"><span class="client">Python 程序</span><span class="exchange">请求关键词 / 作品 ID<br><b>⇄</b><br>返回列表 / 评论 / 媒体地址</span><span class="remote">抖音业务接口</span></div><div class="network-row"><span class="client">Python 程序</span><span class="exchange">请求媒体地址<br><b>⇄</b><br>返回视频 / 图片 / 音频</span><span class="remote">媒体服务器</span></div><small>按职责划分的概念图，不代表抖音实际部署拓扑。</small></div></section>
+
+  <section id="overview" class="content-section"><div class="section-heading"><div><p class="eyebrow">03 / 一张图看全局</p><h2>能力、原理、效果与边界</h2></div><div class="links"><a href="assets/douyin-overview.png" target="_blank" rel="noopener">打开原图 ↗</a><a href="assets/douyin-overview.png" download="douyin-overview.png">下载 PNG ↓</a><a href="assets/douyin-overview.svg" download>可编辑 SVG ↓</a></div></div><a class="poster" href="assets/douyin-overview.png" target="_blank" rel="noopener" aria-label="打开抖音下载库全景图原图"><img src="assets/douyin-overview.png" alt="抖音下载库全景图：公开版、浏览器兜底、桌面桥接的区别；账号与服务器交互；搜索、评论、下载等能力及当前限制" loading="lazy"></a><p class="caption">研究示意图。可验证的内容是源码结构与设计产出，不是当前在线下载成功率。</p></section>
+
+  <section class="value-section"><p class="eyebrow">04 / 为什么值得研究</p><h2>抖音信息的获取与整理层</h2><div class="value-grid"><article><span>01</span><h3>素材归档</h3><p>把媒体与作品资料留在本地，减少逐个保存、查找和整理。</p></article><article><span>02</span><h3>内容研究</h3><p>搜索、评论、热榜和语音文本，为选题与用户反馈分析提供材料。</p></article><article><span>03</span><h3>二次开发</h3><p>复用解析、分页、队列和存储，再接入自己的分析与知识库。</p></article></div><div class="extension">抖音内容 → 获取、筛选与归档〔本库〕 <span>→ 分析、总结与业务洞察〔另接系统〕</span></div></section>
+
+  <section class="limitations"><div><p class="eyebrow">05 / 实现与效果的距离</p><h2>有代码，<br>不等于当前稳定可用。</h2></div><ul><li><strong>会话有效，也可能被风控拒绝。</strong>作者披露多项 CLI 核心接口已受限；简单重试或换 Cookie 不一定解决。</li><li><strong>浏览器不是全能力保证。</strong>主页兜底尚未验证新门禁；桌面桥接是另一条路线，本次未独立实测。</li><li><strong>采集不保证完整。</strong>二级回复仅第一页；接口返回范围、分页和平台限制都会影响结果。</li><li><strong>网页展示的是理解，不是成功案例。</strong>没有登录测试、没有实测成功率，也不把合成文件名当真实采集。</li></ul></section>
+
+  <section id="evidence" class="content-section evidence"><div class="section-heading"><div><p class="eyebrow">06 / 可追溯的理解</p><h2>从文档回到源码</h2></div><span class="tag">MIT · 研究快照 125ddf4</span></div><div class="evidence-grid"><div><h3>本项目研究文档</h3><a href="notes/understanding.md" download>账号与服务器的交互原理 ↓</a><a href="notes/capabilities.md" download>完整能力、产出与价值 ↓</a><a href="notes/sources.md" download>来源、版本与证据层级 ↓</a><a href="notes/verification.md" download>研究网页验证记录 ↓</a><a href="notes/image-production.md" download>图片制作记录 ↓</a><a href="notes/UPSTREAM-LICENSE.txt">上游 MIT 许可 ↗</a></div><div><h3>上游固定版本</h3><a href="https://github.com/jiji262/douyin-downloader/tree/125ddf4d7196b7a18fe3a0258cc746503c9d1c57">完整研究版本 ↗</a><a href="https://github.com/jiji262/douyin-downloader/blob/125ddf4d7196b7a18fe3a0258cc746503c9d1c57/core/api_client.py">接口、评论、浏览器与页面桥接 ↗</a><a href="https://github.com/jiji262/douyin-downloader/blob/125ddf4d7196b7a18fe3a0258cc746503c9d1c57/core/downloader_base.py">媒体选择与下载管理 ↗</a><a href="https://github.com/jiji262/douyin-downloader/blob/125ddf4d7196b7a18fe3a0258cc746503c9d1c57/README.md">作者功能说明与当前限制 ↗</a><a href="https://github.com/jiji262/douyin-downloader/blob/125ddf4d7196b7a18fe3a0258cc746503c9d1c57/AGENTS.md">公开版与桌面版的差异 ↗</a></div></div></section>
+</main><footer><span>008 / GitHub 项目研究集</span><a href="https://github.com/yydshly/0914_codex_project">返回研究仓库 ↗</a><span>原理导读 · 非官方产品页面</span></footer>
+</body></html>

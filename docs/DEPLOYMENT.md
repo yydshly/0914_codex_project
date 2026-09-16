@@ -2,7 +2,7 @@
 
 ## 当前状态
 
-已配置统一的 GitHub Actions 发布流程 `.github/workflows/pages.yml`。`pages.json` 显式选择要发布的项目编号，目前为 `001` 至 `007`；`scripts/build_pages.py` 将各项目的 `web/dist/` 打包到 `_site/<编号-slug>/`，并生成站点导航页。001、005、006、007 在 CI 中从源码构建，其余项目沿用已登记的静态产物。
+已配置统一的 GitHub Actions 发布流程 `.github/workflows/pages.yml`。`pages.json` 显式选择要发布的项目编号，目前为 `001` 至 `008`；`scripts/build_pages.py` 将各项目的 `web/dist/` 打包到 `_site/<编号-slug>/`，并生成站点导航页。001、005、006、007、008 在 CI 中从源码构建，其余项目沿用已登记的静态产物。
 
 发布状态以 GitHub Actions 部署成功且网页实际可访问为准。只有经过访问验证的演示地址才写入 `projects.json`，并同步到仓库索引。
 
@@ -11,6 +11,8 @@
 006 于 2026-09-16 发布并验证：[Dashy 能力与原理研究页](https://yydshly.github.io/0914_codex_project/006-dashy/)。引导图采用能力架构全景图和原版工作台实拍；已核对线上页面与全部静态资源。
 
 ## GitHub Pages 地址规划
+
+008 Douyin Downloader 已整理为抖音信息的获取与整理层，涵盖搜索热榜、评论、媒体下载、转写与归档。研究文档、交互网页和 PNG/SVG 全景图已接入统一发布流程；线上地址在部署验证后登记。
 
 007 于 2026-09-16 发布并验证：[EvoMap 理解手册](https://yydshly.github.io/0914_codex_project/007-evomap/)。内容围绕群体智能愿景、类似 RAG 的经验检索与沉淀、多 Agent 复用和执行反馈展开；已核对全部 7 个静态文件内容，并确认原有研究入口可访问。
 

@@ -18,6 +18,7 @@
 | 5 | 005 | [Diagram Design：图形设计规范与效果展厅](projects/005-diagram-design/README.md) | [diagram\-design](https://github.com/cathrynlavery/diagram-design) | 让 AI 将文字、数据或旧图源文件绘制为可编辑 HTML/SVG 并导出 PNG，覆盖七类 40 种基础图型，支持品牌、动画和三格式重绘；附 57 组 155 个原版示例、8 版中文案例、2 版理解总览及完整绘图清单。 | 已完成 | [在线演示](https://yydshly.github.io/0914_codex_project/005-diagram-design/) |
 | 6 | 006 | [Dashy：网页式应用工作台与信息看板](projects/006-dashy/README.md) | [dashy](https://github.com/Lissy93/dashy) | 用网页集中应用入口、API 数据和服务状态，减少记网址、找入口和逐个查看后台的操作；支持搜索、分组、编辑与嵌入工作区，适合个人首页、家庭服务器和团队工具导航。附架构全景图、原版实拍及网页与桌面应用边界说明。 | 已完成 | [在线演示](https://yydshly.github.io/0914_codex_project/006-dashy/) |
 | 7 | 007 | [EvoMap / Evolver：AI 经验复用与自进化研究](projects/007-evomap/README.md) | [evolver](https://github.com/EvoMap/evolver) | 以群体智能为愿景，探索类似 RAG 的经验检索与沉淀，让多个 Agent 复用方法，并用执行验证与反馈持续积累。作为产品方向具有参考价值，整体收益仍待对照验证；附理解图、交互导读及 Evolver 1\.94\.0 的 77 项离线测试与模块探针。 | 研究中 | [在线演示](https://yydshly.github.io/0914_codex_project/007-evomap/) |
+| 8 | 008 | [Douyin Downloader：抖音采集与下载原理研究](projects/008-douyin-downloader/README.md) | [douyin\-downloader](https://github.com/jiji262/douyin-downloader) | 围绕抖音作品、搜索热榜与评论，提供采集、媒体下载、语音转写和本地归档的工程基础，作为素材库、内容研究与后续 AI 分析的数据获取与整理层；附交互导读、全景图及账号、接口、浏览器分工说明，明确当前风控与未实测边界。 | 研究中 | — |
 <!-- PROJECT_INDEX:END -->
 
 ## 项目预览
@@ -136,6 +137,16 @@
 [研究记录](projects/007-evomap/README.md) · [上游仓库](https://github.com/EvoMap/evolver) · [在线演示](https://yydshly.github.io/0914_codex_project/007-evomap/)
 
 标签：AI 经验复用 / GEP / Agent 架构 / 离线验证
+
+### 008 · Douyin Downloader：抖音采集与下载原理研究
+
+围绕抖音作品、搜索热榜与评论，提供采集、媒体下载、语音转写和本地归档的工程基础，作为素材库、内容研究与后续 AI 分析的数据获取与整理层；附交互导读、全景图及账号、接口、浏览器分工说明，明确当前风控与未实测边界。
+
+![抖音内容采集的能力、账号与服务器交互、Python直连与浏览器路径、输出及当前限制](projects/008-douyin-downloader/assets/douyin-overview.png)
+
+[研究记录](projects/008-douyin-downloader/README.md) · [上游仓库](https://github.com/jiji262/douyin-downloader)
+
+标签：抖音采集 / 账号会话 / 网页接口 / 浏览器桥接 / 源码研究
 <!-- PROJECT_PREVIEWS:END -->
 
 ## 开始研究
