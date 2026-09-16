@@ -157,7 +157,7 @@
       "tags": ["AI 经验复用", "GEP", "Agent 架构", "离线验证"],
       "cover": "projects/007-evomap/assets/product-understanding.png",
       "cover_alt": "AI 技能与经验沉淀的产品方向：区分能力协作与经验积累，连接本地经验库与检索、执行、验证、回写流程，再探索团队共享及群体智能。",
-      "demo": ""
+      "demo": "https://yydshly.github.io/0914_codex_project/007-evomap/"
     }
   ]
 }

@@ -10,7 +10,7 @@
 
 ## 阅读入口
 
-- [网页构建与启动说明](web/README.md)：从愿景、类似 RAG 的经验机制、多 Agent 复用和证据边界理解 EvoMap，含五步交互案例。
+- [在线理解手册](https://yydshly.github.io/0914_codex_project/007-evomap/) · [网页构建与启动说明](web/README.md)：从愿景、类似 RAG 的经验机制、多 Agent 复用和证据边界理解 EvoMap，含五步交互案例。
 - [能力与实际用途](notes/capabilities.md)：谁使用、输入什么、产出什么、还缺什么。
 - [架构与原理](notes/architecture.md)：从日志到经验选择、执行提示、验证和资产记录。
 - [实验报告](notes/experiments.md)：测试结果、合成案例、反例与证据边界。
@@ -88,7 +88,7 @@ python src/research.py
 | 研究日期 | 2026-09-16 |
 | 验证 | 19 项哈希＋47 项选择器＋11 项提示词测试通过；研究探针通过 |
 | 云端验证 | 未进行 |
-| 在线演示 | 暂无 |
+| 在线导读 | [GitHub Pages 理解手册](https://yydshly.github.io/0914_codex_project/007-evomap/)，已验证页面与全部 7 个静态文件 |
 
 ## 后续验证
 

@@ -19,7 +19,9 @@ python -m http.server 8077 --bind 127.0.0.1 --directory projects/007-evomap/web/
 
 理解图来源于本研究的产品方向归纳，使用 `src/draw_understanding.py` 生成。修改或重绘需要 Pillow 和微软雅黑字体；图已在本地打开检查文字与排版。
 
-项目已加入统一 GitHub Pages 发布清单。推送到 main 后，工作流运行 `src/build_site.py`，与其他研究页面一起部署。上线并验证可访问后，再把在线入口登记到 `projects.json`。
+已部署：[在线理解手册](https://yydshly.github.io/0914_codex_project/007-evomap/)。项目已加入统一 GitHub Pages 发布清单。推送到 main 后，工作流运行 `src/build_site.py`，与其他研究页面一起部署。
+
+2026-09-16 部署成功，线上 7 个静态文件均返回 HTTP 200，并核对与本地构建内容一致（文本统一换行符后比较）；同时验证总导航与 001–007 全部入口可访问。
 
 ## 验证范围
 

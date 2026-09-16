@@ -12,6 +12,8 @@
 
 ## GitHub Pages 地址规划
 
+007 于 2026-09-16 发布并验证：[EvoMap 理解手册](https://yydshly.github.io/0914_codex_project/007-evomap/)。内容围绕群体智能愿景、类似 RAG 的经验检索与沉淀、多 Agent 复用和执行反馈展开；已核对全部 7 个静态文件内容，并确认原有研究入口可访问。
+
 GitHub Pages 每个仓库最多有一个站点，可把多个静态演示放在同一站点的不同子目录：
 
 ```text
