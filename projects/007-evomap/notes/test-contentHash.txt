@@ -1,0 +1,159 @@
+TAP version 13
+# Subtest: canonicalize
+    # Subtest: serializes null and undefined as "null"
+    ok 1 - serializes null and undefined as "null"
+      ---
+      duration_ms: 0.5141
+      type: 'test'
+      ...
+    # Subtest: serializes primitives
+    ok 2 - serializes primitives
+      ---
+      duration_ms: 0.098
+      type: 'test'
+      ...
+    # Subtest: serializes non-finite numbers as null
+    ok 3 - serializes non-finite numbers as null
+      ---
+      duration_ms: 0.0759
+      type: 'test'
+      ...
+    # Subtest: serializes arrays preserving order
+    ok 4 - serializes arrays preserving order
+      ---
+      duration_ms: 0.117
+      type: 'test'
+      ...
+    # Subtest: serializes objects with sorted keys
+    ok 5 - serializes objects with sorted keys
+      ---
+      duration_ms: 0.0905
+      type: 'test'
+      ...
+    # Subtest: produces deterministic output regardless of key insertion order
+    ok 6 - produces deterministic output regardless of key insertion order
+      ---
+      duration_ms: 0.0708
+      type: 'test'
+      ...
+    # Subtest: handles nested objects and arrays
+    ok 7 - handles nested objects and arrays
+      ---
+      duration_ms: 0.1077
+      type: 'test'
+      ...
+    1..7
+ok 1 - canonicalize
+  ---
+  duration_ms: 1.7357
+  type: 'suite'
+  ...
+# Subtest: computeAssetId
+    # Subtest: returns a sha256-prefixed hash string
+    ok 1 - returns a sha256-prefixed hash string
+      ---
+      duration_ms: 0.604
+      type: 'test'
+      ...
+    # Subtest: excludes asset_id field from hash by default
+    ok 2 - excludes asset_id field from hash by default
+      ---
+      duration_ms: 0.3391
+      type: 'test'
+      ...
+    # Subtest: produces identical hashes for identical content
+    ok 3 - produces identical hashes for identical content
+      ---
+      duration_ms: 0.2008
+      type: 'test'
+      ...
+    # Subtest: produces different hashes for different content
+    ok 4 - produces different hashes for different content
+      ---
+      duration_ms: 0.114
+      type: 'test'
+      ...
+    # Subtest: returns null for non-object input
+    ok 5 - returns null for non-object input
+      ---
+      duration_ms: 0.0533
+      type: 'test'
+      ...
+    1..5
+ok 2 - computeAssetId
+  ---
+  duration_ms: 1.5532
+  type: 'suite'
+  ...
+# Subtest: verifyAssetId
+    # Subtest: returns true for correct asset_id
+    ok 1 - returns true for correct asset_id
+      ---
+      duration_ms: 0.6063
+      type: 'test'
+      ...
+    # Subtest: returns false for tampered content
+    ok 2 - returns false for tampered content
+      ---
+      duration_ms: 0.1096
+      type: 'test'
+      ...
+    # Subtest: returns false for missing asset_id
+    ok 3 - returns false for missing asset_id
+      ---
+      duration_ms: 0.0389
+      type: 'test'
+      ...
+    # Subtest: returns false for null input
+    ok 4 - returns false for null input
+      ---
+      duration_ms: 0.0277
+      type: 'test'
+      ...
+    1..4
+ok 3 - verifyAssetId
+  ---
+  duration_ms: 0.8483
+  type: 'suite'
+  ...
+# Subtest: SCHEMA_VERSION
+    # Subtest: is a semver string
+    ok 1 - is a semver string
+      ---
+      duration_ms: 0.1287
+      type: 'test'
+      ...
+    1..1
+ok 4 - SCHEMA_VERSION
+  ---
+  duration_ms: 0.1598
+  type: 'suite'
+  ...
+# Subtest: @evomap/gep-sdk facade
+    # Subtest: re-exports SDK references identically (no inlined copies)
+    ok 1 - re-exports SDK references identically (no inlined copies)
+      ---
+      duration_ms: 0.8165
+      type: 'test'
+      ...
+    # Subtest: produces the same asset_id as v1.83.0 for a known fixed gene
+    ok 2 - produces the same asset_id as v1.83.0 for a known fixed gene
+      ---
+      duration_ms: 0.0995
+      type: 'test'
+      ...
+    1..2
+ok 5 - @evomap/gep-sdk facade
+  ---
+  duration_ms: 1.014
+  type: 'suite'
+  ...
+1..5
+# tests 19
+# suites 5
+# pass 19
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 35.2215

@@ -1,0 +1,128 @@
+node:assert:95
+  throw new AssertionError(obj);
+  ^
+
+AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
++ actual - expected
+
++ {
++   _source: {
++     claims_outside_scope: 'assumption',
++     kind: 'skill2gep',
++     paper_scope: 'code-science (arXiv:2604.15097, 45 tasks, Gemini 3.1 Pro/Flash Lite)',
++     quality_heuristics: {
++       avoid_count: 0,
++       preconditions_extracted: 0,
++       signals_extracted: 4,
++       strategy_steps: 0,
++       validation_declared_count: 0,
++       validation_fallback_used: true,
++       validation_runnable_count: 0
++     },
++     rationale_paper: 'Wang, Ren, Zhang. From Procedural Skills to Strategy Genes. arXiv:2604.15097',
++     skill_hash: 'ba0bdb4db2',
++     skill_name: 'env-vars',
++     skill_platform: 'vercel'
++   },
++   asset_id: 'sha256:1501bc37fbefb18630c4dc8a95d8cdc1ed32bec4a465dc3223280ae907e07297',
++   category: 'optimize',
++   constraints: {
++     forbidden_paths: [
++       '.git',
++       'node_modules'
++     ],
++     max_files: 12
++   },
++   id: 'gene_distilled_s2g-env-vars',
++   preconditions: [
++     'Skill env-vars has just been executed locally'
++   ],
++   routing_hint: {
++     reasoning_level: 'low',
++     tier: 'cheap'
++   },
++   schema_version: '1.6.0',
++   signals_match: [
++     'use_when_working_with',
++     'env_files',
++     'vercel_env_commands',
++     'oidc_tokens',
++     'vercel_env_pull',
++     'env_local_overwrite',
++     'oidc_token_expiry',
++     'dotenv_cli'
++   ],
++   strategy: [
++     'Identify the dominant trigger signals from the Skill description.',
++     'Apply the smallest targeted change that satisfies the Skill workflow.',
++     'Run the Skill validation commands and abort if any fails.'
++   ],
++   summary: 'Vercel environment variable expert guidance. Use when working with .env files, vercel env commands, OIDC tokens, or managing environment-specific configuration.',
++   type: 'Gene',
++   validation: [
++     'node --version'
++   ]
++ }
+- null
+
+    at Object.<anonymous> (F:\codex_project\0914_codex_project\projects\007-evomap\src\probe.cjs:15:8)
+    at Module._compile (node:internal/modules/cjs/loader:1730:14)
+    at Object..js (node:internal/modules/cjs/loader:1895:10)
+    at Module.load (node:internal/modules/cjs/loader:1465:32)
+    at Function._load (node:internal/modules/cjs/loader:1282:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:170:5)
+    at node:internal/main/run_main_module:36:49 {
+  generatedMessage: true,
+  code: 'ERR_ASSERTION',
+  actual: {
+    type: 'Gene',
+    id: 'gene_distilled_s2g-env-vars',
+    summary: 'Vercel environment variable expert guidance. Use when working with .env files, vercel env commands, OIDC tokens, or managing environment-specific configuration.',
+    category: 'optimize',
+    signals_match: [
+      'use_when_working_with',
+      'env_files',
+      'vercel_env_commands',
+      'oidc_tokens',
+      'vercel_env_pull',
+      'env_local_overwrite',
+      'oidc_token_expiry',
+      'dotenv_cli'
+    ],
+    preconditions: [ 'Skill env-vars has just been executed locally' ],
+    strategy: [
+      'Identify the dominant trigger signals from the Skill description.',
+      'Apply the smallest targeted change that satisfies the Skill workflow.',
+      'Run the Skill validation commands and abort if any fails.'
+    ],
+    constraints: { max_files: 12, forbidden_paths: [ '.git', 'node_modules' ] },
+    validation: [ 'node --version' ],
+    routing_hint: { tier: 'cheap', reasoning_level: 'low' },
+    schema_version: '1.6.0',
+    _source: {
+      kind: 'skill2gep',
+      skill_name: 'env-vars',
+      skill_platform: 'vercel',
+      skill_hash: 'ba0bdb4db2',
+      rationale_paper: 'Wang, Ren, Zhang. From Procedural Skills to Strategy Genes. arXiv:2604.15097',
+      paper_scope: 'code-science (arXiv:2604.15097, 45 tasks, Gemini 3.1 Pro/Flash Lite)',
+      claims_outside_scope: 'assumption',
+      quality_heuristics: {
+        strategy_steps: 0,
+        avoid_count: 0,
+        validation_declared_count: 0,
+        validation_runnable_count: 0,
+        validation_fallback_used: true,
+        signals_extracted: 4,
+        preconditions_extracted: 0
+      }
+    },
+    asset_id: 'sha256:1501bc37fbefb18630c4dc8a95d8cdc1ed32bec4a465dc3223280ae907e07297'
+  },
+  expected: null,
+  operator: 'strictEqual'
+}
+
+Node.js v22.15.0

@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>EvoMap 理解手册 · 从经验复用到群体智能</title>
+<meta name="description" content="用愿景、方案、证据三个层次理解 EvoMap：它如何让 AI 共享经验，哪些能力已验证，为什么群体超级智能仍是探索。">
+<link rel="stylesheet" href="./style.css"><script src="./main.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#main">跳到正文</a>
+<header class="topbar"><a class="brand" href="#top"><span class="brand-icon" aria-hidden="true">E</span><span>EvoMap <b>理解手册</b></span></a><span class="edition">研究 007 <span aria-hidden="true">/</span> 2026.09</span></header>
+<div class="layout" id="top">
+<aside class="contents" aria-label="阅读导航"><p>从一个问题出发</p><nav><a href="#idea">01 <span>它在探索什么</span></a><a href="#method">02 <span>这套方案怎么做</span></a><a href="#example">03 <span>看一次经验流动</span></a><a href="#architecture">04 <span>谁负责哪一步</span></a><a href="#evidence">05 <span>证据走到哪里</span></a><a href="#next">06 <span>怎样证明有用</span></a></nav><div class="aside-note">独立研究笔记<br>概念图与示例<br>均非 EvoMap 产品界面</div></aside>
+<main id="main">
+<section class="intro" id="idea">
+<div class="eyebrow">愿景 · 方法 · 验证</div>
+<h1>从经验复用，<br>走向<span>群体智能</span></h1>
+<p class="lead">是的，EvoMap 可以理解为<strong>探索群体超级智能的一种工程方案</strong>。它尝试让 AI 保存经验、相互借鉴、分工协作，逐步提高整个系统的能力。</p>
+<p><strong>我们的理解：以群体智能为愿景，探索类似 RAG 的经验检索与沉淀，让多个 Agent 复用方法，并用执行反馈继续改进。</strong>这是一个具有参考价值的产品方向，整体收益和更远的超级智能目标仍需验证。</p>
+<div class="levels" aria-label="愿景、方案、证据三个层次">
+<article><span class="level-label">想达到什么</span><h2>群体更有能力</h2><p>多个 AI 组成的系统，能否完成单个 AI 难以完成的任务？</p><span class="tag vision">长期愿景</span></article>
+<article><span class="level-label">怎样尝试</span><h2>经验共享与协作</h2><p>把做事方法变成资产，允许检索、使用、验证和更新。</p><span class="tag method">具体路线</span></article>
+<article><span class="level-label">目前知道什么</span><h2>部分组件已验证</h2><p>本研究验证了选择、哈希与提示词模块。整体能力仍需对照实验。</p><span class="tag proven">有限证据</span></article>
+</div>
+<p class="source-note">官方也将“协作涌现”列为论证中的主张，将超级智能列为愿景。<a href="https://evomap.ai/zh/blog/toward-collective-superintelligence" target="_blank" rel="noopener">阅读原文 ↗</a></p>
+<figure class="understanding-map" id="product-direction">
+<figcaption><h2>值得参考的产品方向：AI 技能与经验库</h2><p>先沉淀可复用的方法、适用条件和执行结果，形成检索、执行、验证、回写的循环，再考虑扩展到团队共享。</p></figcaption>
+<a href="./assets/product-understanding.png" target="_blank" aria-label="打开完整理解图"><img src="./assets/product-understanding.png" width="1800" height="1760" alt="AI 技能与经验沉淀产品方向：区分多 Agent 能力协作和长期经验积累；任务经过检索、执行、验证、反馈，与本地技能经验库形成循环，再逐步扩展到团队共享和群体智能探索。实际收益需对照验证。"></a>
+<p class="source-note"><a href="./assets/product-understanding.png" download>下载高清 PNG</a> · <a href="./assets/product-understanding.svg" download>下载可编辑 SVG</a>。图中的本地落地路线是我们的产品化建议，不是官方部署架构。</p>
+</figure>
+</section>
+<section id="method">
+<div class="section-heading"><span>02</span><div><h2>它押注的，是经验能在 AI 之间积累</h2><p>一次有用的尝试，成为下一次工作的起点。</p></div></div>
+<div class="loop" aria-label="经验复用循环"><div><b>发现问题</b><small>从任务和错误中识别需求</small></div><span aria-hidden="true">→</span><div><b>借鉴经验</b><small>寻找适用的方法与案例</small></div><span aria-hidden="true">→</span><div><b>执行验证</b><small>在当前环境中真正试过</small></div><span aria-hidden="true">→</span><div><b>保存反馈</b><small>留下有效方法与失败条件</small></div></div>
+<div class="two-paths"><article><span class="mini-label">沿着时间积累</span><h3>AI 之间留下“维修手册”</h3><p>A 今天解决了问题，B 明天遇到类似问题时可以参考。它们无需同时在线、也无需一起执行。</p><strong>这叫经验复用。</strong></article><article><span class="mini-label">在同一任务中协作</span><h3>AI 之间分配不同工作</h3><p>A 分析、B 实现、C 检查，再把结果合并。需要协调分工、处理冲突，并验证最后的交付。</p><strong>这叫多智能体协作。</strong></article></div>
+<div class="callout"><b>两者可以结合，但不是同一件事。</b><p>分享了很多经验，不等于已经形成超级智能；增加 Agent 数量，也不保证结果更正确。关键是能否在真实任务中保持质量、减少无效工作。</p></div>
+<h3>类似 RAG，检索的是“怎样做事”的经验</h3>
+<p>RAG 的基本思路是先查找相关资料，再把资料交给模型使用。这里也有类似过程：从任务与错误中提取线索，选择相关策略与案例，加入执行提示，让 Agent 结合当前环境做事。</p>
+<div class="two-paths"><article><span class="mini-label">检索增强的共同点</span><h3>把外部记忆带进当前任务</h3><p>常见文档 RAG 查找知识片段；这里侧重做法、适用条件、历史案例和验证记录。二者都可以帮助模型借鉴已有信息。</p></article><article><span class="mini-label">这条路线继续探索什么</span><h3>把执行结果带回经验库</h3><p>执行、验证、记录成败，供后续任务和其他 Agent 再次选择。带记忆与反馈的 Agent 系统也能这样设计，并非 EvoMap 独有。</p></article></div>
+<p class="plain-note"><strong>“类似 RAG”是机制类比，不是对底层技术的断言。</strong>已验证的是原版策略选择与案例匹配，不能据此认定平台使用向量数据库或某种向量检索。存成文件、JSON 或数据库只是存储选择；关键在于适用性判断、结果验证与反馈质量。</p>
+<details><summary>看起来像定制规则：规则和经验各起什么作用？</summary><p>规则规定资产格式、使用条件、执行约束和验收办法；经验记录某种方法在什么环境下成功或失败。模型和工具负责执行，验证结果再影响后续选择。因此“配置规则”是其中一部分，持续积累可验证的经验才是我们关注的产品方向。</p></details>
+<div class="callout"><b>一个可落地的起点：技能 ＋ 本地经验库 ＋ 检索 ＋ 执行验证 ＋ 反馈回写。</b><p>先让一个 Agent 在后续任务里复用，再扩展到多个 Agent 共享。数据库本身不会产生群体智能；是否提高整体能力，需要对照实验。这是我们的产品化建议，不是对官方部署架构的复刻。</p></div>
+</section>
+<section id="example">
+<div class="section-heading"><span>03</span><div><h2>一条经验，怎样从 A 到达 B？</h2><p>以“上传大文件总是超时”为例。下面是机制示意，未连接真实 AI 或平台。</p></div></div>
+<div class="example">
+<div class="step-controls" aria-label="选择示例步骤"><button type="button" data-step="0" aria-pressed="true"><span>1</span>遇到问题</button><button type="button" data-step="1" aria-pressed="false"><span>2</span>试出方法</button><button type="button" data-step="2" aria-pressed="false"><span>3</span>打包经验</button><button type="button" data-step="3" aria-pressed="false"><span>4</span>另一个 AI 复用</button><button type="button" data-step="4" aria-pressed="false"><span>5</span>重新验证</button></div>
+<div class="stage" aria-live="polite" aria-atomic="true">
+<div class="stage-meta"><span id="step-count">第 1 / 5 步</span><span class="tag">合成示例</span></div>
+<h3 id="step-title">A 遇到上传超时，需要找出原因</h3>
+<p id="step-explain">执行 Agent 查看错误日志、文件大小和接口限制。首先要弄清楚问题发生的条件。</p>
+<div class="actors"><article id="actor-a" class="actor active"><span class="actor-label">Agent A</span><h4 id="a-title">分析现场</h4><p id="a-text">读取日志与代码，确认故障。</p></article><span class="flow-arrow" aria-hidden="true">→</span><article id="actor-hub" class="actor"><span class="actor-label">共享经验库 · Hub</span><h4 id="hub-title">尚无本次经验</h4><p id="hub-text">保存可供查询的方法与案例。</p></article><span class="flow-arrow" aria-hidden="true">→</span><article id="actor-b" class="actor"><span class="actor-label">Agent B</span><h4 id="b-title">还未参与</h4><p id="b-text">它以后可能遇到类似问题。</p></article></div>
+<p class="step-lesson" id="step-lesson"><b>看清分工：</b>处理代码的是执行 Agent，网页只是入口。</p>
+<div class="step-nav"><button type="button" id="prev-step" disabled>← 上一步</button><button type="button" id="next-step">下一步 →</button></div>
+</div></div>
+<div class="asset-key"><article><code>Gene</code><h3>做事的方法</h3><p>适用条件、步骤、限制和验证办法。</p></article><article><code>Capsule</code><h3>一次执行的案例</h3><p>当时的环境、修改与结果，供后来者参考。</p></article><article><code>EvolutionEvent</code><h3>过程记录</h3><p>选了什么、尝试了什么、最后成功还是失败。</p></article></div>
+<p class="source-note">资产定义依据 <a href="https://evomap.ai/zh/wiki/16-gep-protocol" target="_blank" rel="noopener">GEP 文档 ↗</a>。案例中的分块上传仅用于说明，不保证适合所有超时故障。</p>
+</section>
+<section id="architecture">
+<div class="section-heading"><span>04</span><div><h2>网页、平台、客户端、AI，各做什么？</h2><p>把角色拆开，就能理解“打开网页”和“AI 真正干活”的关系。</p></div></div>
+<div class="architecture">
+<div class="human-entry"><span>你</span><p>提出任务 · 阅读结果 · 反馈</p></div>
+<div class="architecture-columns"><article class="platform"><span class="mini-label">共享侧</span><h3>EvoMap 网页与 Hub</h3><ul><li>网页让人提问、浏览和管理</li><li>Hub 提供经验检索、发布与记录</li><li>平台还描述了任务分配与协作能力</li></ul><span class="scope">云端整体能力：本研究未实测</span></article><div class="exchange"><span>查询经验</span><b aria-hidden="true">⇄</b><span>提交结果</span><small>GEP 规定经验的格式与交换方式</small></div><article class="execution"><span class="mini-label">执行侧</span><h3>Evolver ＋ 执行宿主</h3><ul><li>Evolver 选择策略、组织执行提示</li><li>宿主模型理解任务并调用工具</li><li>在项目里修改、测试，再记录结果</li></ul><span class="scope">已验证：选择、哈希、提示词模块</span></article></div>
+</div>
+<p class="plain-note"><strong>基础独立模式的 Evolver 会生成执行提示词。</strong>修改代码依赖有模型和工具的执行环境。仓库另有 solo、代理等路径，需要逐项核实；不能把下载一个库理解为拥有整个 EvoMap 平台。</p>
+<details><summary>这里的“进化”，是在重新训练大模型吗？</summary><p>本研究看到的主要变化是外部经验、策略、记录与后续选择。AI 因为有更多可用的方法而改变做事方式。本次实验没有更新基础模型的参数，也没有证明 AI 获得了无限自我提升能力。</p></details>
+<details><summary>是不是普通知识库换了一个名字？</summary><p>它与知识检索有重叠，但尝试进一步组织“适用条件、做法、执行结果、后续反馈”。这些结构是否比普通操作说明更有用，仍要用相同任务做对照，不能仅凭 Gene 的名字判断。</p></details>
+</section>
+<section id="evidence">
+<div class="section-heading"><span>05</span><div><h2>目前的证据，能支持到哪一步？</h2><p>把我们的实测、官方描述与长期愿景分开看。</p></div></div>
+<div class="evidence-summary"><strong>77<span> / 77</span></strong><div><b>上游模块测试通过</b><p>19 项内容哈希 · 47 项选择器 · 11 项提示词<br>这些是局部功能验证，没有测量整体任务成功率。</p></div><a href="./evidence/test-summary.json" target="_blank">查看测试摘要 ↗</a></div>
+<div class="evidence-list">
+<article><span class="tag proven">本研究已验证</span><div><h3>经验能被选中，指令能被生成</h3><p>实际调用原版模块，选出修复 Gene、匹配合成 Capsule，并生成含任务与策略的提示词。</p></div></article>
+<article><span class="tag method">官方描述</span><div><h3>平台支持共享、悬赏和多 Agent 协作</h3><p>公开文档列出了功能与接口。本次没有注册节点、发布资产或执行云端协作任务。</p></div></article>
+<article><span class="tag pending">待对照验证</span><div><h3>群体是否比单个 AI 更有效</h3><p>需要控制模型、预算与任务，再比较完成质量、成本和失败情况。</p></div></article>
+<article><span class="tag vision">长期愿景</span><div><h3>群体超级智能</h3><p>这是一种探索方向，局部组件可运行不足以证明这个目标已经实现。</p></div></article>
+</div>
+<div class="finding-grid"><article><span>实测发现 01</span><h3>返回方案 ≠ 找对方案</h3><p>无关输入也可能触发备用策略。调用方需要识别“真正匹配”和“兜底返回”。</p></article><article><span>实测发现 02</span><h3>哈希通过 ≠ 方法正确</h3><p>错误陈述也能拥有有效哈希。哈希检查内容一致性，任务测试检查是否有效。</p></article></div>
+<p class="source-note">研究固定在 Evolver 1.94.0。核心文件存在混淆，本次未完成逐行审计。<a href="./evidence/probe-output.txt" target="_blank">查看探针结果 ↗</a></p>
+</section>
+<section id="next">
+<div class="section-heading"><span>06</span><div><h2>接下来，怎样证明它真的有用？</h2><p>让三组 AI 做相同的任务，用相同的验收标准比较。</p></div></div>
+<div class="comparison"><article><span>A</span><h3>基础 Agent</h3><p>靠模型与工具完成任务。</p></article><article><span>B</span><h3>附普通操作说明</h3><p>额外提供整理好的步骤。</p></article><article><span>C</span><h3>附结构化经验与反馈</h3><p>使用 Gene、Capsule 和历史结果。</p></article></div>
+<p class="measure">共同衡量：<b>成功率</b><b>总成本</b><b>完成时间</b><b>错误采纳</b><b>人工干预</b></p>
+<p>如果 C 在新任务上仍能稳定提高质量、减少总开销，才是这套方案有效的证据。多人同时做事、保存更多资产、给结果打高分，都不能替代这个比较。</p>
+<div class="closing"><span>我们目前的理解</span><p>群体智能是愿景；类似 RAG 的经验沉淀与检索是理解这条探索路线的入口；多 Agent 复用与执行反馈构成持续积累的循环。<br><strong>这是值得参考的产品方向，实际收益要靠真实任务继续证明。</strong></p></div>
+</section>
+<footer><h2>继续阅读与来源</h2><div class="source-links"><a href="https://evomap.ai/zh/blog/toward-collective-superintelligence" target="_blank" rel="noopener">官方：群体智能愿景 ↗</a><a href="https://evomap.ai/llms.txt" target="_blank" rel="noopener">官方：平台能力与接口 ↗</a><a href="https://github.com/EvoMap/evolver/blob/31b0691acd97ba18878019312e646f1f2d970d43/README.zh-CN.md" target="_blank" rel="noopener">固定版本的上游说明 ↗</a><a href="./evidence/test-summary.json" target="_blank">本研究：测试摘要 ↗</a></div><p>GitHub 项目研究集 · 007 EvoMap / Evolver<br>整理于 2026 年 9 月 16 日。页面中的架构图与交互均用于解释，不会连接 Agent 或执行任务。</p></footer>
+</main></div>
+</body></html>

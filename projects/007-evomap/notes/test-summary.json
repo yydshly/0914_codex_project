@@ -1,0 +1,39 @@
+{
+  "node": "v22.15.0",
+  "runs": [
+    {
+      "suite": "contentHash",
+      "exit_code": 0,
+      "summary": [
+        "# tests 19",
+        "# pass 19",
+        "# fail 0",
+        "# skipped 0"
+      ]
+    },
+    {
+      "suite": "selector",
+      "exit_code": 0,
+      "summary": [
+        "# tests 47",
+        "# pass 47",
+        "# fail 0",
+        "# skipped 0"
+      ]
+    },
+    {
+      "suite": "prompt",
+      "exit_code": 0,
+      "summary": [
+        "# tests 11",
+        "# pass 11",
+        "# fail 0",
+        "# skipped 0"
+      ]
+    },
+    {
+      "suite": "research-probe",
+      "exit_code": 0
+    }
+  ]
+}

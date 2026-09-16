@@ -1,0 +1,21 @@
+{
+  "synthetic_fixture": true,
+  "random_control": "Math.random returns 0.99 (selection only; not a production run)",
+  "upstream_version": "1.94.0",
+  "sdk_schema": "1.12.1",
+  "seed_gene_count": 17,
+  "checks": {
+    "error_signals_select_repair": "gene_gep_repair_from_errors",
+    "controlled_unrelated_signal_selects_nothing": true,
+    "full_seed_unrelated_signal_selected": "gene_distilled_s2g-env-vars",
+    "full_seed_unrelated_drift_mode": "distilled_fallback",
+    "matching_capsule_retrieved": "research_upload_timeout_example",
+    "original_hash_valid": true,
+    "tampered_hash_valid": false,
+    "nonsense_with_valid_hash_accepted": true,
+    "prompt_is_text": true,
+    "prompt_contains_context_and_gene": true
+  },
+  "prompt_chars": 16106,
+  "limitation": "No LLM execution, code repair, Hub validation, publication, or token savings measured."
+}

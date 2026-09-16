@@ -1,0 +1,97 @@
+TAP version 13
+# Subtest: buildGepPrompt -- prompt does not contain inline status write
+    # Subtest: does not embed node -e status file command in prompt
+    ok 1 - does not embed node -e status file command in prompt
+      ---
+      duration_ms: 87.0663
+      type: 'test'
+      ...
+    # Subtest: does not contain POST-SOLIDIFY block
+    ok 2 - does not contain POST-SOLIDIFY block
+      ---
+      duration_ms: 1.1649
+      type: 'test'
+      ...
+    # Subtest: does not contain bash heredoc patterns
+    ok 3 - does not contain bash heredoc patterns
+      ---
+      duration_ms: 1.1681
+      type: 'test'
+      ...
+    1..3
+ok 1 - buildGepPrompt -- prompt does not contain inline status write
+  ---
+  duration_ms: 90.204
+  type: 'suite'
+  ...
+# Subtest: buildGepPrompt -- structure
+    # Subtest: contains GEP protocol header
+    ok 1 - contains GEP protocol header
+      ---
+      duration_ms: 1.0738
+      type: 'test'
+      ...
+    # Subtest: contains mandatory object model section
+    ok 2 - contains mandatory object model section
+      ---
+      duration_ms: 0.8517
+      type: 'test'
+      ...
+    # Subtest: contains constitutional ethics section
+    ok 3 - contains constitutional ethics section
+      ---
+      duration_ms: 0.8531
+      type: 'test'
+      ...
+    # Subtest: contains cycle ID in report requirement
+    ok 4 - contains cycle ID in report requirement
+      ---
+      duration_ms: 0.796
+      type: 'test'
+      ...
+    1..4
+ok 2 - buildGepPrompt -- structure
+  ---
+  duration_ms: 3.9525
+  type: 'suite'
+  ...
+# Subtest: buildGepPrompt -- Context [Execution] is preserved under preview bloat (public issue \#552)
+    # Subtest: does NOT inline capsule.diff / gene.learning_history into the prompt
+    ok 1 - does NOT inline capsule.diff / gene.learning_history into the prompt
+      ---
+      duration_ms: 1.5482
+      type: 'test'
+      ...
+    # Subtest: keeps Context [Execution] non-empty under heavy preview bloat (\#552 regression)
+    ok 2 - keeps Context [Execution] non-empty under heavy preview bloat (\#552 regression)
+      ---
+      duration_ms: 3.4112
+      type: 'test'
+      ...
+    # Subtest: _compactPreviewForPrompt strips diff from dispatch.js markdown-fenced input (Bugbot PR \#162 HIGH)
+    ok 3 - _compactPreviewForPrompt strips diff from dispatch.js markdown-fenced input (Bugbot PR \#162 HIGH)
+      ---
+      duration_ms: 0.2731
+      type: 'test'
+      ...
+    # Subtest: floor protection truncates the prefix, not Execution, when maxChars is tight
+    ok 4 - floor protection truncates the prefix, not Execution, when maxChars is tight
+      ---
+      duration_ms: 1.7014
+      type: 'test'
+      ...
+    1..4
+ok 3 - buildGepPrompt -- Context [Execution] is preserved under preview bloat (public issue \#552)
+  ---
+  duration_ms: 7.1173
+  type: 'suite'
+  ...
+1..3
+# tests 11
+# suites 3
+# pass 11
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 118.086

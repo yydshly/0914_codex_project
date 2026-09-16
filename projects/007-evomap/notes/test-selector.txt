@@ -1,0 +1,362 @@
+TAP version 13
+# Subtest: selectGene
+    # Subtest: selects the gene with highest signal match
+    ok 1 - selects the gene with highest signal match
+      ---
+      duration_ms: 6.2832
+      type: 'test'
+      ...
+    # Subtest: returns null when no signals match
+    ok 2 - returns null when no signals match
+      ---
+      duration_ms: 1.1393
+      type: 'test'
+      ...
+    # Subtest: returns alternatives when multiple genes match
+    ok 3 - returns alternatives when multiple genes match
+      ---
+      duration_ms: 1.2508
+      type: 'test'
+      ...
+    # Subtest: includes drift intensity in result
+    ok 4 - includes drift intensity in result
+      ---
+      duration_ms: 1.0735
+      type: 'test'
+      ...
+    # Subtest: applies score multiplier for preferred gene from memory graph
+    ok 5 - applies score multiplier for preferred gene from memory graph
+      ---
+      duration_ms: 0.9629
+      type: 'test'
+      ...
+    # Subtest: does not let multiplier override a much-higher-scoring gene
+    ok 6 - does not let multiplier override a much-higher-scoring gene
+      ---
+      duration_ms: 0.8805
+      type: 'test'
+      ...
+    # Subtest: selects a forced gene even when another candidate scores higher
+    ok 7 - selects a forced gene even when another candidate scores higher
+      ---
+      duration_ms: 1.0751
+      type: 'test'
+      ...
+    # Subtest: does not select a banned forced gene
+    ok 8 - does not select a banned forced gene
+      ---
+      duration_ms: 0.8292
+      type: 'test'
+      ...
+    # Subtest: matches gene via baseName:snippet signal (user_feature_request:snippet)
+    ok 9 - matches gene via baseName:snippet signal (user_feature_request:snippet)
+      ---
+      duration_ms: 1.1004
+      type: 'test'
+      ...
+    # Subtest: matches gene via baseName:snippet signal (user_improvement_suggestion:snippet)
+    ok 10 - matches gene via baseName:snippet signal (user_improvement_suggestion:snippet)
+      ---
+      duration_ms: 1.1398
+      type: 'test'
+      ...
+    # Subtest: uses derived learning tags to match related performance genes
+    ok 11 - uses derived learning tags to match related performance genes
+      ---
+      duration_ms: 0.8632
+      type: 'test'
+      ...
+    # Subtest: downweights genes with repeated hard-fail anti-patterns
+    ok 12 - downweights genes with repeated hard-fail anti-patterns
+      ---
+      duration_ms: 0.7386
+      type: 'test'
+      ...
+    1..12
+ok 1 - selectGene
+  ---
+  duration_ms: 18.2455
+  type: 'suite'
+  ...
+# Subtest: selectCapsule
+    # Subtest: selects capsule matching signals
+    ok 1 - selects capsule matching signals
+      ---
+      duration_ms: 0.1789
+      type: 'test'
+      ...
+    # Subtest: returns null when no triggers match
+    ok 2 - returns null when no triggers match
+      ---
+      duration_ms: 0.0745
+      type: 'test'
+      ...
+    1..2
+ok 2 - selectCapsule
+  ---
+  duration_ms: 0.3104
+  type: 'suite'
+  ...
+# Subtest: selectGeneAndCapsule
+    # Subtest: returns selected gene, capsule candidates, and selector decision
+    ok 1 - returns selected gene, capsule candidates, and selector decision
+      ---
+      duration_ms: 2.3198
+      type: 'test'
+      ...
+    # Subtest: includes selectionPath and memoryUsed telemetry
+    ok 2 - includes selectionPath and memoryUsed telemetry
+      ---
+      duration_ms: 0.809
+      type: 'test'
+      ...
+    # Subtest: marks forced gene selection separately from memory preference
+    ok 3 - marks forced gene selection separately from memory preference
+      ---
+      duration_ms: 0.8125
+      type: 'test'
+      ...
+    # Subtest: does not let memoryAdvice forced gene bypass an array ban
+    ok 4 - does not let memoryAdvice forced gene bypass an array ban
+      ---
+      duration_ms: 0.9085
+      type: 'test'
+      ...
+    # Subtest: does not let a forced gene bypass a structured ban_gene signal
+    ok 5 - does not let a forced gene bypass a structured ban_gene signal
+      ---
+      duration_ms: 0.9215
+      type: 'test'
+      ...
+    1..5
+ok 3 - selectGeneAndCapsule
+  ---
+  duration_ms: 5.8841
+  type: 'suite'
+  ...
+# Subtest: computeDriftIntensity adaptive decay
+    # Subtest: returns base drift with max offset when no memory evidence
+    ok 1 - returns base drift with max offset when no memory evidence
+      ---
+      duration_ms: 0.1907
+      type: 'test'
+      ...
+    # Subtest: decays offset as memory evidence grows
+    ok 2 - decays offset as memory evidence grows
+      ---
+      duration_ms: 0.0678
+      type: 'test'
+      ...
+    # Subtest: reaches floor offset at full maturity
+    ok 3 - reaches floor offset at full maturity
+      ---
+      duration_ms: 0.0584
+      type: 'test'
+      ...
+    # Subtest: returns population-dependent drift when not explicitly enabled
+    ok 4 - returns population-dependent drift when not explicitly enabled
+      ---
+      duration_ms: 0.0435
+      type: 'test'
+      ...
+    1..4
+ok 4 - computeDriftIntensity adaptive decay
+  ---
+  duration_ms: 0.4251
+  type: 'suite'
+  ...
+# Subtest: selectGene drift respects bannedGeneIds (regression)
+    # Subtest: skips a banned gene even when drift is enabled
+    ok 1 - skips a banned gene even when drift is enabled
+      ---
+      duration_ms: 8.2766
+      type: 'test'
+      ...
+    # Subtest: returns null when every candidate is banned, regardless of drift
+    ok 2 - returns null when every candidate is banned, regardless of drift
+      ---
+      duration_ms: 0.6018
+      type: 'test'
+      ...
+    1..2
+ok 5 - selectGene drift respects bannedGeneIds (regression)
+  ---
+  duration_ms: 8.9418
+  type: 'suite'
+  ...
+# Subtest: isEpigeneticallySuppressed
+    # Subtest: returns false for a gene with no epigenetic marks
+    ok 1 - returns false for a gene with no epigenetic marks
+      ---
+      duration_ms: 0.0809
+      type: 'test'
+      ...
+    # Subtest: returns false for a mild negative boost above the hard threshold
+    ok 2 - returns false for a mild negative boost above the hard threshold
+      ---
+      duration_ms: 0.2715
+      type: 'test'
+      ...
+    # Subtest: returns true once boost reaches the hard threshold (-0.3)
+    ok 3 - returns true once boost reaches the hard threshold (-0.3)
+      ---
+      duration_ms: 0.0641
+      type: 'test'
+      ...
+    # Subtest: returns true for boost well past the threshold
+    ok 4 - returns true for boost well past the threshold
+      ---
+      duration_ms: 0.0491
+      type: 'test'
+      ...
+    # Subtest: does not suppress when the negative mark belongs to a different env
+    ok 5 - does not suppress when the negative mark belongs to a different env
+      ---
+      duration_ms: 0.0462
+      type: 'test'
+      ...
+    1..5
+ok 6 - isEpigeneticallySuppressed
+  ---
+  duration_ms: 0.6018
+  type: 'suite'
+  ...
+# Subtest: selectGene distilled-gene fallback when no signal matches (issue \#97)
+    # Subtest: falls back to a distilled gene when no signal matches
+    ok 1 - falls back to a distilled gene when no signal matches
+      ---
+      duration_ms: 0.7015
+      type: 'test'
+      ...
+    # Subtest: returns null when no distilled gene exists in the pool
+    ok 2 - returns null when no distilled gene exists in the pool
+      ---
+      duration_ms: 0.4827
+      type: 'test'
+      ...
+    # Subtest: does not fall back to a banned distilled gene
+    ok 3 - does not fall back to a banned distilled gene
+      ---
+      duration_ms: 0.5369
+      type: 'test'
+      ...
+    # Subtest: does not fall back to an epigenetically suppressed distilled gene
+    ok 4 - does not fall back to an epigenetically suppressed distilled gene
+      ---
+      duration_ms: 0.882
+      type: 'test'
+      ...
+    # Subtest: still prefers a real signal-matched gene over the distilled fallback
+    ok 5 - still prefers a real signal-matched gene over the distilled fallback
+      ---
+      duration_ms: 0.5761
+      type: 'test'
+      ...
+    1..5
+ok 7 - selectGene distilled-gene fallback when no signal matches (issue \#97)
+  ---
+  duration_ms: 3.3074
+  type: 'suite'
+  ...
+# Subtest: tokenize is unicode-aware (issue \#98)
+    # Subtest: preserves Chinese characters
+    ok 1 - preserves Chinese characters
+      ---
+      duration_ms: 0.4087
+      type: 'test'
+      ...
+    # Subtest: preserves Japanese characters
+    ok 2 - preserves Japanese characters
+      ---
+      duration_ms: 0.1311
+      type: 'test'
+      ...
+    # Subtest: preserves Korean characters
+    ok 3 - preserves Korean characters
+      ---
+      duration_ms: 0.0532
+      type: 'test'
+      ...
+    # Subtest: still strips ASCII punctuation
+    ok 4 - still strips ASCII punctuation
+      ---
+      duration_ms: 0.4893
+      type: 'test'
+      ...
+    # Subtest: lowercases ASCII while leaving non-ASCII untouched
+    ok 5 - lowercases ASCII while leaving non-ASCII untouched
+      ---
+      duration_ms: 0.0595
+      type: 'test'
+      ...
+    1..5
+ok 8 - tokenize is unicode-aware (issue \#98)
+  ---
+  duration_ms: 1.2359
+  type: 'suite'
+  ...
+# Subtest: selectGene matches multilingual signals_match (issue \#98)
+    # Subtest: matches a Chinese signal against the | alias
+    ok 1 - matches a Chinese signal against the | alias
+      ---
+      duration_ms: 0.9385
+      type: 'test'
+      ...
+    # Subtest: matches a Japanese signal against the | alias
+    ok 2 - matches a Japanese signal against the | alias
+      ---
+      duration_ms: 0.7076
+      type: 'test'
+      ...
+    # Subtest: matches a Korean signal against the | alias
+    ok 3 - matches a Korean signal against the | alias
+      ---
+      duration_ms: 1.0441
+      type: 'test'
+      ...
+    # Subtest: English signal still matches (no regression)
+    ok 4 - English signal still matches (no regression)
+      ---
+      duration_ms: 0.6401
+      type: 'test'
+      ...
+    1..4
+ok 9 - selectGene matches multilingual signals_match (issue \#98)
+  ---
+  duration_ms: 3.4213
+  type: 'suite'
+  ...
+# Subtest: selectGene filters epigenetically suppressed genes (regression)
+    # Subtest: skips a gene with boost <= -0.3 even when its signal score would win
+    ok 1 - skips a gene with boost <= -0.3 even when its signal score would win
+      ---
+      duration_ms: 0.5282
+      type: 'test'
+      ...
+    # Subtest: still selects a suppressed gene when no other candidates exist
+    ok 2 - still selects a suppressed gene when no other candidates exist
+      ---
+      duration_ms: 0.3824
+      type: 'test'
+      ...
+    # Subtest: does not select an epigenetically suppressed forced gene
+    ok 3 - does not select an epigenetically suppressed forced gene
+      ---
+      duration_ms: 0.5363
+      type: 'test'
+      ...
+    1..3
+ok 10 - selectGene filters epigenetically suppressed genes (regression)
+  ---
+  duration_ms: 1.5289
+  type: 'suite'
+  ...
+1..10
+# tests 47
+# suites 10
+# pass 47
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 141.3479
