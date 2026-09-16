@@ -1,185 +1,198 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1800" height="2480" viewBox="0 0 1800 2480" role="img" aria-labelledby="title desc">
 <title id="title">MiroFish 能力全景：场景、输入、内部原理、输出与价值边界</title>
 <desc id="desc">多智能体社会模拟应用。资料与问题经过文档解析、知识图谱、角色与环境配置，进入模型决策和 OASIS 环境执行的多轮循环，最终呈现关系图、角色档案、互动记录、状态、报告和对话。官方案例包括舆情和红楼梦；市场调研等为可设计用途。模拟不等于真实调研或已验证预测。</desc>
-<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10Z" fill="#258f7e"/></marker><marker id="light" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10Z" fill="#7ce3c7"/></marker></defs>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10Z" fill="#6475cd"/></marker><marker id="light" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10Z" fill="#7764c5"/></marker></defs>
 <style>text{font-family:"Microsoft YaHei","Noto Sans CJK SC","Segoe UI",sans-serif}a:hover text{text-decoration:underline}</style>
-<rect width="1800" height="2480" fill="#f3f7f9"/>
-<text x="48" y="53" font-size="21" fill="#11796d" font-weight="700" data-max-width="1704">MIROFISH  /  CAPABILITY MAP</text>
-<text x="48" y="118" font-size="49" fill="#163846" font-weight="700" data-max-width="1704">从一份资料，到一群角色的可能反应</text>
-<text x="50" y="166" font-size="26" fill="#506b79" font-weight="400" data-max-width="1702">多智能体社会模拟应用  ·  用知识图谱组织背景，用大模型驱动角色，用仿真环境承接行动</text>
-<rect x="48" y="194" width="40" height="36" rx="7" fill="#11796d" stroke="#11796d"/>
-<text x="54" y="220" font-size="22" fill="#fff" font-weight="700" data-max-width="30">01</text>
-<text x="104" y="222" font-size="30" fill="#163846" font-weight="700" data-max-width="1648">可以用在哪些场景？</text>
-<text x="520" y="221" font-size="22" fill="#506b79" font-weight="400" data-max-width="1232">前两项有官方演示；后三项是基于机制可设计的用途，效果需验证</text>
-<rect x="48" y="248" width="328" height="200" rx="15" fill="#fff" stroke="#d6e3e7"/>
-<text x="68" y="283" font-size="19" fill="#11796d" font-weight="600" data-max-width="288">官方演示</text>
-<text x="68" y="324" font-size="27" fill="#163846" font-weight="700" data-max-width="288">舆情与公关</text>
-<text x="68" y="361" font-size="20" fill="#506b79" font-weight="400" data-max-width="288">事件材料 + 公开反馈</text>
-<text x="68" y="391" font-size="20" fill="#506b79" font-weight="400" data-max-width="288">模拟公告后的各方反应</text>
-<text x="68" y="421" font-size="20" fill="#506b79" font-weight="400" data-max-width="288">观察争议与信息传播</text>
-<rect x="392" y="248" width="328" height="200" rx="15" fill="#fff" stroke="#d6e3e7"/>
-<text x="412" y="283" font-size="19" fill="#11796d" font-weight="600" data-max-width="288">官方演示</text>
-<text x="412" y="324" font-size="27" fill="#163846" font-weight="700" data-max-width="288">故事后续推演</text>
-<text x="412" y="361" font-size="20" fill="#506b79" font-weight="400" data-max-width="288">已有章节 + 人物关系</text>
-<text x="412" y="391" font-size="20" fill="#506b79" font-weight="400" data-max-width="288">探索人物选择与冲突</text>
-<text x="412" y="421" font-size="20" fill="#506b79" font-weight="400" data-max-width="288">示例：《红楼梦》前 80 回</text>
-<rect x="736" y="248" width="328" height="200" rx="15" fill="#fff" stroke="#d6e3e7"/>
-<text x="756" y="283" font-size="19" fill="#927041" font-weight="600" data-max-width="288">可设计用途</text>
-<text x="756" y="324" font-size="27" fill="#163846" font-weight="700" data-max-width="288">市场调研辅助</text>
-<text x="756" y="361" font-size="20" fill="#506b79" font-weight="400" data-max-width="288">产品资料 + 客户访谈</text>
-<text x="756" y="391" font-size="20" fill="#506b79" font-weight="400" data-max-width="288">探索需求、顾虑与拒绝理由</text>
-<text x="756" y="421" font-size="20" fill="#506b79" font-weight="400" data-max-width="288">形成待真人验证的假设</text>
-<rect x="1080" y="248" width="328" height="200" rx="15" fill="#fff" stroke="#d6e3e7"/>
-<text x="1100" y="283" font-size="19" fill="#927041" font-weight="600" data-max-width="288">可设计用途</text>
-<text x="1100" y="324" font-size="27" fill="#163846" font-weight="700" data-max-width="288">产品与价格评审</text>
-<text x="1100" y="361" font-size="20" fill="#506b79" font-weight="400" data-max-width="288">功能 / 定价方案 + 反馈</text>
-<text x="1100" y="391" font-size="20" fill="#506b79" font-weight="400" data-max-width="288">观察各类用户的潜在反应</text>
-<text x="1100" y="421" font-size="20" fill="#506b79" font-weight="400" data-max-width="288">发现解释缺口与改进线索</text>
-<rect x="1424" y="248" width="328" height="200" rx="15" fill="#fff" stroke="#d6e3e7"/>
-<text x="1444" y="283" font-size="19" fill="#927041" font-weight="600" data-max-width="288">可设计用途</text>
-<text x="1444" y="324" font-size="27" fill="#163846" font-weight="700" data-max-width="288">规则与政策讨论</text>
-<text x="1444" y="361" font-size="20" fill="#506b79" font-weight="400" data-max-width="288">规则草案 + 各方约束</text>
-<text x="1444" y="391" font-size="20" fill="#506b79" font-weight="400" data-max-width="288">探索群体冲突与适应行为</text>
-<text x="1444" y="421" font-size="20" fill="#506b79" font-weight="400" data-max-width="288">寻找可能遗漏的利益诉求</text>
-<rect x="48" y="477" width="40" height="36" rx="7" fill="#11796d" stroke="#11796d"/>
-<text x="54" y="503" font-size="22" fill="#fff" font-weight="700" data-max-width="30">02</text>
-<text x="104" y="505" font-size="30" fill="#163846" font-weight="700" data-max-width="1648">输入什么？</text>
-<text x="520" y="504" font-size="22" fill="#506b79" font-weight="400" data-max-width="1232">标准入口：上传背景资料，再用自然语言描述要探索的问题</text>
-<rect x="48" y="533" width="558" height="198" rx="15" fill="#fff" stroke="#d6e3e7"/>
-<text x="70" y="573" font-size="27" fill="#163846" font-weight="700" data-max-width="514">A  背景资料</text>
-<text x="70" y="611" font-size="22" fill="#506b79" font-weight="400" data-max-width="514">新闻、事件时间线、报告、公开评论</text>
-<text x="70" y="643" font-size="22" fill="#506b79" font-weight="400" data-max-width="514">产品说明、客户访谈、竞品资料</text>
-<text x="70" y="675" font-size="22" fill="#506b79" font-weight="400" data-max-width="514">小说章节、人物小传、关系与世界设定</text>
-<text x="70" y="708" font-size="20" fill="#11796d" font-weight="600" data-max-width="514">文件：PDF / TXT / Markdown</text>
-<rect x="621" y="533" width="558" height="198" rx="15" fill="#fff" stroke="#d6e3e7"/>
-<text x="643" y="573" font-size="27" fill="#163846" font-weight="700" data-max-width="514">B  明确的问题</text>
-<text x="643" y="611" font-size="22" fill="#506b79" font-weight="400" data-max-width="514">“发布这份回应，各方会如何反应？”</text>
-<text x="643" y="643" font-size="22" fill="#506b79" font-weight="400" data-max-width="514">“新价格可能引起哪些购买顾虑？”</text>
-<text x="643" y="675" font-size="22" fill="#506b79" font-weight="400" data-max-width="514">“这个秘密公开后，人物会如何选择？”</text>
-<text x="643" y="708" font-size="20" fill="#11796d" font-weight="600" data-max-width="514">写清事件、对象与要观察的变化</text>
-<rect x="1194" y="533" width="558" height="198" rx="15" fill="#fff" stroke="#d6e3e7"/>
-<text x="1216" y="573" font-size="27" fill="#163846" font-weight="700" data-max-width="514">C  情境与约束</text>
-<text x="1216" y="611" font-size="22" fill="#506b79" font-weight="400" data-max-width="514">在资料或需求中说明时间点与已知事实</text>
-<text x="1216" y="643" font-size="22" fill="#506b79" font-weight="400" data-max-width="514">说明谁知道什么、各方目标与限制</text>
-<text x="1216" y="675" font-size="22" fill="#506b79" font-weight="400" data-max-width="514">比较方案时分别运行，控制其余条件</text>
-<text x="1216" y="708" font-size="20" fill="#11796d" font-weight="600" data-max-width="514">资料缺口可能被模型补全，需人工检查</text>
-<rect x="48" y="760" width="40" height="36" rx="7" fill="#11796d" stroke="#11796d"/>
-<text x="54" y="786" font-size="22" fill="#fff" font-weight="700" data-max-width="30">03</text>
-<text x="104" y="788" font-size="30" fill="#163846" font-weight="700" data-max-width="1648">内部怎样处理？</text>
-<text x="520" y="787" font-size="22" fill="#506b79" font-weight="400" data-max-width="1232">把“背景关系”转换为“角色行动”，再由行动结果进入下一轮</text>
-<rect x="48" y="816" width="1704" height="750" rx="20" fill="#12323f" stroke="#12323f"/>
-<text x="76" y="852" font-size="21" fill="#88ddc8" font-weight="600" data-max-width="1676">准备阶段  /  从材料建立模拟起点</text>
-<rect x="76" y="876" width="518" height="143" rx="12" fill="#1c4351" stroke="#40616d"/>
-<text x="96" y="914" font-size="26" fill="#f2f9f9" font-weight="700" data-max-width="478">1  文档解析</text>
-<text x="96" y="956" font-size="22" fill="#c6dce2" font-weight="400" data-max-width="478">提取文本，整理输入内容</text>
-<text x="96" y="989" font-size="22" fill="#c6dce2" font-weight="400" data-max-width="478">材料是角色与推演的背景依据</text>
-<path d="M601 948 L621 948" fill="none" stroke="#7ce3c7" stroke-width="2.5" marker-end="url(#light)"/>
-<rect x="630" y="876" width="518" height="143" rx="12" fill="#1c4351" stroke="#40616d"/>
-<text x="650" y="914" font-size="26" fill="#f2f9f9" font-weight="700" data-max-width="478">2  图谱与记忆 · Zep</text>
-<text x="650" y="956" font-size="22" fill="#c6dce2" font-weight="400" data-max-width="478">抽取实体、关系，建立可检索背景</text>
-<text x="650" y="989" font-size="22" fill="#c6dce2" font-weight="400" data-max-width="478">支持 GraphRAG 与时序记忆</text>
-<path d="M1155 948 L1175 948" fill="none" stroke="#7ce3c7" stroke-width="2.5" marker-end="url(#light)"/>
-<rect x="1184" y="876" width="518" height="143" rx="12" fill="#1c4351" stroke="#40616d"/>
-<text x="1204" y="914" font-size="26" fill="#f2f9f9" font-weight="700" data-max-width="478">3  角色与环境配置 · LLM</text>
-<text x="1204" y="956" font-size="22" fill="#c6dce2" font-weight="400" data-max-width="478">生成简介、人设、立场等角色设定</text>
-<text x="1204" y="989" font-size="22" fill="#c6dce2" font-weight="400" data-max-width="478">配置活跃度、时长、初始帖子等</text>
-<path d="M1445 1022 V1041 H614 V1058" fill="none" stroke="#7ce3c7" stroke-width="2.5" marker-end="url(#light)"/>
-<rect x="76" y="1070" width="1074" height="327" rx="12" fill="#173c49" stroke="#446671"/>
-<text x="98" y="1106" font-size="25" fill="#f2f9f9" font-weight="700" data-max-width="1654">多轮互动循环  /  活跃角色按当前可见信息行动</text>
-<rect x="98" y="1133" width="311" height="131" rx="10" fill="#eaf6f1" stroke="#eaf6f1"/>
-<text x="115" y="1170" font-size="26" fill="#11796d" font-weight="700" data-max-width="277">观察</text>
-<text x="115" y="1209" font-size="20" fill="#163846" font-weight="400" data-max-width="277">角色背景与记忆</text>
-<text x="115" y="1239" font-size="20" fill="#163846" font-weight="400" data-max-width="277">当前可见帖子 / 环境信息</text>
-<path d="M415 1198 L435 1198" fill="none" stroke="#7ce3c7" stroke-width="2.5" marker-end="url(#light)"/>
-<rect x="444" y="1133" width="311" height="131" rx="10" fill="#eaf6f1" stroke="#eaf6f1"/>
-<text x="461" y="1170" font-size="26" fill="#11796d" font-weight="700" data-max-width="277">决策 · 大模型</text>
-<text x="461" y="1209" font-size="20" fill="#163846" font-weight="400" data-max-width="277">人设 + 上下文 → 选择行动</text>
-<text x="461" y="1239" font-size="20" fill="#163846" font-weight="400" data-max-width="277">同一模型可驱动多个角色</text>
-<path d="M761 1198 L781 1198" fill="none" stroke="#7ce3c7" stroke-width="2.5" marker-end="url(#light)"/>
-<rect x="790" y="1133" width="311" height="131" rx="10" fill="#eaf6f1" stroke="#eaf6f1"/>
-<text x="807" y="1170" font-size="26" fill="#11796d" font-weight="700" data-max-width="277">执行 · OASIS</text>
-<text x="807" y="1209" font-size="20" fill="#163846" font-weight="400" data-max-width="277">发帖、评论、转发等</text>
-<text x="807" y="1239" font-size="20" fill="#163846" font-weight="400" data-max-width="277">也可以不行动</text>
-<text x="115" y="1338" font-size="23" fill="#d4e9ed" font-weight="400" data-max-width="1000">共享环境保存行动结果；可用信息与记忆更新 → 其他角色在后续轮次观察</text>
-<path d="M1049 1271 V1300 H252 V1274" fill="none" stroke="#7ce3c7" stroke-width="2.5" marker-end="url(#light)"/>
-<text x="416" y="1375" font-size="21" fill="#88ddc8" font-weight="600" data-max-width="690">不是每人都发言，也不是所有角色都知道一切</text>
-<rect x="1174" y="1070" width="550" height="468" rx="12" fill="#1c4351" stroke="#40616d"/>
-<text x="1196" y="1110" font-size="26" fill="#f2f9f9" font-weight="700" data-max-width="506">几个容易混淆的分工</text>
-<text x="1196" y="1153" font-size="22" fill="#c6dce2" font-weight="400" data-max-width="506">角色 = 档案 / 人设 + 上下文 + 可用动作</text>
-<text x="1196" y="1191" font-size="22" fill="#c6dce2" font-weight="400" data-max-width="506">大模型：生成设定、选择行动、分析结果</text>
-<text x="1196" y="1229" font-size="22" fill="#c6dce2" font-weight="400" data-max-width="506">OASIS：执行动作，管理虚拟社交环境</text>
-<text x="1196" y="1267" font-size="22" fill="#c6dce2" font-weight="400" data-max-width="506">Zep：组织知识关系与记忆检索</text>
-<text x="1196" y="1305" font-size="22" fill="#c6dce2" font-weight="400" data-max-width="506">MiroFish：编排流程，提供网页与接口</text>
-<rect x="1196" y="1340" width="506" height="171" rx="10" fill="#143744" stroke="#527080"/>
-<text x="1212" y="1373" font-size="21" fill="#8fe1cc" font-weight="400" data-max-width="474">多个 Agent ≠ 必须使用多种模型</text>
-<text x="1212" y="1409" font-size="21" fill="#8fe1cc" font-weight="400" data-max-width="474">角色定制 ≠ 为每个角色训练模型</text>
-<text x="1212" y="1445" font-size="21" fill="#8fe1cc" font-weight="400" data-max-width="474">社交模拟 ≠ 完整的现实 / 剧情引擎</text>
-<text x="1212" y="1481" font-size="21" fill="#8fe1cc" font-weight="400" data-max-width="474">报告通常负责事后分析，不是剧情导演</text>
-<path d="M613 1400 L613 1417" fill="none" stroke="#7ce3c7" stroke-width="2.5" marker-end="url(#light)"/>
-<rect x="76" y="1426" width="1074" height="112" rx="12" fill="#eaf6f1" stroke="#eaf6f1"/>
-<text x="98" y="1465" font-size="28" fill="#11796d" font-weight="700" data-max-width="1654">模拟后的分析 · ReportAgent</text>
-<text x="98" y="1507" font-size="24" fill="#163846" font-weight="400" data-max-width="1030">检索模拟信息 / 调用工具 / 采访角色 → 生成报告，并支持后续追问</text>
-<path d="M900 1569 L900 1589" fill="none" stroke="#258f7e" stroke-width="2.5" marker-end="url(#arrow)"/>
-<rect x="48" y="1602" width="40" height="36" rx="7" fill="#11796d" stroke="#11796d"/>
-<text x="54" y="1628" font-size="22" fill="#fff" font-weight="700" data-max-width="30">04</text>
-<text x="104" y="1630" font-size="30" fill="#163846" font-weight="700" data-max-width="1648">最终看到什么？</text>
-<text x="520" y="1629" font-size="22" fill="#506b79" font-weight="400" data-max-width="1232">原版是图谱 + 记录 + 报告 + 对话的组合，图不是唯一输出</text>
-<rect x="48" y="1660" width="558" height="159" rx="15" fill="#fff" stroke="#d6e3e7"/>
-<text x="70" y="1699" font-size="28" fill="#163846" font-weight="700" data-max-width="245">关系图谱</text>
-<text x="310" y="1697" font-size="20" fill="#11796d" font-weight="600" data-max-width="274">图形节点与连线</text>
-<text x="70" y="1745" font-size="23" fill="#506b79" font-weight="400" data-max-width="514">看人物、组织、事件之间的关联</text>
-<text x="70" y="1780" font-size="23" fill="#506b79" font-weight="400" data-max-width="514">用于理解背景，不直接证明因果</text>
-<rect x="621" y="1660" width="558" height="159" rx="15" fill="#fff" stroke="#d6e3e7"/>
-<text x="643" y="1699" font-size="28" fill="#163846" font-weight="700" data-max-width="245">角色档案</text>
-<text x="883" y="1697" font-size="20" fill="#11796d" font-weight="600" data-max-width="274">人设与配置详情</text>
-<text x="643" y="1745" font-size="23" fill="#506b79" font-weight="400" data-max-width="514">看每个角色的背景、立场和设定</text>
-<text x="643" y="1780" font-size="23" fill="#506b79" font-weight="400" data-max-width="514">用于检查角色是否偏离资料</text>
-<rect x="1194" y="1660" width="558" height="159" rx="15" fill="#fff" stroke="#d6e3e7"/>
-<text x="1216" y="1699" font-size="28" fill="#163846" font-weight="700" data-max-width="245">互动记录</text>
-<text x="1456" y="1697" font-size="20" fill="#11796d" font-weight="600" data-max-width="274">时间线 / 动作列表</text>
-<text x="1216" y="1745" font-size="23" fill="#506b79" font-weight="400" data-max-width="514">看谁在何时发帖、评论或转发</text>
-<text x="1216" y="1780" font-size="23" fill="#506b79" font-weight="400" data-max-width="514">用于追踪讨论过程与信息变化</text>
-<rect x="48" y="1838" width="558" height="159" rx="15" fill="#fff" stroke="#d6e3e7"/>
-<text x="70" y="1877" font-size="28" fill="#163846" font-weight="700" data-max-width="245">运行状态</text>
-<text x="310" y="1875" font-size="20" fill="#11796d" font-weight="600" data-max-width="274">进度与动作计数</text>
-<text x="70" y="1923" font-size="23" fill="#506b79" font-weight="400" data-max-width="514">看轮次进展、平台状态和动作数量</text>
-<text x="70" y="1958" font-size="23" fill="#506b79" font-weight="400" data-max-width="514">用于监控运行，不代表预测准确率</text>
-<rect x="621" y="1838" width="558" height="159" rx="15" fill="#fff" stroke="#d6e3e7"/>
-<text x="643" y="1877" font-size="28" fill="#163846" font-weight="700" data-max-width="245">分析报告</text>
-<text x="883" y="1875" font-size="20" fill="#11796d" font-weight="600" data-max-width="274">按章节组织的文字报告</text>
-<text x="643" y="1923" font-size="23" fill="#506b79" font-weight="400" data-max-width="514">阅读模拟现象、解释和推演结论</text>
-<text x="643" y="1958" font-size="23" fill="#506b79" font-weight="400" data-max-width="514">可回到记录核查，不是确定的未来</text>
-<rect x="1194" y="1838" width="558" height="159" rx="15" fill="#fff" stroke="#d6e3e7"/>
-<text x="1216" y="1877" font-size="28" fill="#163846" font-weight="700" data-max-width="245">深度互动</text>
-<text x="1456" y="1875" font-size="20" fill="#11796d" font-weight="600" data-max-width="274">角色聊天 / 报告问答</text>
-<text x="1216" y="1923" font-size="23" fill="#506b79" font-weight="400" data-max-width="514">问角色为什么这样回应</text>
-<text x="1216" y="1958" font-size="23" fill="#506b79" font-weight="400" data-max-width="514">问报告依据是什么、还有什么遗漏</text>
-<rect x="48" y="2028" width="40" height="36" rx="7" fill="#11796d" stroke="#11796d"/>
-<text x="54" y="2054" font-size="22" fill="#fff" font-weight="700" data-max-width="30">05</text>
-<text x="104" y="2056" font-size="30" fill="#163846" font-weight="700" data-max-width="1648">怎样理解它的价值？</text>
-<text x="520" y="2055" font-size="22" fill="#506b79" font-weight="400" data-max-width="1232">用模拟形成可检查的假设，再回到现实验证</text>
-<rect x="48" y="2085" width="832" height="215" rx="15" fill="#e5f4ed" stroke="#b9dbcd"/>
-<text x="72" y="2127" font-size="28" fill="#11796d" font-weight="700" data-max-width="1680">能帮助你做的事</text>
-<text x="72" y="2171" font-size="23" fill="#163846" font-weight="400" data-max-width="784">发现被遗漏的群体、顾虑和沟通缺口；探索可能的反应路径。</text>
-<text x="72" y="2210" font-size="23" fill="#163846" font-weight="400" data-max-width="784">设计不同方案的模拟，形成访谈问题、评审线索与创作方向。</text>
-<text x="72" y="2249" font-size="23" fill="#163846" font-weight="400" data-max-width="784">知识库侧重“资料说了什么”；它进一步探索“角色可能怎么做”。</text>
-<rect x="902" y="2085" width="850" height="215" rx="15" fill="#fff4e8" stroke="#e4c9a8"/>
-<text x="926" y="2127" font-size="28" fill="#89602f" font-weight="700" data-max-width="826">不能由模拟直接推出的结论</text>
-<text x="926" y="2171" font-size="23" fill="#6a5847" font-weight="400" data-max-width="802">模拟客户不等于真实市场样本，角色数量不等于代表性。</text>
-<text x="926" y="2210" font-size="23" fill="#6a5847" font-weight="400" data-max-width="802">舆情推演不等于全网实时监测；故事推演不保证成稿小说。</text>
-<text x="926" y="2249" font-size="23" fill="#6a5847" font-weight="400" data-max-width="802">反复出现的结果不自动等于现实概率，准确性需对照验证。</text>
-<text x="48" y="2344" font-size="23" fill="#506b79" font-weight="400" data-max-width="1704">运行依赖：MiroFish 前端与 Python 后端 + 大模型 API + Zep 服务；仿真引擎采用 OASIS。</text>
-<text x="48" y="2382" font-size="21" fill="#506b79" font-weight="400" data-max-width="1704">源码能力归纳，非本次实测输出。固定版本 39d849138ef2 · 查阅 2026-09-16 · 本地演示发言为预设教学内容。</text>
+<rect width="1800" height="2480" fill="#fafaff"/>
+<rect x="48" y="18" width="1704" height="4" rx="0" fill="#4255c4" stroke="#4255c4"/>
+<text x="48" y="53" font-size="21" fill="#4255c4" font-weight="700" data-max-width="1704">MIROFISH  /  CAPABILITY MAP</text>
+<text x="1510" y="53" font-size="21" fill="#667089" font-weight="600" data-max-width="240">研究图解 / 009</text>
+<text x="48" y="118" font-size="49" fill="#202944" font-weight="700" data-max-width="1704">从一份资料，到一群角色的可能反应</text>
+<text x="50" y="166" font-size="26" fill="#667089" font-weight="400" data-max-width="1702">多智能体社会模拟应用  ·  用知识图谱组织背景，用大模型驱动角色，用仿真环境承接行动</text>
+<rect x="48" y="194" width="40" height="36" rx="3" fill="#e6eafa" stroke="#e6eafa"/>
+<text x="54" y="220" font-size="22" fill="#4255c4" font-weight="700" data-max-width="30">01</text>
+<text x="104" y="222" font-size="30" fill="#202944" font-weight="700" data-max-width="1648">可以用在哪些场景？</text>
+<text x="520" y="221" font-size="22" fill="#667089" font-weight="400" data-max-width="1232">前两项有官方演示；后三项是基于机制可设计的用途，效果需验证</text>
+<rect x="48" y="248" width="328" height="200" rx="6" fill="#fff" stroke="#dce0ef"/>
+<rect x="68" y="248" width="48" height="4" rx="0" fill="#4255c4" stroke="#4255c4"/>
+<text x="68" y="283" font-size="19" fill="#4255c4" font-weight="600" data-max-width="288">官方演示</text>
+<text x="68" y="324" font-size="27" fill="#202944" font-weight="700" data-max-width="288">舆情与公关</text>
+<text x="68" y="361" font-size="20" fill="#667089" font-weight="400" data-max-width="288">事件材料 + 公开反馈</text>
+<text x="68" y="391" font-size="20" fill="#667089" font-weight="400" data-max-width="288">模拟公告后的各方反应</text>
+<text x="68" y="421" font-size="20" fill="#667089" font-weight="400" data-max-width="288">观察争议与信息传播</text>
+<rect x="392" y="248" width="328" height="200" rx="6" fill="#fff" stroke="#dce0ef"/>
+<rect x="412" y="248" width="48" height="4" rx="0" fill="#4255c4" stroke="#4255c4"/>
+<text x="412" y="283" font-size="19" fill="#4255c4" font-weight="600" data-max-width="288">官方演示</text>
+<text x="412" y="324" font-size="27" fill="#202944" font-weight="700" data-max-width="288">故事后续推演</text>
+<text x="412" y="361" font-size="20" fill="#667089" font-weight="400" data-max-width="288">已有章节 + 人物关系</text>
+<text x="412" y="391" font-size="20" fill="#667089" font-weight="400" data-max-width="288">探索人物选择与冲突</text>
+<text x="412" y="421" font-size="20" fill="#667089" font-weight="400" data-max-width="288">示例：《红楼梦》前 80 回</text>
+<rect x="736" y="248" width="328" height="200" rx="6" fill="#fff" stroke="#dce0ef"/>
+<rect x="756" y="248" width="48" height="4" rx="0" fill="#8860b8" stroke="#8860b8"/>
+<text x="756" y="283" font-size="19" fill="#7652aa" font-weight="600" data-max-width="288">可设计用途</text>
+<text x="756" y="324" font-size="27" fill="#202944" font-weight="700" data-max-width="288">市场调研辅助</text>
+<text x="756" y="361" font-size="20" fill="#667089" font-weight="400" data-max-width="288">产品资料 + 客户访谈</text>
+<text x="756" y="391" font-size="20" fill="#667089" font-weight="400" data-max-width="288">探索需求、顾虑与拒绝理由</text>
+<text x="756" y="421" font-size="20" fill="#667089" font-weight="400" data-max-width="288">形成待真人验证的假设</text>
+<rect x="1080" y="248" width="328" height="200" rx="6" fill="#fff" stroke="#dce0ef"/>
+<rect x="1100" y="248" width="48" height="4" rx="0" fill="#8860b8" stroke="#8860b8"/>
+<text x="1100" y="283" font-size="19" fill="#7652aa" font-weight="600" data-max-width="288">可设计用途</text>
+<text x="1100" y="324" font-size="27" fill="#202944" font-weight="700" data-max-width="288">产品与价格评审</text>
+<text x="1100" y="361" font-size="20" fill="#667089" font-weight="400" data-max-width="288">功能 / 定价方案 + 反馈</text>
+<text x="1100" y="391" font-size="20" fill="#667089" font-weight="400" data-max-width="288">观察各类用户的潜在反应</text>
+<text x="1100" y="421" font-size="20" fill="#667089" font-weight="400" data-max-width="288">发现解释缺口与改进线索</text>
+<rect x="1424" y="248" width="328" height="200" rx="6" fill="#fff" stroke="#dce0ef"/>
+<rect x="1444" y="248" width="48" height="4" rx="0" fill="#8860b8" stroke="#8860b8"/>
+<text x="1444" y="283" font-size="19" fill="#7652aa" font-weight="600" data-max-width="288">可设计用途</text>
+<text x="1444" y="324" font-size="27" fill="#202944" font-weight="700" data-max-width="288">规则与政策讨论</text>
+<text x="1444" y="361" font-size="20" fill="#667089" font-weight="400" data-max-width="288">规则草案 + 各方约束</text>
+<text x="1444" y="391" font-size="20" fill="#667089" font-weight="400" data-max-width="288">探索群体冲突与适应行为</text>
+<text x="1444" y="421" font-size="20" fill="#667089" font-weight="400" data-max-width="288">寻找可能遗漏的利益诉求</text>
+<rect x="48" y="477" width="40" height="36" rx="3" fill="#e6eafa" stroke="#e6eafa"/>
+<text x="54" y="503" font-size="22" fill="#4255c4" font-weight="700" data-max-width="30">02</text>
+<text x="104" y="505" font-size="30" fill="#202944" font-weight="700" data-max-width="1648">输入什么？</text>
+<text x="520" y="504" font-size="22" fill="#667089" font-weight="400" data-max-width="1232">标准入口：上传背景资料，再用自然语言描述要探索的问题</text>
+<rect x="48" y="533" width="558" height="198" rx="6" fill="#fff" stroke="#dce0ef"/>
+<text x="70" y="573" font-size="27" fill="#202944" font-weight="700" data-max-width="514">A  背景资料</text>
+<text x="70" y="611" font-size="22" fill="#667089" font-weight="400" data-max-width="514">新闻、事件时间线、报告、公开评论</text>
+<text x="70" y="643" font-size="22" fill="#667089" font-weight="400" data-max-width="514">产品说明、客户访谈、竞品资料</text>
+<text x="70" y="675" font-size="22" fill="#667089" font-weight="400" data-max-width="514">小说章节、人物小传、关系与世界设定</text>
+<text x="70" y="708" font-size="20" fill="#4255c4" font-weight="600" data-max-width="514">文件：PDF / TXT / Markdown</text>
+<rect x="621" y="533" width="558" height="198" rx="6" fill="#fff" stroke="#dce0ef"/>
+<text x="643" y="573" font-size="27" fill="#202944" font-weight="700" data-max-width="514">B  明确的问题</text>
+<text x="643" y="611" font-size="22" fill="#667089" font-weight="400" data-max-width="514">“发布这份回应，各方会如何反应？”</text>
+<text x="643" y="643" font-size="22" fill="#667089" font-weight="400" data-max-width="514">“新价格可能引起哪些购买顾虑？”</text>
+<text x="643" y="675" font-size="22" fill="#667089" font-weight="400" data-max-width="514">“这个秘密公开后，人物会如何选择？”</text>
+<text x="643" y="708" font-size="20" fill="#4255c4" font-weight="600" data-max-width="514">写清事件、对象与要观察的变化</text>
+<rect x="1194" y="533" width="558" height="198" rx="6" fill="#fff" stroke="#dce0ef"/>
+<text x="1216" y="573" font-size="27" fill="#202944" font-weight="700" data-max-width="514">C  情境与约束</text>
+<text x="1216" y="611" font-size="22" fill="#667089" font-weight="400" data-max-width="514">在资料或需求中说明时间点与已知事实</text>
+<text x="1216" y="643" font-size="22" fill="#667089" font-weight="400" data-max-width="514">说明谁知道什么、各方目标与限制</text>
+<text x="1216" y="675" font-size="22" fill="#667089" font-weight="400" data-max-width="514">比较方案时分别运行，控制其余条件</text>
+<text x="1216" y="708" font-size="20" fill="#4255c4" font-weight="600" data-max-width="514">资料缺口可能被模型补全，需人工检查</text>
+<rect x="48" y="760" width="40" height="36" rx="3" fill="#e6eafa" stroke="#e6eafa"/>
+<text x="54" y="786" font-size="22" fill="#4255c4" font-weight="700" data-max-width="30">03</text>
+<text x="104" y="788" font-size="30" fill="#202944" font-weight="700" data-max-width="1648">内部怎样处理？</text>
+<text x="520" y="787" font-size="22" fill="#667089" font-weight="400" data-max-width="1232">把“背景关系”转换为“角色行动”，再由行动结果进入下一轮</text>
+<rect x="48" y="816" width="1704" height="750" rx="20" fill="#eceefa" stroke="#eceefa"/>
+<text x="76" y="852" font-size="21" fill="#654aa2" font-weight="600" data-max-width="1676">准备阶段  /  从材料建立模拟起点</text>
+<rect x="76" y="876" width="518" height="143" rx="12" fill="#ffffff" stroke="#d3d9ec"/>
+<text x="96" y="914" font-size="26" fill="#202944" font-weight="700" data-max-width="478">1  文档解析</text>
+<text x="96" y="956" font-size="22" fill="#596780" font-weight="400" data-max-width="478">提取文本，整理输入内容</text>
+<text x="96" y="989" font-size="22" fill="#596780" font-weight="400" data-max-width="478">材料是角色与推演的背景依据</text>
+<path d="M601 948 L621 948" fill="none" stroke="#7764c5" stroke-width="2.5" marker-end="url(#light)"/>
+<rect x="630" y="876" width="518" height="143" rx="12" fill="#ffffff" stroke="#d3d9ec"/>
+<text x="650" y="914" font-size="26" fill="#202944" font-weight="700" data-max-width="478">2  图谱与记忆 · Zep</text>
+<text x="650" y="956" font-size="22" fill="#596780" font-weight="400" data-max-width="478">抽取实体、关系，建立可检索背景</text>
+<text x="650" y="989" font-size="22" fill="#596780" font-weight="400" data-max-width="478">支持 GraphRAG 与时序记忆</text>
+<path d="M1155 948 L1175 948" fill="none" stroke="#7764c5" stroke-width="2.5" marker-end="url(#light)"/>
+<rect x="1184" y="876" width="518" height="143" rx="12" fill="#ffffff" stroke="#d3d9ec"/>
+<text x="1204" y="914" font-size="26" fill="#202944" font-weight="700" data-max-width="478">3  角色与环境配置 · LLM</text>
+<text x="1204" y="956" font-size="22" fill="#596780" font-weight="400" data-max-width="478">生成简介、人设、立场等角色设定</text>
+<text x="1204" y="989" font-size="22" fill="#596780" font-weight="400" data-max-width="478">配置活跃度、时长、初始帖子等</text>
+<path d="M1445 1022 V1041 H614 V1058" fill="none" stroke="#7764c5" stroke-width="2.5" marker-end="url(#light)"/>
+<rect x="76" y="1070" width="1074" height="327" rx="12" fill="#f6f7ff" stroke="#cfd5eb"/>
+<text x="98" y="1106" font-size="25" fill="#202944" font-weight="700" data-max-width="1654">多轮互动循环  /  活跃角色按当前可见信息行动</text>
+<rect x="98" y="1133" width="311" height="131" rx="10" fill="#e5eafa" stroke="#e5eafa"/>
+<text x="115" y="1170" font-size="26" fill="#4255c4" font-weight="700" data-max-width="277">观察</text>
+<text x="115" y="1209" font-size="20" fill="#202944" font-weight="400" data-max-width="277">角色背景与记忆</text>
+<text x="115" y="1239" font-size="20" fill="#202944" font-weight="400" data-max-width="277">当前可见帖子 / 环境信息</text>
+<path d="M415 1198 L435 1198" fill="none" stroke="#7764c5" stroke-width="2.5" marker-end="url(#light)"/>
+<rect x="444" y="1133" width="311" height="131" rx="10" fill="#e5eafa" stroke="#e5eafa"/>
+<text x="461" y="1170" font-size="26" fill="#4255c4" font-weight="700" data-max-width="277">决策 · 大模型</text>
+<text x="461" y="1209" font-size="20" fill="#202944" font-weight="400" data-max-width="277">人设 + 上下文 → 选择行动</text>
+<text x="461" y="1239" font-size="20" fill="#202944" font-weight="400" data-max-width="277">同一模型可驱动多个角色</text>
+<path d="M761 1198 L781 1198" fill="none" stroke="#7764c5" stroke-width="2.5" marker-end="url(#light)"/>
+<rect x="790" y="1133" width="311" height="131" rx="10" fill="#e5eafa" stroke="#e5eafa"/>
+<text x="807" y="1170" font-size="26" fill="#4255c4" font-weight="700" data-max-width="277">执行 · OASIS</text>
+<text x="807" y="1209" font-size="20" fill="#202944" font-weight="400" data-max-width="277">发帖、评论、转发等</text>
+<text x="807" y="1239" font-size="20" fill="#202944" font-weight="400" data-max-width="277">也可以不行动</text>
+<text x="115" y="1338" font-size="23" fill="#52617a" font-weight="400" data-max-width="1000">共享环境保存行动结果；可用信息与记忆更新 → 其他角色在后续轮次观察</text>
+<path d="M1049 1271 V1300 H252 V1274" fill="none" stroke="#7764c5" stroke-width="2.5" marker-end="url(#light)"/>
+<text x="416" y="1375" font-size="21" fill="#654aa2" font-weight="600" data-max-width="690">不是每人都发言，也不是所有角色都知道一切</text>
+<rect x="1174" y="1070" width="550" height="468" rx="12" fill="#ffffff" stroke="#d3d9ec"/>
+<text x="1196" y="1110" font-size="26" fill="#202944" font-weight="700" data-max-width="506">几个容易混淆的分工</text>
+<text x="1196" y="1153" font-size="22" fill="#596780" font-weight="400" data-max-width="506">角色 = 档案 / 人设 + 上下文 + 可用动作</text>
+<text x="1196" y="1191" font-size="22" fill="#596780" font-weight="400" data-max-width="506">大模型：生成设定、选择行动、分析结果</text>
+<text x="1196" y="1229" font-size="22" fill="#596780" font-weight="400" data-max-width="506">OASIS：执行动作，管理虚拟社交环境</text>
+<text x="1196" y="1267" font-size="22" fill="#596780" font-weight="400" data-max-width="506">Zep：组织知识关系与记忆检索</text>
+<text x="1196" y="1305" font-size="22" fill="#596780" font-weight="400" data-max-width="506">MiroFish：编排流程，提供网页与接口</text>
+<rect x="1196" y="1340" width="506" height="171" rx="10" fill="#f0edfa" stroke="#d9d0ed"/>
+<text x="1212" y="1373" font-size="21" fill="#614888" font-weight="400" data-max-width="474">多个 Agent ≠ 必须使用多种模型</text>
+<text x="1212" y="1409" font-size="21" fill="#614888" font-weight="400" data-max-width="474">角色定制 ≠ 为每个角色训练模型</text>
+<text x="1212" y="1445" font-size="21" fill="#614888" font-weight="400" data-max-width="474">社交模拟 ≠ 完整的现实 / 剧情引擎</text>
+<text x="1212" y="1481" font-size="21" fill="#614888" font-weight="400" data-max-width="474">报告通常负责事后分析，不是剧情导演</text>
+<path d="M613 1400 L613 1417" fill="none" stroke="#7764c5" stroke-width="2.5" marker-end="url(#light)"/>
+<rect x="76" y="1426" width="1074" height="112" rx="12" fill="#e5eafa" stroke="#e5eafa"/>
+<text x="98" y="1465" font-size="28" fill="#4255c4" font-weight="700" data-max-width="1654">模拟后的分析 · ReportAgent</text>
+<text x="98" y="1507" font-size="24" fill="#202944" font-weight="400" data-max-width="1030">检索模拟信息 / 调用工具 / 采访角色 → 生成报告，并支持后续追问</text>
+<path d="M900 1569 L900 1589" fill="none" stroke="#6475cd" stroke-width="2.5" marker-end="url(#arrow)"/>
+<rect x="48" y="1602" width="40" height="36" rx="3" fill="#e6eafa" stroke="#e6eafa"/>
+<text x="54" y="1628" font-size="22" fill="#4255c4" font-weight="700" data-max-width="30">04</text>
+<text x="104" y="1630" font-size="30" fill="#202944" font-weight="700" data-max-width="1648">最终看到什么？</text>
+<text x="520" y="1629" font-size="22" fill="#667089" font-weight="400" data-max-width="1232">原版是图谱 + 记录 + 报告 + 对话的组合，图不是唯一输出</text>
+<rect x="48" y="1660" width="558" height="159" rx="6" fill="#fff" stroke="#dce0ef"/>
+<rect x="48" y="1680" width="3" height="35" rx="0" fill="#4255c4" stroke="#4255c4"/>
+<text x="70" y="1699" font-size="28" fill="#202944" font-weight="700" data-max-width="245">关系图谱</text>
+<text x="310" y="1697" font-size="20" fill="#4255c4" font-weight="600" data-max-width="274">图形节点与连线</text>
+<text x="70" y="1745" font-size="23" fill="#667089" font-weight="400" data-max-width="514">看人物、组织、事件之间的关联</text>
+<text x="70" y="1780" font-size="23" fill="#667089" font-weight="400" data-max-width="514">用于理解背景，不直接证明因果</text>
+<rect x="621" y="1660" width="558" height="159" rx="6" fill="#fff" stroke="#dce0ef"/>
+<rect x="621" y="1680" width="3" height="35" rx="0" fill="#4255c4" stroke="#4255c4"/>
+<text x="643" y="1699" font-size="28" fill="#202944" font-weight="700" data-max-width="245">角色档案</text>
+<text x="883" y="1697" font-size="20" fill="#4255c4" font-weight="600" data-max-width="274">人设与配置详情</text>
+<text x="643" y="1745" font-size="23" fill="#667089" font-weight="400" data-max-width="514">看每个角色的背景、立场和设定</text>
+<text x="643" y="1780" font-size="23" fill="#667089" font-weight="400" data-max-width="514">用于检查角色是否偏离资料</text>
+<rect x="1194" y="1660" width="558" height="159" rx="6" fill="#fff" stroke="#dce0ef"/>
+<rect x="1194" y="1680" width="3" height="35" rx="0" fill="#4255c4" stroke="#4255c4"/>
+<text x="1216" y="1699" font-size="28" fill="#202944" font-weight="700" data-max-width="245">互动记录</text>
+<text x="1456" y="1697" font-size="20" fill="#4255c4" font-weight="600" data-max-width="274">时间线 / 动作列表</text>
+<text x="1216" y="1745" font-size="23" fill="#667089" font-weight="400" data-max-width="514">看谁在何时发帖、评论或转发</text>
+<text x="1216" y="1780" font-size="23" fill="#667089" font-weight="400" data-max-width="514">用于追踪讨论过程与信息变化</text>
+<rect x="48" y="1838" width="558" height="159" rx="6" fill="#fff" stroke="#dce0ef"/>
+<rect x="48" y="1858" width="3" height="35" rx="0" fill="#4255c4" stroke="#4255c4"/>
+<text x="70" y="1877" font-size="28" fill="#202944" font-weight="700" data-max-width="245">运行状态</text>
+<text x="310" y="1875" font-size="20" fill="#4255c4" font-weight="600" data-max-width="274">进度与动作计数</text>
+<text x="70" y="1923" font-size="23" fill="#667089" font-weight="400" data-max-width="514">看轮次进展、平台状态和动作数量</text>
+<text x="70" y="1958" font-size="23" fill="#667089" font-weight="400" data-max-width="514">用于监控运行，不代表预测准确率</text>
+<rect x="621" y="1838" width="558" height="159" rx="6" fill="#fff" stroke="#dce0ef"/>
+<rect x="621" y="1858" width="3" height="35" rx="0" fill="#4255c4" stroke="#4255c4"/>
+<text x="643" y="1877" font-size="28" fill="#202944" font-weight="700" data-max-width="245">分析报告</text>
+<text x="883" y="1875" font-size="20" fill="#4255c4" font-weight="600" data-max-width="274">按章节组织的文字报告</text>
+<text x="643" y="1923" font-size="23" fill="#667089" font-weight="400" data-max-width="514">阅读模拟现象、解释和推演结论</text>
+<text x="643" y="1958" font-size="23" fill="#667089" font-weight="400" data-max-width="514">可回到记录核查，不是确定的未来</text>
+<rect x="1194" y="1838" width="558" height="159" rx="6" fill="#fff" stroke="#dce0ef"/>
+<rect x="1194" y="1858" width="3" height="35" rx="0" fill="#4255c4" stroke="#4255c4"/>
+<text x="1216" y="1877" font-size="28" fill="#202944" font-weight="700" data-max-width="245">深度互动</text>
+<text x="1456" y="1875" font-size="20" fill="#4255c4" font-weight="600" data-max-width="274">角色聊天 / 报告问答</text>
+<text x="1216" y="1923" font-size="23" fill="#667089" font-weight="400" data-max-width="514">问角色为什么这样回应</text>
+<text x="1216" y="1958" font-size="23" fill="#667089" font-weight="400" data-max-width="514">问报告依据是什么、还有什么遗漏</text>
+<rect x="48" y="2028" width="40" height="36" rx="3" fill="#e6eafa" stroke="#e6eafa"/>
+<text x="54" y="2054" font-size="22" fill="#4255c4" font-weight="700" data-max-width="30">05</text>
+<text x="104" y="2056" font-size="30" fill="#202944" font-weight="700" data-max-width="1648">怎样理解它的价值？</text>
+<text x="520" y="2055" font-size="22" fill="#667089" font-weight="400" data-max-width="1232">用模拟形成可检查的假设，再回到现实验证</text>
+<rect x="48" y="2085" width="832" height="215" rx="6" fill="#edf0fc" stroke="#d2d9f2"/>
+<text x="72" y="2127" font-size="28" fill="#4255c4" font-weight="700" data-max-width="1680">能帮助你做的事</text>
+<text x="72" y="2171" font-size="23" fill="#202944" font-weight="400" data-max-width="784">发现被遗漏的群体、顾虑和沟通缺口；探索可能的反应路径。</text>
+<text x="72" y="2210" font-size="23" fill="#202944" font-weight="400" data-max-width="784">设计不同方案的模拟，形成访谈问题、评审线索与创作方向。</text>
+<text x="72" y="2249" font-size="23" fill="#202944" font-weight="400" data-max-width="784">知识库侧重“资料说了什么”；它进一步探索“角色可能怎么做”。</text>
+<rect x="902" y="2085" width="850" height="215" rx="6" fill="#f5effa" stroke="#e0d4eb"/>
+<text x="926" y="2127" font-size="28" fill="#75519a" font-weight="700" data-max-width="826">不能由模拟直接推出的结论</text>
+<text x="926" y="2171" font-size="23" fill="#695976" font-weight="400" data-max-width="802">模拟客户不等于真实市场样本，角色数量不等于代表性。</text>
+<text x="926" y="2210" font-size="23" fill="#695976" font-weight="400" data-max-width="802">舆情推演不等于全网实时监测；故事推演不保证成稿小说。</text>
+<text x="926" y="2249" font-size="23" fill="#695976" font-weight="400" data-max-width="802">反复出现的结果不自动等于现实概率，准确性需对照验证。</text>
+<text x="48" y="2344" font-size="23" fill="#667089" font-weight="400" data-max-width="1704">运行依赖：MiroFish 前端与 Python 后端 + 大模型 API + Zep 服务；仿真引擎采用 OASIS。</text>
+<text x="48" y="2382" font-size="21" fill="#667089" font-weight="400" data-max-width="1704">源码能力归纳，非本次实测输出。固定版本 39d849138ef2 · 查阅 2026-09-16 · 本地演示发言为预设教学内容。</text>
 <a href="https://github.com/666ghj/MiroFish/blob/39d849138ef254f6c737ab4c4705e5545dbe31d4/README-ZH.md" target="_blank" rel="noopener">
-<text x="48" y="2428" font-size="21" fill="#11796d" font-weight="600" data-max-width="390">官方说明与案例 ↗</text>
+<text x="48" y="2428" font-size="21" fill="#4255c4" font-weight="600" data-max-width="390">官方说明与案例 ↗</text>
 </a>
 <a href="https://github.com/666ghj/MiroFish/blob/39d849138ef254f6c737ab4c4705e5545dbe31d4/backend/app/services/oasis_profile_generator.py" target="_blank" rel="noopener">
-<text x="468" y="2428" font-size="21" fill="#11796d" font-weight="600" data-max-width="390">角色与配置 ↗</text>
+<text x="468" y="2428" font-size="21" fill="#4255c4" font-weight="600" data-max-width="390">角色与配置 ↗</text>
 </a>
 <a href="https://github.com/666ghj/MiroFish/blob/39d849138ef254f6c737ab4c4705e5545dbe31d4/backend/scripts/run_parallel_simulation.py" target="_blank" rel="noopener">
-<text x="888" y="2428" font-size="21" fill="#11796d" font-weight="600" data-max-width="390">仿真执行 ↗</text>
+<text x="888" y="2428" font-size="21" fill="#4255c4" font-weight="600" data-max-width="390">仿真执行 ↗</text>
 </a>
 <a href="https://github.com/666ghj/MiroFish/blob/39d849138ef254f6c737ab4c4705e5545dbe31d4/frontend/src/components/Step5Interaction.vue" target="_blank" rel="noopener">
-<text x="1308" y="2428" font-size="21" fill="#11796d" font-weight="600" data-max-width="390">报告与对话界面 ↗</text>
+<text x="1308" y="2428" font-size="21" fill="#4255c4" font-weight="600" data-max-width="390">报告与对话界面 ↗</text>
 </a>
 </svg>
