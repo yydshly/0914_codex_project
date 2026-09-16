@@ -240,7 +240,7 @@
       ],
       "cover": "projects/010-graft/assets/graft-overview.png",
       "cover_alt": "Graft 能力与初步研究全景图：扫描源码并构建索引与关系图，指导 AI 查找；构建原理待研究。",
-      "demo": ""
+      "demo": "https://yydshly.github.io/0914_codex_project/010-graft/"
     }
   ]
 }

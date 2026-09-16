@@ -2,8 +2,11 @@
 
 独立研究网页，延续总仓库的原生 HTML / CSS / JavaScript 与静态打包方式。无需前端依赖，可离线阅读；外部来源链接需要联网。
 
+在线入口：[Graft 导读](https://yydshly.github.io/0914_codex_project/010-graft/) · [一图总览](https://yydshly.github.io/0914_codex_project/010-graft/#overview)。
+
 ## 内容
 
+- 能力引导图及 PNG / SVG 下载，初步源码笔记与探针记录下载。
 - 三个预设任务：调查登录掉线、修改 Token 接口、理解登录流程。
 - 文件与依赖图联动，点击模块查看说明及代码。
 - 接口轮廓、相关片段、完整示例三种阅读深度；按实际示例计算展示行数。
@@ -24,4 +27,4 @@ python -m http.server 8096 --bind 127.0.0.1 --directory projects/010-graft/web/d
 
 打开 http://127.0.0.1:8096/，也可以直接打开 dist/index.html。
 
-构建产物位于 web/dist（被版本控制忽略），已按总仓库的子路径部署方式使用相对资源。当前仅本地预览，未发布到公共站点。
+构建产物位于 web/dist（被版本控制忽略），已按总仓库的子路径部署方式使用相对资源。已接入统一 GitHub Pages 构建与发布，并完成远端访问验证。

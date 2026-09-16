@@ -27,9 +27,9 @@
 
 研究材料：[源码阅读笔记（初步）](notes/implementation-audit.md) · [原函数探针结果](notes/source-probes.json)。包含数据结构、调用链和局部分支线索；纯中文分词、过期片段等观察仅限已记录的核对范围，未做完整上游运行。
 
-[打开本地交互导读](web/dist/index.html) · [网页运行说明](web/README.md)
+[打开在线导读](https://yydshly.github.io/0914_codex_project/010-graft/) · [查看在线引导图](https://yydshly.github.io/0914_codex_project/010-graft/#overview) · [打开本地交互导读](web/dist/index.html) · [网页运行说明](web/README.md)
 
-网页提供三个任务、依赖关系图、三种阅读深度、六步实现流程与缓存状态切换，同时解释 Graft 与 Caveman 的差别。内容为原创教学示例，未调用上游检索或模型；尚未发布到公共站点。
+网页提供三个任务、依赖关系图、三种阅读深度、六步实现流程与缓存状态切换，同时解释 Graft 与 Caveman 的差别。内容为原创教学示例，未调用上游检索或模型；已发布至 GitHub Pages，并核对全部 11 个静态文件与导航入口。
 
 | 能力 | 产物 / 操作 | 用途 |
 | --- | --- | --- |

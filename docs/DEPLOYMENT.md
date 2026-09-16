@@ -52,4 +52,4 @@ GitHub Pages 托管静态 HTML、CSS 和 JavaScript。需要服务端、数据�
 - [GitHub Pages 简介与限制](https://docs.github.com/en/pages/getting-started-with-github-pages/what-is-github-pages)
 - [创建 GitHub Pages 站点](https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-github-pages-site)
 
-010 Graft 已接入统一构建与发布清单，打包交互导读、PNG/SVG 引导图和研究笔记。部署成功并访问验证后登记在线入口；能力定位为扫描源码构建索引、指导 AI 查找，构建原理待研究。
+010 Graft 已接入统一构建与发布清单，打包交互导读、PNG/SVG 引导图和研究笔记。部署已成功，11 个静态文件逐项核对一致，总导航与十个项目入口均可访问；[在线导读](https://yydshly.github.io/0914_codex_project/010-graft/)已登记到仓库索引。能力定位为扫描源码构建索引、指导 AI 查找，构建原理待研究。
