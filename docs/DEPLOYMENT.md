@@ -56,4 +56,4 @@ GitHub Pages 托管静态 HTML、CSS 和 JavaScript。需要服务端、数据�
 
 011 Background Agents 已发布并验证：[在线研究导读](https://yydshly.github.io/0914_codex_project/011-background-agents/)。包含能力、入口、执行流程、AI 接入、Codex 关系、PNG/SVG 总览图与理解汇总。13 个静态文件逐项核对一致，总导航及全部 11 个项目入口可访问；已关联仓库索引和项目说明。此次只发布研究网页，未部署 Open-Inspect 后端或执行沙箱。
 
-012 Future AGI 已接入统一发布清单与 CI 构建。内容定位为检测和评估 AI 应用的能力与表现，说明七类检测方式，并明确根本原理需后期深入研究、实际效果待实测。发布结果将在部署成功并访问验证后登记。
+012 Future AGI 于 2026-09-16 发布并验证：[AI 能力检测与评测研究](https://yydshly.github.io/0914_codex_project/012-future-agi/)。内容定位为检测和评估 AI 应用的能力与表现，说明七类检测方式，并明确根本原理需后期深入研究、实际效果待实测。21 个静态文件逐项核对一致，总导航摘要与 12 个项目入口可访问；正式地址已登记到项目索引。

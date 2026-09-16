@@ -31,6 +31,6 @@ HTML、CSS、JavaScript 与图标直接维护于本目录，无前端依赖。�
 
 总览图由 `src/draw_overview.py` 生成到 `assets/`，需要 Pillow 与指定的中文字体。更新图中文字后，先运行绘图器再构建网页；网页构建本身无需 Pillow。分析说明与证据集中在 `notes/analysis-methods.md`。
 
-当前未发布在线地址，也未修改统一发布清单。研究源码固定版本为 c02ffdd8d0575cba4ab07743f67b508bd20206c0。
+已通过统一 GitHub Pages 流程发布：[在线研究网页](https://yydshly.github.io/0914_codex_project/012-future-agi/)。21 个静态文件与本地内容核对一致，总导航及 12 个项目入口可访问。研究源码固定版本为 c02ffdd8d0575cba4ab07743f67b508bd20206c0。
 
 [验证记录](../notes/web-verification.md) · [返回研究入口](../README.md)

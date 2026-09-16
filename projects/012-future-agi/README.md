@@ -17,6 +17,8 @@
 
 ## 阅读入口
 
+- [在线研究网页](https://yydshly.github.io/0914_codex_project/012-future-agi/)：已发布并验证，说明检测能力、检测方式与后续研究范围。
+
 - [中文研究网页](http://127.0.0.1:8098/)：能力展开、评测方式与业务场景切换；需本地服务运行。也可打开 [离线网页](web/dist/index.html)。
 - [网页运行与维护说明](web/README.md)
 - [一张图看懂技术原理](assets/future-agi-technical-overview.png) / [可缩放 SVG](assets/future-agi-technical-overview.svg)

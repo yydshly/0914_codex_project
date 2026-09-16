@@ -278,7 +278,7 @@
       ],
       "cover": "projects/012-future-agi/assets/future-agi-technical-overview.png",
       "cover_alt": "Future AGI 技术总览：证据输入、模型请求与遥测路径、七类评测手段、错误诊断、优化实验及使用边界。",
-      "demo": ""
+      "demo": "https://yydshly.github.io/0914_codex_project/012-future-agi/"
     }
   ]
 }
