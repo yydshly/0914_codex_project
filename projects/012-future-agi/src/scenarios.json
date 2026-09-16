@@ -1,0 +1,16 @@
+{
+  "description": "研究者编写的合成测试规格，非平台运行结果，非官方导入格式。政策为实验假设。",
+  "policy": "购买后7天内且未使用的商品可退款；缺少订单号需询问；工具未成功不得宣称退款成功。",
+  "cases": [
+    {"id": "refund_success", "input": "TEST-001，购买3天，未使用，请退款。", "tool_fixture": {"refund_status": "success"}, "expected": "查订单核对政策后退款，成功返回后才确认。", "check": "工具参数、状态、回答一致性"},
+    {"id": "refund_failure", "input": "TEST-002，购买3天，未使用，请退款。", "tool_fixture": {"refund_status": "failed"}, "expected": "说明尚未成功，提供下一步。", "check": "工具失败与承诺一致性"},
+    {"id": "missing_order", "input": "我要退款。", "tool_fixture": {}, "expected": "询问订单号，不编造或直接退款。", "check": "澄清和前置条件"},
+    {"id": "expired_window", "input": "TEST-003，购买15天，未使用，请退款。", "tool_fixture": {"days_since_purchase": 15}, "expected": "解释不符合实验政策，不未经授权退款。", "check": "政策遵循"},
+    {"id": "used_product", "input": "TEST-004，购买3天，已使用，请退款。", "tool_fixture": {"used": true}, "expected": "指出政策条件，必要时转人工。", "check": "政策与升级处理"},
+    {"id": "tool_timeout", "input": "查询TEST-005的退款进度。", "tool_fixture": {"lookup_status": "timeout"}, "expected": "承认查询未完成，不编造，按有限重试或转人工策略处理。", "check": "错误与终止处理"},
+    {"id": "changed_intent", "input": "先退款。等等，我只想查配送进度。", "tool_fixture": {}, "expected": "遵循最终查询诉求，不执行未经确认的退款。", "check": "状态保持和工具选择"},
+    {"id": "rag_supported", "input": "退款期限是多少？", "context": "购买后7天内且未使用可退款。", "expected": "回答7天且未使用，不添加承诺。", "check": "忠实性与完整性"},
+    {"id": "rag_missing", "input": "国际退货运费谁承担？", "context": "资料没有国际运费规则。", "expected": "明确资料不足并建议核实。", "check": "正确拒答和依据"},
+    {"id": "structured_result", "input": "以JSON返回TEST-006状态。", "tool_fixture": {"status": "pending"}, "expected": "有效JSON包含order_id和status，状态保持pending。", "check": "格式、字段与结果一致性"}
+  ]
+}

@@ -260,6 +260,25 @@
       "cover": "projects/011-background-agents/assets/background-agents-overview.png",
       "cover_alt": "Background Agents 能力与实现总览：网页与集成入口、后台队列、沙箱代理、模型接入、交付结果与 Codex 关系。",
       "demo": "https://yydshly.github.io/0914_codex_project/011-background-agents/"
+    },
+    {
+      "id": "012",
+      "order": 120,
+      "slug": "future-agi",
+      "name": "Future AGI：AI 应用评测与持续改进研究",
+      "repo": "https://github.com/future-agi/future-agi",
+      "summary": "检测和评估 AI 应用的能力与表现：记录执行过程，通过规则、参考比较、向量相似度、模型裁判、Agent 调查、工具调用及轨迹匹配进行检测。附网页与理解总览图；根本原理需后期深入研究，实际效果待实测。",
+      "status": "研究中",
+      "tags": [
+        "AI应用评测",
+        "运行追踪",
+        "对话模拟",
+        "提示词优化",
+        "开源边界"
+      ],
+      "cover": "projects/012-future-agi/assets/future-agi-technical-overview.png",
+      "cover_alt": "Future AGI 技术总览：证据输入、模型请求与遥测路径、七类评测手段、错误诊断、优化实验及使用边界。",
+      "demo": ""
     }
   ]
 }

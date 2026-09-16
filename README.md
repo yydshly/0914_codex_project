@@ -22,6 +22,7 @@
 | 9 | 009 | [MiroFish：多智能体社会推演能力展示](projects/009-mirofish/README.md) | [MiroFish](https://github.com/666ghj/MiroFish) | 将资料与假设问题转成角色，由知识图谱组织背景、大模型决策、OASIS 执行动作，输出图谱、互动记录、报告与对话；用于舆情和故事推演，可设计市场调研、产品与规则评审。附能力全景图、交互教学和真实案例，尚未实测预测效果。 | 研究中 | [在线演示](https://yydshly.github.io/0914_codex_project/009-mirofish/) |
 | 10 | 010 | [Graft：代码库地图与按需上下文研究](projects/010-graft/README.md) | [Graft](https://github.com/trailhq/Graft) | 对源码进行扫描并构建代码索引与关系图，指导 AI 查找相关代码。构建原理待研究，效果待实测。 | 研究中 | [在线演示](https://yydshly.github.io/0914_codex_project/010-graft/) |
 | 11 | 011 | [Background Agents：后台 AI 编程平台能力研究](projects/011-background-agents/README.md) | [background\-agents](https://github.com/ColeMurray/background-agents) | 搭建给 AI 派开发任务的平台，在独立环境中修改代码、执行测试并提交 PR；附中文交互网页与前后端总览图，区分代理程序、模型接入及 Codex 关系，含 25 项固定版本来源，真实运行效果待验证。 | 研究中 | [在线演示](https://yydshly.github.io/0914_codex_project/011-background-agents/) |
+| 12 | 012 | [Future AGI：AI 应用评测与持续改进研究](projects/012-future-agi/README.md) | [future\-agi](https://github.com/future-agi/future-agi) | 检测和评估 AI 应用的能力与表现：记录执行过程，通过规则、参考比较、向量相似度、模型裁判、Agent 调查、工具调用及轨迹匹配进行检测。附网页与理解总览图；根本原理需后期深入研究，实际效果待实测。 | 研究中 | — |
 <!-- PROJECT_INDEX:END -->
 
 ## 项目预览
@@ -194,6 +195,16 @@
 [研究记录](projects/011-background-agents/README.md) · [上游仓库](https://github.com/ColeMurray/background-agents) · [在线演示](https://yydshly.github.io/0914_codex_project/011-background-agents/)
 
 标签：后台编程代理 / 云端沙箱 / 任务队列 / 并行子任务 / 自动化触发
+
+### 012 · Future AGI：AI 应用评测与持续改进研究
+
+检测和评估 AI 应用的能力与表现：记录执行过程，通过规则、参考比较、向量相似度、模型裁判、Agent 调查、工具调用及轨迹匹配进行检测。附网页与理解总览图；根本原理需后期深入研究，实际效果待实测。
+
+![Future AGI 技术总览：证据输入、模型请求与遥测路径、七类评测手段、错误诊断、优化实验及使用边界。](projects/012-future-agi/assets/future-agi-technical-overview.png)
+
+[研究记录](projects/012-future-agi/README.md) · [上游仓库](https://github.com/future-agi/future-agi)
+
+标签：AI应用评测 / 运行追踪 / 对话模拟 / 提示词优化 / 开源边界
 <!-- PROJECT_PREVIEWS:END -->
 
 ## 开始研究

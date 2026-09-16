@@ -1,0 +1,146 @@
+[
+  {
+    "path": "README.md",
+    "url": "https://github.com/future-agi/future-agi/blob/c02ffdd8d0575cba4ab07743f67b508bd20206c0/README.md",
+    "sha256": "1207e22e7898fd5b4f0def4fc1e347cd9b8f00b9289d22572e3ccc21392bf2a0",
+    "bytes": 25121
+  },
+  {
+    "path": "LICENSE",
+    "url": "https://github.com/future-agi/future-agi/blob/c02ffdd8d0575cba4ab07743f67b508bd20206c0/LICENSE",
+    "sha256": "31d1553aa55ecb5c96ad0ed070dc4191e60776bb135080a1ea58663f72f13847",
+    "bytes": 11308
+  },
+  {
+    "path": "LICENSE-EE",
+    "url": "https://github.com/future-agi/future-agi/blob/c02ffdd8d0575cba4ab07743f67b508bd20206c0/LICENSE-EE",
+    "sha256": "de84cf42db1a88c57f7000c434fbe99ac21e307b06025253e7f2ed6267d21715",
+    "bytes": 850
+  },
+  {
+    "path": "NOTICE",
+    "url": "https://github.com/future-agi/future-agi/blob/c02ffdd8d0575cba4ab07743f67b508bd20206c0/NOTICE",
+    "sha256": "9a4d44d50df9e017b53f10e26a1e5dd3b800d7e5fd1bd279e5d1de1ec769bfc6",
+    "bytes": 614
+  },
+  {
+    "path": "INSTALLATION.md",
+    "url": "https://github.com/future-agi/future-agi/blob/c02ffdd8d0575cba4ab07743f67b508bd20206c0/INSTALLATION.md",
+    "sha256": "aadcde30b6fe7eac84bfc360e8465cb18e44a622b695ad92101dd1eb300b9e79",
+    "bytes": 26274
+  },
+  {
+    "path": "docker-compose.yml",
+    "url": "https://github.com/future-agi/future-agi/blob/c02ffdd8d0575cba4ab07743f67b508bd20206c0/docker-compose.yml",
+    "sha256": "7c1f6cf8f19be5a7f3e882dba45be985dd04e6dc1c20a80c0d719ba0ad6534e9",
+    "bytes": 52183
+  },
+  {
+    "path": "Dockerfile.oss",
+    "url": "https://github.com/future-agi/future-agi/blob/c02ffdd8d0575cba4ab07743f67b508bd20206c0/Dockerfile.oss",
+    "sha256": "052f586945498167ba1fb2fb60111f73b61f6345b90ce0e9f1ae880e694bee32",
+    "bytes": 1388
+  },
+  {
+    "path": "fi-collector/README.md",
+    "url": "https://github.com/future-agi/future-agi/blob/c02ffdd8d0575cba4ab07743f67b508bd20206c0/fi-collector/README.md",
+    "sha256": "dfe7e09ce7201b906003a9396d4a2c5ce2a1155c6b4504371cc9077ba9de9287",
+    "bytes": 8943
+  },
+  {
+    "path": "agentcc-gateway/README.md",
+    "url": "https://github.com/future-agi/future-agi/blob/c02ffdd8d0575cba4ab07743f67b508bd20206c0/agentcc-gateway/README.md",
+    "sha256": "04c90344c56c8dddfabc17f34f946f5019eaef075b853a0ca03405d9c90590de",
+    "bytes": 48898
+  },
+  {
+    "path": "agentcc-gateway/internal/routing/router.go",
+    "url": "https://github.com/future-agi/future-agi/blob/c02ffdd8d0575cba4ab07743f67b508bd20206c0/agentcc-gateway/internal/routing/router.go",
+    "sha256": "8abd241a8ed0348b6cbb83147581806737cd2eac401fb27d5f79099c8bee5c06",
+    "bytes": 5518
+  },
+  {
+    "path": "agentcc-gateway/internal/guardrails/engine.go",
+    "url": "https://github.com/future-agi/future-agi/blob/c02ffdd8d0575cba4ab07743f67b508bd20206c0/agentcc-gateway/internal/guardrails/engine.go",
+    "sha256": "1595a997fd5601abce5a72a42e74d7837bac98cae095a53c657a182c0ff863de",
+    "bytes": 7971
+  },
+  {
+    "path": "agentcc-gateway/internal/guardrails/injection/injection.go",
+    "url": "https://github.com/future-agi/future-agi/blob/c02ffdd8d0575cba4ab07743f67b508bd20206c0/agentcc-gateway/internal/guardrails/injection/injection.go",
+    "sha256": "82ec4b502c1f3201e36f742d7d88b3ec0d619bb5873f2d10e2e7261d4cfa1f05",
+    "bytes": 9850
+  },
+  {
+    "path": "futureagi/tfc/ee_loader.py",
+    "url": "https://github.com/future-agi/future-agi/blob/c02ffdd8d0575cba4ab07743f67b508bd20206c0/futureagi/tfc/ee_loader.py",
+    "sha256": "1b418f922d9868a69ecc039c6c99bffade2e720399c21619c23177a0ae820c4a",
+    "bytes": 1195
+  },
+  {
+    "path": "futureagi/model_hub/services/optimization_service.py",
+    "url": "https://github.com/future-agi/future-agi/blob/c02ffdd8d0575cba4ab07743f67b508bd20206c0/futureagi/model_hub/services/optimization_service.py",
+    "sha256": "9a306885861c7667143c203cc98ee527e354bfa893f10aa3aa92de404f1dc2cf",
+    "bytes": 2110
+  },
+  {
+    "path": "futureagi/model_hub/tasks/optimisation_runner.py",
+    "url": "https://github.com/future-agi/future-agi/blob/c02ffdd8d0575cba4ab07743f67b508bd20206c0/futureagi/model_hub/tasks/optimisation_runner.py",
+    "sha256": "c3f0c833829a0528adc221b7257e0b804e4e452094f4891d3c6a00c74a7a45c1",
+    "bytes": 1424
+  },
+  {
+    "path": "futureagi/agentic_eval/core_evals/fi_evals/function/function_evaluator.py",
+    "url": "https://github.com/future-agi/future-agi/blob/c02ffdd8d0575cba4ab07743f67b508bd20206c0/futureagi/agentic_eval/core_evals/fi_evals/function/function_evaluator.py",
+    "sha256": "9dfb3cfe404a8d514b0383706987a70eab480fb6abbd2480d3eadc81daecbaf9",
+    "bytes": 4264
+  },
+  {
+    "path": "futureagi/agentic_eval/core_evals/fi_evals/llm/custom_prompt_evaluator/evaluator.py",
+    "url": "https://github.com/future-agi/future-agi/blob/c02ffdd8d0575cba4ab07743f67b508bd20206c0/futureagi/agentic_eval/core_evals/fi_evals/llm/custom_prompt_evaluator/evaluator.py",
+    "sha256": "4c1dbf6ff05cea8e639cc639dad72f994af0a9ec4c0b2ea88a90352ff2a055d4",
+    "bytes": 25053
+  },
+  {
+    "path": "futureagi/simulate/services/chat_engine.py",
+    "url": "https://github.com/future-agi/future-agi/blob/c02ffdd8d0575cba4ab07743f67b508bd20206c0/futureagi/simulate/services/chat_engine.py",
+    "sha256": "7cb8eb8257734378bce84c3de280566a83a354d7e8607c34332034785fbb65f0",
+    "bytes": 3598
+  },
+  {
+    "path": "futureagi/simulate/tasks/chat_sim.py",
+    "url": "https://github.com/future-agi/future-agi/blob/c02ffdd8d0575cba4ab07743f67b508bd20206c0/futureagi/simulate/tasks/chat_sim.py",
+    "sha256": "cd7defed9828408fcfa3bd756309bd7afdcf50b677664649ffc98da9275f21bd",
+    "bytes": 27875
+  },
+  {
+    "path": "futureagi/tfc/deployment_telemetry/config.py",
+    "url": "https://github.com/future-agi/future-agi/blob/c02ffdd8d0575cba4ab07743f67b508bd20206c0/futureagi/tfc/deployment_telemetry/config.py",
+    "sha256": "49948e28542a451c19d29d7f0ffb1bc3d7b964f7615cf142874387f20824ded5",
+    "bytes": 4036
+  },
+  {
+    "path": "futureagi/model_hub/views/develop_optimiser.py",
+    "url": "https://github.com/future-agi/future-agi/blob/c02ffdd8d0575cba4ab07743f67b508bd20206c0/futureagi/model_hub/views/develop_optimiser.py",
+    "sha256": "75a330ac04cce5a86d092fdf22692db9fe1956288395b6b4754060ba7ae9c516",
+    "bytes": 27797
+  },
+  {
+    "path": "futureagi/model_hub/tasks/prompt_template_optimizer.py",
+    "url": "https://github.com/future-agi/future-agi/blob/c02ffdd8d0575cba4ab07743f67b508bd20206c0/futureagi/model_hub/tasks/prompt_template_optimizer.py",
+    "sha256": "c328c3ba518dc8d7afa94cbb3f6225f814ca8cf64aa8b2c92dd156ac7a25cf65",
+    "bytes": 27521
+  },
+  {
+    "path": "futureagi/simulate/services/prompt_based_agent_adapter.py",
+    "url": "https://github.com/future-agi/future-agi/blob/c02ffdd8d0575cba4ab07743f67b508bd20206c0/futureagi/simulate/services/prompt_based_agent_adapter.py",
+    "sha256": "e49d72ae19c705dfd2f0315cf4dc40162b67f192dbad917529edb6841a8ce4f6",
+    "bytes": 15023
+  },
+  {
+    "path": ".dockerignore",
+    "url": "https://github.com/future-agi/future-agi/blob/c02ffdd8d0575cba4ab07743f67b508bd20206c0/.dockerignore",
+    "sha256": "a1fde2e867ca32f796a6fae87d444c6011d5a54b307686865bc05620e4a4542a",
+    "bytes": 4816
+  }
+]

@@ -1,0 +1,14 @@
+{
+  "commit": "c02ffdd8d0575cba4ab07743f67b508bd20206c0",
+  "evidence": "GitHub recursive tree, not implementation execution",
+  "paths": [
+    "futureagi/ee/agent_opt/optimizers/__init__.py",
+    "futureagi/ee/agent_opt/optimizers/bayesian_search.py",
+    "futureagi/ee/agent_opt/optimizers/gepa.py",
+    "futureagi/ee/agent_opt/optimizers/metaprompt.py",
+    "futureagi/ee/agent_opt/optimizers/promptwizard.py",
+    "futureagi/ee/agent_opt/optimizers/protegi.py",
+    "futureagi/ee/agent_opt/optimizers/random_search.py",
+    "futureagi/ee/agent_opt/optimizers/stepper.py"
+  ]
+}

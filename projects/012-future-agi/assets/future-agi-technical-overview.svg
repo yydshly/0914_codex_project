@@ -1,0 +1,148 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2400" height="4310" viewBox="0 0 2400 4310" role="img" aria-labelledby="title desc">
+<title id="title">Future AGI：从运行证据到质量改进的技术原理总览</title>
+<desc id="desc">汇总业务输入、请求与遥测两条路径、七类分析手段、组合评分、错误定位与聚类、提示词优化及独立验证；区分源码证据、文档能力和实际运行效果。</desc>
+<rect width="2400" height="4310" fill="#f3f6fb"/>
+<rect x="0" y="0" width="2400" height="325" rx="0" fill="#142237" stroke="#142237" stroke-width="2"/>
+<text x="100" y="40" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="31" font-weight="700" fill="#aabaff">FUTURE AGI  /  能力 × 技术原理</text>
+<text x="100" y="102" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="60" font-weight="700" fill="#ffffff">检测 AI 的能力与表现：记录、评测、诊断</text>
+<text x="104" y="193" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="32" font-weight="400" fill="#d7e0f6">对象是 AI 应用：模型 + 提示词 + 知识检索 + 工具；观察可见执行过程，不读取模型内部思维。</text>
+<text x="104" y="259" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="34" font-weight="700" fill="#ffffff">主线：采集证据 → 多种方法评测 → 诊断与归类 → 修改 / 优化 → 固定样本复测</text>
+<text x="100" y="375" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="36" font-weight="700" fill="#1739d2">01</text>
+<text x="185" y="373" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="43" font-weight="700" fill="#142237">准备证据与标准</text>
+<text x="185" y="435" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="29" font-weight="400" fill="#53647a">记录本身不产生质量结论；判断需要业务标准和可核对的证据。</text>
+<rect x="100" y="490" width="704" height="177" rx="18" fill="#ffffff" stroke="#d7e0ed" stroke-width="2"/>
+<text x="127" y="514" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="34" font-weight="700" fill="#1739d2">真实运行</text>
+<text x="127" y="572" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="28" font-weight="400" fill="#142237">问题、回答、检索片段、工具入参与结果</text>
+<text x="127" y="613" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="28" font-weight="400" fill="#142237">Span 耗时、Token、错误状态及成本信息</text>
+<rect x="848" y="490" width="704" height="177" rx="18" fill="#ffffff" stroke="#d7e0ed" stroke-width="2"/>
+<text x="875" y="514" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="34" font-weight="700" fill="#1739d2">数据集与人工标准</text>
+<text x="875" y="572" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="28" font-weight="400" fill="#142237">上传样本 / 生产失败案例 / 参考答案</text>
+<text x="875" y="613" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="28" font-weight="400" fill="#142237">业务规则、预期工具调用、人工认可的判断</text>
+<rect x="1596" y="490" width="704" height="177" rx="18" fill="#ffffff" stroke="#d7e0ed" stroke-width="2"/>
+<text x="1623" y="514" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="34" font-weight="700" fill="#1739d2">模拟用户 · Simulate</text>
+<text x="1623" y="572" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="28" font-weight="400" fill="#142237">场景 + 用户画像 → 多轮文本 / 语音对话</text>
+<text x="1623" y="613" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="28" font-weight="400" fill="#142237">生成测试材料，再交给同一套评测流程</text>
+<text x="100" y="711" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="36" font-weight="700" fill="#087975">02</text>
+<text x="185" y="709" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="43" font-weight="700" fill="#142237">接入与存储：模型请求、运行记录是两条路径</text>
+<rect x="100" y="788" width="2200" height="400" rx="18" fill="#ffffff" stroke="#d7e0ed" stroke-width="2"/>
+<text x="134" y="820" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="31" font-weight="700" fill="#087975">业务请求</text>
+<text x="370" y="817" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="34" font-weight="700" fill="#142237">你的 AI 应用</text>
+<path d="M676 839 L753 839" fill="none" stroke="#087975" stroke-width="4"/><polygon points="753,839 736.7919521576518,846.8293796140022 736.7919521576518,831.1706203859978" fill="#087975"/>
+<text x="790" y="817" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="34" font-weight="700" fill="#142237">可选 Go 模型网关</text>
+<path d="M1207 839 L1290 839" fill="none" stroke="#087975" stroke-width="4"/><polygon points="1290,839 1273.7919521576518,846.8293796140022 1273.7919521576518,831.1706203859978" fill="#087975"/>
+<text x="1330" y="817" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="34" font-weight="700" fill="#142237">模型服务</text>
+<text x="1630" y="821" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="28" font-weight="400" fill="#53647a">统一入口 / 路由 / 缓存 / 故障切换</text>
+<text x="790" y="873" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="29" font-weight="400" fill="#53647a">请求前后可配置 Guardrails：规则 / 检测器 → 阻断、脱敏或记录</text>
+<text x="134" y="948" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="31" font-weight="700" fill="#1739d2">运行记录</text>
+<text x="370" y="945" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="33" font-weight="700" fill="#142237">SDK / traceAI 埋点</text>
+<path d="M702 968 L776 968" fill="none" stroke="#1739d2" stroke-width="4"/><polygon points="776,968 759.7919521576518,975.8293796140022 759.7919521576518,960.1706203859978" fill="#1739d2"/>
+<text x="805" y="945" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="32" font-weight="700" fill="#142237">OpenTelemetry / OTLP</text>
+<path d="M1220 968 L1286 968" fill="none" stroke="#1739d2" stroke-width="4"/><polygon points="1286,968 1269.7919521576518,975.8293796140022 1269.7919521576518,960.1706203859978" fill="#1739d2"/>
+<text x="1320" y="945" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="33" font-weight="700" fill="#142237">fi-collector</text>
+<path d="M1570 968 L1644 968" fill="none" stroke="#1739d2" stroke-width="4"/><polygon points="1644,968 1627.7919521576518,975.8293796140022 1627.7919521576518,960.1706203859978" fill="#1739d2"/>
+<text x="1680" y="945" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="33" font-weight="700" fill="#142237">ClickHouse 分析</text>
+<text x="370" y="1001" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="30" font-weight="400" fill="#53647a">Trace 串起一次任务；Span 记录模型、检索和工具步骤。采集器接收、批处理，再写入分析存储。</text>
+<rect x="132" y="1074" width="2136" height="81" rx="10" fill="#f0f5fb" stroke="#f0f5fb" stroke-width="2"/>
+<text x="156" y="1097" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="28" font-weight="400" fill="#142237">平台支撑：React 展示 · Django 业务 · PostgreSQL 元数据 · Temporal 等任务组件 · 缓存 / 队列 / 对象存储</text>
+<path d="M1200 1202 L1200 1244" fill="none" stroke="#1739d2" stroke-width="4"/><polygon points="1200,1244 1192.1706203859978,1227.7919521576518 1207.8293796140022,1227.7919521576518" fill="#1739d2"/>
+<text x="100" y="1270" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="36" font-weight="700" fill="#1739d2">03</text>
+<text x="185" y="1268" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="43" font-weight="700" fill="#142237">核心：怎样从记录得到“好不好”的判断</text>
+<text x="185" y="1330" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="29" font-weight="400" fill="#53647a">评测角度 = 正确性 / 有依据 / 安全 / 语气 / 工具使用；实现手段如下。</text>
+<text x="185" y="1380" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="28" font-weight="400" fill="#53647a">官方三种类型：Code Eval、LLM-as-Judge、Agent Evaluator；下面七项是研究归纳，非七种官方引擎。</text>
+<rect x="100" y="1440" width="1080" height="241" rx="18" fill="#ffffff" stroke="#d7e0ed" stroke-width="2"/>
+<rect x="100" y="1440" width="8" height="241" rx="2" fill="#1739d2" stroke="#1739d2" stroke-width="2"/>
+<text x="130" y="1465" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="34" font-weight="700" fill="#1739d2">A  规则与函数检查</text>
+<text x="130" y="1523" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="29" font-weight="700" fill="#142237">字段 / 文本 / 数值 → 条件或函数 → 通过 / 失败</text>
+<text x="130" y="1577" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="29" font-weight="400" fill="#53647a">正则、包含判断、JSON 合法性、数值条件。</text>
+<text x="130" y="1620" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="29" font-weight="400" fill="#53647a">擅长明确要求；格式通过不代表事实正确。</text>
+<rect x="1220" y="1440" width="1080" height="241" rx="18" fill="#ffffff" stroke="#d7e0ed" stroke-width="2"/>
+<rect x="1220" y="1440" width="8" height="241" rx="2" fill="#1739d2" stroke="#1739d2" stroke-width="2"/>
+<text x="1250" y="1465" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="34" font-weight="700" fill="#1739d2">B  与参考答案或标注比较</text>
+<text x="1250" y="1523" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="29" font-weight="700" fill="#142237">实际结果 + 标准参考 → 差异 / 命中 / 排名分数</text>
+<text x="1250" y="1577" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="29" font-weight="400" fill="#53647a">BLEU / ROUGE / 编辑距离；检索 Recall@K、MRR 等。</text>
+<text x="1250" y="1620" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="29" font-weight="400" fill="#53647a">依赖可信参考；文字重合度不等于语义正确。</text>
+<rect x="100" y="1703" width="1080" height="241" rx="18" fill="#ffffff" stroke="#d7e0ed" stroke-width="2"/>
+<rect x="100" y="1703" width="8" height="241" rx="2" fill="#1739d2" stroke="#1739d2" stroke-width="2"/>
+<text x="130" y="1728" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="34" font-weight="700" fill="#1739d2">C  向量相似度</text>
+<text x="130" y="1786" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="29" font-weight="700" fill="#142237">文本 → Embedding 向量 → 余弦相似度 / 距离</text>
+<text x="130" y="1840" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="29" font-weight="400" fill="#53647a">衡量语义接近，依赖嵌入模型。</text>
+<text x="130" y="1883" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="29" font-weight="400" fill="#53647a">“7 天退款”和“30 天退款”可能相似，但事实不同。</text>
+<rect x="1220" y="1703" width="1080" height="241" rx="18" fill="#ffffff" stroke="#d7e0ed" stroke-width="2"/>
+<rect x="1220" y="1703" width="8" height="241" rx="2" fill="#7144a5" stroke="#7144a5" stroke-width="2"/>
+<text x="1250" y="1728" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="34" font-weight="700" fill="#7144a5">D  模型裁判 · LLM-as-Judge</text>
+<text x="1250" y="1786" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="29" font-weight="700" fill="#142237">标准 + 回答 + 上下文 → 评测提示词 → 模型判断</text>
+<text x="1250" y="1840" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="29" font-weight="400" fill="#53647a">解析结构化分数、分类或理由；可加入示例校准。</text>
+<text x="1250" y="1883" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="29" font-weight="400" fill="#53647a">适合忠实性、语气等；有费用、波动与误判。</text>
+<rect x="100" y="1966" width="1080" height="241" rx="18" fill="#ffffff" stroke="#d7e0ed" stroke-width="2"/>
+<rect x="100" y="1966" width="8" height="241" rx="2" fill="#7144a5" stroke="#7144a5" stroke-width="2"/>
+<text x="130" y="1991" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="34" font-weight="700" fill="#7144a5">E  Agent 调查式评测〔文档〕</text>
+<text x="130" y="2049" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="29" font-weight="700" fill="#142237">待核实问题 → 多轮推理 / 工具查询 → 综合判断</text>
+<text x="130" y="2103" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="29" font-weight="400" fill="#53647a">可补查政策、知识库等证据再下结论。</text>
+<text x="130" y="2146" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="29" font-weight="400" fill="#53647a">依赖工具与资料；本次未独立核验完整实现。</text>
+<rect x="1220" y="1966" width="1080" height="241" rx="18" fill="#ffffff" stroke="#d7e0ed" stroke-width="2"/>
+<rect x="1220" y="1966" width="8" height="241" rx="2" fill="#087975" stroke="#087975" stroke-width="2"/>
+<text x="1250" y="1991" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="34" font-weight="700" fill="#087975">F  工具调用匹配</text>
+<text x="1250" y="2049" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="29" font-weight="700" fill="#142237">实际工具名与参数 对照 预期调用 → 匹配得分</text>
+<text x="1250" y="2103" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="29" font-weight="400" fill="#53647a">完整匹配 1；只匹配名称 0.5；未匹配 0。</text>
+<text x="1250" y="2146" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="29" font-weight="400" fill="#53647a">总分 ÷ 两边较大调用数；匹配不证明业务成功。</text>
+<rect x="100" y="2229" width="1080" height="241" rx="18" fill="#ffffff" stroke="#d7e0ed" stroke-width="2"/>
+<rect x="100" y="2229" width="8" height="241" rx="2" fill="#087975" stroke="#087975" stroke-width="2"/>
+<text x="130" y="2254" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="34" font-weight="700" fill="#087975">G  执行轨迹匹配</text>
+<text x="130" y="2312" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="29" font-weight="700" fill="#142237">实际步骤序列 对照 预期轨迹 → 顺序 / 集合比较</text>
+<text x="130" y="2366" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="29" font-weight="400" fill="#53647a">支持 strict、unordered、subset、superset 模式。</text>
+<text x="130" y="2409" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="29" font-weight="400" fill="#53647a">查漏步骤、顺序与冗余；预期流程须符合业务。</text>
+<rect x="1220" y="2229" width="1080" height="241" rx="18" fill="#ffffff" stroke="#d7e0ed" stroke-width="2"/>
+<rect x="1220" y="2229" width="8" height="241" rx="2" fill="#a34b20" stroke="#a34b20" stroke-width="2"/>
+<text x="1250" y="2254" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="34" font-weight="700" fill="#a34b20">怎样组合使用？以退款为例</text>
+<text x="1250" y="2312" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="29" font-weight="700" fill="#142237">格式规则 + 政策忠实性 + 工具匹配 + 结果一致性</text>
+<text x="1250" y="2366" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="29" font-weight="400" fill="#53647a">资料写 7 天，回答写 30 天：需要政策检查。</text>
+<text x="1250" y="2409" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="29" font-weight="400" fill="#53647a">退款接口失败却说成功：需核对真实工具结果。</text>
+<path d="M1200 2498 L1200 2538" fill="none" stroke="#1739d2" stroke-width="4"/><polygon points="1200,2538 1192.1706203859978,2521.791952157652 1207.8293796140022,2521.791952157652" fill="#1739d2"/>
+<text x="100" y="2564" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="36" font-weight="700" fill="#1739d2">04</text>
+<text x="185" y="2562" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="43" font-weight="700" fill="#142237">结果与诊断：发现问题，还要知道问题集中在哪</text>
+<text x="185" y="2624" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="29" font-weight="400" fill="#53647a">输出依评测器而异：分数 / 是否通过 / 分类 / 解释；诊断结论需要证据复核。</text>
+<rect x="100" y="2682" width="1080" height="174" rx="18" fill="#ffffff" stroke="#d7e0ed" stroke-width="2"/>
+<text x="128" y="2705" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="32" font-weight="700" fill="#1739d2">组合评分 · Composite</text>
+<text x="128" y="2760" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="29" font-weight="400" fill="#142237">子评分归一化 → 加权 / 平均 / 最小 / 最大 / 通过率。</text>
+<text x="128" y="2803" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="29" font-weight="400" fill="#142237">严重错误宜单设门槛，避免被平均分掩盖。</text>
+<rect x="1220" y="2682" width="1080" height="174" rx="18" fill="#ffffff" stroke="#d7e0ed" stroke-width="2"/>
+<text x="1248" y="2705" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="32" font-weight="700" fill="#7144a5">错误定位 · Error Localization</text>
+<text x="1248" y="2760" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="29" font-weight="400" fill="#142237">失败评测 + 标准 + 输入 → Agent 返回问题字段与分析。</text>
+<text x="1248" y="2803" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="29" font-weight="400" fill="#142237">需启用；所读路径排除代码型与组合评测。</text>
+<rect x="100" y="2876" width="1080" height="174" rx="18" fill="#ffffff" stroke="#d7e0ed" stroke-width="2"/>
+<text x="128" y="2899" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="32" font-weight="700" fill="#087975">失败聚类 · 已评测结果</text>
+<text x="128" y="2954" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="29" font-weight="400" fill="#142237">失败描述 → 可选提炼 → 向量化 → 近邻中心归类。</text>
+<text x="128" y="2997" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="29" font-weight="400" fill="#142237">聚合相似问题，便于排查；相似不等于同一根因。</text>
+<rect x="1220" y="2876" width="1080" height="174" rx="18" fill="#ffffff" stroke="#d7e0ed" stroke-width="2"/>
+<text x="1248" y="2899" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="32" font-weight="700" fill="#a34b20">主动扫描 · Error Feed〔云端 / 企业〕</text>
+<text x="1248" y="2954" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="29" font-weight="400" fill="#142237">抽样 Trace → 分析潜在错误 → 汇总 Issue。</text>
+<text x="1248" y="2997" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="29" font-weight="400" fill="#142237">可扫描尚未标为失败的记录；默认采样为 0。</text>
+<path d="M1200 3065 L1200 3105" fill="none" stroke="#1739d2" stroke-width="4"/><polygon points="1200,3105 1192.1706203859978,3088.791952157652 1207.8293796140022,3088.791952157652" fill="#1739d2"/>
+<text x="100" y="3130" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="36" font-weight="700" fill="#1739d2">05</text>
+<text x="185" y="3128" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="43" font-weight="700" fill="#142237">从诊断回到改进：用相同标准比较新旧版本</text>
+<rect x="100" y="3210" width="2200" height="354" rx="18" fill="#eaf0ff" stroke="#c8d4fc" stroke-width="2"/>
+<text x="140" y="3242" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="40" font-weight="700" fill="#1739d2">失败案例 → 数据集 → 人工修改 / 提示词优化 → 实验对比 → 独立样本验收</text>
+<text x="142" y="3317" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="32" font-weight="400" fill="#142237">自动优化原理：生成候选提示词 / 示例配置 → 运行样本 → 评分 → 保留更好候选 → 反馈下一轮</text>
+<text x="142" y="3381" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="32" font-weight="400" fill="#142237">六种搜索思路：Random / Bayesian / ProTeGi / Meta-Prompt / PromptWizard / GEPA</text>
+<text x="142" y="3442" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="32" font-weight="400" fill="#142237">实验同时看质量、耗时、Token、费用与严重错误；生产统计帮助定位“错、慢、贵”。</text>
+<text x="142" y="3504" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="29" font-weight="400" fill="#a34b20">验收后再投入使用，持续采集新记录。优化提示词不等于训练模型权重；部分平台优化实现依赖企业模块。</text>
+<text x="100" y="3620" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="36" font-weight="700" fill="#1739d2">06</text>
+<text x="185" y="3618" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="43" font-weight="700" fill="#142237">落地场景与适用边界</text>
+<text x="185" y="3680" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="29" font-weight="400" fill="#53647a">RAG：分开检查检索与生成  ·  客服 / Agent：核对执行与承诺  ·  版本升级：质量、成本、延迟回归</text>
+<rect x="100" y="3740" width="2200" height="283" rx="18" fill="#ffffff" stroke="#d7e0ed" stroke-width="2"/>
+<text x="134" y="3773" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="34" font-weight="700" fill="#1739d2">记录边界</text>
+<text x="134" y="3835" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="29" font-weight="400" fill="#142237">只记录已接入的可见步骤。</text>
+<text x="134" y="3881" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="29" font-weight="400" fill="#142237">网关不能代替应用内部埋点。</text>
+<text x="679" y="3773" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="34" font-weight="700" fill="#1739d2">判断边界</text>
+<text x="679" y="3835" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="29" font-weight="400" fill="#142237">人工样本校准裁判与阈值。</text>
+<text x="679" y="3881" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="29" font-weight="400" fill="#142237">诊断推测、模拟行为均需复核。</text>
+<text x="1224" y="3773" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="34" font-weight="700" fill="#1739d2">运行边界</text>
+<text x="1224" y="3835" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="29" font-weight="400" fill="#142237">完整平台依赖多种基础服务。</text>
+<text x="1224" y="3881" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="29" font-weight="400" fill="#142237">语音、模型、工具另有成本。</text>
+<text x="1769" y="3773" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="34" font-weight="700" fill="#1739d2">许可与防护</text>
+<text x="1769" y="3835" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="29" font-weight="400" fill="#142237">核心 Apache-2.0；ee/ 企业许可。</text>
+<text x="1769" y="3881" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="29" font-weight="400" fill="#142237">规则防护不保证拦截未知变体。</text>
+<rect x="100" y="4070" width="2200" height="160" rx="16" fill="#142237" stroke="#142237" stroke-width="2"/>
+<text x="134" y="4097" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="29" font-weight="400" fill="#ffffff">证据：固定源码 c02ffdd8（2026-09-15）+ 官方文档；研究整理于 2026-09-16。</text>
+<text x="134" y="4148" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="28" font-weight="400" fill="#c6d4ee">当前为能力、检测方式与初步实现思路；根本原理需后期深入研究，实际检测效果尚未实测。</text>
+</svg>
