@@ -21,6 +21,7 @@
 | 8 | 008 | [Douyin Downloader：抖音采集与下载原理研究](projects/008-douyin-downloader/README.md) | [douyin\-downloader](https://github.com/jiji262/douyin-downloader) | 围绕抖音作品、搜索热榜与评论，提供采集、媒体下载、语音转写和本地归档的工程基础，作为素材库、内容研究与后续 AI 分析的数据获取与整理层；附交互导读、全景图及账号、接口、浏览器分工说明，明确当前风控与未实测边界。 | 研究中 | [在线演示](https://yydshly.github.io/0914_codex_project/008-douyin-downloader/) |
 | 9 | 009 | [MiroFish：多智能体社会推演能力展示](projects/009-mirofish/README.md) | [MiroFish](https://github.com/666ghj/MiroFish) | 将资料与假设问题转成角色，由知识图谱组织背景、大模型决策、OASIS 执行动作，输出图谱、互动记录、报告与对话；用于舆情和故事推演，可设计市场调研、产品与规则评审。附能力全景图、交互教学和真实案例，尚未实测预测效果。 | 研究中 | [在线演示](https://yydshly.github.io/0914_codex_project/009-mirofish/) |
 | 10 | 010 | [Graft：代码库地图与按需上下文研究](projects/010-graft/README.md) | [Graft](https://github.com/trailhq/Graft) | 对源码进行扫描并构建代码索引与关系图，指导 AI 查找相关代码。构建原理待研究，效果待实测。 | 研究中 | [在线演示](https://yydshly.github.io/0914_codex_project/010-graft/) |
+| 11 | 011 | [Background Agents：后台 AI 编程平台能力研究](projects/011-background-agents/README.md) | [background\-agents](https://github.com/ColeMurray/background-agents) | 搭建给 AI 派开发任务的平台，在独立环境中修改代码、执行测试并提交 PR；附中文交互网页与前后端总览图，区分代理程序、模型接入及 Codex 关系，含 25 项固定版本来源，真实运行效果待验证。 | 研究中 | — |
 <!-- PROJECT_INDEX:END -->
 
 ## 项目预览
@@ -183,6 +184,16 @@
 [研究记录](projects/010-graft/README.md) · [上游仓库](https://github.com/trailhq/Graft) · [在线演示](https://yydshly.github.io/0914_codex_project/010-graft/)
 
 标签：代码图谱 / 按需上下文 / MCP / 减少重复读取
+
+### 011 · Background Agents：后台 AI 编程平台能力研究
+
+搭建给 AI 派开发任务的平台，在独立环境中修改代码、执行测试并提交 PR；附中文交互网页与前后端总览图，区分代理程序、模型接入及 Codex 关系，含 25 项固定版本来源，真实运行效果待验证。
+
+![Background Agents 能力与实现总览：网页与集成入口、后台队列、沙箱代理、模型接入、交付结果与 Codex 关系。](projects/011-background-agents/assets/background-agents-overview.png)
+
+[研究记录](projects/011-background-agents/README.md) · [上游仓库](https://github.com/ColeMurray/background-agents)
+
+标签：后台编程代理 / 云端沙箱 / 任务队列 / 并行子任务 / 自动化触发
 <!-- PROJECT_PREVIEWS:END -->
 
 ## 开始研究

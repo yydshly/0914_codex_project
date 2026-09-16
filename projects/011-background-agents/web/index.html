@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="看懂 Background Agents：网页控制服务端编程代理，配置模型、派发任务、执行代码并查看结果。附任务流程、接入方式、Codex 对照与源码依据。">
+  <title>Background Agents · 网页控制，Agent 执行</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="stylesheet" href="style.css">
+  <script src="main.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">跳到主要内容</a>
+  <header class="topbar">
+    <a class="brand" href="#main"><span class="brand-mark" aria-hidden="true">B<span>↗</span></span><span>Background Agents<small>011 / 开源项目研究</small></span></a>
+    <nav aria-label="页面导航">
+      <a href="#capabilities">能力与入口</a><a href="#workflow">执行原理</a><a href="#connect">AI 接入</a><a href="#codex">与 Codex 的关系</a><a href="#overview">总览图</a>
+    </nav>
+    <a class="source-link" href="https://github.com/ColeMurray/background-agents" target="_blank" rel="noopener noreferrer">上游仓库 ↗</a>
+  </header>
+  <main id="main">
+    <section class="hero wrap" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow">BACKGROUND AGENTS / OPEN-INSPECT</p>
+        <h1 id="hero-title">网页派任务，<br><span>服务端 Agent 干活。</span></h1>
+        <p class="intro">你在网页配置 AI、选择代码仓库、描述需求。后台准备开发环境，让编程代理修改代码、运行测试，再把结果交给你检查。</p>
+        <p class="identity"><strong>background-agents</strong> 是仓库名，<strong>Open-Inspect</strong> 是系统名。</p>
+        <div class="hero-actions"><a class="button primary" href="#workflow">看一条任务怎么执行 <span aria-hidden="true">↓</span></a><a class="button secondary" href="#connect">看能接入哪些 AI</a></div>
+      </div>
+      <div class="hero-map" aria-label="网页通过后台管理服务控制编程代理，代理调用模型和开发工具">
+        <div class="map-caption"><span class="status-dot"></span> 本页是研究导读，未连接真实 Agent</div>
+        <div class="map-node web-node"><span class="node-label">你操作的地方</span><strong>网页控制台</strong><span>配置 · 派任务 · 看结果</span></div>
+        <div class="map-wire"><span>任务 ↓</span><span>↑ 进度</span></div>
+        <div class="map-node backend-node"><span class="node-label">后台管理服务</span><strong>记录与调度任务</strong><span>排队 · 状态 · 环境管理</span></div>
+        <div class="map-wire"><span>下发 ↓</span><span>↑ 事件</span></div>
+        <div class="map-node agent-node"><span class="node-label">独立开发环境内</span><strong>编程代理 Agent</strong><span>OpenCode / Claude Agent</span></div>
+        <div class="map-branches"><div><span class="branch-line">↙</span><b>调用模型</b><small>理解与决策</small></div><div><span class="branch-line">↘</span><b>操作工具</b><small>文件、终端、浏览器</small></div></div>
+      </div>
+    </section>
+
+    <section class="roles wrap" aria-label="三个角色的分工">
+      <article><span class="role-number">01</span><div><h2>网页是控制台</h2><p>你在这里发指令、选配置、看进度。它本身不负责执行代码。</p></div></article>
+      <article><span class="role-number">02</span><div><h2>代理程序是执行者</h2><p>它调用模型，并使用工具真正读文件、改代码、运行命令。</p></div></article>
+      <article><span class="role-number">03</span><div><h2>模型提供推理</h2><p>分析需求，决定下一步操作，再根据工具返回的结果继续判断。</p></div></article>
+    </section>
+
+    <section id="capabilities" class="section wrap">
+      <div class="section-heading"><div><p class="eyebrow">WHAT IT DOES</p><h2>具体能做什么，从哪里使用？</h2></div><p>入口把需求变成任务，代理在配置好的开发环境中执行。</p></div>
+      <div class="capability-layout">
+        <div class="ability-list">
+          <article><span>01</span><div><h3>读写与修改代码</h3><p>调查 Bug、增加功能、重构、补充测试。交付实际文件改动和说明。</p></div></article>
+          <article><span>02</span><div><h3>执行命令与验证</h3><p>安装依赖、构建、运行测试；可操作浏览器并截图检查页面。</p></div></article>
+          <article><span>03</span><div><h3>提交代码供审核</h3><p>通过 Git 推送分支，按任务要求创建 PR，供人检查与合并。</p></div></article>
+          <article><span>04</span><div><h3>组织后台与并行工作</h3><p>保存任务状态，派发独立子任务，按时间或事件启动工作。</p></div></article>
+        </div>
+        <div class="entry-panel"><h3>任务入口</h3><dl>
+          <div><dt>网页</dt><dd>新建会话，选择仓库、模型，输入要求。</dd></div>
+          <div><dt>Slack</dt><dd>私聊或 @机器人；在线程里继续交流。</dd></div>
+          <div><dt>GitHub</dt><dd>新 PR 自动审查；PR 评论或行内评论 @机器人。</dd></div>
+          <div><dt>Linear</dt><dd>在工单中提及代理，或将工单分配给代理。</dd></div>
+          <div><dt>Automations</dt><dd>定时执行，或由 GitHub、Sentry、Slack 消息触发。</dd></div>
+          <div><dt>Webhook</dt><dd>你的程序发送认证请求，触发已配置的任务。</dd></div>
+        </dl><p class="small-note">各集成需配置。GitHub PR 评论入口主要用于分析与讨论；普通 Issue 的 @提及不走该评论入口。</p></div>
+      </div>
+    </section>
+
+    <section id="workflow" class="workflow-band">
+      <div class="wrap section">
+        <div class="section-heading"><div><p class="eyebrow">HOW IT WORKS</p><h2>一条任务，怎样从网页走到结果？</h2></div><p>切换步骤看各层的分工。这里展示预设教学案例，不会发送真实任务。</p></div>
+        <div class="scenario-row"><label for="scenario">用哪个例子理解</label><select id="scenario"><option value="bug">修复登录问题</option><option value="feature">增加订单导出功能</option><option value="alert">CI 失败后排查原因</option></select></div>
+        <div class="task-example"><span>任务要求</span><p id="task-prompt">查明登录按钮没有反应的原因，修复问题，补充回归测试，并提交 PR 供我审核。</p></div>
+        <div class="workflow-interactive">
+          <div class="step-list" role="tablist" aria-label="任务执行步骤" aria-orientation="vertical">
+            <button id="step-tab-0" class="step active" type="button" role="tab" aria-selected="true" aria-controls="step-panel" data-step="0"><span>1</span><div><strong>接收与保存</strong><small>网页 → 管理服务</small></div><b aria-hidden="true">→</b></button>
+            <button id="step-tab-1" class="step" type="button" role="tab" aria-selected="false" aria-controls="step-panel" tabindex="-1" data-step="1"><span>2</span><div><strong>准备开发环境</strong><small>管理服务 → 独立沙箱</small></div><b aria-hidden="true">→</b></button>
+            <button id="step-tab-2" class="step" type="button" role="tab" aria-selected="false" aria-controls="step-panel" tabindex="-1" data-step="2"><span>3</span><div><strong>代理与模型协作</strong><small>推理 → 工具 → 反馈</small></div><b aria-hidden="true">→</b></button>
+            <button id="step-tab-3" class="step" type="button" role="tab" aria-selected="false" aria-controls="step-panel" tabindex="-1" data-step="3"><span>4</span><div><strong>验证与交付</strong><small>执行结果 → 平台 → 你</small></div><b aria-hidden="true">→</b></button>
+          </div>
+          <div id="step-panel" class="step-panel" role="tabpanel" aria-labelledby="step-tab-0" tabindex="0">
+            <span id="step-owner" class="pill">管理服务</span><h3 id="step-title">先把需求存成一条任务</h3><p id="step-description">网页发送要求后，后台保存内容、作者和状态。如果同一会话已有工作，新的要求进入队列。</p>
+            <div class="example-detail"><span>在这个例子中</span><p id="step-example">保存登录问题的描述、目标仓库和验收要求，等待执行。</p></div>
+            <p id="step-principle" class="principle">技术点：任务生命周期属于服务端，网页是输入与查看入口。</p>
+            <div class="step-footer"><span id="step-count">步骤 1 / 4</span><button id="next-step" class="text-button" type="button">下一步 →</button></div>
+          </div>
+        </div>
+        <p class="band-note">关闭网页不等于停止任务：进度保存在后台，执行发生在沙箱。任务仍受超时、预算和环境故障影响。</p>
+      </div>
+    </section>
+
+    <section id="connect" class="section wrap">
+      <div class="section-heading"><div><p class="eyebrow">AGENT ≠ MODEL</p><h2>接入的是代理程序，还是模型 API？</h2></div><p>两层都需要。先选择负责执行的程序，再配置它使用的模型与认证。</p></div>
+      <div class="connection-layout">
+        <div class="connection-controls"><label for="harness">① 代理程序</label><select id="harness"><option value="opencode">OpenCode（默认）</option><option value="claude">Claude Agent</option></select><label for="provider">② 模型服务 / 渠道</label><select id="provider"><option value="openai">OpenAI / Codex 模型</option><option value="anthropic">Anthropic Claude</option><option value="xai">xAI Grok</option><option value="zen">OpenCode Zen / Go</option><option value="zai">Z.AI Coding Plan</option><option value="deepseek">DeepSeek</option></select><p id="compatibility-note" class="small-note">OpenCode 可使用项目模型目录中的多个提供商。</p><span class="research-label">接入关系说明 · 不配置真实账号</span></div>
+        <div id="connection-result" class="connection-result" aria-live="polite"><p class="eyebrow">实际执行链</p><div class="connection-chain"><span>平台后台</span><i aria-hidden="true">→</i><strong id="runner-name">OpenCode 程序</strong><i aria-hidden="true">↔</i><span id="provider-name">OpenAI / Codex 模型</span></div><h3 id="connection-title">运行 OpenCode，调用 OpenAI 模型</h3><p id="connection-description">平台在沙箱中启动 opencode serve，由它执行代理流程。模型提供推理，文件与命令操作由代理工具完成。</p><dl class="connection-facts"><div><dt>凭据方式</dt><dd id="auth-method">API Key，或项目支持的 ChatGPT 账号授权。</dd></div><div><dt>配置位置</dt><dd id="config-location">部署密钥 / Settings → Provider Accounts；创建会话时选择模型和认证。</dd></div></dl><p id="connection-boundary" class="important-note">使用 Codex 模型，不等于启动 Codex CLI 或控制 Codex 桌面软件。</p></div>
+      </div>
+      <div class="provider-summary"><span>接入范围</span><p>OpenAI、Anthropic、xAI、OpenCode Zen / Go、Z.AI Coding Plan、DeepSeek。Zen / Go 提供 Kimi、MiniMax、Qwen、GLM 等模型渠道。实际可用性取决于账号、渠道和项目配置。</p></div>
+    </section>
+
+    <section id="codex" class="section wrap codex-section">
+      <div class="section-heading"><div><p class="eyebrow">WHERE CODEX FITS</p><h2>与我们现在使用的 Codex，有什么关系？</h2></div></div>
+      <div class="comparison"><article><span class="comparison-label">现在这个环境</span><h3>我们用 Codex 研究它</h3><p>当前的文件阅读、文档整理和网页制作由 Codex 完成。下载这个库，不会自动给当前 Codex 增加功能。</p><strong>目前未部署，也没有接管当前 Codex。</strong></article><article><span class="comparison-label">如果部署这个库</span><h3>你拥有另一套可定制平台</h3><p>在自己的网页中配置模型和仓库，通过服务端代理执行任务。模型、环境与团队入口由你配置。</p><strong>价值是自部署与流程组织，开发能力有重叠。</strong></article></div>
+      <div class="codex-answer"><span aria-hidden="true">↳</span><p><strong>能接入 Codex 模型；该版本没有原生 Codex CLI 适配。</strong><br>现有代理类型是 <code>opencode</code> 与 <code>claude</code>。如果想直接运行 Codex CLI，需要新增代理适配。</p></div>
+    </section>
+
+    <section class="section wrap engineering-section" id="engineering">
+      <div class="section-heading"><div><p class="eyebrow">WHAT YOU CAN REUSE</p><h2>内部值得借鉴的技术</h2></div><p>这些设计也适用于资料分析、视频处理、报告生成等长时间 AI 任务。</p></div>
+      <div class="engineering-grid">
+        <article><span>01 / 调度</span><h3>任务管理与执行分开</h3><p>网页请求不一直等待 AI。后台记录任务，再交给工作进程处理。</p><small>可复用到：上传资料后异步生成报告</small></article>
+        <article><span>02 / 状态</span><h3>持久化队列与事件</h3><p>要求排队、状态保存、进度回传。刷新页面后仍能找到原任务。</p><small>状态保存不等于任何故障都能无损续跑</small></article>
+        <article><span>03 / 适配</span><h3>统一代理执行接口</h3><p>用开始、继续、停止和事件回传接口对接不同代理程序。</p><small>模型接入和代理程序接入分开设计</small></article>
+        <article><span>04 / 环境</span><h3>隔离与环境复用</h3><p>不同任务使用独立环境，通过预构建、快照或暂停恢复减少准备。</p><small>各沙箱提供商的恢复能力不同</small></article>
+      </div>
+      <details class="technical-detail"><summary>展开看前后端的具体实现</summary><div class="table-scroll"><table><thead><tr><th>部分</th><th>实现</th><th>作用</th></tr></thead><tbody><tr><td>网页</td><td>Next.js</td><td>配置、创建会话、显示任务与结果</td></tr><tr><td>管理服务</td><td>Cloudflare Workers + Durable Objects / SQLite + D1</td><td>身份、队列、状态、沙箱生命周期</td></tr><tr><td>容器替代方案</td><td>Node + SQLite + S3 兼容存储</td><td>自行部署管理服务；当前依赖单实例数据目录</td></tr><tr><td>沙箱内协调</td><td>Supervisor + Bridge</td><td>准备环境、管理进程、转发指令与事件</td></tr><tr><td>代理程序</td><td>OpenCode / Claude Agent SDK</td><td>调用模型，执行工具循环</td></tr><tr><td>沙箱后端</td><td>Modal / Daytona / E2B / Vercel / OpenComputer</td><td>隔离开发环境及各自的恢复能力</td></tr></tbody></table></div></details>
+    </section>
+
+    <section id="overview" class="overview-section wrap section">
+      <div class="overview-copy"><p class="eyebrow">KEEP THE WHOLE PICTURE</p><h2>一张图，保留完整理解</h2><p>从入口到结果，串起前后端、代理、模型、开发工具与部署边界。</p><button id="open-overview" class="button primary" type="button">展开总览图 ↗</button><div class="download-links"><a href="assets/background-agents-overview.png" download>下载高清 PNG</a><a href="assets/background-agents-overview.svg" download>下载 SVG</a></div><p class="small-note">2400 × 3320 · 原创机制归纳，非软件运行截图</p></div>
+      <a class="overview-preview" href="assets/background-agents-overview.png" target="_blank" rel="noopener noreferrer" aria-label="在新标签页查看完整总览图"><img src="assets/background-agents-overview-preview.png" width="1200" height="1660" alt="Background Agents 总览：使用入口、管理服务、沙箱内代理程序与外部模型服务、代码交付及 Codex 关系" loading="lazy"><span>点击图片查看原图 ↗</span></a>
+    </section>
+
+    <section class="wrap section evidence-section" id="evidence">
+      <div class="section-heading"><div><p class="eyebrow">SCOPE & SOURCES</p><h2>部署条件与研究依据</h2></div><span class="evidence-badge">25 项固定版本来源</span></div>
+      <div class="evidence-grid"><div><h3>实际部署需要</h3><p>网页与管理服务、模型凭据、沙箱后端、仓库权限，以及项目依赖与启动脚本。</p><p>当前设计面向同一组织的可信成员。子代理限父会话主仓库、派生深度受限；多仓库会话与定时批量任务是不同机制。</p></div><div><h3>这次研究做到哪里</h3><p>已阅读文档并核对关键源码，固定提交为 <code>4c470da615ea</code>。尚未运行真实模型、云沙箱或创建真实 PR，未验证成本与完成率。</p><p>页面中的案例和接入切换用于解释机制，不是可派发真实任务的控制台。</p></div></div>
+      <div class="resource-links"><a href="notes/understanding.md" download>我们的理解汇总 ↓</a><a href="notes/capabilities.md" download>能力矩阵 ↓</a><a href="notes/architecture.md" download>实现原理 ↓</a><a href="notes/deployment.md" download>部署路线 ↓</a><a href="notes/sources.md" download>源码依据 ↓</a><a href="notes/evidence.json" download>证据记录 ↓</a><a href="https://github.com/ColeMurray/background-agents/tree/4c470da615eaecbf8f64b0ae5a04666c99b4c536" target="_blank" rel="noopener noreferrer">查看研究版本 ↗</a></div>
+    </section>
+  </main>
+  <footer class="wrap footer"><span>011 · Background Agents 研究导读</span><span>2026-09-16 · 文档与源码分析</span><a href="#main">回到顶部 ↑</a></footer>
+  <dialog id="overview-dialog" aria-labelledby="dialog-title"><div class="dialog-toolbar"><h2 id="dialog-title">能力与实现总览</h2><button id="close-overview" type="button" aria-label="关闭总览图">关闭 ×</button></div><img src="assets/background-agents-overview.png" width="2400" height="3320" alt="完整能力与架构总览，内容与本页各部分一致"><a href="assets/background-agents-overview.png" download>下载高清原图</a></dialog>
+  <noscript><p class="wrap no-script">已关闭 JavaScript，正文与总览图仍可阅读；任务流程和模型接入显示默认案例。</p></noscript>
+</body>
+</html>

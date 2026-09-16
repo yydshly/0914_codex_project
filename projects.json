@@ -241,6 +241,25 @@
       "cover": "projects/010-graft/assets/graft-overview.png",
       "cover_alt": "Graft 能力与初步研究全景图：扫描源码并构建索引与关系图，指导 AI 查找；构建原理待研究。",
       "demo": "https://yydshly.github.io/0914_codex_project/010-graft/"
+    },
+    {
+      "id": "011",
+      "order": 110,
+      "slug": "background-agents",
+      "name": "Background Agents：后台 AI 编程平台能力研究",
+      "repo": "https://github.com/ColeMurray/background-agents",
+      "summary": "搭建给 AI 派开发任务的平台，在独立环境中修改代码、执行测试并提交 PR；附中文交互网页与前后端总览图，区分代理程序、模型接入及 Codex 关系，含 25 项固定版本来源，真实运行效果待验证。",
+      "status": "研究中",
+      "tags": [
+        "后台编程代理",
+        "云端沙箱",
+        "任务队列",
+        "并行子任务",
+        "自动化触发"
+      ],
+      "cover": "projects/011-background-agents/assets/background-agents-overview.png",
+      "cover_alt": "Background Agents 能力与实现总览：网页与集成入口、后台队列、沙箱代理、模型接入、交付结果与 Codex 关系。",
+      "demo": ""
     }
   ]
 }

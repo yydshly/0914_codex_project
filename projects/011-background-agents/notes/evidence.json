@@ -1,0 +1,672 @@
+{
+  "upstream": "https://github.com/ColeMurray/background-agents",
+  "commit": "4c470da615eaecbf8f64b0ae5a04666c99b4c536",
+  "method": "static source/document inspection",
+  "runtime_validated": false,
+  "files": [
+    {
+      "id": "S01",
+      "title": "项目名称、功能与单租户边界",
+      "path": "README.md",
+      "sha256": "1d55255d73738c953a9dabb37e362ca73c719455a57dce09f3e26c191c9dab54",
+      "line_count": 330,
+      "url": "https://github.com/ColeMurray/background-agents/blob/4c470da615eaecbf8f64b0ae5a04666c99b4c536/README.md",
+      "matches": [
+        {
+          "query": "# Background Agents: Open-Inspect",
+          "lines": [
+            1
+          ]
+        },
+        {
+          "query": "No per-user repository access validation",
+          "lines": [
+            38
+          ]
+        },
+        {
+          "query": "Ad-hoc sets",
+          "lines": [
+            172
+          ]
+        }
+      ]
+    },
+    {
+      "id": "S02",
+      "title": "运行流程、会话与环境恢复",
+      "path": "docs/HOW_IT_WORKS.md",
+      "sha256": "07a029bbe2f895e4d76df49b1e66ed9c1346128e97e1a0891f8a4b3d0c3a05fd",
+      "line_count": 703,
+      "url": "https://github.com/ColeMurray/background-agents/blob/4c470da615eaecbf8f64b0ae5a04666c99b4c536/docs/HOW_IT_WORKS.md",
+      "matches": [
+        {
+          "query": "## How Prompts Flow",
+          "lines": [
+            381
+          ]
+        },
+        {
+          "query": "## The Agent",
+          "lines": [
+            459
+          ]
+        },
+        {
+          "query": "## The Sandbox Lifecycle",
+          "lines": [
+            240
+          ]
+        }
+      ]
+    },
+    {
+      "id": "S03",
+      "title": "任务排队、分发与并发认领",
+      "path": "packages/control-plane/src/session/message-queue.ts",
+      "sha256": "8610c8c974c1e4411b766c38bf8b158e2df5a5eb6dc4116d3d57fe8cf4d969f6",
+      "line_count": 869,
+      "url": "https://github.com/ColeMurray/background-agents/blob/4c470da615eaecbf8f64b0ae5a04666c99b4c536/packages/control-plane/src/session/message-queue.ts",
+      "matches": [
+        {
+          "query": "async processMessageQueue",
+          "lines": [
+            365
+          ]
+        },
+        {
+          "query": "getProcessingMessage()",
+          "lines": [
+            383
+          ]
+        },
+        {
+          "query": "startMessageProcessing(",
+          "lines": [
+            505
+          ]
+        },
+        {
+          "query": "spawnSandbox()",
+          "lines": [
+            450
+          ]
+        },
+        {
+          "query": "queueDepth >= MAX_UNFINISHED_PROMPTS",
+          "lines": [
+            851
+          ]
+        }
+      ]
+    },
+    {
+      "id": "S04",
+      "title": "断线存活与代理调用",
+      "path": "packages/sandbox-runtime/src/sandbox_runtime/bridge.py",
+      "sha256": "13853d1edcd7ec8c4a04c18c981b182b902db049343b9b73ede1acecde4a7035",
+      "line_count": 993,
+      "url": "https://github.com/ColeMurray/background-agents/blob/4c470da615eaecbf8f64b0ae5a04666c99b4c536/packages/sandbox-runtime/src/sandbox_runtime/bridge.py",
+      "matches": [
+        {
+          "query": "prompt tasks must survive WS disconnects",
+          "lines": [
+            625
+          ]
+        },
+        {
+          "query": "await self.harness.run_prompt",
+          "lines": [
+            709
+          ]
+        },
+        {
+          "query": "harness must not emit execution_complete",
+          "lines": [
+            699
+          ]
+        }
+      ]
+    },
+    {
+      "id": "S05",
+      "title": "代理统一接口",
+      "path": "packages/sandbox-runtime/src/sandbox_runtime/harness/base.py",
+      "sha256": "126882a091d057f5a8930f6bdf309246706449f17caf2d90378b32652f87f8e7",
+      "line_count": 165,
+      "url": "https://github.com/ColeMurray/background-agents/blob/4c470da615eaecbf8f64b0ae5a04666c99b4c536/packages/sandbox-runtime/src/sandbox_runtime/harness/base.py",
+      "matches": [
+        {
+          "query": "class HarnessId",
+          "lines": [
+            30
+          ]
+        },
+        {
+          "query": "class AgentHarness",
+          "lines": [
+            115
+          ]
+        },
+        {
+          "query": "class TurnOutcome",
+          "lines": [
+            79
+          ]
+        }
+      ]
+    },
+    {
+      "id": "S06",
+      "title": "运行层与模型兼容性",
+      "path": "packages/shared/src/harnesses.ts",
+      "sha256": "a7f5ee4092a890a248dba63ef7263d5f0a1f6186420a3b1cbf0b34329fe0c243",
+      "line_count": 188,
+      "url": "https://github.com/ColeMurray/background-agents/blob/4c470da615eaecbf8f64b0ae5a04666c99b4c536/packages/shared/src/harnesses.ts",
+      "matches": [
+        {
+          "query": "HARNESS_IDS",
+          "lines": [
+            23,
+            24,
+            26,
+            61
+          ]
+        },
+        {
+          "query": "modelFamilies: [\"anthropic\"]",
+          "lines": [
+            52
+          ]
+        },
+        {
+          "query": "checkHarnessCompatibility",
+          "lines": [
+            6,
+            113,
+            164
+          ]
+        }
+      ]
+    },
+    {
+      "id": "S07",
+      "title": "子会话的深度、仓库与基准分支",
+      "path": "packages/control-plane/src/routes/session-child-spawn.ts",
+      "sha256": "c93cfae456df68e86909882a95c839ef79ca5e98c640b8a5819d2b61b2458d6e",
+      "line_count": 383,
+      "url": "https://github.com/ColeMurray/background-agents/blob/4c470da615eaecbf8f64b0ae5a04666c99b4c536/packages/control-plane/src/routes/session-child-spawn.ts",
+      "matches": [
+        {
+          "query": "MAX_SPAWN_DEPTH = 2",
+          "lines": [
+            47
+          ]
+        },
+        {
+          "query": "child sessions are single-repo by design",
+          "lines": [
+            139
+          ]
+        },
+        {
+          "query": "Child sessions must use the same repository",
+          "lines": [
+            147
+          ]
+        },
+        {
+          "query": "spawnContext.baseBranch",
+          "lines": [
+            254
+          ]
+        }
+      ]
+    },
+    {
+      "id": "S08",
+      "title": "PR 创建时的身份选择",
+      "path": "packages/control-plane/src/session/pull-request-service.ts",
+      "sha256": "969a4951557075be5ae6f195477c856340b53fc0094a43f3ae2a38ad275758a8",
+      "line_count": 635,
+      "url": "https://github.com/ColeMurray/background-agents/blob/4c470da615eaecbf8f64b0ae5a04666c99b4c536/packages/control-plane/src/session/pull-request-service.ts",
+      "matches": [
+        {
+          "query": "input.promptingAuth ?? appAuth",
+          "lines": [
+            365
+          ]
+        },
+        {
+          "query": "sourceControlProvider.createPullRequest",
+          "lines": [
+            370
+          ]
+        }
+      ]
+    },
+    {
+      "id": "S09",
+      "title": "自动化种类、间隔与失败暂停",
+      "path": "docs/AUTOMATIONS.md",
+      "sha256": "333171c35a17f0d0416445bb185caf43ee4ff441e4093017346dab2cb359fc9b",
+      "line_count": 484,
+      "url": "https://github.com/ColeMurray/background-agents/blob/4c470da615eaecbf8f64b0ae5a04666c99b4c536/docs/AUTOMATIONS.md",
+      "matches": [
+        {
+          "query": "Linear Event",
+          "lines": [
+            16
+          ]
+        },
+        {
+          "query": "15 minutes",
+          "lines": [
+            348,
+            353,
+            480
+          ]
+        },
+        {
+          "query": "3 consecutive",
+          "lines": [
+            455
+          ]
+        },
+        {
+          "query": "scheduled automations only",
+          "lines": [
+            69
+          ]
+        }
+      ]
+    },
+    {
+      "id": "S10",
+      "title": "Node 容器部署与单实例假设",
+      "path": "docs/CONTROL_PLANE_CONTAINER.md",
+      "sha256": "7f452c9796bdd2689b820ec7c0b7777ceb2f57be16e6b33406bb76f4826cf9b2",
+      "line_count": 268,
+      "url": "https://github.com/ColeMurray/background-agents/blob/4c470da615eaecbf8f64b0ae5a04666c99b4c536/docs/CONTROL_PLANE_CONTAINER.md",
+      "matches": [
+        {
+          "query": "one Node process",
+          "lines": [
+            4
+          ]
+        },
+        {
+          "query": "The web app is not part of the stack",
+          "lines": [
+            21
+          ]
+        },
+        {
+          "query": "Two processes at once",
+          "lines": [
+            173
+          ]
+        }
+      ]
+    },
+    {
+      "id": "S11",
+      "title": "沙箱供应商工厂",
+      "path": "packages/control-plane/src/sandbox/provider-factory.ts",
+      "sha256": "ce8f0cd15ab4abf4e807bac6353bdc24128ebbcfe82d6d089dead02e765dafb4",
+      "line_count": 204,
+      "url": "https://github.com/ColeMurray/background-agents/blob/4c470da615eaecbf8f64b0ae5a04666c99b4c536/packages/control-plane/src/sandbox/provider-factory.ts",
+      "matches": [
+        {
+          "query": "case \"daytona\"",
+          "lines": [
+            172
+          ]
+        },
+        {
+          "query": "case \"e2b\"",
+          "lines": [
+            180
+          ]
+        },
+        {
+          "query": "case \"modal\"",
+          "lines": [
+            182
+          ]
+        },
+        {
+          "query": "case \"vercel\"",
+          "lines": [
+            174
+          ]
+        },
+        {
+          "query": "case \"opencomputer\"",
+          "lines": [
+            176
+          ]
+        }
+      ]
+    },
+    {
+      "id": "S12",
+      "title": "Modal 状态恢复能力声明",
+      "path": "packages/control-plane/src/sandbox/providers/modal-provider.ts",
+      "sha256": "d1de72af3a20ee26669306f59d66081885aa83982e8348cae653b11a37654a7a",
+      "line_count": 394,
+      "url": "https://github.com/ColeMurray/background-agents/blob/4c470da615eaecbf8f64b0ae5a04666c99b4c536/packages/control-plane/src/sandbox/providers/modal-provider.ts",
+      "matches": [
+        {
+          "query": "supportsSnapshots: true",
+          "lines": [
+            90
+          ]
+        },
+        {
+          "query": "supportsPersistentResume: false",
+          "lines": [
+            92
+          ]
+        }
+      ]
+    },
+    {
+      "id": "S13",
+      "title": "Daytona 状态恢复能力声明",
+      "path": "packages/control-plane/src/sandbox/providers/daytona-provider.ts",
+      "sha256": "1b19721c0d6f86b58c49140ee9b1ee6eeb841db1bfa94db876fa57441d37a408",
+      "line_count": 350,
+      "url": "https://github.com/ColeMurray/background-agents/blob/4c470da615eaecbf8f64b0ae5a04666c99b4c536/packages/control-plane/src/sandbox/providers/daytona-provider.ts",
+      "matches": [
+        {
+          "query": "supportsSnapshots: false",
+          "lines": [
+            61
+          ]
+        },
+        {
+          "query": "supportsPersistentResume: true",
+          "lines": [
+            63
+          ]
+        }
+      ]
+    },
+    {
+      "id": "S14",
+      "title": "E2B 状态恢复能力声明",
+      "path": "packages/control-plane/src/sandbox/providers/e2b-provider.ts",
+      "sha256": "b0a52bcb04d71cc70fbcc4c5e1b07ea698d152c530b3585c61f8c44f43cf9d36",
+      "line_count": 706,
+      "url": "https://github.com/ColeMurray/background-agents/blob/4c470da615eaecbf8f64b0ae5a04666c99b4c536/packages/control-plane/src/sandbox/providers/e2b-provider.ts",
+      "matches": [
+        {
+          "query": "supportsSnapshots: false",
+          "lines": [
+            192
+          ]
+        },
+        {
+          "query": "supportsPersistentResume: true",
+          "lines": [
+            195
+          ]
+        }
+      ]
+    },
+    {
+      "id": "S15",
+      "title": "Vercel 状态恢复能力声明",
+      "path": "packages/control-plane/src/sandbox/providers/vercel/provider.ts",
+      "sha256": "5a892f37a79dcf6ef1d1a5a3ecc87e113792267cd1a8f096640b3e09d9adfd58",
+      "line_count": 668,
+      "url": "https://github.com/ColeMurray/background-agents/blob/4c470da615eaecbf8f64b0ae5a04666c99b4c536/packages/control-plane/src/sandbox/providers/vercel/provider.ts",
+      "matches": [
+        {
+          "query": "supportsSnapshots: true",
+          "lines": [
+            86
+          ]
+        },
+        {
+          "query": "supportsPersistentResume: false",
+          "lines": [
+            88
+          ]
+        }
+      ]
+    },
+    {
+      "id": "S16",
+      "title": "OpenComputer 状态恢复能力声明",
+      "path": "packages/control-plane/src/sandbox/providers/opencomputer-provider.ts",
+      "sha256": "78c5f665cd1d94620f437db1d3190268a201b04168c46e1479c8ce58865ff534",
+      "line_count": 769,
+      "url": "https://github.com/ColeMurray/background-agents/blob/4c470da615eaecbf8f64b0ae5a04666c99b4c536/packages/control-plane/src/sandbox/providers/opencomputer-provider.ts",
+      "matches": [
+        {
+          "query": "supportsSnapshots: true",
+          "lines": [
+            77
+          ]
+        },
+        {
+          "query": "supportsPersistentResume: true",
+          "lines": [
+            79
+          ]
+        }
+      ]
+    },
+    {
+      "id": "S17",
+      "title": "复用指令与技能版本",
+      "path": "docs/MANAGED_SKILLS.md",
+      "sha256": "5010735d7e9f0d097e18b5bca3c66a635aecbe14391cf43f1c16686b9ba86f69",
+      "line_count": 328,
+      "url": "https://github.com/ColeMurray/background-agents/blob/4c470da615eaecbf8f64b0ae5a04666c99b4c536/docs/MANAGED_SKILLS.md",
+      "matches": [
+        {
+          "query": "Managed skills give agents",
+          "lines": [
+            3
+          ]
+        },
+        {
+          "query": "permission boundary",
+          "lines": [
+            11
+          ]
+        }
+      ]
+    },
+    {
+      "id": "S18",
+      "title": "上游许可证",
+      "path": "LICENSE",
+      "sha256": "2e230a59d412f03f5d6d57884ee0b0894599a1b90b8f864d280f1de9b48b7a76",
+      "line_count": 21,
+      "url": "https://github.com/ColeMurray/background-agents/blob/4c470da615eaecbf8f64b0ae5a04666c99b4c536/LICENSE",
+      "matches": [
+        {
+          "query": "MIT License",
+          "lines": [
+            1
+          ]
+        },
+        {
+          "query": "Copyright",
+          "lines": [
+            3
+          ]
+        }
+      ]
+    },
+    {
+      "id": "S19",
+      "title": "Node 最低版本",
+      "path": "package.json",
+      "sha256": "af98e79f1e06b7337a7e86d56fb716f9a692387e0842de1627145260482e2d21",
+      "line_count": 69,
+      "url": "https://github.com/ColeMurray/background-agents/blob/4c470da615eaecbf8f64b0ae5a04666c99b4c536/package.json",
+      "matches": [
+        {
+          "query": "\"node\": \">=22.13.0\"",
+          "lines": [
+            50
+          ]
+        }
+      ]
+    },
+    {
+      "id": "S20",
+      "title": "单会话待完成任务上限",
+      "path": "packages/shared/src/types/prompts.ts",
+      "sha256": "dd28e6ef8c0f559e51c09661847ed7a23f9106ba11865496381ebf188d93d947",
+      "line_count": 31,
+      "url": "https://github.com/ColeMurray/background-agents/blob/4c470da615eaecbf8f64b0ae5a04666c99b4c536/packages/shared/src/types/prompts.ts",
+      "matches": [
+        {
+          "query": "MAX_UNFINISHED_PROMPTS = 50",
+          "lines": [
+            5
+          ]
+        }
+      ]
+    },
+    {
+      "id": "S21",
+      "title": "部署指南",
+      "path": "docs/SETUP_GUIDE.md",
+      "sha256": "246afc60fab6c54df7c1d4611733ee95471aed9343e4f6d8c0e61efae61c46fa",
+      "line_count": 257,
+      "url": "https://github.com/ColeMurray/background-agents/blob/4c470da615eaecbf8f64b0ae5a04666c99b4c536/docs/SETUP_GUIDE.md",
+      "matches": [
+        {
+          "query": "Full Self-Hosted Deployment",
+          "lines": [
+            193
+          ]
+        }
+      ]
+    },
+    {
+      "id": "S22",
+      "title": "模型与供应商目录",
+      "path": "docs/AVAILABLE_MODELS.md",
+      "sha256": "a096fa7f0bd472729b65f3b11e2f6a055c6ca81ed07542df88f657f93a090fa6",
+      "line_count": 164,
+      "url": "https://github.com/ColeMurray/background-agents/blob/4c470da615eaecbf8f64b0ae5a04666c99b4c536/docs/AVAILABLE_MODELS.md",
+      "matches": [
+        {
+          "query": "## Harnesses",
+          "lines": [
+            16
+          ]
+        },
+        {
+          "query": "## OpenAI",
+          "lines": [
+            47
+          ]
+        },
+        {
+          "query": "## OpenCode Go",
+          "lines": [
+            91
+          ]
+        },
+        {
+          "query": "## DeepSeek",
+          "lines": [
+            157
+          ]
+        }
+      ]
+    },
+    {
+      "id": "S23",
+      "title": "Claude 程序、SDK 与认证配置",
+      "path": "docs/CLAUDE_AGENT.md",
+      "sha256": "677a511b54445c74f913dcc5502afff66f7759b4229b6a8d15a0aa5320cda9cf",
+      "line_count": 201,
+      "url": "https://github.com/ColeMurray/background-agents/blob/4c470da615eaecbf8f64b0ae5a04666c99b4c536/docs/CLAUDE_AGENT.md",
+      "matches": [
+        {
+          "query": "Settings > Provider Accounts",
+          "lines": [
+            42,
+            70
+          ]
+        },
+        {
+          "query": "claude",
+          "lines": [
+            48,
+            94,
+            101,
+            102,
+            140,
+            149,
+            180,
+            198
+          ]
+        },
+        {
+          "query": "ANTHROPIC_API_KEY",
+          "lines": [
+            25,
+            26,
+            98
+          ]
+        }
+      ]
+    },
+    {
+      "id": "S24",
+      "title": "OpenAI 账号与 API Key 接入",
+      "path": "docs/OPENAI_MODELS.md",
+      "sha256": "dc3a360b5052a4e89f47a81c941ab47da88aab8685ad9a9d771924a248008511",
+      "line_count": 101,
+      "url": "https://github.com/ColeMurray/background-agents/blob/4c470da615eaecbf8f64b0ae5a04666c99b4c536/docs/OPENAI_MODELS.md",
+      "matches": [
+        {
+          "query": "Use API key",
+          "lines": [
+            42,
+            50
+          ]
+        },
+        {
+          "query": "access-token",
+          "lines": [
+            64
+          ]
+        }
+      ]
+    },
+    {
+      "id": "S25",
+      "title": "OpenCode 服务运行方式",
+      "path": "packages/sandbox-runtime/src/sandbox_runtime/harness/opencode.py",
+      "sha256": "501ed215c18299307dd5432268ee16a10af5cffd0c08986ec7dfc131632b5346",
+      "line_count": 131,
+      "url": "https://github.com/ColeMurray/background-agents/blob/4c470da615eaecbf8f64b0ae5a04666c99b4c536/packages/sandbox-runtime/src/sandbox_runtime/harness/opencode.py",
+      "matches": [
+        {
+          "query": "opencode serve",
+          "lines": [
+            26
+          ]
+        },
+        {
+          "query": "HTTP/SSE",
+          "lines": [
+            24
+          ]
+        }
+      ]
+    }
+  ]
+}
