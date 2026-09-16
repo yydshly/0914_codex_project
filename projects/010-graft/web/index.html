@@ -12,7 +12,7 @@
 <aside class="rail">
   <a class="brand" href="#top" aria-label="Graft 导读首页"><span class="brand-symbol">g.</span><span>Graft<small>代码理解手册</small></span></a>
   <div class="rail-label">研究档案 / 010</div>
-  <nav aria-label="章节导航"><a href="#explore"><span>01</span> 能力实验室</a><a href="#mechanism"><span>02</span> 技术原理</a><a href="#freshness"><span>03</span> 更新与缓存</a><a href="#compare"><span>04</span> 与 Caveman 比较</a><a href="#evidence"><span>05</span> 效果与依据</a></nav>
+  <nav aria-label="章节导航"><a href="#overview"><span>00</span> 一图总览</a><a href="#explore"><span>01</span> 能力实验室</a><a href="#mechanism"><span>02</span> 原理研究线索</a><a href="#freshness"><span>03</span> 更新与缓存</a><a href="#compare"><span>04</span> 与 Caveman 比较</a><a href="#evidence"><span>05</span> 效果与依据</a></nav>
   <div class="rail-bottom"><span class="version">研究版本 0.18.0</span><p>少读无关内容，<br>看清代码之间的联系。</p><a href="https://github.com/trailhq/Graft" target="_blank" rel="noopener noreferrer">查看上游仓库 ↗</a></div>
 </aside>
 <main id="main">
@@ -22,6 +22,13 @@
     <div class="hero-bottom"><p>扫描源码并构建代码索引与关系图，指导 AI 查找相关代码。<br>构建原理待研究，效果待实测。</p><a class="primary" href="#explore">从一个任务开始 <span>↓</span></a></div>
     <div class="thesis"><div><span>01 / 整理</span><strong>源码 → 代码图谱</strong></div><div><span>02 / 筛选</span><strong>任务 → 相关位置</strong></div><div><span>03 / 交付</span><strong>片段 + 接口 + 依赖</strong></div></div>
   </header>
+
+  <section id="overview" class="section">
+    <div class="section-title"><div><div class="eyebrow">00 / OVERVIEW</div><h2>一张图，整理我们对 Graft 的理解</h2></div><span class="badge">构建原理待研究</span></div>
+    <p class="intro">对源码进行扫描并构建代码索引与关系图，指导 AI 查找相关代码。下图保留能力、函数关联、检索与缓存等初步线索；效果待实测。</p>
+    <figure class="overview-figure"><a href="assets/graft-overview.png" target="_blank" rel="noopener noreferrer" aria-label="打开高清 Graft 引导图"><img src="assets/graft-overview.png" width="2600" height="3740" alt="Graft 能力与初步研究全景图：源码扫描、索引构建、函数关联、AI 查找、缓存更新与效果边界；构建原理待研究。"></a><figcaption>点击图片查看高清版本。图中的源码阅读和局部探针是研究线索，不代表完整构建流程已经验证。</figcaption></figure>
+    <div class="source-list"><a href="assets/graft-overview.png" download>下载高清 PNG ↓</a><a href="assets/graft-overview.svg" download>下载可缩放 SVG ↓</a><a href="notes/implementation-audit.md" download>下载初步源码笔记 ↓</a><a href="notes/source-probes.json" download>下载局部探针记录 ↓</a></div>
+  </section>
 
   <section id="explore" class="section">
     <div class="section-title"><div><div class="eyebrow">01 / EXPLORE</div><h2>同一个项目，不同任务的阅读路线</h2></div><span class="badge">可交互教学示例</span></div>
@@ -76,7 +83,7 @@
     <div class="limits"><strong>图谱是一份线索，不是正确性证明。</strong><p>动态调用、解析覆盖、过期摘要和遗漏关系都可能影响结果。真实修改仍需源码复核与回归测试；作者基准不能直接代表你的项目收益。</p></div>
     <div class="source-list"><a data-source="README.md">上游能力与作者测试 ↗</a><a data-source="src/ask/ask.ts">检索与排序源码 ↗</a><a data-source="src/graph/enrich.ts">深度摘要状态 ↗</a><a href="notes/mechanism.md" download>下载机制笔记 ↓</a><a href="notes/sources.md" download>下载来源记录 ↓</a></div>
   </section>
-  <footer><span>Graft / 独立研究导读</span><span>2026.09.16 · 依据提交 f9e6539</span><a href="#top">回到顶部 ↑</a></footer>
+  <footer><span>Graft / 独立研究导读</span><span>2026.09.16 · 依据提交 f9e6539</span><a href="https://yydshly.github.io/0914_codex_project/">全部研究项目 ↗</a><a href="https://github.com/yydshly/0914_codex_project/tree/main/projects/010-graft">研究文档 ↗</a><a href="#top">回到顶部 ↑</a></footer>
 </main>
 <noscript><div class="noscript">交互示例需要 JavaScript。技术说明和来源仍可阅读。</div></noscript>
 </body></html>

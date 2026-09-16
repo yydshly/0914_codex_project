@@ -7,8 +7,10 @@ import shutil
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / 'web' / 'dist'
 FILES = {name: ROOT / 'web' / name for name in ('index.html', 'style.css', 'main.js', 'favicon.svg')}
-for name in ('mechanism.md', 'sources.md'):
+for name in ('mechanism.md', 'sources.md', 'implementation-audit.md', 'source-probes.json'):
     FILES['notes/' + name] = ROOT / 'notes' / name
+for name in ('graft-overview.png', 'graft-overview.svg', 'graft-overview-preview.png'):
+    FILES['assets/' + name] = ROOT / 'assets' / name
 
 class References(HTMLParser):
     def __init__(self):

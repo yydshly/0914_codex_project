@@ -16,6 +16,7 @@ on:
       - 'projects/007-evomap/**'
       - 'projects/008-douyin-downloader/**'
       - 'projects/009-mirofish/**'
+      - 'projects/010-graft/**'
   workflow_dispatch:
 
 permissions:
@@ -54,6 +55,8 @@ jobs:
         run: python projects/008-douyin-downloader/src/build_site.py
       - name: Build MiroFish capability exhibit
         run: python projects/009-mirofish/src/build_site.py
+      - name: Build Graft code navigation guide
+        run: python projects/010-graft/src/build_site.py
       - name: Build combined project site
         run: python scripts/build_pages.py
       - uses: actions/configure-pages@v5

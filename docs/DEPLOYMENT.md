@@ -2,7 +2,7 @@
 
 ## 当前状态
 
-已配置统一的 GitHub Actions 发布流程 `.github/workflows/pages.yml`。`pages.json` 显式选择要发布的项目编号，目前为 `001` 至 `009`；`scripts/build_pages.py` 将各项目的 `web/dist/` 打包到 `_site/<编号-slug>/`，并生成站点导航页。001、005、006、007、008、009 在 CI 中从源码构建，其余项目沿用已登记的静态产物。
+已配置统一的 GitHub Actions 发布流程 `.github/workflows/pages.yml`。`pages.json` 显式选择要发布的项目编号，目前为 `001` 至 `010`；`scripts/build_pages.py` 将各项目的 `web/dist/` 打包到 `_site/<编号-slug>/`，并生成站点导航页。001、005、006、007、008、009、010 在 CI 中从源码构建，其余项目沿用已登记的静态产物。
 
 发布状态以 GitHub Actions 部署成功且网页实际可访问为准。只有经过访问验证的演示地址才写入 `projects.json`，并同步到仓库索引。
 
@@ -51,3 +51,5 @@ GitHub Pages 托管静态 HTML、CSS 和 JavaScript。需要服务端、数据�
 
 - [GitHub Pages 简介与限制](https://docs.github.com/en/pages/getting-started-with-github-pages/what-is-github-pages)
 - [创建 GitHub Pages 站点](https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-github-pages-site)
+
+010 Graft 已接入统一构建与发布清单，打包交互导读、PNG/SVG 引导图和研究笔记。部署成功并访问验证后登记在线入口；能力定位为扫描源码构建索引、指导 AI 查找，构建原理待研究。
