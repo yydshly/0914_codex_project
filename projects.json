@@ -223,6 +223,24 @@
           "caption": "历史事实有公开来源，方案比较为研究者提出的实验设计；没有证据表明 Unity 使用过 MiroFish，也未在本次运行真实模型。"
         }
       ]
+    },
+    {
+      "id": "010",
+      "order": 100,
+      "slug": "graft",
+      "name": "Graft：代码库地图与按需上下文研究",
+      "repo": "https://github.com/trailhq/Graft",
+      "summary": "对源码进行扫描并构建代码索引与关系图，指导 AI 查找相关代码。构建原理待研究，效果待实测。",
+      "status": "研究中",
+      "tags": [
+        "代码图谱",
+        "按需上下文",
+        "MCP",
+        "减少重复读取"
+      ],
+      "cover": "projects/010-graft/assets/graft-overview.png",
+      "cover_alt": "Graft 能力与初步研究全景图：扫描源码并构建索引与关系图，指导 AI 查找；构建原理待研究。",
+      "demo": ""
     }
   ]
 }

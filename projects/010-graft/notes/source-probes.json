@@ -1,0 +1,40 @@
+{
+  "commit": "f9e65396e638e517aecae0d731017f53084d70ed",
+  "scope": "Exact tokenizer and inlineSource functions; fixture dependencies, no full Graft build or model calls.",
+  "tokenizer": [
+    {
+      "query": "登录凭证在哪里生成",
+      "tokens": []
+    },
+    {
+      "query": "token 为什么很快过期",
+      "tokens": [
+        "token"
+      ]
+    },
+    {
+      "query": "token expiry",
+      "tokens": [
+        "token",
+        "expiry"
+      ]
+    },
+    {
+      "query": "issueToken",
+      "tokens": [
+        "issue",
+        "token"
+      ]
+    }
+  ],
+  "staleCrux": [
+    {
+      "full": false,
+      "output": "OLD_CRUX_FIXTURE\n… (crux — full definition at example.ts:L1-L3; rerun with --full)"
+    },
+    {
+      "full": true,
+      "output": "FRESH_SOURCE_FIXTURE"
+    }
+  ]
+}

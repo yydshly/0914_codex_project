@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Graft 对源码进行扫描并构建代码索引与关系图，指导 AI 查找相关代码。构建原理待研究，效果待实测。">
+  <title>Graft · 让模型带着地图读代码</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="style.css">
+  <script src="main.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#main">跳到内容</a>
+<aside class="rail">
+  <a class="brand" href="#top" aria-label="Graft 导读首页"><span class="brand-symbol">g.</span><span>Graft<small>代码理解手册</small></span></a>
+  <div class="rail-label">研究档案 / 010</div>
+  <nav aria-label="章节导航"><a href="#explore"><span>01</span> 能力实验室</a><a href="#mechanism"><span>02</span> 技术原理</a><a href="#freshness"><span>03</span> 更新与缓存</a><a href="#compare"><span>04</span> 与 Caveman 比较</a><a href="#evidence"><span>05</span> 效果与依据</a></nav>
+  <div class="rail-bottom"><span class="version">研究版本 0.18.0</span><p>少读无关内容，<br>看清代码之间的联系。</p><a href="https://github.com/trailhq/Graft" target="_blank" rel="noopener noreferrer">查看上游仓库 ↗</a></div>
+</aside>
+<main id="main">
+  <header id="top" class="hero">
+    <div class="eyebrow">CODE INTELLIGENCE / 代码库理解</div>
+    <h1>让模型带着<span>地图</span><br>读代码。</h1>
+    <div class="hero-bottom"><p>扫描源码并构建代码索引与关系图，指导 AI 查找相关代码。<br>构建原理待研究，效果待实测。</p><a class="primary" href="#explore">从一个任务开始 <span>↓</span></a></div>
+    <div class="thesis"><div><span>01 / 整理</span><strong>源码 → 代码图谱</strong></div><div><span>02 / 筛选</span><strong>任务 → 相关位置</strong></div><div><span>03 / 交付</span><strong>片段 + 接口 + 依赖</strong></div></div>
+  </header>
+
+  <section id="explore" class="section">
+    <div class="section-title"><div><div class="eyebrow">01 / EXPLORE</div><h2>同一个项目，不同任务的阅读路线</h2></div><span class="badge">可交互教学示例</span></div>
+    <p class="intro">切换任务，再点击图中的模块。看看哪些位置值得先读，以及为什么。下方是预设的解释模型，不执行真实 Graft 检索。</p>
+    <div class="task-tabs" role="group" aria-label="选择示例任务"><button data-task="expiry" aria-pressed="true"><span>修复问题</span>登录后很快掉线</button><button data-task="refactor" aria-pressed="false"><span>修改接口</span>调整 Token 签发参数</button><button data-task="overview" aria-pressed="false"><span>了解项目</span>登录请求经过哪里</button></div>
+    <div class="lab">
+      <div class="lab-head"><span class="mono">sample-auth / 示例项目</span><span id="task-hint">从过期配置查起，沿关系查看签发与校验。</span></div>
+      <div class="lab-grid">
+        <div class="file-panel"><div class="panel-label">项目文件 <span id="file-count"></span></div><div id="file-list"></div><p class="panel-foot">蓝色：当前任务优先查看<br>灰色：本次未选中，不代表永远无关</p></div>
+        <div class="graph-panel"><div class="panel-label">关系地图 <span>点击模块查看</span></div><div id="graph" class="graph"><svg viewBox="0 0 500 350" preserveAspectRatio="none" aria-hidden="true"><defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="currentColor"/></marker></defs><g id="edges"></g></svg><div id="nodes"></div></div><div class="graph-legend"><span><i></i> 当前选中</span><span>连线箭头：引用或调用方向</span></div><p id="why" class="why" aria-live="polite"></p></div>
+      </div>
+      <div class="context-panel"><div class="context-top"><div><div class="panel-label">交给模型的内容</div><h3 id="code-title"></h3></div><div class="segmented" role="group" aria-label="代码阅读深度"><button data-depth="signature" aria-pressed="false">接口轮廓</button><button data-depth="crux" aria-pressed="true">相关片段</button><button data-depth="full" aria-pressed="false">完整实现</button></div></div><div class="context-content"><pre><code id="code"></code></pre><div class="readout"><div class="readout-number"><b id="shown-lines"></b><span>行 / 当前展示</span></div><p id="depth-note"></p><span id="total-lines" class="mono"></span></div></div></div>
+      <div class="lab-note">示例代码与选择路径为原创教学材料；行数按当前示例实际计算，不是 Token、性能或节省率测试。</div>
+    </div>
+    <div class="takeaway"><span>真正减少的是什么？</span><p>减少模型接收的无关代码，以及“找位置 → 读文件 → 再找”的探索轮次。<strong>本地程序仍需扫描与解析源码；关键逻辑仍需回到源码验证。</strong></p></div>
+    <div class="tool-grid">
+      <article><span>01</span><h3>找相关代码</h3><p>按问题返回排序后的代码位置和片段。</p><code>graft_find_code</code></article>
+      <article><span>02</span><h3>看接口轮廓</h3><p>先看定义和签名，必要时再读实现。</p><code>graft_file_api</code></article>
+      <article><span>03</span><h3>追踪上下游</h3><p>查调用者、依赖方及多层关系。</p><code>graft_trace_calls</code></article>
+      <article><span>04</span><h3>查完整命中</h3><p>正则搜索已索引文件，按所属符号组织结果。</p><code>graft_find_all</code></article>
+      <article><span>05</span><h3>看项目地图</h3><p>浏览目录分组、关键节点与连接热点。</p><code>graft_repo_map</code></article>
+      <article><span>06</span><h3>检查是否过期</h3><p>报告图谱与当前代码之间的变化。</p><code>graft_check_freshness</code></article>
+    </div>
+    <p class="source-line">六项工具依据 <a data-source="src/mcp/tools.ts">MCP 工具定义 ↗</a>；上游还提供 <code>graft viz</code> 图谱查看与 <code>graft blast</code> 变更影响分析。本页为独立导读。</p>
+  </section>
+
+  <section id="mechanism" class="section">
+    <div class="section-title"><div><div class="eyebrow">02 / UNDER THE HOOD</div><h2>构建原理待研究：先保留六步线索</h2></div></div>
+    <p class="intro">以下是初步源码阅读形成的流程示意，尚未验证完整构建过程。扫描、提取、关系解析与更新仍需进一步研究。</p>
+    <div class="pipeline" role="group" aria-label="技术流程"><button data-step="0" aria-pressed="true"><span>01</span>扫描源码</button><button data-step="1" aria-pressed="false"><span>02</span>提取结构</button><button data-step="2" aria-pressed="false"><span>03</span>连接关系</button><button data-step="3" aria-pressed="false"><span>04</span>检索与排序</button><button data-step="4" aria-pressed="false"><span>05</span>按需输出</button><button data-step="5" aria-pressed="false"><span>06</span>交给助手</button></div>
+    <div class="mechanism-detail" aria-live="polite"><div><span id="step-kicker" class="eyebrow"></span><h3 id="step-title"></h3><p id="step-description"></p><a id="step-source" target="_blank" rel="noopener noreferrer">查看实现依据 ↗</a></div><div class="step-example"><span>数据如何变化 / 示意</span><pre id="step-example"></pre></div></div>
+    <div class="layers"><article><span class="layer-tag">默认 / 结构层</span><h3>语法树读出“代码长什么样”</h3><p>Tree-sitter 将源码解析为语法树，提取函数、类、签名和调用位置，再解析跨文件关系。基础构建与查询不调用大模型。</p><div class="mini-flow"><span>源码</span><b>→</b><span>语法树</span><b>→</b><span>节点 / 边</span></div><a data-source="src/graph/build.ts">build.ts ↗</a></article><article><span class="layer-tag purple">可选 / 语义层</span><h3>模型补充“这段代码在做什么”</h3><p>深度模式生成文件摘要，再合成为概念节点；同时可给符号补充说明和关键片段。内容按哈希缓存，配置的模型可能产生费用。</p><div class="mini-flow"><span>文件摘要</span><b>→</b><span>概念说明</span><b>→</b><span>关联节点</span></div><a data-source="src/context/build.ts">context/build.ts ↗</a></article></div>
+    <details class="technical"><summary>进一步理解：自然语言查询，为什么不一定需要向量数据库？<span>＋</span></summary><div><p>这个版本的查询把任务词项与符号名、签名、说明等内容进行匹配，再结合图结构排序。源码包含 IDF 词项权重、代码体 BM25 评分和 Personalized PageRank 图排序；关系查询还可以直接沿边查找。</p><p>这些是确定性的检索方法，不等于一个理解任何自然语言的模型。问题措辞、标识符、说明质量和语言覆盖都会影响命中效果。按路径缩小范围、返回不同文件的代表位置，也能减少结果被单个文件占满。</p><a data-source="src/ask/ask.ts">阅读查询实现 ↗</a></div></details>
+  </section>
+
+  <section id="freshness" class="section">
+    <div class="section-title"><div><div class="eyebrow">03 / KEEP IT CURRENT</div><h2>代码变了，地图怎么办？</h2></div></div>
+    <div class="fresh-layout"><div><p class="intro">查询前先检查变化，构建时复用没有变动的解析结果。结构更新和模型摘要更新是两件事。</p><div class="fresh-options" role="group" aria-label="模拟代码变化"><button data-fresh="clean" aria-pressed="true">① 代码没有变化</button><button data-fresh="changed" aria-pressed="false">② 修改 Token 逻辑</button><button data-fresh="failed" aria-pressed="false">③ 刷新失败</button></div><p class="small">此处只切换说明，不修改文件或运行 Graft。</p></div><div class="fresh-card" aria-live="polite"><div class="fresh-row"><span>结构图谱</span><b id="structure-state"></b></div><div class="fresh-row"><span>深度摘要</span><b id="summary-state"></b></div><p id="fresh-explanation"></p><div class="fresh-code" id="fresh-code"></div></div></div>
+    <details class="technical"><summary>缓存为什么快，又有哪些边界？<span>＋</span></summary><div><p>查询的轻量检查使用文件大小、修改时间等指纹；需要重建时，构建过程读取并计算内容哈希，未变化文件复用解析缓存。因此“少做解析”不等于“重建时不读文件”。</p><p>保持相同大小与修改时间的特殊改写可能绕过快速检查；哈希检查模式可以避开这一盲点。刷新失败时存在返回旧图谱并附提示的降级路径。不能把自动刷新等同于信息永远准确。</p><a data-source="src/graph/fingerprint.ts">指纹实现 ↗</a> · <a data-source="src/graph/refresh.ts">刷新实现 ↗</a></div></details>
+  </section>
+
+  <section id="compare" class="section">
+    <div class="section-title"><div><div class="eyebrow">04 / THE DIFFERENCE</div><h2>Graft 与 Caveman：两种减少输入的方式</h2></div></div>
+    <div class="compare-grid"><article class="graft-card"><div class="eyebrow">GRAFT / 先找对位置</div><h3>“这次应该读哪些代码？”</h3><div class="compare-visual"><span>整个项目</span><b>→</b><span>相关位置<br>＋依赖关系</span><b>→</b><strong>上下文</strong></div><p>从任务出发，查找相关节点，组织片段与关系。类似先找到书中相关章节及其引用。</p></article><article><div class="eyebrow">CAVEMAN / 精简选中的材料</div><h3>“这些材料怎样更精简？”</h3><div class="compare-visual"><span>已取回内容</span><b>→</b><span>按内容类型<br>精简与保留</span><b>→</b><strong>上下文</strong></div><p>处理已选中的代码、日志等输入，提供原文恢复与回退。类似将拿到的章节整理成精简材料。</p></article></div>
+    <p class="comparison-note">这是侧重点的区别：Graft 的接口轮廓与片段输出也会精简内容。两者能力有重合，组合使用的净收益需要实测。</p>
+    <div class="history"><strong>我们的相关研究</strong><p>Caveman 已做独立机制研究；Serena 在指南中收录过代码导航能力；Pi 关注 Agent 运行与会话；EvoMap 关注方法和经验复用。研究过不代表实测过节省率。</p><a href="https://github.com/yydshly/0910_codex_project/tree/main/projects/005-caveman">查看 Caveman 研究 ↗</a></div>
+  </section>
+
+  <section id="evidence" class="section evidence">
+    <div class="section-title"><div><div class="eyebrow">05 / EVIDENCE & LIMITS</div><h2>继续研究构建原理，再验证效果</h2></div><span class="badge">尚未运行上游对照实验</span></div>
+    <div class="evidence-grid"><article><span>已核对</span><h3>文档与关键源码</h3><p>查询输出、结构构建、排序、缓存、刷新和摘要状态。页面交互是原创教学演示。</p></article><article><span>预期价值</span><h3>少探索，少遗漏</h3><p>大型代码库、跨文件重构、反复维护值得做对照。小任务的准备成本可能抵消收益。</p></article><article><span>仍需验证</span><h3>成本与正确性一起看</h3><p>同一模型、同一任务比较 Token、工具轮次、总耗时、建图费用与验收结果。</p></article></div>
+    <div class="limits"><strong>图谱是一份线索，不是正确性证明。</strong><p>动态调用、解析覆盖、过期摘要和遗漏关系都可能影响结果。真实修改仍需源码复核与回归测试；作者基准不能直接代表你的项目收益。</p></div>
+    <div class="source-list"><a data-source="README.md">上游能力与作者测试 ↗</a><a data-source="src/ask/ask.ts">检索与排序源码 ↗</a><a data-source="src/graph/enrich.ts">深度摘要状态 ↗</a><a href="notes/mechanism.md" download>下载机制笔记 ↓</a><a href="notes/sources.md" download>下载来源记录 ↓</a></div>
+  </section>
+  <footer><span>Graft / 独立研究导读</span><span>2026.09.16 · 依据提交 f9e6539</span><a href="#top">回到顶部 ↑</a></footer>
+</main>
+<noscript><div class="noscript">交互示例需要 JavaScript。技术说明和来源仍可阅读。</div></noscript>
+</body></html>
